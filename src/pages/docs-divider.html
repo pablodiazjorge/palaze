@@ -29,10 +29,24 @@
             <plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>
+            <plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Variante personalizada</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de separador "custom" y podremos ajustarlo a nuestra página haciendo uso del atributo height y de custom-position para determinar la posición del divider que se determinará por el atributo custom-divider donde definiremos la imagen que utilizaremos para este.</p>
+    <p>A continuación se muestran dos ejemplos de su posible uso</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
+            <plz-divider variant="custom" height="250" custom-divider="../assets/icon/Divider-orange.svg" custom-position="bottom left"></plz-divider>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
+            <plz-divider variant="custom" height="250" custom-divider="../assets/icon/Divider-orange.svg" custom-position="bottom left"></plz-divider>'>
         </plz-showcase-code>
     </plz-showcase>
 
@@ -142,10 +156,16 @@
         </thead>
         <tbody>
             <tr>
-                <td>type</td>
+                <td>variant</td>
                 <td>Distintas tipos del componente separador</td>
+                <td>'default' - 'custom'</td>
+                <td>'default'</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>Distintas variantes del componente separador</td>
                 <td>'solid' - 'dashed' - 'dotted'</td>
-                <td>'solid'</td>
+                <td>'default'</td>
             </tr>
             <tr>
                 <td>color</td>
@@ -164,6 +184,18 @@
                 <td>Separación inferior del componente separador</td>
                 <td>Number</td>
                 <td>'0'</td>
+            </tr>
+            <tr>
+                <td>custom-divider</td>
+                <td>Referencia a una imagen</td>
+                <td>'../assets/icon/...'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>custom-position</td>
+                <td>Distintas posiciones de imagen del componente separador</td>
+                <td></td>
+                <td>'top left'</td>
             </tr>
         </tbody>
     </table>

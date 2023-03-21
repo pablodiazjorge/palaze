@@ -89,6 +89,12 @@
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
+  --color-rainbow-0: #FACFAE;
+  --color-rainbow-1: #F9E8C9;
+  --color-rainbow-2: #8FBCA3;
+  --color-rainbow-3: #5E8D82;
+  --rainbow-height: 300px;
+
   display: block;
   width: 100%;
   margin: 0;
@@ -105,4 +111,11 @@ hr {
   border-bottom: 1px solid var(--plz-color-black-4);
   width: 100%;
   overflow: hidden;
+}
+
+.custom {
+  height: 400px;
+  width: 100%;
+  background-position: top left;
+  background-size: cover;
 }

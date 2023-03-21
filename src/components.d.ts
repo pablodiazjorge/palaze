@@ -28,6 +28,8 @@ export namespace Components {
     }
     interface PlzDivider {
         "color": string;
+        "customDivider": string;
+        "customPosition": string;
         "height": string;
         "spaceBottom": string;
         "spaceTop": string;
@@ -211,6 +213,8 @@ declare namespace LocalJSX {
     }
     interface PlzDivider {
         "color"?: string;
+        "customDivider"?: string;
+        "customPosition"?: string;
         "height"?: string;
         "spaceBottom"?: string;
         "spaceTop"?: string;

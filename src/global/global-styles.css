@@ -256,44 +256,10 @@ body {
     background-color: var(--plz-color-black-3);
 }
 
-/*
-    ###      DIVIDERS      ###
-*/
-
-.divider-green {
-    height: 400px;
-    width: 100%;
-    background-image: url('../assets/icon/Divider-green.svg');
-    background-position: top left;
-    background-size: cover;
-}
-
-.divider-orange {
-    height: 400px;
-    width: 100%;
-    background-image: url('../assets/icon/Divider-orange.svg');
-    background-position: bottom left;
-    background-size: cover;
-}
 
 /*
     ###      RESIZE AND FIXING      ###
 */
-
-
-/*
-    ###      SCREEN MEDIA QUERIS      ###
-*/
-
-@media screen and (max-width: 600px) {
-    header {
-        text-align: center;
-    }
-
-    header a.web {
-        display: none;
-    }
-}
 
 /*
     ###      FOOTER      ###
