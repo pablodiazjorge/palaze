@@ -33,3 +33,15 @@
 .column-content:first-child {
   border-right: 1px solid var(--plz-color-black-3);
 }
+
+@media (max-width: 756px) {
+  .columns {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "content";
+  }
+
+  .column-content:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--plz-color-black-3);
+  }
+}

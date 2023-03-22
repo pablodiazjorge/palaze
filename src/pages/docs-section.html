@@ -1,0 +1,147 @@
+<section class="content-detail">
+    <h1>Section</h1>
+    <p class="component-tag">&lt;plz-section&gt; &#124; PlzSection</p> <!-- Dar forma y poner letra de consola-->
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
+    <!-- Pequeña descripción -->
+    <p>El componente section constará de varias opciones para estructurar secciones en una página web.</p>
+    <p>La función de este componente es meramente organizativa.</p>
+
+    <!-- Ejemplos de las posibilidades del componente-->
+    <h2>Ejemplos</h2>
+    <plz-divider></plz-divider>
+    <h3>Variante wrapper</h3>
+    <p>Usaremos el atributo variant para elegir "wrapper".</p>
+    <p>Esta variente organiza elementos en columnas para distribuirlos equitativamente a lo largo del espacio.</p>
+    <p>Dependiendo de los elementos y de las dimensiones del dispositivo, el componente distribuirá los elementos
+        contenidos en más filas.</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-section variant="wrapper">
+                <!-- 3 card section -->
+                <plz-card image="../assets/icon/card-section.png" hover="blue" width="250">
+                    <h3>Componente tarjeta</h3>
+                    <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
+                </plz-card>
+                <plz-card image="../assets/icon/divider-section.png" hover="blue" width="250">
+                    <h3>Componente Separador</h3>
+                    <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
+                </plz-card>
+                <plz-card image="../assets/icon/hero-section.png" hover="blue" width="250">
+                    <h3>Componente Heroe</h3>
+                    <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
+                </plz-card>
+            </plz-section>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-section variant="wrapper">
+            <!-- 3 card section -->
+            <plz-card image="../assets/icon/card-section.png" hover="blue" width="250">
+                <h3>Componente tarjeta</h3>
+                <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
+            </plz-card>
+            <plz-card image="../assets/icon/divider-section.png" hover="blue" width="250">
+                <h3>Componente Separador</h3>
+                <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
+            </plz-card>
+            <plz-card image="../assets/icon/hero-section.png" hover="blue" width="250">
+                <h3>Componente Heroe</h3>
+                <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
+            </plz-card>
+        </plz-section>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Variante columns</h3>
+    <p>Usaremos el atributo variant para elegir "columns".</p>
+    <p>Esta variente organiza elementos en columnas al estilo de un artículo.</p>
+    <p>Dependiendo de los elementos y de las dimensiones del dispositivo, el componente distribuirá los elementos
+        contenidos de columnas a filas.</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-section variant="columns">
+                <h3 slot="first">Proyecto Palaze</h3>
+                <p slot="first">
+                    Además, nuestros componentes son totalmente compatibles con los estándares web actuales,
+                    haciendolos así seguros y escalables para adaptarse a tus necesidades de negocio a medida
+                    que
+                    evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una
+                    solución sólida y
+                    confiable que te permitirá crear aplicaciones web atractivas y funcionales de forma rápida y
+                    eficaz.
+                    Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para
+                    adaptarlos a
+                    tus necesidades específicas o integrarlos a las herramientas que se usen en tus proyectos.
+                    Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
+                    navegador.
+                </p>
+                <h3 slot="second">Creador</h3>
+                <p slot="second">
+                    <em>En el trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente
+                        nueva
+                        que son los componentes web nativos. Aquí fue donde empecé a aprender sobre el
+                        desarrollo
+                        web y
+                        desarrollar mis conocimientos sobre los lenguajes CSS, JavaScript y HTML.</em>
+                </p>
+                <p slot="second">
+                    <em>Este proyecto empezó como una forma de aprender y empezar a encaminar mi carrera
+                        profesional,durante el proceso se han replanteado y rehecho muchas partes una vez
+                        desarrolladas, ya que una sola
+                        persona tenía que hacer de diseñador y desarrollador.</em>
+                </p>
+            </plz-section>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-section variant="columns">
+            <h3 slot="first">Proyecto Palaze</h3>
+            <p slot="first">
+                Además, nuestros componentes son totalmente compatibles con los estándares web actuales,
+                haciendolos así seguros y escalables para adaptarse a tus necesidades de negocio a medida
+                que
+                evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una
+                solución sólida y
+                confiable que te permitirá crear aplicaciones web atractivas y funcionales de forma rápida y
+                eficaz.
+                Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para
+                adaptarlos a
+                tus necesidades específicas o integrarlos a las herramientas que se usen en tus proyectos.
+                Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
+                navegador.
+            </p>
+            <h3 slot="second">Creador</h3>
+            <p slot="second">
+                <em>En el trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente
+                    nueva
+                    que son los componentes web nativos. Aquí fue donde empecé a aprender sobre el
+                    desarrollo
+                    web y
+                    desarrollar mis conocimientos sobre los lenguajes CSS, JavaScript y HTML.</em>
+            </p>
+            <p slot="second">
+                <em>Este proyecto empezó como una forma de aprender y empezar a encaminar mi carrera
+                    profesional,durante el proceso se han replanteado y rehecho muchas partes una vez
+                    desarrolladas, ya que una sola
+                    persona tenía que hacer de diseñador y desarrollador.</em>
+            </p>
+        </plz-section>'>
+        </plz-showcase-code>
+    </plz-showcase>
+    <!-- Sección de los atributos -->
+    <h2>Atributos</h2>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Posibilidades</th>
+                <th>Por defecto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>variant</td>
+                <td>Distintas variantes del componente section</td>
+                <td>'wrapper' - 'columns'</td>
+                <td>'wrapper'</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
