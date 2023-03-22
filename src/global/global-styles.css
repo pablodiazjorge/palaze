@@ -120,12 +120,6 @@ body {
     background-color: var(--plz-color-black-5);
 }
 
-.cards-section {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
 .cards-section h2 {
     text-align: center;
     font-size: var(--plz-font-size-section);
@@ -140,16 +134,7 @@ body {
     font-size: var(--plz-font-size-sub-section);
 }
 
-.landing-cards {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.about-us-section {
+ .about-us-section {
     box-sizing: border-box;
     margin-left: 10%;
     margin-right: 10%;
@@ -172,22 +157,6 @@ body {
 .about-us-section p {
     font-size: var(--plz-font-size-sub-section);
     text-align: justify;
-}
-
-.about-us-columns {
-    box-sizing: border-box;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "content content";
-}
-
-.about-us-content {
-    padding: 5%;
-}
-
-.about-us-content:first-child {
-    border-right: 1px solid var(--plz-color-black-3);
 }
 
 /*

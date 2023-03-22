@@ -28,7 +28,8 @@ export const config: Config = {
         { src: 'pages/docs-tooltip.html', dest: 'docs-tooltip.html' },
         { src: 'pages/docs-spinner.html', dest: 'docs-spinner.html' },
         { src: 'pages/docs-design-system.html', dest: 'docs-design-system.html' },
-        { src: 'pages/docs-figure.html', dest: 'docs-figure.html' }
+        { src: 'pages/docs-figure.html', dest: 'docs-figure.html' },
+        { src: 'pages/docs-section.html', dest: 'docs-section.html' }
       ],
     },
   ],

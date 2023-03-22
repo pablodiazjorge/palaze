@@ -17,13 +17,15 @@
 
 <body>
     <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
-        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px" height="40px"></a>
+        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
+                height="40px"></a>
         <a slot="left" href="index.html">Palaze web</a>
 
         <a slot="right-select" href="docs.html" target="_blank">Docs</a>
         <a slot="right-select" href="#contact">Contacto</a>
         <a slot="right-select" href="#about-us">Acerca de</a>
-        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop" target="_blank">Github</a>
+        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
+            target="_blank">Github</a>
     </plz-header>
     <main class="landing-main">
         <!-- Header -->
@@ -67,118 +69,119 @@
 
         <!-- Cards updates section -->
         <section class="cards-section">
-            <div>
-                <h2>Echa un vistazo a los últimos componentes añadidos</h2>
-                <div class="landing-cards">
-                    <!-- 3 card section -->
-                    <plz-card image="./assets/icon/card-section.png" url="docs-card.html" hover="blue" width="500">
-                        <h3>Componente tarjeta</h3>
-                        <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
-                    </plz-card>
-                    <plz-card image="./assets/icon/divider-section.png" url="docs-divider.html" hover="blue"
-                        width="500">
-                        <h3>Componente Separador</h3>
-                        <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
-                    </plz-card>
-                    <plz-card image="./assets/icon/hero-section.png" url="docs-hero.html" hover="blue" width="500">
-                        <h3>Componente Heroe</h3>
-                        <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
-                    </plz-card>
-                </div>
-            </div>
+            <h2>Echa un vistazo a los últimos componentes añadidos</h2>
+            <plz-section variant="wrapper">
+                <!-- 3 card section -->
+                <plz-card image="./assets/icon/card-section.png" url="docs-card.html" hover="blue" width="500">
+                    <h3>Componente tarjeta</h3>
+                    <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/divider-section.png" url="docs-divider.html" hover="blue" width="500">
+                    <h3>Componente Separador</h3>
+                    <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/hero-section.png" url="docs-hero.html" hover="blue" width="500">
+                    <h3>Componente Heroe</h3>
+                    <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
+                </plz-card>
+            </plz-section>
 
-            <div>
-                <h2>Consulta nuestro sistema de diseño</h2>
-                <div class="landing-cards">
-                    <!-- 3 card section -->
-                    <plz-card image="./assets/icon/design-color.png" url="docs.html" hover="blue" width="500">
-                        <h3>Diseño colores</h3>
-                        <p>Se han añadido y modificado colores a nuestro sistema de diseño.</p>
-                    </plz-card>
-                    <plz-card image="./assets/icon/design-corner.png" url="docs.html" hover="blue" width="500">
-                        <h3>Diseño formas</h3>
-                        <p>Añadidas nuvas formas para nuestros componentes en nuestro sistema de diseño.</p>
-                    </plz-card>
-                    <plz-card image="./assets/icon/design-typography.png" url="docs.html" hover="blue" width="500">
-                        <h3>Diseño tipografía</h3>
-                        <p>Cambios en la tipografía de nuestros componentes web.</p>
-                    </plz-card>
-                </div>
-
-            </div>
+            <h2>Consulta nuestro sistema de diseño</h2>
+            <plz-section variant="wrapper">
+                <!-- 3 card section -->
+                <plz-card image="./assets/icon/design-color.png" url="docs.html" hover="blue" width="500">
+                    <h3>Diseño colores</h3>
+                    <p>Se han añadido y modificado colores a nuestro sistema de diseño.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/design-corner.png" url="docs.html" hover="blue" width="500">
+                    <h3>Diseño formas</h3>
+                    <p>Añadidas nuvas formas para nuestros componentes en nuestro sistema de diseño.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/design-typography.png" url="docs.html" hover="blue" width="500">
+                    <h3>Diseño tipografía</h3>
+                    <p>Cambios en la tipografía de nuestros componentes web.</p>
+                </plz-card>
+            </plz-section>
         </section>
-        <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-orange.svg" custom-position="bottom left"></plz-divider>
+
+        <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-orange.svg"
+            custom-position="bottom left"></plz-divider>
         </div>
 
         <!-- About us section -->
         <section id="about-us" class="about-us-section">
             <h2>Acerca de</h2>
-            <div class="about-us-columns">
-                <div class="about-us-content">
-                    <h3>Proyecto Palaze</h3>
-                    <p>
-                        En Palaze, nos enorgullece ofrecer componentes web nativos de calidad, diseñados para
-                        mejorar tu experiencia de desarrollo web. Nuestros componentes son fáciles de usar e intuitivos,
-                        permitiendo así ahorrar más tiempo y esfuerzo en la creación de tus sitios web de forma
-                        profesional.
-                    </p>
-                    <br>
-                    <p>
-                        Además, nuestros componentes son totalmente compatibles con los estándares web actuales,
-                        haciendolos así seguros y escalables para adaptarse a tus necesidades de negocio a medida que
-                        evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una
-                        solución sólida y
-                        confiable que te permitirá crear aplicaciones web atractivas y funcionales de forma rápida y
-                        eficaz.
-                        Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para
-                        adaptarlos a
-                        tus necesidades específicas o integrarlos a las herramientas que se usen en tus proyectos.
-                        Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
-                        navegador.
-                    </p>
-                    <br>
-                    <p>En resumen, en Palaze nos esforzamos por brindar componentes web nativos originales y con una
-                        implementación sencilla. Puedes unirte a nuestra comunidad de desarrolladores y experimentar con
-                        el desarrollo tu mismo.
-                    </p>
-
-                </div>
-                <div class="about-us-content">
-                    <h3>Creador</h3>
-                    <p>
-                        <b>Pablo Díaz-Jorge García</b>, estudiante de último año de ingeniería informática.
-                    </p>
-                    <br>
-                    <p>
-                        "<em>Desde pequeño siempre me ha gustado la tecnología, me decantaba más por el software que por
-                            el hardware. Conforme fueron pasando los años me decidí por enfocar mi trayectoria
-                            profesional
-                            a la vertiente que más me apasionara, el desarrollo web y concretamente el desarrollo
-                            front-end.</em>
-                    </p>
-                    <p>
-                        <em>En el trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente nueva
-                            que son los componentes web nativos. Aquí fue donde empecé a aprender sobre el desarrollo
-                            web y
-                            desarrollar mis conocimientos sobre los lenguajes CSS, JavaScript y HTML.</em>
-                    </p>
-                    <p>
-                        <em>Este proyecto empezó como una forma de aprender y empezar a encaminar mi carrera
-                            profesional,durante el proceso se han replanteado y rehecho muchas partes una vez
-                            desarrolladas, ya que una sola
-                            persona tenía que hacer de diseñador y desarrollador.</em>
-                    </p>
-                    <p>
-                        <em>Después de mucho tiempo empleado y cada vez ir ganando fluidez conforme iba aprendiendo más
-                            sobre estos lenguajes y los pequeños trucos para hacer que todos los elementos web se
-                            comporten como se
-                            esperaría entre ellos, se puede decir que he alcanzado un buen estado del proyecto.</em>
-                    </p>
-                    <p><em>Mi idea con este proyecto es no dejarlo solo como un trabajo de final de grado, sino
-                            continuar con su desarrollo conforme pase el tiempo, aprendiendo al crear nuevos componentes
-                            y funcionalidades.</em>"</p>
-                </div>
-            </div>
+            <plz-section variant="columns">
+                <h3 slot="first">Proyecto Palaze</h3>
+                <p slot="first">
+                    En Palaze, nos enorgullece ofrecer componentes web nativos de calidad, diseñados para
+                    mejorar tu experiencia de desarrollo web. Nuestros componentes son fáciles de usar e
+                    intuitivos,
+                    permitiendo así ahorrar más tiempo y esfuerzo en la creación de tus sitios web de forma
+                    profesional.
+                </p>
+                <br slot="first">
+                <p slot="first">
+                    Además, nuestros componentes son totalmente compatibles con los estándares web actuales,
+                    haciendolos así seguros y escalables para adaptarse a tus necesidades de negocio a medida
+                    que
+                    evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una
+                    solución sólida y
+                    confiable que te permitirá crear aplicaciones web atractivas y funcionales de forma rápida y
+                    eficaz.
+                    Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para
+                    adaptarlos a
+                    tus necesidades específicas o integrarlos a las herramientas que se usen en tus proyectos.
+                    Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
+                    navegador.
+                </p>
+                <br slot="first">
+                <p slot="first">En resumen, en Palaze nos esforzamos por brindar componentes web nativos originales y
+                    con una
+                    implementación sencilla. Puedes unirte a nuestra comunidad de desarrolladores y experimentar
+                    con
+                    el desarrollo tu mismo.
+                </p>
+                <h3 slot="second">Creador</h3>
+                <p>
+                    <b>Pablo Díaz-Jorge García</b>, estudiante de último año de ingeniería informática.
+                </p>
+                <br slot="second">
+                <p slot="second">
+                    "<em>Desde pequeño siempre me ha gustado la tecnología, me decantaba más por el software que
+                        por
+                        el hardware. Conforme fueron pasando los años me decidí por enfocar mi trayectoria
+                        profesional
+                        a la vertiente que más me apasionara, el desarrollo web y concretamente el desarrollo
+                        front-end.</em>
+                </p>
+                <p slot="second">
+                    <em>En el trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente
+                        nueva
+                        que son los componentes web nativos. Aquí fue donde empecé a aprender sobre el
+                        desarrollo
+                        web y
+                        desarrollar mis conocimientos sobre los lenguajes CSS, JavaScript y HTML.</em>
+                </p>
+                <p slot="second">
+                    <em>Este proyecto empezó como una forma de aprender y empezar a encaminar mi carrera
+                        profesional,durante el proceso se han replanteado y rehecho muchas partes una vez
+                        desarrolladas, ya que una sola
+                        persona tenía que hacer de diseñador y desarrollador.</em>
+                </p>
+                <p slot="second">
+                    <em>Después de mucho tiempo empleado y cada vez ir ganando fluidez conforme iba aprendiendo
+                        más
+                        sobre estos lenguajes y los pequeños trucos para hacer que todos los elementos web se
+                        comporten como se
+                        esperaría entre ellos, se puede decir que he alcanzado un buen estado del proyecto.</em>
+                </p>
+                <p slot="second"><em>Mi idea con este proyecto es no dejarlo solo como un trabajo de final de grado,
+                        sino
+                        continuar con su desarrollo conforme pase el tiempo, aprendiendo al crear nuevos
+                        componentes
+                        y funcionalidades.</em>"</p>
+            </plz-section>
         </section>
         <!-- class="footer" -->
         <footer id="contact">

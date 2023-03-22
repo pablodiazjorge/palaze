@@ -61,6 +61,9 @@ export namespace Components {
     interface PlzMenuItem {
         "type": string;
     }
+    interface PlzSection {
+        "variant": string;
+    }
     interface PlzShowcase {
     }
     interface PlzShowcaseCode {
@@ -143,6 +146,12 @@ declare global {
         prototype: HTMLPlzMenuItemElement;
         new (): HTMLPlzMenuItemElement;
     };
+    interface HTMLPlzSectionElement extends Components.PlzSection, HTMLStencilElement {
+    }
+    var HTMLPlzSectionElement: {
+        prototype: HTMLPlzSectionElement;
+        new (): HTMLPlzSectionElement;
+    };
     interface HTMLPlzShowcaseElement extends Components.PlzShowcase, HTMLStencilElement {
     }
     var HTMLPlzShowcaseElement: {
@@ -183,6 +192,7 @@ declare global {
         "plz-hero": HTMLPlzHeroElement;
         "plz-menu": HTMLPlzMenuElement;
         "plz-menu-item": HTMLPlzMenuItemElement;
+        "plz-section": HTMLPlzSectionElement;
         "plz-showcase": HTMLPlzShowcaseElement;
         "plz-showcase-code": HTMLPlzShowcaseCodeElement;
         "plz-showcase-render": HTMLPlzShowcaseRenderElement;
@@ -246,6 +256,9 @@ declare namespace LocalJSX {
     interface PlzMenuItem {
         "type"?: string;
     }
+    interface PlzSection {
+        "variant"?: string;
+    }
     interface PlzShowcase {
     }
     interface PlzShowcaseCode {
@@ -282,6 +295,7 @@ declare namespace LocalJSX {
         "plz-hero": PlzHero;
         "plz-menu": PlzMenu;
         "plz-menu-item": PlzMenuItem;
+        "plz-section": PlzSection;
         "plz-showcase": PlzShowcase;
         "plz-showcase-code": PlzShowcaseCode;
         "plz-showcase-render": PlzShowcaseRender;
@@ -302,6 +316,7 @@ declare module "@stencil/core" {
             "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
             "plz-menu": LocalJSX.PlzMenu & JSXBase.HTMLAttributes<HTMLPlzMenuElement>;
             "plz-menu-item": LocalJSX.PlzMenuItem & JSXBase.HTMLAttributes<HTMLPlzMenuItemElement>;
+            "plz-section": LocalJSX.PlzSection & JSXBase.HTMLAttributes<HTMLPlzSectionElement>;
             "plz-showcase": LocalJSX.PlzShowcase & JSXBase.HTMLAttributes<HTMLPlzShowcaseElement>;
             "plz-showcase-code": LocalJSX.PlzShowcaseCode & JSXBase.HTMLAttributes<HTMLPlzShowcaseCodeElement>;
             "plz-showcase-render": LocalJSX.PlzShowcaseRender & JSXBase.HTMLAttributes<HTMLPlzShowcaseRenderElement>;
