@@ -1,0 +1,137 @@
+<section class="content-detail">
+    <h1>Footer</h1>
+    <p class="component-tag">&lt;plz-footer&gt; &#124; PlzFooter</p> <!-- Dar forma y poner letra de consola-->
+    <plz-divider space-bottom="10" space-top="4"></plz-divider>
+    <!-- Pequeña descripción -->
+    <p>Texto ejemplo</p>
+
+    <!-- Ejemplos de las posibilidades del componente-->
+    <h2>Ejemplos</h2>
+    <plz-divider></plz-divider>
+    <h3>Footer simple</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de heroe "two-columns".</p>
+    <p>Para identificar la columna en la que colocaremos el contenido utilizaremos el atributo slot="first-column" o
+        slot="second-column".</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <p>Contenido de la página principal</p>
+            <br><br>
+            <plz-footer variant="simple">
+                <h3>Footer info</h3>
+                <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                    código a través de nuestro Github.</p>
+            </plz-footer>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-footer variant="simple">
+            <h3>Footer info</h3>
+            <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                código a través de nuestro Github.</p>
+        </plz-footer>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Footer dos columnas</h3>
+    <p>Texto ejemplo</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-footer variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
+                <plz-button slot="first-column" variant="icon" icon="palaze"></plz-button>
+                <p slot="first-column">Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                    código a través de nuestro Github.</p>
+                <h3 slot="second-column" style="margin-bottom: 20px;">Segunda Columna</h3>
+                <p slot="second-column">Dependiendo del contenido de la web, se puede utilizar de distinta manera las
+                    columnas</p>
+            </plz-footer>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-footer variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
+            <plz-button slot="first-column" variant="icon" icon="palaze"></plz-button>
+            <p slot="first-column">Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                código a través de nuestro Github.</p>
+            <h3 slot="second-column" style="margin-bottom: 20px;">Segunda Columna</h3>
+            <p slot="second-column">Dependiendo del contenido de la web, se puede utilizar de distinta manera las
+                columnas</p>
+        </plz-footer>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+
+    <h3>Personaliza tu footer</h3>
+    <p>Usaremos el atributo variant para elegir el tipo de heroe "two-columns".</p>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <p>Contenido de la página principal</p>
+            <br><br>
+            <plz-footer variant="simple">
+                <plz-section variant="columns">
+                    <h3 slot="first">Contacto</h3>
+                    <p slot="first">
+                        Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
+                        tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
+                        Agradecemos vuestra comprensión.
+                    </p>
+                    <plz-button slot="first" variant="icon" icon="github"></plz-button>
+                    <plz-button slot="first" variant="icon" icon="linkedin"></plz-button>
+                    <plz-button slot="first" variant="icon" icon="mail"></plz-button>
+                    <h3 slot="second">Compañía</h3>
+                    <p slot="second">Palaze es una gran comunidad en la que nos centramos en la practicidad y el
+                        minimalismo, buscando aportar el máximo valor posible a nuestros usuarios y desarrolladores.
+                    </p>
+                </plz-section>
+            </plz-footer>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-section variant="columns">
+            <h3 slot="first">Contacto</h3>
+            <p slot="first">
+                Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
+                tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
+                Agradecemos vuestra comprensión.
+            </p>
+            <plz-button slot="first" variant="icon" icon="github"></plz-button>
+            <plz-button slot="first" variant="icon" icon="linkedin"></plz-button>
+            <plz-button slot="first" variant="icon" icon="mail"></plz-button>
+            <h3 slot="second">Creador</h3>
+            <p slot="second">
+                <em>En el
+                    trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente
+                    nueva que son los componentes web nativos. Aquí fue donde empecé a aprender
+                    sobre el desarrollo web y desarrollar mis conocimientos sobre los lenguajes CSS,
+                    JavaScript y HTML.</em>
+            </p>
+        </plz-section>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <!-- Sección de los atributos -->
+    <h2>Atributos</h2>
+    <table class="table-atr">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Posibilidades</th>
+                <th>Por defecto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>variant</td>
+                <td>Distintas variantes del componente heroe</td>
+                <td>'default' - 'simple' - 'image' - 'two-column'</td>
+                <td>'default'</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Puedes determinar la altura del componente.</td>
+                <td>px</td>
+                <td>'600px'</td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td>Dirección url de la imagen a colocar en el componente heroe con la variante "default", "image" o
+                    "two-column"</td>
+                <td>'./mi-imagen-ejemplo.svg'</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

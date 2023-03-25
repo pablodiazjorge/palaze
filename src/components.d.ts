@@ -44,6 +44,11 @@ export namespace Components {
         "src": string;
         "width": number;
     }
+    interface PlzFooter {
+        "height": string;
+        "image": string;
+        "variant": string;
+    }
     interface PlzHeader {
         "color": string;
         "colorHover": string;
@@ -122,6 +127,12 @@ declare global {
         prototype: HTMLPlzFigureElement;
         new (): HTMLPlzFigureElement;
     };
+    interface HTMLPlzFooterElement extends Components.PlzFooter, HTMLStencilElement {
+    }
+    var HTMLPlzFooterElement: {
+        prototype: HTMLPlzFooterElement;
+        new (): HTMLPlzFooterElement;
+    };
     interface HTMLPlzHeaderElement extends Components.PlzHeader, HTMLStencilElement {
     }
     var HTMLPlzHeaderElement: {
@@ -188,6 +199,7 @@ declare global {
         "plz-colors": HTMLPlzColorsElement;
         "plz-divider": HTMLPlzDividerElement;
         "plz-figure": HTMLPlzFigureElement;
+        "plz-footer": HTMLPlzFooterElement;
         "plz-header": HTMLPlzHeaderElement;
         "plz-hero": HTMLPlzHeroElement;
         "plz-menu": HTMLPlzMenuElement;
@@ -238,6 +250,11 @@ declare namespace LocalJSX {
         "height"?: number;
         "src"?: string;
         "width"?: number;
+    }
+    interface PlzFooter {
+        "height"?: string;
+        "image"?: string;
+        "variant"?: string;
     }
     interface PlzHeader {
         "color"?: string;
@@ -291,6 +308,7 @@ declare namespace LocalJSX {
         "plz-colors": PlzColors;
         "plz-divider": PlzDivider;
         "plz-figure": PlzFigure;
+        "plz-footer": PlzFooter;
         "plz-header": PlzHeader;
         "plz-hero": PlzHero;
         "plz-menu": PlzMenu;
@@ -312,6 +330,7 @@ declare module "@stencil/core" {
             "plz-colors": LocalJSX.PlzColors & JSXBase.HTMLAttributes<HTMLPlzColorsElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
             "plz-figure": LocalJSX.PlzFigure & JSXBase.HTMLAttributes<HTMLPlzFigureElement>;
+            "plz-footer": LocalJSX.PlzFooter & JSXBase.HTMLAttributes<HTMLPlzFooterElement>;
             "plz-header": LocalJSX.PlzHeader & JSXBase.HTMLAttributes<HTMLPlzHeaderElement>;
             "plz-hero": LocalJSX.PlzHero & JSXBase.HTMLAttributes<HTMLPlzHeroElement>;
             "plz-menu": LocalJSX.PlzMenu & JSXBase.HTMLAttributes<HTMLPlzMenuElement>;
