@@ -97,12 +97,9 @@
 .a-default {
   box-sizing: border-box;
   display: inline-flex;
-  align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   position: relative;
-  justify-content: start;
   background-size: cover;
-  vertical-align: baseline;
   min-width: 200px;
   border-radius: var(--plz-border-radius-low-rounded);
   color: inherit;
@@ -112,8 +109,6 @@
 .image-container-default {
   display: flex;
   position: relative;
-  align-items: center;
-  justify-content: center;
   min-width: 200px;
   height: 200px;
   border-radius: var(--plz-border-radius-low-rounded);

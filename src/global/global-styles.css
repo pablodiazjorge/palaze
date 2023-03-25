@@ -31,7 +31,7 @@
     /* Radio borde */
     --plz-border-radius-circle: 50%;
     --plz-border-radius-rounded: 9999px;
-    --plz-border-radius-low-rounded: 25px;
+    --plz-border-radius-low-rounded: 20px;
     --plz-border-radius-default: 0.25rem;
     --plz-border-radius-square: 0px;
 
@@ -203,26 +203,6 @@ body {
     padding-left: 90px;
     padding-right: 90px;
     font-size: var(--plz-font-size-sub-section);
-}
-
-.docs-button {
-    margin-top: var(--plz-font-size-sub-section);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90px;
-    height: 50px;
-    color: var(--plz-color-white);
-    background: var(--plz-color-black-2);
-    border: none;
-    border-radius: var(--plz-font-size-sub-section);
-    font-size: var(--plz-font-size-sub-section);
-    cursor: pointer;
-}
-
-
-.docs-button:hover {
-    background-color: var(--plz-color-black-3);
 }
 
 

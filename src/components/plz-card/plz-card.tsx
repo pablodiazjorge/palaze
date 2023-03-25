@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'plz-card',
@@ -15,11 +15,9 @@ export class PlzCard {
   render() {
     return this.variant == 'default' ? (
       <a class={`a-${this.variant + ' ' + 'glow-' + this.hover}`} href={this.url}>
-        <div>
-          <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})`,'width': `${this.width}px` }}></div>
-          <div class={`text-container-${this.variant}`} style= {{'width': `${this.width}px`}}>
-            <slot></slot>
-          </div>
+        <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})`, 'width': `${this.width}px` }}></div>
+        <div class={`text-container-${this.variant}`} style={{ width: `${this.width}px` }}>
+          <slot></slot>
         </div>
       </a>
     ) : this.variant == 'simple' ? (
@@ -27,26 +25,26 @@ export class PlzCard {
         <slot></slot>
       </div>
     ) : this.variant == 'header' ? (
-      <div>
+      <Host>
         <div class={`card-${this.variant} header-top`}>
           <slot name="header-content"></slot>
         </div>
         <div class={`card-${this.variant} header-bottom`}>
           <slot name="content"></slot>
         </div>
-      </div>
+      </Host>
     ) : this.variant == 'footer' ? (
-      <div>
+      <Host>
         <div class={`card-${this.variant} footer-top`}>
           <slot name="content"></slot>
         </div>
         <div class={`card-${this.variant} footer-bottom`}>
           <slot name="footer-content"></slot>
         </div>
-      </div>
+      </Host>
     ) : this.variant == 'image' ? (
-      <div>
-        <div class={`container-${this.variant}`} style={{ 'background-image': `url(${this.image})` }}><slot></slot></div>
+      <div class={`container-${this.variant}`} style={{ 'background-image': `url(${this.image})` }}>
+        <slot></slot>
       </div>
     ) : null;
   }
