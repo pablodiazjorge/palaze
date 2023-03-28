@@ -205,25 +205,6 @@ body {
     font-size: var(--plz-font-size-sub-section);
 }
 
-
-/*
-    ###      RESIZE AND FIXING      ###
-*/
-
-/*
-    ###      FOOTER      ###
-*/
-
-.footer-content h2 {
-    font-size: var(--plz-font-size-mid-section);
-    text-align: justify;
-}
-
-.footer-content p {
-    font-size: var(--plz-font-size-sub-section);
-    text-align: justify;
-}
-
 /*-------------------------------------------------------------------------------------------------------------*/
 
 /*

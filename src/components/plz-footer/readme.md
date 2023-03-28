@@ -9,9 +9,9 @@
 
 | Property  | Attribute | Description | Type     | Default     |
 | --------- | --------- | ----------- | -------- | ----------- |
-| `height`  | `height`  |             | `string` | `undefined` |
+| `height`  | `height`  |             | `string` | `'auto'`    |
 | `image`   | `image`   |             | `string` | `undefined` |
-| `variant` | `variant` |             | `string` | `''`        |
+| `variant` | `variant` |             | `string` | `'simple'`  |
 
 
 ----------------------------------------------

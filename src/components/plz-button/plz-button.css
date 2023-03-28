@@ -90,6 +90,11 @@
   --plz-color-white: white;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :host([variant=icon]) {
   display: inline-block;
   height: 50px;

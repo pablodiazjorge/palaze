@@ -31,13 +31,31 @@
             <plz-button variant="progress" active="true" text="Progress" color="purple"
                 corners="low-rounded"></plz-button>
             <plz-button variant="icon" icon="github" size="small"></plz-button>
+            <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-button>Default</plz-button>
             <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Shadow
                 Pop</plz-button>
             <plz-button variant="progress" active="true" text="Progress" color="red"
                 corners="low-rounded"></plz-button>
-            <plz-button variant="icon" icon="github" size="small"></plz-button>'>
+            <plz-button variant="icon" icon="github" size="small"></plz-button>
+            <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Link en botón</h3>
+    <p>Usaremos el atributo link para determinar la url a la que se accederá al hacer click en el botón. En el caso de
+        no determinar una url mediante el atributo, se darña por entendido que se usa el botón con otro tipo de acción.
+    </p>
+    <p>Para asegurarnos que el link se abre como queremos, haremos uso del atributo target, en este podremos elegir
+        entre "_blank", "_self", "_parent", "_top" y "framename". En el caso de no hacer uso de este atributo, se
+        utilizará por defecto "_self" (se abrirá la página en el mismo marco en el que se ha hecho el click).</p>
+    <p>Estos dos atributos se pueden usar con las distintas variantes de botón.</p>
+    <plz-showcase>
+        <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+            <plz-button color="blue" corners="low-rounded" link="docs.html" target="_self">Link</plz-button>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-button color="blue" corners="low-rounded" link="docs.html">Link</plz-button>'>
         </plz-showcase-code>
     </plz-showcase>
 
@@ -246,6 +264,18 @@
                 <td>Distintas variantes del componente botón</td>
                 <td>'default' - 'icon' - 'progress' - 'pop-shadow'</td>
                 <td>'default'</td>
+            </tr>
+            <tr>
+                <td>link</td>
+                <td>Url a la que se accedera a partir del botón.</td>
+                <td>'docs-ejemplo.html'</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>target</td>
+                <td>Distintas formas de mostart el link del componente botón</td>
+                <td>'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
+                <td>'_self'</td>
             </tr>
             <tr>
                 <td>color</td>

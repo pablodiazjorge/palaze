@@ -13,8 +13,10 @@
 | `color`       | `color`        |             | `string`  | `'default'` |
 | `corners`     | `corners`      |             | `string`  | `'default'` |
 | `icon`        | `icon`         |             | `string`  | `''`        |
+| `link`        | `link`         |             | `string`  | `''`        |
 | `shadowColor` | `shadow-color` |             | `string`  | `''`        |
 | `size`        | `size`         |             | `string`  | `'default'` |
+| `target`      | `target`       |             | `string`  | `'_self'`   |
 | `text`        | `text`         |             | `string`  | `''`        |
 | `variant`     | `variant`      |             | `string`  | `'default'` |
 
