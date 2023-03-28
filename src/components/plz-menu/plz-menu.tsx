@@ -9,7 +9,7 @@ export class PlzMenu {
 
   render() {
     return (
-      <ul>
+      <ul class="simple">
         <slot></slot>
       </ul>
     );

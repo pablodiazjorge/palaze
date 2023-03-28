@@ -66,7 +66,11 @@ export namespace Components {
     interface PlzMenu {
     }
     interface PlzMenuItem {
-        "type": string;
+        "colorHover": string;
+        "colorText": string;
+        "link": string;
+        "target": string;
+        "variant": string;
     }
     interface PlzSection {
         "variant": string;
@@ -275,7 +279,11 @@ declare namespace LocalJSX {
     interface PlzMenu {
     }
     interface PlzMenuItem {
-        "type"?: string;
+        "colorHover"?: string;
+        "colorText"?: string;
+        "link"?: string;
+        "target"?: string;
+        "variant"?: string;
     }
     interface PlzSection {
         "variant"?: string;

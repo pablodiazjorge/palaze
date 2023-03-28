@@ -1,13 +1,14 @@
 :host {
   display: block;
-  --plz-color-black-5: #d4d4d8;
+  --plz-color-black-4: #d4d4d8;
 }
 
-ul {
+.simple {
   box-sizing: border-box;
+  width: 100%;
   list-style: none;
   list-style-type: none;
-  border: 1px solid var(--plz-color-black-5);
+  border: 1px solid var(--plz-color-black-4);;
   margin: 0;
   padding: 0;
   padding-top: 5px;

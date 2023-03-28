@@ -6,6 +6,7 @@
     <p>El componente menu sirve para agrupar distintos elementos con una estructura concreta.</p>
     <p>Dentro del mundo del desarrollo web proporciona una lista de opciones para navegar por secciones de una misma web.</p>
     <!-- Muestra del componente -->
+    <h3>Simple</h3>
     <plz-showcase>
         <plz-showcase-render display="block">
             <plz-menu style="font-size: 20px; font-weight: 100; width: 150px;">
@@ -16,6 +17,55 @@
                 <plz-menu-item>Girar</plz-menu-item>
                 <plz-menu-item>Rodar</plz-menu-item>
                 <plz-menu-item>Saltar</plz-menu-item>
+            </plz-menu>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-menu>
+            <plz-menu-item>Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item>Boton</plz-menu-item>
+            <plz-menu-item>Tarjeta</plz-menu-item>
+            <plz-menu-item>Separador</plz-menu-item>
+            <plz-menu-item>Heroe</plz-menu-item>
+            <plz-menu-item>Menu</plz-menu-item>
+        </plz-menu>'>
+        </plz-showcase-code>
+    </plz-showcase>
+    <h3>Custom sin link y con link</h3>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-menu style="font-size: 20px; width: 150px;">
+                <plz-menu-item variant="custom">Acciones</plz-menu-item>
+                <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                <plz-menu-item variant="custom" color-hover="#b88900" color-text="black">Subir</plz-menu-item>
+                <plz-menu-item variant="custom" color-hover="#b88900">Bajar</plz-menu-item>
+                <plz-menu-item variant="custom">Girar</plz-menu-item>
+                <plz-menu-item variant="custom">Rodar</plz-menu-item>
+                <plz-menu-item variant="custom">Saltar</plz-menu-item>
+            </plz-menu>
+        </plz-showcase-render>
+        <plz-showcase-code text-code='<plz-menu>
+            <plz-menu-item>Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item>Boton</plz-menu-item>
+            <plz-menu-item>Tarjeta</plz-menu-item>
+            <plz-menu-item>Separador</plz-menu-item>
+            <plz-menu-item>Heroe</plz-menu-item>
+            <plz-menu-item>Menu</plz-menu-item>
+        </plz-menu>'>
+        </plz-showcase-code>
+    </plz-showcase>
+
+    <h3>Custom</h3>
+    <plz-showcase>
+        <plz-showcase-render display="block">
+            <plz-menu style="font-size: 20px; width: 150px;">
+                <plz-menu-item variant="custom">Acciones</plz-menu-item>
+                <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                <plz-menu-item variant="custom">Subir</plz-menu-item>
+                <plz-menu-item variant="custom">Bajar</plz-menu-item>
+                <plz-menu-item variant="custom">Girar</plz-menu-item>
+                <plz-menu-item variant="custom">Rodar</plz-menu-item>
+                <plz-menu-item variant="custom">Saltar</plz-menu-item>
             </plz-menu>
         </plz-showcase-render>
         <plz-showcase-code text-code='<plz-menu>
