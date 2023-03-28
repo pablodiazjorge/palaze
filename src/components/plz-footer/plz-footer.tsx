@@ -6,29 +6,43 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzFooter {
-  @Prop() variant: string = '';
+  @Prop() variant: string = 'simple';
   @Prop() image: string;
-  @Prop() height: string;
+  @Prop() height: string = 'auto';
 
   render() {
     return this.variant == 'simple' ? (
       <Host>
-        <div class="simple">
-          <slot></slot>
-        </div>
+        <footer>
+          <div class="simple">
+            <slot></slot>
+          </div>
+        </footer>
       </Host>
-    ) :this.variant == 'two-column' ? (
+    ) : this.variant == 'block' ? (
       <Host>
-        <div class="hero-columns" style={{ 'background-image': `url(${this.image})`, 'height': `${this.height}px` }}>
-          <div class="hero-columns-container">
-            <div class="hero-columns-content">
-              <slot name="first-column"></slot>
-            </div>
-            <div class="hero-columns-content">
-              <slot name="second-column"></slot>
+        <footer>
+          <div class="block" style={{ 'background-image': `url(${this.image})`, 'height': `${this.height}px` }}>
+            <div class="block-content">
+              <slot></slot>
             </div>
           </div>
-        </div>
+        </footer>
+      </Host>
+    ) : this.variant == 'two-column' ? (
+      <Host>
+        <footer>
+          <div class="hero-columns" style={{ 'background-image': `url(${this.image})`, 'height': `${this.height}px` }}>
+            <div class="hero-columns-container">
+              <div class="hero-columns-content">
+                <slot name="first-column"></slot>
+              </div>
+              <div class="hero-columns-content">
+                <slot name="second-column"></slot>
+              </div>
+            </div>
+          </div>
+        </footer>
       </Host>
     ) : null;
   }

@@ -47,7 +47,8 @@
             <p>Puedes empezar ahora a usar nuestros componentes Palaze. Haz click en el botón a continuación para
                 acceder a nuestra
                 documentación en la que se detalla como implementarlos en tu sitio web.</p>
-            <plz-button color="black" corners="low-rounded" onclick="window.open('docs.html', '_blank')">Docs</plz-button>
+            <plz-button color="black" corners="low-rounded"
+                onclick="window.open('docs.html', '_blank')">Docs</plz-button>
         </section>
         <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
         </div>
@@ -169,24 +170,18 @@
             </plz-section>
         </section>
         <!-- class="footer" -->
-        <footer id="contact">
-            <plz-hero variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
-                <plz-button slot="first-column" variant="icon" icon="palaze" onclick="location.href='#'"></plz-button>
-                <div slot="first-column" class="footer-content">
-                    <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
-                        código a través de nuestro Github.</p>
-                </div>
-                <div slot="second-column" class="footer-content">
-                    <h2>Social</h2>
-                    <plz-button variant="icon" icon="github"
-                        onclick="window.open('https://github.com/pablodiazjorge/palaze-web/tree/develop')">Icon</plz-button>
-                    <plz-button variant="icon" icon="linkedin"
-                        onclick="window.open('https://www.linkedin.com/in/pablodiazjorge')">Icon</plz-button>
-                    <plz-button variant="icon" icon="mail"
-                        onclick="window.open('mailto:pablodiazjorge@gmail.com')">Icon</plz-button>
-                </div>
-            </plz-hero>
-        </footer>
+        <plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg" id="contact">
+            <plz-button variant="icon" icon="palaze" onclick="location.href='#'"></plz-button>
+            <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                código a través de nuestro Github.</p>
+            <h2>Social</h2>
+            <plz-button variant="icon" icon="github"
+                onclick="window.open('https://github.com/pablodiazjorge/palaze-web/tree/develop')"></plz-button>
+            <plz-button variant="icon" icon="linkedin"
+                onclick="window.open('https://www.linkedin.com/in/pablodiazjorge')"></plz-button>
+            <plz-button variant="icon" icon="mail"
+                onclick="window.open('mailto:pablodiazjorge@gmail.com')"></plz-button>
+        </plz-footer>
     </main>
 </body>
 

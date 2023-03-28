@@ -48,3 +48,25 @@
   background-color: var(--plz-color-white);
   border-radius: 50px;
 }
+
+/* ## BLOCK VARIANT ## */
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.block-content {
+  box-sizing: border-box;
+  margin: 200px;
+  min-width: 250px;
+  padding: 40px;
+  background-color: var(--plz-color-white);
+  border-radius: 50px;
+  text-align: center;
+}
