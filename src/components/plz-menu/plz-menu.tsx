@@ -6,7 +6,6 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class PlzMenu {
-
   render() {
     return (
       <ul class="simple">
@@ -14,5 +13,4 @@ export class PlzMenu {
       </ul>
     );
   }
-
 }

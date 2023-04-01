@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop, State } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'plz-menu-item',
@@ -11,23 +11,18 @@ export class PlzMenuItem {
   @Prop() target: string = '_self';
   @Prop() colorHover: string = '';
   @Prop() colorText: string = 'white';
+  @Prop() imageUrl: string = '';
 
-  @State() private isActive: boolean = false;
-  private menuItemRef: HTMLElement;
+  @Prop() active: boolean = false;
 
-
-  private handleClick() {
-    const prevActive = document.querySelector('.item.active');
-    if (prevActive) {
-      prevActive.classList.remove('active');
-    }
-    this.menuItemRef.classList.add('active');
+  handleClick() {
+    this.active = !this.active;
   }
 
   render() {
     return this.variant == 'simple' ? (
       <Host>
-        <a href={this.link} target={this.target} class="link simple">
+        <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.handleClick()}>
           <li class="item">
             <slot></slot>
           </li>
@@ -35,7 +30,13 @@ export class PlzMenuItem {
       </Host>
     ) : this.variant == 'custom' && this.colorHover != '' && this.link != '' ? (
       <Host>
-        <a href={this.link} target={this.target} class="link custom" style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
+        <a
+          href={this.link}
+          target={this.target}
+          class={`link custom ${this.active ? 'active' : ''}`}
+          onClick={() => this.handleClick()}
+          style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+        >
           <li class="item">
             <slot></slot>
           </li>
@@ -43,50 +44,55 @@ export class PlzMenuItem {
       </Host>
     ) : this.variant == 'custom' && this.colorHover != '' ? (
       <Host>
-        <li class="item custom" style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
+        <li
+          class={`item custom ${this.active ? 'active' : ''}`}
+          onClick={() => this.handleClick()}
+          style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+        >
           <slot></slot>
         </li>
       </Host>
     ) : this.variant == 'custom' ? (
       <Host>
-        <li class={{ item: true, active: this.isActive }} ref={el => (this.menuItemRef = el)} onClick={() => this.handleClick()}>
+        <li class={{ item: true, active: this.active }} onClick={() => this.handleClick()}>
           <slot></slot>
         </li>
       </Host>
-    ) : this.variant == 'home' ? (
+    ) : this.variant == 'image' && this.colorHover && this.link != '' ? (
       <Host>
-        <li class={`item-${this.variant} grid-container`}>
+        <a
+          href={this.link}
+          target={this.target}
+          class="link custom"
+          style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+          onClick={() => this.handleClick()}
+        >
+          <li class={`item-image grid-container ${this.active ? 'active' : ''}`} onClick={() => this.handleClick()}>
+            <div class="grid-item">
+              <img src={this.imageUrl} />
+            </div>
+            <slot></slot>
+          </li>
+        </a>
+      </Host>
+    ) : this.variant == 'image' && this.colorHover ? (
+      <Host>
+        <li
+          class={`item-image grid-container ${this.active ? 'active' : ''}`}
+          onClick={() => this.handleClick()}
+          style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+        >
           <div class="grid-item">
-            <img src="./assets/icon/Icon-home-p.svg" alt="github" />
+            <img src={this.imageUrl} />
           </div>
           <slot></slot>
         </li>
       </Host>
-    ) : this.variant == 'message' ? (
+    ) : this.variant == 'image' ? (
       <Host>
-        <li class={`item-${this.variant} grid-container`}>
+        <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''}`} onClick={() => this.handleClick()}>
           <div class="grid-item">
-            <img src="./assets/icon/Icon-message-p.svg" alt="github" />
-          </div>
-
-          <slot></slot>
-        </li>
-      </Host>
-    ) : this.variant == 'settings' ? (
-      <Host>
-        <li class={`item-${this.variant} grid-container`}>
-          <div class="grid-item">
-            <img src="./assets/icon/Icon-settings-p.svg" alt="github" />
-          </div>
-
-          <slot></slot>
-        </li>
-      </Host>
-    ) : this.variant == 'user' ? (
-      <Host>
-        <li class={`item-${this.variant} grid-container`}>
-          <div class="grid-item">
-            <img src="./assets/icon/Icon-user-p.svg" alt="github" />
+            <img src={this.imageUrl} />
           </div>
           <slot></slot>
         </li>

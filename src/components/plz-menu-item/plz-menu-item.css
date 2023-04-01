@@ -135,7 +135,6 @@
 /* ## VARIANT CUSTOM ## */
 
 .active {
-  background-color: var(--plz-color-black-3);
   background-color: var(--bg-color-hover);
   color: var(--bg-color-text);
   font-weight: var(--plz-font-weight-bold);
@@ -143,29 +142,25 @@
   border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
-/* .simple-default {
-  box-sizing: border-box;
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
-  cursor: pointer;
-  list-style: none;
-}
-
-.item-home {
-  box-sizing: border-box;
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
-  cursor: pointer;
-  list-style: none;
-}
+/* ## VARIANT IMAGE ## */
 
 img {
   height: 23px;
   width: 23px;
+}
+
+.item-image {
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  cursor: pointer;
+  list-style: none;
+}
+
+.item-image-hover:hover {
+  background-color: var(--plz-color-black-4);
 }
 
 .grid-container {
@@ -184,4 +179,5 @@ img {
   align-self: center;
   justify-self: center;
   margin-right: 5px;
-} */
+  margin-left: 5px;
+}
