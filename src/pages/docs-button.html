@@ -1,82 +1,128 @@
-<section class="content-detail">
-    <h1>Botón</h1>
-    <p class="component-tag">&lt;plz-button&gt; &#124; PlzButton</p>
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>Los botones representan acciones accesibles desde un click por el usuario.</p>
-    <p>Se utilizan en distintos contextos y situaciones en una misma página. Pueden usarse para busquedas, para
-        formularios, para contactos, para redes sociales, para cargas, etc.</p>
-    <!-- Muestra del componente -->
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-button>Press me</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button>Press me</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- Ejemplos de las posibilidades del componente-->
-    <h2>Ejemplos</h2>
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <h3>Variantes de botón</h3>
-    <p>Usaremos el atributo variant para elegir el estilo de botón que se prefiera entre "default", "pop-shadow",
-        "progress" y "icon".
-    </p>
-    <p>Dentro de los usos del componente, los más usados son estas cuatro variantes.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-button>Default</plz-button>
-            <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Shadow
-                Pop</plz-button>
-            <plz-button variant="progress" active="true" text="Progress" color="purple"
-                corners="low-rounded"></plz-button>
-            <plz-button variant="icon" icon="github" size="small"></plz-button>
-            <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button>Default</plz-button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white" active="true">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Botón</h1>
+            <p class="component-tag">&lt;plz-button&gt; &#124; PlzButton</p>
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>Los botones representan acciones accesibles desde un click por el usuario.</p>
+            <p>Se utilizan en distintos contextos y situaciones en una misma página. Pueden usarse para busquedas, para
+                formularios, para contactos, para redes sociales, para cargas, etc.</p>
+            <!-- Muestra del componente -->
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-button>Press me</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button>Press me</plz-button>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
+            <!-- Ejemplos de las posibilidades del componente-->
+            <h2>Ejemplos</h2>
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <h3>Variantes de botón</h3>
+            <p>Usaremos el atributo variant para elegir el estilo de botón que se prefiera entre "default",
+                "pop-shadow",
+                "progress" y "icon".
+            </p>
+            <p>Dentro de los usos del componente, los más usados son estas cuatro variantes.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-button>Default</plz-button>
+                    <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Shadow
+                        Pop</plz-button>
+                    <plz-button variant="progress" active="true" text="Progress" color="purple"
+                        corners="low-rounded"></plz-button>
+                    <plz-button variant="icon" icon="github" size="small"></plz-button>
+                    <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button>Default</plz-button>
             <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Shadow
                 Pop</plz-button>
             <plz-button variant="progress" active="true" text="Progress" color="red"
                 corners="low-rounded"></plz-button>
             <plz-button variant="icon" icon="github" size="small"></plz-button>
             <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Link en botón</h3>
-    <p>Usaremos el atributo link para determinar la url a la que se accederá al hacer click en el botón. En el caso de
-        no determinar una url mediante el atributo, se darña por entendido que se usa el botón con otro tipo de acción.
-    </p>
-    <p>Para asegurarnos que el link se abre como queremos, haremos uso del atributo target, en este podremos elegir
-        entre "_blank", "_self", "_parent", "_top" y "framename". En el caso de no hacer uso de este atributo, se
-        utilizará por defecto "_self" (se abrirá la página en el mismo marco en el que se ha hecho el click).</p>
-    <p>Estos dos atributos se pueden usar con las distintas variantes de botón.</p>
-    <plz-showcase>
-        <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button color="blue" corners="low-rounded" link="docs.html" target="_self">Link</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button color="blue" corners="low-rounded" link="docs.html">Link</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
+            <h3>Link en botón</h3>
+            <p>Usaremos el atributo link para determinar la url a la que se accederá al hacer click en el botón. En el
+                caso
+                de
+                no determinar una url mediante el atributo, se darña por entendido que se usa el botón con otro tipo de
+                acción.
+            </p>
+            <p>Para asegurarnos que el link se abre como queremos, haremos uso del atributo target, en este podremos
+                elegir
+                entre "_blank", "_self", "_parent", "_top" y "framename". En el caso de no hacer uso de este atributo,
+                se
+                utilizará por defecto "_self" (se abrirá la página en el mismo marco en el que se ha hecho el click).
+            </p>
+            <p>Estos dos atributos se pueden usar con las distintas variantes de botón.</p>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button color="blue" corners="low-rounded" link="docs.html" target="_self">Link</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code
+                    text-code='<plz-button color="blue" corners="low-rounded" link="docs.html">Link</plz-button>'>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Colors -->
-    <h3>Colores de botón</h3>
-    <p>Usaremos el atributo color para elegir el color de botón que se prefiera entre "black", "purple", "blue",
-        "green", "red", "orange", "yellow" y si no eliges ningún color tendrás el de por defecto.
-    </p>
-    <p>Dependiendo del estilo de página en que se usen, es apropiado cambiar el color acorde a esta.</p>
-    <plz-showcase>
-        <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button corners="low-rounded">Basic</plz-button>
-            <plz-button color="black" corners="low-rounded">Negro</plz-button>
-            <plz-button color="purple" corners="low-rounded">Morado</plz-button>
-            <plz-button color="blue" corners="low-rounded">Azul</plz-button>
-            <plz-button color="green" corners="low-rounded">Verde</plz-button>
-            <plz-button color="red" corners="low-rounded">Rojo</plz-button>
-            <plz-button color="orange" corners="low-rounded">Naranja</plz-button>
-            <plz-button color="yellow" corners="low-rounded">Amarillo</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button corners="low-rounded">Basic</plz-button>
+            <!-- Colors -->
+            <h3>Colores de botón</h3>
+            <p>Usaremos el atributo color para elegir el color de botón que se prefiera entre "black", "purple", "blue",
+                "green", "red", "orange", "yellow" y si no eliges ningún color tendrás el de por defecto.
+            </p>
+            <p>Dependiendo del estilo de página en que se usen, es apropiado cambiar el color acorde a esta.</p>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button corners="low-rounded">Basic</plz-button>
+                    <plz-button color="black" corners="low-rounded">Negro</plz-button>
+                    <plz-button color="purple" corners="low-rounded">Morado</plz-button>
+                    <plz-button color="blue" corners="low-rounded">Azul</plz-button>
+                    <plz-button color="green" corners="low-rounded">Verde</plz-button>
+                    <plz-button color="red" corners="low-rounded">Rojo</plz-button>
+                    <plz-button color="orange" corners="low-rounded">Naranja</plz-button>
+                    <plz-button color="yellow" corners="low-rounded">Amarillo</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button corners="low-rounded">Basic</plz-button>
             <plz-button color="black" corners="low-rounded">Negro</plz-button>
             <plz-button color="purple" corners="low-rounded">Morado</plz-button>
             <plz-button color="blue" corners="low-rounded">Azul</plz-button>
@@ -84,59 +130,75 @@
             <plz-button color="red" corners="low-rounded">Rojo</plz-button>
             <plz-button color="orange" corners="low-rounded">Naranja</plz-button>
             <plz-button color="yellow" corners="low-rounded">Amarillo</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Variant Progress -->
-    <h3>Variante Progress</h3>
-    <p>Usaremos el atributo variant para elegir "progress". A diferencia de un botón normal, deberemos de hacer uso del
-        atributo text para introducir información en el botón. También haremos uso del atributo active al que deberemos
-        pasarle "true" o "false" dependiendo de si queremos que el botón esté activo o no. En el caso de que no esté
-        activado, pasará a ser un botón normal hasta que el atributo active cambie. Este tipo de variente se suele usar
-        principalmente en formularios, ya que puedes indicar al usuario que su petición se está procesando y una vez
-        termine volverá a la normalidad (es dinámico).</p>
-    <p>A continuación ejemplos de los botones de carga en sus dos versiones (activado y no activado).</p>
-    <plz-showcase>
-        <plz-showcase-render display="block" padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button variant="progress" active="true" text="Progress" color="blue"
-                corners="low-rounded"></plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button variant="progress" active="true" text="Progress" color="blue"
+            <!-- Variant Progress -->
+            <h3>Variante Progress</h3>
+            <p>Usaremos el atributo variant para elegir "progress". A diferencia de un botón normal, deberemos de hacer
+                uso
+                del
+                atributo text para introducir información en el botón. También haremos uso del atributo active al que
+                deberemos
+                pasarle "true" o "false" dependiendo de si queremos que el botón esté activo o no. En el caso de que no
+                esté
+                activado, pasará a ser un botón normal hasta que el atributo active cambie. Este tipo de variente se
+                suele
+                usar
+                principalmente en formularios, ya que puedes indicar al usuario que su petición se está procesando y una
+                vez
+                termine volverá a la normalidad (es dinámico).</p>
+            <p>A continuación ejemplos de los botones de carga en sus dos versiones (activado y no activado).</p>
+            <plz-showcase>
+                <plz-showcase-render display="block" padding-top="20" padding-bottom="20" padding-left="20"
+                    padding-right="20">
+                    <plz-button variant="progress" active="true" text="Progress" color="blue"
+                        corners="low-rounded"></plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button variant="progress" active="true" text="Progress" color="blue"
         corners="low-rounded"></plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
-    <plz-showcase>
-        <plz-showcase-render display="block" padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button variant="progress" active="false" text="Progress" color="blue"
-                corners="low-rounded"></plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button variant="progress" active="false" text="Progress" color="blue"
+                </plz-showcase-code>
+            </plz-showcase>
+            <plz-showcase>
+                <plz-showcase-render display="block" padding-top="20" padding-bottom="20" padding-left="20"
+                    padding-right="20">
+                    <plz-button variant="progress" active="false" text="Progress" color="blue"
+                        corners="low-rounded"></plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button variant="progress" active="false" text="Progress" color="blue"
         corners="low-rounded"></plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
-    <!-- Pop Shadow Colors -->
-    <h3>Sobras de botón y variante PopShadow</h3>
-    <p>Usaremos el atributo variant para elegir "pop-shadow" y el atributo shadow-color para elegir entre "black",
-        "purple", "blue",
-        "green", "red", "orange" y "yellow". También puedes elegir colores como hemos visto anteriormente con el
-        atributo color.</p>
-    <p>Puedes buscar combinaciones entre los distintos atributos para dar forma, color, sombra y tamaño dependiendo de
-        lo que estés buscando para tu sitio web.</p>
-    <plz-showcase>
-        <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button variant="pop-shadow" corners="low-rounded">Basic</plz-button>
-            <plz-button variant="pop-shadow" color="black" shadow-color="black" corners="low-rounded">Negro</plz-button>
-            <plz-button variant="pop-shadow" color="purple" shadow-color="purple"
-                corners="low-rounded">Morado</plz-button>
-            <plz-button variant="pop-shadow" color="blue" shadow-color="blue" corners="low-rounded">Azul</plz-button>
-            <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Verde</plz-button>
-            <plz-button variant="pop-shadow" color="red" shadow-color="red" corners="low-rounded">Rojo</plz-button>
-            <plz-button variant="pop-shadow" color="orange" shadow-color="orange"
-                corners="low-rounded">Naranja</plz-button>
-            <plz-button variant="pop-shadow" color="yellow" shadow-color="yellow"
-                corners="low-rounded">Amarillo</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button variant="pop-shadow" corners="low-rounded">Basic</plz-button>
+                </plz-showcase-code>
+            </plz-showcase>
+            <!-- Pop Shadow Colors -->
+            <h3>Sobras de botón y variante PopShadow</h3>
+            <p>Usaremos el atributo variant para elegir "pop-shadow" y el atributo shadow-color para elegir entre
+                "black",
+                "purple", "blue",
+                "green", "red", "orange" y "yellow". También puedes elegir colores como hemos visto anteriormente con el
+                atributo color.</p>
+            <p>Puedes buscar combinaciones entre los distintos atributos para dar forma, color, sombra y tamaño
+                dependiendo
+                de
+                lo que estés buscando para tu sitio web.</p>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button variant="pop-shadow" corners="low-rounded">Basic</plz-button>
+                    <plz-button variant="pop-shadow" color="black" shadow-color="black"
+                        corners="low-rounded">Negro</plz-button>
+                    <plz-button variant="pop-shadow" color="purple" shadow-color="purple"
+                        corners="low-rounded">Morado</plz-button>
+                    <plz-button variant="pop-shadow" color="blue" shadow-color="blue"
+                        corners="low-rounded">Azul</plz-button>
+                    <plz-button variant="pop-shadow" color="green" shadow-color="green"
+                        corners="low-rounded">Verde</plz-button>
+                    <plz-button variant="pop-shadow" color="red" shadow-color="red"
+                        corners="low-rounded">Rojo</plz-button>
+                    <plz-button variant="pop-shadow" color="orange" shadow-color="orange"
+                        corners="low-rounded">Naranja</plz-button>
+                    <plz-button variant="pop-shadow" color="yellow" shadow-color="yellow"
+                        corners="low-rounded">Amarillo</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button variant="pop-shadow" corners="low-rounded">Basic</plz-button>
             <plz-button variant="pop-shadow" color="black" shadow-color="black" corners="low-rounded">Negro</plz-button>
             <plz-button variant="pop-shadow" color="purple" shadow-color="purple"
                 corners="low-rounded">Morado</plz-button>
@@ -147,32 +209,33 @@
                 corners="low-rounded">Naranja</plz-button>
             <plz-button variant="pop-shadow" color="yellow" shadow-color="yellow"
                 corners="low-rounded">Amarillo</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Icon variant -->
-    <h3>Variante icono</h3>
-    <p>Usaremos el atributo variant para elegir "icon" y el atributo icon para elegir entre "github", "linkedin" y
-        "mail". Este tipo de botón se
-        usa en gran variedad de ocasiones, pero
-        siempre va a destacar para compartir información de redes sociales.</p>
-    <p>A continuación un ejemplo de los distintos iconos con diferentes tamaños. Recalcar que si deseas un icono
-        distinto, siempre puedes acceder al fichero assets/icon e importar ahí una imagen con esta estructura
-        "Icon-imagen.svg". La imagen será detectada como podemos observar en la segunda tanda de ejemplo.</p>
-    <plz-showcase>
-        <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button variant="icon" icon="github" size="small"></plz-button>
-            <plz-button variant="icon" icon="github" size="default"></plz-button>
-            <plz-button variant="icon" icon="github" size="big"></plz-button>
-            <plz-button variant="icon" icon="linkedin" size="big"></plz-button>
-            <plz-button variant="icon" icon="linkedin" size="default"></plz-button>
-            <plz-button variant="icon" icon="linkedin" size="small"></plz-button>
-            <plz-button variant="icon" icon="palaze" size="big"></plz-button>
-            <plz-button variant="icon" icon="mail" size="small"></plz-button>
-            <plz-button variant="icon" icon="mail" size="default"></plz-button>
-            <plz-button variant="icon" icon="mail" size="big"></plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button variant="icon" icon="github" size="small"></plz-button>
+            <!-- Icon variant -->
+            <h3>Variante icono</h3>
+            <p>Usaremos el atributo variant para elegir "icon" y el atributo icon para elegir entre "github", "linkedin"
+                y
+                "mail". Este tipo de botón se
+                usa en gran variedad de ocasiones, pero
+                siempre va a destacar para compartir información de redes sociales.</p>
+            <p>A continuación un ejemplo de los distintos iconos con diferentes tamaños. Recalcar que si deseas un icono
+                distinto, siempre puedes acceder al fichero assets/icon e importar ahí una imagen con esta estructura
+                "Icon-imagen.svg". La imagen será detectada como podemos observar en la segunda tanda de ejemplo.</p>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button variant="icon" icon="github" size="small"></plz-button>
+                    <plz-button variant="icon" icon="github" size="default"></plz-button>
+                    <plz-button variant="icon" icon="github" size="big"></plz-button>
+                    <plz-button variant="icon" icon="linkedin" size="big"></plz-button>
+                    <plz-button variant="icon" icon="linkedin" size="default"></plz-button>
+                    <plz-button variant="icon" icon="linkedin" size="small"></plz-button>
+                    <plz-button variant="icon" icon="palaze" size="big"></plz-button>
+                    <plz-button variant="icon" icon="mail" size="small"></plz-button>
+                    <plz-button variant="icon" icon="mail" size="default"></plz-button>
+                    <plz-button variant="icon" icon="mail" size="big"></plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button variant="icon" icon="github" size="small"></plz-button>
             <plz-button variant="icon" icon="github" size="default"></plz-button>
             <plz-button variant="icon" icon="github" size="big"></plz-button>
             <plz-button variant="icon" icon="linkedin" size="big"></plz-button>
@@ -182,131 +245,140 @@
             <plz-button variant="icon" icon="mail" size="small"></plz-button>
             <plz-button variant="icon" icon="mail" size="default"></plz-button>
             <plz-button variant="icon" icon="mail" size="big"></plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
-    <plz-showcase>
-        <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-            <plz-button variant="icon" icon="home" size="small"></plz-button>
-            <plz-button variant="icon" icon="user" size="small"></plz-button>
-            <plz-button variant="icon" icon="message" size="small"></plz-button>
-            <plz-button variant="icon" icon="palaze" size="small"></plz-button>
-            <plz-button variant="icon" icon="settings" size="small"></plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button variant="icon" icon="home" size="small"></plz-button>
+                </plz-showcase-code>
+            </plz-showcase>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button variant="icon" icon="home" size="small"></plz-button>
+                    <plz-button variant="icon" icon="user" size="small"></plz-button>
+                    <plz-button variant="icon" icon="message" size="small"></plz-button>
+                    <plz-button variant="icon" icon="palaze" size="small"></plz-button>
+                    <plz-button variant="icon" icon="settings" size="small"></plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button variant="icon" icon="home" size="small"></plz-button>
             <plz-button variant="icon" icon="user" size="small"></plz-button>
             <plz-button variant="icon" icon="message" size="small"></plz-button>
             <plz-button variant="icon" icon="palaze" size="small"></plz-button>
             <plz-button variant="icon" icon="settings" size="small"></plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
-    <!-- Radio borde -->
-    <h3>Forma del botón</h3>
-    <p>Usaremos el atributo corner para elegir la forma del botón que se prefiera entre "default", "low-rounded",
-        "rounded", "square", y "circle".</p>
-    <p>Dependiendo del estilo de la página en el que se usen y los tokens de diseño, se utilizará una forma distinta.
-    </p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-button corners="square">Square</plz-button>
-            <plz-button>Default</plz-button>
-            <plz-button corners="low-rounded">Low Rounded</plz-button>
-            <plz-button corners="rounded">Rounded</plz-button>
-            <plz-button corners="circle">Circle</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button corners="square">Square</plz-button>
+                </plz-showcase-code>
+            </plz-showcase>
+            <!-- Radio borde -->
+            <h3>Forma del botón</h3>
+            <p>Usaremos el atributo corner para elegir la forma del botón que se prefiera entre "default",
+                "low-rounded",
+                "rounded", "square", y "circle".</p>
+            <p>Dependiendo del estilo de la página en el que se usen y los tokens de diseño, se utilizará una forma
+                distinta.
+            </p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-button corners="square">Square</plz-button>
+                    <plz-button>Default</plz-button>
+                    <plz-button corners="low-rounded">Low Rounded</plz-button>
+                    <plz-button corners="rounded">Rounded</plz-button>
+                    <plz-button corners="circle">Circle</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button corners="square">Square</plz-button>
             <plz-button>Default</plz-button>
             <plz-button corners="low-rounded">Low Rounded</plz-button>
             <plz-button corners="rounded">Rounded</plz-button>
             <plz-button corners="circle">Circle</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
-    <!-- Tamaño botón -->
-    <h3>Tamaño de botón</h3>
-    <p>Puedes usar el atributo size para elegir el tamaño de botón que se prefiera entre "small", "default" y "big".</p>
-    <p>Dentro de estos tamaños, lo normal es uno ni grande ni pequeño, pero siempre hay casos donde puedes necesitar
-        distintas opciones.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-button size="small">Small</plz-button>
-            <plz-button>Default</plz-button>
-            <plz-button size="big">Big</plz-button>
-            <br>
-            <plz-button variant="icon" icon="github" size="small">Icon</plz-button>
-            <plz-button variant="icon" icon="github" size="default">Icon</plz-button>
-            <plz-button variant="icon" icon="github" size="big">Icon</plz-button>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-button size="small">Small</plz-button>
+                </plz-showcase-code>
+            </plz-showcase>
+            <!-- Tamaño botón -->
+            <h3>Tamaño de botón</h3>
+            <p>Puedes usar el atributo size para elegir el tamaño de botón que se prefiera entre "small", "default" y
+                "big".
+            </p>
+            <p>Dentro de estos tamaños, lo normal es uno ni grande ni pequeño, pero siempre hay casos donde puedes
+                necesitar
+                distintas opciones.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-button size="small">Small</plz-button>
+                    <plz-button>Default</plz-button>
+                    <plz-button size="big">Big</plz-button>
+                    <br>
+                    <plz-button variant="icon" icon="github" size="small">Icon</plz-button>
+                    <plz-button variant="icon" icon="github" size="default">Icon</plz-button>
+                    <plz-button variant="icon" icon="github" size="big">Icon</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button size="small">Small</plz-button>
             <plz-button>Default</plz-button>
             <plz-button size="big">Big</plz-button>
             <plz-button variant="icon" icon="github" size="small">Icon</plz-button>
             <plz-button variant="icon" icon="github" size="default">Icon</plz-button>
             <plz-button variant="icon" icon="github" size="big">Icon</plz-button>'>
-        </plz-showcase-code>
-    </plz-showcase>
-    <!-- Tamaño botón -->
-    <h3>Recomendación</h3>
-    <p>Se puede hacer uso de todo lo que hemos visto anteriormente para hacer combinaciones.</p>
+                </plz-showcase-code>
+            </plz-showcase>
+            <!-- Tamaño botón -->
+            <h3>Recomendación</h3>
+            <p>Se puede hacer uso de todo lo que hemos visto anteriormente para hacer combinaciones.</p>
 
-    <!--Sección de los atributos -->
-    <h2>Atributos</h2>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>variant</td>
-                <td>Distintas variantes del componente botón</td>
-                <td>'default' - 'icon' - 'progress' - 'pop-shadow'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>link</td>
-                <td>Url a la que se accedera a partir del botón.</td>
-                <td>'docs-ejemplo.html'</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>target</td>
-                <td>Distintas formas de mostart el link del componente botón</td>
-                <td>'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
-                <td>'_self'</td>
-            </tr>
-            <tr>
-                <td>color</td>
-                <td>Distintos colores del componente botón</td>
-                <td>'default' - 'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>shadow-color</td>
-                <td>Distintos colores de sombra para el componente botón</td>
-                <td>'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>size</td>
-                <td>Distintos tamaños del componente botón</td>
-                <td>'default' - 'small' - 'big'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>corners</td>
-                <td>Distintas formas de las esquinas del componente botón</td>
-                <td>'default' - 'low-rounded' - 'rounded' - 'square' - 'circle'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>icon</td>
-                <td>Solo compatible con la variante "icon". Distintos iconos para la variante</td>
-                <td>'github' - 'linkedin' - 'mail' - 'palaze'</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <!--Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variant</td>
+                        <td>Distintas variantes del componente botón</td>
+                        <td>'default' - 'icon' - 'progress' - 'pop-shadow'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>link</td>
+                        <td>Url a la que se accedera a partir del botón.</td>
+                        <td>'docs-ejemplo.html'</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>target</td>
+                        <td>Distintas formas de mostart el link del componente botón</td>
+                        <td>'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
+                        <td>'_self'</td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>Distintos colores del componente botón</td>
+                        <td>'default' - 'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>shadow-color</td>
+                        <td>Distintos colores de sombra para el componente botón</td>
+                        <td>'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>size</td>
+                        <td>Distintos tamaños del componente botón</td>
+                        <td>'default' - 'small' - 'big'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>corners</td>
+                        <td>Distintas formas de las esquinas del componente botón</td>
+                        <td>'default' - 'low-rounded' - 'rounded' - 'square' - 'circle'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>Solo compatible con la variante "icon". Distintos iconos para la variante</td>
+                        <td>'github' - 'linkedin' - 'mail' - 'palaze'</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

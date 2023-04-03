@@ -1,348 +1,429 @@
-<section class="content-detail">
-    <!-- Introduction System Design -->
-    <h1>Sistema de diseño</h1>
-    <plz-divider space-top="-15" height="1.5" type="solid" color="#A4133C"></plz-divider>
-    <plz-divider height="1.5" type="solid" color="#FF4D6D"></plz-divider>
-    <plz-divider height="1.5" type="solid" color="#e67a8d"></plz-divider>
-    <plz-divider height="1.5" type="solid" color="#FFB3C1"></plz-divider>
-    <plz-divider space-bottom="15" height="1.5" type="solid" color="#FFF0F3"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>Dentro del desarroyo web los sistemas de diseño han supuesto un antes y un después. Se han hecho indispensables a
-        la hora de mantener la consistencia y eficiencia a lo largo del desarrollo de los proyectos. Debido a este
-        motivo se decidió crear un sistema de diseño que apoyara el proyecto Palaze.</p>
-    <h3>¿Qué es un sistema de diseño?</h3>
-    <img class="design-block-image-left" src="../assets/icon/design-section-1.png" alt="design-section">
-    <p>Un sistema de diseño es un conjunto de directrices y reglas que se utilizarán en el proceso de
-        creación
-        de los
-        componentes y de todos los elementos del proyecto al que acompañe. Estas reglas pueden ser
-        tipografía,
-        paletas
-        de colores, formas de componentes, el cómo interactúa el usuario final con los elementos del sitio
-        web,
-        etc.
-    </p>
-    <p>
-        Principalmente, los sistemas de diseño nacieron de la falta de consistencia en los proyectos web, ya que
-        lo que
-        sucedía era que en un mismo proyecto, se iban modificando estilos aplicados a los mismos componentes
-        debido a no
-        tener guías. Este hecho en proyectos de cierto tamaño se hacía aún más visible, por esta razón, se
-        decidió crear
-        sistemas de diseño para mantener la consistencia y coherencia dentro de un proyecto, pudiendo así los
-        desarrolladores disfrutar de un camino menos escarpado durante su estancia en estos.
-    </p>
+<!DOCTYPE html>
+<html lang="es">
 
-    <h3>¿Qué son los tokens de diseño?</h3>
-    <p>Los tokens de diseño son variables que representan las guías y directrices que se utilizan en los sistemas de
-        diseño. Un ejemplo de estas variables de diseño son los colores dentro de las paletas seleccionadas en el
-        sistema de diseño, otro sería el tipo de letra y los tamaños correspondientes dependiendo de dónde se use, ya
-        sea un título o subtítulo, etc.</p>
-    <p>En este caso las variables serán representadas por css properties.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
 
-    <h3>Ventajas de utilizar un sistema de diseño</h3>
-    <img class="design-block-image-right" src="../assets/icon/design-section-2.png" alt="design-section">
-    <p><b><u>Coherencia:</u></b> Gracias a compartir los mismos patrones durante todo el proyecto, se reduce la posibilidad de que en
-        mismos componentes en distintas secciones varien en estilo.</p>
-    <p><b><u>Reutilización:</u></b> Este apartado es clave, los sistemas de diseño se suelen utilizar en varios proyectos o una vez
-        acabado con uno, hacer unas pequeñas modificaciones y usarlo en otro. También se reutilizan los tokens de diseño
-        constantemente sobre un mismo proyecto para mantener la cohesión.</p>
-    <p><b><u>Flexibilidad:</u></b> Permite una amplia libertad al poderse usar en cualquier plataforma o tecnología. Al ser unos
-        patrones/reglas/directrices, se pueden aplicar sobre casi cualquier proyecto.</p>
-    <p><b><u>Eficiencia y calidad:</u></b> Se ahorra mucho tiempo debido a no tener que ir revisando cómo se han aplicado los estilos
-        en otras secciones. Simplemente tienes que mirar los tokens de diseño y aplicarlos. Otro punto fuerte de esto es
-        que si se hace una modificación en los tokens de diseño, se aplican en todos los elementos en que se usen, lo
-        que permite mejorar la calidad y la eficiencia de los productos reduciendo así el número de fallos.</p>
-    <p>Entre muchas otras ventajas.</p>
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white" active="true">Design System</plz-menu-item>
+            <plz-menu-item class="sub-option" variant="custom" color-hover="#495057" color-text="white">Colores</plz-menu-item>
+            <plz-menu-item class="sub-option" variant="custom" color-hover="#495057" color-text="white">Tipografía</plz-menu-item>
+            <plz-menu-item class="sub-option" variant="custom" color-hover="#495057" color-text="white">Formas</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <!-- Introduction System Design -->
+            <h1>Sistema de diseño</h1>
+            <plz-divider space-top="-15" height="1.5" type="solid" color="#A4133C"></plz-divider>
+            <plz-divider height="1.5" type="solid" color="#FF4D6D"></plz-divider>
+            <plz-divider height="1.5" type="solid" color="#e67a8d"></plz-divider>
+            <plz-divider height="1.5" type="solid" color="#FFB3C1"></plz-divider>
+            <plz-divider space-bottom="15" height="1.5" type="solid" color="#FFF0F3"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>Dentro del desarroyo web los sistemas de diseño han supuesto un antes y un después. Se han hecho
+                indispensables a
+                la hora de mantener la consistencia y eficiencia a lo largo del desarrollo de los proyectos. Debido a
+                este
+                motivo se decidió crear un sistema de diseño que apoyara el proyecto Palaze.</p>
+            <h3>¿Qué es un sistema de diseño?</h3>
+            <img class="design-block-image-left" src="../assets/icon/design-section-1.png" alt="design-section">
+            <p>Un sistema de diseño es un conjunto de directrices y reglas que se utilizarán en el proceso de
+                creación
+                de los
+                componentes y de todos los elementos del proyecto al que acompañe. Estas reglas pueden ser
+                tipografía,
+                paletas
+                de colores, formas de componentes, el cómo interactúa el usuario final con los elementos del sitio
+                web,
+                etc.
+            </p>
+            <p>
+                Principalmente, los sistemas de diseño nacieron de la falta de consistencia en los proyectos web, ya que
+                lo que
+                sucedía era que en un mismo proyecto, se iban modificando estilos aplicados a los mismos componentes
+                debido a no
+                tener guías. Este hecho en proyectos de cierto tamaño se hacía aún más visible, por esta razón, se
+                decidió crear
+                sistemas de diseño para mantener la consistencia y coherencia dentro de un proyecto, pudiendo así los
+                desarrolladores disfrutar de un camino menos escarpado durante su estancia en estos.
+            </p>
 
-    <!-- Palaze System Design -->
-    <h2>Sistema de diseño Palaze</h2>
-    <plz-divider space-top="-15" height="1.5" type="solid" color="#ee4a00"></plz-divider>
-    <plz-divider height="1.5" type="solid" color="#e28000"></plz-divider>
-    <plz-divider height="1.5" type="solid" color="#f9a72f"></plz-divider>
-    <plz-divider height="1.5" type="solid" color="#fbbd5e"></plz-divider>
-    <plz-divider space-bottom="15" height="1.5" type="solid" color="#fde9b0"></plz-divider>
-    <p>El sistema de diseño empleado en Palaze destaca por buscar el minimalismo, no se pretende saturar al usuario con
-        elementos excesivamente llamativos que distraigan el foco de lo verdaderamente importante.</p>
-    <h3 style="text-decoration: underline;">Paletas de colores</h3>
-    <p>Las paletas de colores que se muestran a continuación son las que se usan en Palaze, tokens incluidos.</p>
+            <h3>¿Qué son los tokens de diseño?</h3>
+            <p>Los tokens de diseño son variables que representan las guías y directrices que se utilizan en los
+                sistemas de
+                diseño. Un ejemplo de estas variables de diseño son los colores dentro de las paletas seleccionadas en
+                el
+                sistema de diseño, otro sería el tipo de letra y los tamaños correspondientes dependiendo de dónde se
+                use,
+                ya
+                sea un título o subtítulo, etc.</p>
+            <p>En este caso las variables serán representadas por css properties.</p>
 
-    <div class="colors-design">
-        <plz-colors class="paleta" variant="green"></plz-colors>
-        <plz-colors class="paleta" variant="blue"></plz-colors>
-        <plz-colors class="paleta" variant="red"></plz-colors>
-        <plz-colors class="paleta" variant="yellow"></plz-colors>
-        <plz-colors class="paleta" variant="purple"></plz-colors>
-        <plz-colors class="paleta" variant="orange"></plz-colors>
-        <plz-colors class="paleta" variant="black"></plz-colors>
-    </div>
+            <h3>Ventajas de utilizar un sistema de diseño</h3>
+            <img class="design-block-image-right" src="../assets/icon/design-section-2.png" alt="design-section">
+            <p><b><u>Coherencia:</u></b> Gracias a compartir los mismos patrones durante todo el proyecto, se reduce la
+                posibilidad de que en
+                mismos componentes en distintas secciones varien en estilo.</p>
+            <p><b><u>Reutilización:</u></b> Este apartado es clave, los sistemas de diseño se suelen utilizar en varios
+                proyectos o una vez
+                acabado con uno, hacer unas pequeñas modificaciones y usarlo en otro. También se reutilizan los tokens
+                de
+                diseño
+                constantemente sobre un mismo proyecto para mantener la cohesión.</p>
+            <p><b><u>Flexibilidad:</u></b> Permite una amplia libertad al poderse usar en cualquier plataforma o
+                tecnología.
+                Al ser unos
+                patrones/reglas/directrices, se pueden aplicar sobre casi cualquier proyecto.</p>
+            <p><b><u>Eficiencia y calidad:</u></b> Se ahorra mucho tiempo debido a no tener que ir revisando cómo se han
+                aplicado los estilos
+                en otras secciones. Simplemente tienes que mirar los tokens de diseño y aplicarlos. Otro punto fuerte de
+                esto es
+                que si se hace una modificación en los tokens de diseño, se aplican en todos los elementos en que se
+                usen,
+                lo
+                que permite mejorar la calidad y la eficiencia de los productos reduciendo así el número de fallos.</p>
+            <p>Entre muchas otras ventajas.</p>
 
-    <h3 style="text-decoration: underline;">Tipografía</h3>
-    <p>A continuación se muestra un ejemplo de los distintos tipos de letra, tamaño, espacio entre lineas, espacio entre
-        letras, etc.</p>
-    <h4>Familia Tipográfica</h4>
-    <p>Para nuestra fuenta principal tenemos Padauk. Se ha elegido debido a su estilo simple pero diferente de la
-        tipografía más popular. También tendremos como fuente opcional sans-serif, que tomará lugar como principal si en
-        algún dispositivo llegara a haber un error con la fuente Padauk.</p>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th style="background-color: #FF4D6D; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                    Token</th>
-                <th style="background-color: #e67a8d;">Valor</th>
-                <th
-                    style="background-color: #FFB3C1; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
-                    Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>--plz-font-primary</td>
-                <td>Padauk</td>
-                <td style="font-family: Padauk, sans-serif;">La octaba maravilla del mundo.</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>sans-serif</td>
-                <td style="font-family: sans-serif, Padauk;">La octaba maravilla del mundo.</td>
-            </tr>
-        </tbody>
-    </table>
+            <!-- Palaze System Design -->
+            <h2>Sistema de diseño Palaze</h2>
+            <plz-divider space-top="-15" height="1.5" type="solid" color="#ee4a00"></plz-divider>
+            <plz-divider height="1.5" type="solid" color="#e28000"></plz-divider>
+            <plz-divider height="1.5" type="solid" color="#f9a72f"></plz-divider>
+            <plz-divider height="1.5" type="solid" color="#fbbd5e"></plz-divider>
+            <plz-divider space-bottom="15" height="1.5" type="solid" color="#fde9b0"></plz-divider>
+            <p>El sistema de diseño empleado en Palaze destaca por buscar el minimalismo, no se pretende saturar al
+                usuario
+                con
+                elementos excesivamente llamativos que distraigan el foco de lo verdaderamente importante.</p>
+            <h3 style="text-decoration: underline;">Paletas de colores</h3>
+            <p>Las paletas de colores que se muestran a continuación son las que se usan en Palaze, tokens incluidos.
+            </p>
 
-    <h4>Tamaño de fuente</h4>
-    <p>Distintos tipos de tamaño de fuente que son utilizados tanto en el landing page, como en la documentación, como
-        en los propios componentes de Palaze.</p>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th style="background-color: #f9a72f; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                    Token</th>
-                <th style="background-color: #fbbd5e;">Valor</th>
-                <th
-                    style="background-color: #fde9b0; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
-                    Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>--plz-font-size-very-small</td>
-                <td>12px</td>
-                <td style="font-size: 12px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-small</td>
-                <td>14px</td>
-                <td style="font-size: 14px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-normal</td>
-                <td>16px</td>
-                <td style="font-size: 16px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-sub-section</td>
-                <td>20px</td>
-                <td style="font-size: 20px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-mid-section</td>
-                <td>30px</td>
-                <td style="font-size: 30px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-below-titles</td>
-                <td>24px</td>
-                <td style="font-size: 24px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-section</td>
-                <td>48px</td>
-                <td style="font-size: 48px;">Aa</td>
-            </tr>
-            <tr>
-                <td>--plz-font-size-titles</td>
-                <td>64px</td>
-                <td style="font-size: 64px;">Aa</td>
-            </tr>
-        </tbody>
-    </table>
+            <div class="colors-design">
+                <plz-colors class="paleta" variant="green"></plz-colors>
+                <plz-colors class="paleta" variant="blue"></plz-colors>
+                <plz-colors class="paleta" variant="red"></plz-colors>
+                <plz-colors class="paleta" variant="yellow"></plz-colors>
+                <plz-colors class="paleta" variant="purple"></plz-colors>
+                <plz-colors class="paleta" variant="orange"></plz-colors>
+                <plz-colors class="paleta" variant="black"></plz-colors>
+            </div>
 
-    <h4>Grosor de fuente</h4>
-    <p>La fuente tipográfica Padauk, solo dispone de dos grosores, el regular y el bold (negrita).</p>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th style="background-color: #4cb05b; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                    Token</th>
-                <th style="background-color: #52B788;">Valor</th>
-                <th
-                    style="background-color: #D8F3DC; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
-                    Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>--plz-font-weight-regular</td>
-                <td>400</td>
-                <td style="font-weight: 400;">Visteme despacio que tengo prisa.</td>
-            </tr>
-            <tr>
-                <td>--plz-font-weight-bold</td>
-                <td>700</td>
-                <td style="font-weight: 700;">Visteme despacio que tengo prisa.</td>
-            </tr>
-        </tbody>
-    </table>
+            <h3 style="text-decoration: underline;">Tipografía</h3>
+            <p>A continuación se muestra un ejemplo de los distintos tipos de letra, tamaño, espacio entre lineas,
+                espacio
+                entre
+                letras, etc.</p>
+            <h4>Familia Tipográfica</h4>
+            <p>Para nuestra fuenta principal tenemos Padauk. Se ha elegido debido a su estilo simple pero diferente de
+                la
+                tipografía más popular. También tendremos como fuente opcional sans-serif, que tomará lugar como
+                principal
+                si en
+                algún dispositivo llegara a haber un error con la fuente Padauk.</p>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th
+                            style="background-color: #FF4D6D; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            Token</th>
+                        <th style="background-color: #e67a8d;">Valor</th>
+                        <th
+                            style="background-color: #FFB3C1; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--plz-font-primary</td>
+                        <td>Padauk</td>
+                        <td style="font-family: Padauk, sans-serif;">La octaba maravilla del mundo.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>sans-serif</td>
+                        <td style="font-family: sans-serif, Padauk;">La octaba maravilla del mundo.</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h4>Espacio entre lineas</h4>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th style="background-color: #0096C7; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                    Token</th>
-                <th style="background-color: #a7b3e9;">Valor</th>
-                <th
-                    style="background-color: #CAF0F8; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
-                    Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>--plz-line-height-smaller</td>
-                <td>1</td>
-                <td style="line-height: 1;">
-                    <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla del
-                        mundo. <br></p>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-line-height-small</td>
-                <td>1.4</td>
-                <td style="line-height: 1.4;">
-                    <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla del
-                        mundo. <br></p>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-line-height-normal</td>
-                <td>1.8</td>
-                <td style="line-height: 1.8;">
-                    <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla del
-                        mundo. <br></p>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-line-height-big</td>
-                <td>2.4</td>
-                <td style="line-height: 2.4;">
-                    <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla del
-                        mundo. <br></p>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+            <h4>Tamaño de fuente</h4>
+            <p>Distintos tipos de tamaño de fuente que son utilizados tanto en el landing page, como en la
+                documentación,
+                como
+                en los propios componentes de Palaze.</p>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th
+                            style="background-color: #f9a72f; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            Token</th>
+                        <th style="background-color: #fbbd5e;">Valor</th>
+                        <th
+                            style="background-color: #fde9b0; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--plz-font-size-very-small</td>
+                        <td>12px</td>
+                        <td style="font-size: 12px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-small</td>
+                        <td>14px</td>
+                        <td style="font-size: 14px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-normal</td>
+                        <td>16px</td>
+                        <td style="font-size: 16px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-sub-section</td>
+                        <td>20px</td>
+                        <td style="font-size: 20px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-mid-section</td>
+                        <td>30px</td>
+                        <td style="font-size: 30px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-below-titles</td>
+                        <td>24px</td>
+                        <td style="font-size: 24px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-section</td>
+                        <td>48px</td>
+                        <td style="font-size: 48px;">Aa</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-size-titles</td>
+                        <td>64px</td>
+                        <td style="font-size: 64px;">Aa</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h4>Espacio entre letras</h4>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th style="background-color: #b88900; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                    Token</th>
-                <th style="background-color: #d3a007;">Valor</th>
-                <th
-                    style="background-color: #fbf451; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
-                    Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>--plz-letter-space-smaller</td>
-                <td>-0.48px</td>
-                <td style="letter-spacing: -0.48px;">La octaba maravilla del mundo.</td>
-            </tr>
-            <tr>
-                <td>--plz-letter-space-small</td>
-                <td>-0.24px</td>
-                <td style="letter-spacing: -0.24px;">La octaba maravilla del mundo.</td>
-            </tr>
-            <tr>
-                <td>--plz-letter-space-normal</td>
-                <td>normal</td>
-                <td style="letter-spacing: normal;">La octaba maravilla del mundo.</td>
-            </tr>
-            <tr>
-                <td>--plz-letter-space-big</td>
-                <td>1.2px</td>
-                <td style="letter-spacing: 1.2px;">La octaba maravilla del mundo.</td>
-            </tr>
-            <tr>
-                <td>--plz-letter-space-bigger</td>
-                <td>2.4px</td>
-                <td style="letter-spacing: 2.4px;">La octaba maravilla del mundo.</td>
-            </tr>
-        </tbody>
-    </table>
+            <h4>Grosor de fuente</h4>
+            <p>La fuente tipográfica Padauk, solo dispone de dos grosores, el regular y el bold (negrita).</p>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th
+                            style="background-color: #4cb05b; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            Token</th>
+                        <th style="background-color: #52B788;">Valor</th>
+                        <th
+                            style="background-color: #D8F3DC; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--plz-font-weight-regular</td>
+                        <td>400</td>
+                        <td style="font-weight: 400;">Visteme despacio que tengo prisa.</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-font-weight-bold</td>
+                        <td>700</td>
+                        <td style="font-weight: 700;">Visteme despacio que tengo prisa.</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3 style="text-decoration: underline;">Formas de los bloques</h3>
-    <p>Cada elemento, ya sea componente o no puede cambiar visualmente de una manera drástica cambiando su
-        "border-radius".</p>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th style="background-color: #732487; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
-                    Token</th>
-                <th style="background-color: #a167c9;">Valor</th>
-                <th
-                    style="background-color: #fff0ff; border-top-right-radius: 15px;border-bottom-right-radius: 15px; color: black;">
-                    Ejemplo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>--plz-border-radius-circle</td>
-                <td>50%</td>
-                <td>
-                    <div
-                        style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 50%;background-color: #a7b3e9;">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-border-radius-rounded</td>
-                <td>9999px</td>
-                <td>
-                    <div
-                        style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 9999px;background-color: #a7b3e9;">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-border-radius-low-rounded</td>
-                <td>25px</td>
-                <td>
-                    <div
-                        style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 25px;background-color: #a7b3e9;">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-border-radius-default</td>
-                <td>0.25rem</td>
-                <td>
-                    <div
-                        style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 0.25rem;background-color: #a7b3e9;">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>--plz-border-radius-square</td>
-                <td>0px</td>
-                <td>
-                    <div
-                        style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 0px;background-color: #a7b3e9;">
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <h4>Espacio entre lineas</h4>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th
+                            style="background-color: #0096C7; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            Token</th>
+                        <th style="background-color: #a7b3e9;">Valor</th>
+                        <th
+                            style="background-color: #CAF0F8; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--plz-line-height-smaller</td>
+                        <td>1</td>
+                        <td style="line-height: 1;">
+                            <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla
+                                del
+                                mundo. <br></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-line-height-small</td>
+                        <td>1.4</td>
+                        <td style="line-height: 1.4;">
+                            <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla
+                                del
+                                mundo. <br></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-line-height-normal</td>
+                        <td>1.8</td>
+                        <td style="line-height: 1.8;">
+                            <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla
+                                del
+                                mundo. <br></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-line-height-big</td>
+                        <td>2.4</td>
+                        <td style="line-height: 2.4;">
+                            <p>La octaba maravilla del mundo. <br>La octaba maravilla del mundo. <br>La octaba maravilla
+                                del
+                                mundo. <br></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Espacio entre letras</h4>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th
+                            style="background-color: #b88900; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            Token</th>
+                        <th style="background-color: #d3a007;">Valor</th>
+                        <th
+                            style="background-color: #fbf451; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--plz-letter-space-smaller</td>
+                        <td>-0.48px</td>
+                        <td style="letter-spacing: -0.48px;">La octaba maravilla del mundo.</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-letter-space-small</td>
+                        <td>-0.24px</td>
+                        <td style="letter-spacing: -0.24px;">La octaba maravilla del mundo.</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-letter-space-normal</td>
+                        <td>normal</td>
+                        <td style="letter-spacing: normal;">La octaba maravilla del mundo.</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-letter-space-big</td>
+                        <td>1.2px</td>
+                        <td style="letter-spacing: 1.2px;">La octaba maravilla del mundo.</td>
+                    </tr>
+                    <tr>
+                        <td>--plz-letter-space-bigger</td>
+                        <td>2.4px</td>
+                        <td style="letter-spacing: 2.4px;">La octaba maravilla del mundo.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="text-decoration: underline;">Formas de los bloques</h3>
+            <p>Cada elemento, ya sea componente o no puede cambiar visualmente de una manera drástica cambiando su
+                "border-radius".</p>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th
+                            style="background-color: #732487; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            Token</th>
+                        <th style="background-color: #a167c9;">Valor</th>
+                        <th
+                            style="background-color: #fff0ff; border-top-right-radius: 15px;border-bottom-right-radius: 15px; color: black;">
+                            Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--plz-border-radius-circle</td>
+                        <td>50%</td>
+                        <td>
+                            <div
+                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 50%;background-color: #a7b3e9;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-border-radius-rounded</td>
+                        <td>9999px</td>
+                        <td>
+                            <div
+                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 9999px;background-color: #a7b3e9;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-border-radius-low-rounded</td>
+                        <td>25px</td>
+                        <td>
+                            <div
+                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 25px;background-color: #a7b3e9;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-border-radius-default</td>
+                        <td>0.25rem</td>
+                        <td>
+                            <div
+                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 0.25rem;background-color: #a7b3e9;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>--plz-border-radius-square</td>
+                        <td>0px</td>
+                        <td>
+                            <div
+                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 0px;background-color: #a7b3e9;">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

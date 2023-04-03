@@ -14,80 +14,27 @@
     <script nomodule src="/build/palaze-web.js"></script>
 </head>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const lis = document.querySelectorAll('#sidebar ul li');
-        let activeLi = null;
-        lis.forEach(li => {
-            li.addEventListener('click', () => {
-                if (activeLi) {
-                    activeLi.classList.remove('sidebar-selected');
-                }
-                li.classList.add('sidebar-selected');
-                activeLi = li;
-            });
-        });
-    });
-
-    var toggled = false;
-    function toggle() {
-        if (toggled === false) {
-            toggled = true;
-            document.getElementById("sidebar").style.width = "0";
-            document.getElementById("main").style.left = "20%";
-            document.getElementById("sidebar").style.borderLeft = "none";
-        } else if (toggled === true) {
-            toggled = false;
-            document.getElementById("sidebar").style.width = "270px";
-            document.getElementById("main").style.left = "30%";
-            document.getElementById("sidebar").style.borderLeft = "1px solid #495057";
-        }
-    }
-
-    function loadSection(file) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", file, true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                window.scrollTo(0, 0);
-                document.querySelector("#main").innerHTML = xhr.responseText;
-            }
-        };
-        xhr.send();
-    }
-
-</script>
-
 <body>
-
-    <!--  Sidebar -->
-    <nav id="sidebar" class="sidebar">
-        <ul>
-            <img src="../assets/icon/log-mask-overview.svg" alt="">
-            <li onclick="location.href='docs.html'">Componentes</li>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white" active="true">Componentes</plz-menu-item>
             <plz-divider></plz-divider>
-            <li onclick="loadSection('docs-card.html')">Tarjeta</li>
-            <li onclick="loadSection('docs-divider.html')">Separador</li>
-            <li onclick="loadSection('docs-hero.html')">Heroe</li>
-            <li onclick="loadSection('docs-button.html')">Boton</li>
-            <li onclick="loadSection('docs-menu.html')">Menu</li>
-            <li onclick="loadSection('docs-menu-item.html')">Menu-item</li>
-            <li onclick="loadSection('docs-tooltip.html')">Tooltip</li>
-            <li onclick="loadSection('docs-spinner.html')">Spinner</li>
-            <li onclick="loadSection('docs-header.html')">Header</li>
-            <li onclick="loadSection('docs-figure.html')">Figure</li>
-            <li onclick="loadSection('docs-section.html')">Section</li>
-            <li onclick="loadSection('docs-footer.html')">Footer</li>
-            <a href="demo.html">click</a>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
             <plz-divider></plz-divider>
-            <li onclick="loadSection('docs-design-system.html')">Design System</li>
-            <li class="sub-option">Colores</li>
-            <li class="sub-option">Tipografía</li>
-            <li class="sub-option">Formas</li>
-        </ul>
-    </nav>
-
-    <button class="button-sidebar" onclick="toggle()">&#9776</button>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
 
     <!-- Main section -->
     <main id="main" class="docs-main">

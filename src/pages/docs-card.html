@@ -1,54 +1,101 @@
-<section class="content-detail">
-    <h1>Tarjeta</h1>
-    <p class="component-tag">&lt;plz-card&gt; &#124; PlzCard</p> <!-- Dar forma y poner letra de consola-->
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>Las tarjetas son elementos que captan la atención debido a su apariencia llamativa. Este componente suele
-        utilizarse con una imagen y un pequeño texto que representan el contenido al que se puede acceder a través
-        mediante un click.</p>
-    <p>Como todo dentro del mundo del desarrollo web, hay infinidad de variantes, a continuación se podrán observar las
-        que hemos considerado más relevantes.</p>
-    <!-- Muestra del componente -->
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-card width="350" image="./assets/icon/Hero-img.svg" hover="blue">
-                <h3>Abstracto</h3>
-                <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-            </plz-card>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" hover="blue">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white" active="true">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Tarjeta</h1>
+            <p class="component-tag">&lt;plz-card&gt; &#124; PlzCard</p> <!-- Dar forma y poner letra de consola-->
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>Las tarjetas son elementos que captan la atención debido a su apariencia llamativa. Este componente suele
+                utilizarse con una imagen y un pequeño texto que representan el contenido al que se puede acceder a
+                través
+                mediante un click.</p>
+            <p>Como todo dentro del mundo del desarrollo web, hay infinidad de variantes, a continuación se podrán
+                observar
+                las
+                que hemos considerado más relevantes.</p>
+            <!-- Muestra del componente -->
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-card width="350" image="./assets/icon/Hero-img.svg" hover="blue">
+                        <h3>Abstracto</h3>
+                        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                    </plz-card>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" hover="blue">
             <h3>Button component</h3>
             <p>Just the typical text of esample to know if this currently works.</p>
         </plz-card>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Ejemplos de las posibilidades del componente-->
-    <h2>Ejemplos</h2>
-    <plz-divider></plz-divider>
-    <h3>Tarjeta básica</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "simple".</p>
-    <p>Este tipo de tarjeta es de las más básicas que podremos encontrar, siendo un estilo plano y utilizandose
-        principalmente para seccionar una pequeña parte de información.</p>
-    <p>Debido a la escabilidad del componente, puedes personalizarlo pese a ser una variante básica.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-card variant="simple">
-                <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
-                    a terner solo lo dicta tu imaginación.</p>
-            </plz-card>
-            <plz-card variant="simple">
-                <h3>Tarjeta simple personalizada</h3>
-                <p style="text-align: justify;">En este caso se ha añadido un título "h3" y a continuación un texto "p".
-                    También se le ha pasado por estilo que el texto se encuentre justificado.</p>
-            </plz-card>
-            <plz-card variant="simple">
-                <p style="text-align: center;"><b><i>Tarjeta simple personalizada</i></b></p>
-                <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos en
-                    cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado. </p>
-            </plz-card>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card variant="simple">
+            <!-- Ejemplos de las posibilidades del componente-->
+            <h2>Ejemplos</h2>
+            <plz-divider></plz-divider>
+            <h3>Tarjeta básica</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de tarjeta "simple".</p>
+            <p>Este tipo de tarjeta es de las más básicas que podremos encontrar, siendo un estilo plano y utilizandose
+                principalmente para seccionar una pequeña parte de información.</p>
+            <p>Debido a la escabilidad del componente, puedes personalizarlo pese a ser una variante básica.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-card variant="simple">
+                        <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que
+                            pueda
+                            llegar
+                            a terner solo lo dicta tu imaginación.</p>
+                    </plz-card>
+                    <plz-card variant="simple">
+                        <h3>Tarjeta simple personalizada</h3>
+                        <p style="text-align: justify;">En este caso se ha añadido un título "h3" y a continuación un
+                            texto
+                            "p".
+                            También se le ha pasado por estilo que el texto se encuentre justificado.</p>
+                    </plz-card>
+                    <plz-card variant="simple">
+                        <p style="text-align: center;"><b><i>Tarjeta simple personalizada</i></b></p>
+                        <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos
+                            en
+                            cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado.
+                        </p>
+                    </plz-card>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-card variant="simple">
             <p>Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones que pueda llegar
                 a terner solo lo dicta tu imaginación.</p>
         </plz-card>
@@ -62,27 +109,30 @@
             <p style="text-align: center;">En este caso la tarjeta ha recibido dos párrafos y uno de ellos en
                 cursiva y negrita. También se le ha pasado por estilo que el texto se encuentre centrado. </p>
         </plz-card>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Tarjeta con encabezado</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "header".</p>
-    <p>Otra forma de utilizar este componente es haciendo uso de encabezados, en este ejemplo, seccionamos la parte
-        superior que podría ser un pequeño logo o título y un texto simple informativo.</p>
-    <p>Dependiendo del caso de uso, este se podrá personalizar acomodando a las necesidades del usuario.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-card variant="header">
-                <div style="display: flex; align-items: center; justify-content: space-between;" slot="header-content">
-                    <p><b>Header</b></p>
-                    <plz-button variant="icon" size="small" icon="palaze"></plz-button>
-                </div>
-                <p slot="content">Es una tarjeta simple en la que puedes poner texto a modo informativo. Las funciones
-                    que pueda llegar
-                    a terner solo lo dicta tu imaginación.</p>
-            </plz-card>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card variant="header">
+            <h3>Tarjeta con encabezado</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de tarjeta "header".</p>
+            <p>Otra forma de utilizar este componente es haciendo uso de encabezados, en este ejemplo, seccionamos la
+                parte
+                superior que podría ser un pequeño logo o título y un texto simple informativo.</p>
+            <p>Dependiendo del caso de uso, este se podrá personalizar acomodando a las necesidades del usuario.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-card variant="header">
+                        <div style="display: flex; align-items: center; justify-content: space-between;"
+                            slot="header-content">
+                            <p><b>Header</b></p>
+                            <plz-button variant="icon" size="small" icon="palaze"></plz-button>
+                        </div>
+                        <p slot="content">Es una tarjeta simple en la que puedes poner texto a modo informativo. Las
+                            funciones
+                            que pueda llegar
+                            a terner solo lo dicta tu imaginación.</p>
+                    </plz-card>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-card variant="header">
             <div style="display: flex; align-items: center; justify-content: space-between;" slot="header-content">
                 <p><b>Header</b></p>
                 <plz-button variant="icon" size="small" icon="palaze"></plz-button>
@@ -91,56 +141,66 @@
                 que pueda llegar
                 a terner solo lo dicta tu imaginación.</p>
         </plz-card>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Tarjeta con pie de página</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "footer".</p>
-    <p>Otra forma de utilizar este componente es haciendo uso de pie de página, en este ejemplo, seccionamos la parte
-        inferior que podría ser información de contacto y en la parte superior un texto simple informativo.</p>
-    <p>Dependiendo del caso de uso, este se podrá personalizar acomodando a las necesidades del usuario.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-card variant="footer">
-                <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la información que
-                    consideres. En este ejemplo ponemos un texto y un botón.</p>
-                <div style="display: flex; align-items: center; justify-content: space-between;" slot="footer-content">
-                    <p><b>Documentación github</b></p>
-                    <plz-button variant="icon" icon="github" size="small"></plz-button>
-                </div>
-            </plz-card>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card variant="footer">
+            <h3>Tarjeta con pie de página</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de tarjeta "footer".</p>
+            <p>Otra forma de utilizar este componente es haciendo uso de pie de página, en este ejemplo, seccionamos la
+                parte
+                inferior que podría ser información de contacto y en la parte superior un texto simple informativo.</p>
+            <p>Dependiendo del caso de uso, este se podrá personalizar acomodando a las necesidades del usuario.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-card variant="footer">
+                        <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la
+                            información
+                            que
+                            consideres. En este ejemplo ponemos un texto y un botón.</p>
+                        <div style="display: flex; align-items: center; justify-content: space-between;"
+                            slot="footer-content">
+                            <p><b>Documentación github</b></p>
+                            <plz-button variant="icon" icon="github" size="small"></plz-button>
+                        </div>
+                    </plz-card>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-card variant="footer">
             <p slot="content">Este componente tarjeta tiene un footer en el que puedes colocar la información que consideres. En este ejemplo ponemos un texto y un botón.</p>
             <div style="display: flex; align-items: center; justify-content: space-between;" slot="footer-content">
                 <p><b>Documentación github</b></p>
                 <plz-button variant="icon" icon="github" size="small"></plz-button>
             </div>
         </plz-card>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Tarjeta con imagen</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "default".</p>
-    <p>Este tipo de tarjeta es el más común, en el que encontramos una imagen y a posteriori un título y un pequeño
-        texto informativo. De esta manera te permite conocer de forma general el contenido al que vas a acceder mediante
-        un click.</p>
-    <p>A diferencia de otras variantes, esta tiene la intención de que se pueda acceder a otra fuente a través de ella.
-        En este caso hemos decidido hacerla aún más constumizable añadiendo una sección en la que poder aaceder a otro
-        contenido mediante un botón (la versión "default" básica es el primer ejemplo de esta sección).</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-card width="350" image="./assets/icon/Hero-img.svg" hover="blue">
-                <h3>Abstracto</h3>
-                <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-                <plz-divider space-bottom="5"></plz-divider>
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                    <p>Ver info</p>
-                    <plz-button color="blue">Info</plz-button>
-                </div>
-            </plz-card>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" hover="blue">
+            <h3>Tarjeta con imagen</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de tarjeta "default".</p>
+            <p>Este tipo de tarjeta es el más común, en el que encontramos una imagen y a posteriori un título y un
+                pequeño
+                texto informativo. De esta manera te permite conocer de forma general el contenido al que vas a acceder
+                mediante
+                un click.</p>
+            <p>A diferencia de otras variantes, esta tiene la intención de que se pueda acceder a otra fuente a través
+                de
+                ella.
+                En este caso hemos decidido hacerla aún más constumizable añadiendo una sección en la que poder aaceder
+                a
+                otro
+                contenido mediante un botón (la versión "default" básica es el primer ejemplo de esta sección).</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-card width="350" image="./assets/icon/Hero-img.svg" hover="blue">
+                        <h3>Abstracto</h3>
+                        <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                        <plz-divider space-bottom="5"></plz-divider>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p>Ver info</p>
+                            <plz-button color="blue">Info</plz-button>
+                        </div>
+                    </plz-card>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-card style="width: 350px;" image="./assets/icon/Hero-img.svg" hover="blue">
             <h3>Abstracto</h3>
             <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
             <plz-divider></plz-divider>
@@ -149,51 +209,55 @@
                 <plz-button color="blue">Info</plz-button>
             </div>
         </plz-card>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Tarjeta con solo imagen</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de tarjeta "image".</p>
-    <p>Esta es una forma bastante común del componente tarjeta. Suele usarse en páginas planas donde se pretende
-        resaltar información de una manera atractiva.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-card style="width: 350px;" variant="image" image="./assets/icon/card-ejemplo.png" hover="blue">
-                <p style="color: white; line-height: 1; margin-top: 75px;">Esta es una tarjeta con una imagen de fondo y
-                    texto.</p>
-            </plz-card>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-card style="width: 350px;" variant="image" image="./assets/icon/card-ejemplo.png" url="docs.html" hover="blue">
+            <h3>Tarjeta con solo imagen</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de tarjeta "image".</p>
+            <p>Esta es una forma bastante común del componente tarjeta. Suele usarse en páginas planas donde se pretende
+                resaltar información de una manera atractiva.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-card style="width: 350px;" variant="image" image="./assets/icon/card-ejemplo.png" hover="blue">
+                        <p style="color: white; line-height: 1; margin-top: 75px;">Esta es una tarjeta con una imagen de
+                            fondo y
+                            texto.</p>
+                    </plz-card>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-card style="width: 350px;" variant="image" image="./assets/icon/card-ejemplo.png" url="docs.html" hover="blue">
             <p style="color: white; line-height: 1; margin-top: 75px;">Esta es una tarjeta con una imagen de fondo y texto.</p>
         </plz-card>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Colors -->
-    <h3>Colores del hover en la tarjeta default</h3>
-    <p>Usaremos el atributo hover para elegir el color de la tarjeta "default" al pasar el cursor por encima.</p>
-    <p>En este caso, se podrá personalizar el componente eligiendo qué tipo de color le conviene al componente según el
-        estilo de la web en la que se esté usando.</p>
+            <!-- Colors -->
+            <h3>Colores del hover en la tarjeta default</h3>
+            <p>Usaremos el atributo hover para elegir el color de la tarjeta "default" al pasar el cursor por encima.
+            </p>
+            <p>En este caso, se podrá personalizar el componente eligiendo qué tipo de color le conviene al componente
+                según
+                el
+                estilo de la web en la que se esté usando.</p>
 
-    <plz-showcase-render>
-        <plz-card image="./assets/icon/Hero-img.svg" hover="gray">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-        <plz-card image="./assets/icon/Hero-img.svg" hover="blue">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-        <plz-card image="./assets/icon/Hero-img.svg" hover="green">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-        <plz-card image="./assets/icon/Hero-img.svg" hover="red">
-            <h3>Abstracto</h3>
-            <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
-        </plz-card>
-    </plz-showcase-render>
-    <plz-showcase-code text-code='<plz-card image="./assets/icon/Hero-img.svg" hover="gray">
+            <plz-showcase-render>
+                <plz-card image="./assets/icon/Hero-img.svg" hover="gray">
+                    <h3>Abstracto</h3>
+                    <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/Hero-img.svg" hover="blue">
+                    <h3>Abstracto</h3>
+                    <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/Hero-img.svg" hover="green">
+                    <h3>Abstracto</h3>
+                    <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                </plz-card>
+                <plz-card image="./assets/icon/Hero-img.svg" hover="red">
+                    <h3>Abstracto</h3>
+                    <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
+                </plz-card>
+            </plz-showcase-render>
+            <plz-showcase-code text-code='<plz-card image="./assets/icon/Hero-img.svg" hover="gray">
         <h3>Abstracto</h3>
         <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
     </plz-card>
@@ -209,44 +273,48 @@
         <h3>Abstracto</h3>
         <p>Es un concepto, una idea que no se puede explicar de forma concreta. Lo no específico.</p>
     </plz-card>'>
-    </plz-showcase-code>
+            </plz-showcase-code>
 
-    <!-- Sección de los atributos -->
-    <h2>Atributos</h2>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>variant</td>
-                <td>Distintas variantes del componente tarjeta</td>
-                <td>'default' - 'simple' - 'header' - 'footer' - 'image'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>hover</td>
-                <td>Distintos colores del componente botón</td>
-                <td>'gray' - 'blue' - 'green' - 'red'</td>
-                <td>'blue'</td>
-            </tr>
-            <tr>
-                <td>image</td>
-                <td>Dirección url de la imagen a colocar en las tarjetas con variante "default" y "image"</td>
-                <td>'./mi-imagen-ejemplo.svg'</td>
-                <td>black-4</td>
-            </tr>
-            <tr>
-                <td>url</td>
-                <td>Dirección url para crear evento (solo para la variante "default")</td>
-                <td>'./ejemplo.html'</td>
-                <td>'#'</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <!-- Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variant</td>
+                        <td>Distintas variantes del componente tarjeta</td>
+                        <td>'default' - 'simple' - 'header' - 'footer' - 'image'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>hover</td>
+                        <td>Distintos colores del componente botón</td>
+                        <td>'gray' - 'blue' - 'green' - 'red'</td>
+                        <td>'blue'</td>
+                    </tr>
+                    <tr>
+                        <td>image</td>
+                        <td>Dirección url de la imagen a colocar en las tarjetas con variante "default" y "image"</td>
+                        <td>'./mi-imagen-ejemplo.svg'</td>
+                        <td>black-4</td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td>Dirección url para crear evento (solo para la variante "default")</td>
+                        <td>'./ejemplo.html'</td>
+                        <td>'#'</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

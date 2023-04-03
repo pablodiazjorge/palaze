@@ -1,23 +1,63 @@
-<section class="content-detail">
-    <h1>Menu</h1>
-    <p class="component-tag">&lt;plz-menu&gt; &#124; PlzMenu</p> <!-- Dar forma y poner letra de consola-->
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>El componente menu sirve para agrupar distintos elementos con una estructura concreta.</p>
-    <p>Dentro del mundo del desarrollo web proporciona una lista de opciones para navegar por secciones de una misma web.</p>
-    <!-- Muestra del componente -->
-    <plz-showcase-render display="block">
-        <plz-menu style="width: 200px;">
-            <plz-menu-item link="#">Acciones</plz-menu-item>
-            <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-            <plz-menu-item link="#">Subir</plz-menu-item>
-            <plz-menu-item link="#">Bajar</plz-menu-item>
-            <plz-menu-item link="#">Girar</plz-menu-item>
-            <plz-menu-item link="#">Rodar</plz-menu-item>
-            <plz-menu-item link="#">Saltar</plz-menu-item>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white" active="true">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
         </plz-menu>
-    </plz-showcase-render>
-    <plz-showcase-code text-code='<plz-menu style="font-size: 20px; font-weight: 100; width: 150px;">
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Menu</h1>
+            <p class="component-tag">&lt;plz-menu&gt; &#124; PlzMenu</p> <!-- Dar forma y poner letra de consola-->
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>El componente menu sirve para agrupar distintos elementos con una estructura concreta.</p>
+            <p>Dentro del mundo del desarrollo web proporciona una lista de opciones para navegar por secciones de una
+                misma
+                web.</p>
+            <!-- Muestra del componente -->
+            <plz-showcase-render display="block">
+                <plz-menu style="width: 200px;">
+                    <plz-menu-item link="#">Acciones</plz-menu-item>
+                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                    <plz-menu-item link="#">Subir</plz-menu-item>
+                    <plz-menu-item link="#">Bajar</plz-menu-item>
+                    <plz-menu-item link="#">Girar</plz-menu-item>
+                    <plz-menu-item link="#">Rodar</plz-menu-item>
+                    <plz-menu-item link="#">Saltar</plz-menu-item>
+                </plz-menu>
+            </plz-showcase-render>
+            <plz-showcase-code text-code='<plz-menu style="font-size: 20px; font-weight: 100; width: 150px;">
         <plz-menu-item>Acciones</plz-menu-item>
         <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
         <plz-menu-item>Subir</plz-menu-item>
@@ -26,25 +66,29 @@
         <plz-menu-item>Rodar</plz-menu-item>
         <plz-menu-item>Saltar</plz-menu-item>
     </plz-menu>'>
-    </plz-showcase-code>
-    <!-- Sección de los atributos -->
-    <h2>Atributos</h2>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>border-menu</td>
-                <td>Distintas ubicaciones para bordes aplicados al componente separador</td>
-                <td>'all' - 'top-bottom' - 'left-right' - 'top' - 'bottom' - 'right' - 'left' - 'none'</td>
-                <td>'all'</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            </plz-showcase-code>
+            <!-- Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>border-menu</td>
+                        <td>Distintas ubicaciones para bordes aplicados al componente separador</td>
+                        <td>'all' - 'top-bottom' - 'left-right' - 'top' - 'bottom' - 'right' - 'left' - 'none'</td>
+                        <td>'all'</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

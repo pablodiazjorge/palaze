@@ -1,129 +1,185 @@
-<section class="content-detail">
-    <h1>Separador</h1>
-    <p class="component-tag">&lt;plz-divider&gt; &#124; PlzDivider</p> <!-- Dar forma y poner letra de consola-->
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>Los separadores sirven para dividir distintas partes del contenido y hacer que se diferencien.</p>
-    <p>En este caso se hará uso de separadores de tipo horizontal ya que son los más comunes y se podrá ajustar grosor,
-        color y forma del mismo.</p>
-    <p>El uso más normal de estos es de tipo minimalista, una línea fina solida de un color que vaya acorde al estilo de
-        la página y que no resalte mucho.</p>
-    <!-- Muestra del componente -->
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <plz-divider space-top="5" space-bottom="10"></plz-divider>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-divider space-top="5" space-bottom="10"></plz-divider>'>
-        </plz-showcase-code>
-    </plz-showcase>
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- Ejemplos de las posibilidades del componente-->
-    <h2>Ejemplos</h2>
-    <plz-divider></plz-divider>
-    <h3>Tipos de separador</h3>
-    <p>Usaremos el atributo type para elegir el tipo de separador que veamos adecuado para nuestro contenido entre
-        "solid", "dashed" y "dotted".</p>
-    <p>En este caso estaremos modificando la forma del separador, pudiendo elegir entre tres tipos.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
-            <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
-            <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>
-            <plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white" active="true">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Separador</h1>
+            <p class="component-tag">&lt;plz-divider&gt; &#124; PlzDivider</p>
+            <!-- Dar forma y poner letra de consola-->
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>Los separadores sirven para dividir distintas partes del contenido y hacer que se diferencien.</p>
+            <p>En este caso se hará uso de separadores de tipo horizontal ya que son los más comunes y se podrá ajustar
+                grosor,
+                color y forma del mismo.</p>
+            <p>El uso más normal de estos es de tipo minimalista, una línea fina solida de un color que vaya acorde al
+                estilo de
+                la página y que no resalte mucho.</p>
+            <!-- Muestra del componente -->
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-divider space-top="5" space-bottom="10"></plz-divider>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-divider space-top="5" space-bottom="10"></plz-divider>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
+            <!-- Ejemplos de las posibilidades del componente-->
+            <h2>Ejemplos</h2>
+            <plz-divider></plz-divider>
+            <h3>Tipos de separador</h3>
+            <p>Usaremos el atributo type para elegir el tipo de separador que veamos adecuado para nuestro contenido
+                entre
+                "solid", "dashed" y "dotted".</p>
+            <p>En este caso estaremos modificando la forma del separador, pudiendo elegir entre tres tipos.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
+                    <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
+                    <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>
+                    <plz-divider variant="custom" height="175"
+                        custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="dashed"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="dotted"></plz-divider>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Variante personalizada</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de separador "custom" y podremos ajustarlo a nuestra página haciendo uso del atributo height y de custom-position para determinar la posición del divider que se determinará por el atributo custom-divider donde definiremos la imagen que utilizaremos para este.</p>
-    <p>A continuación se muestran dos ejemplos de su posible uso</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
-            <plz-divider variant="custom" height="250" custom-divider="../assets/icon/Divider-orange.svg" custom-position="bottom left"></plz-divider>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
+            <h3>Variante personalizada</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de separador "custom" y podremos ajustarlo a nuestra
+                página
+                haciendo uso del atributo height y de custom-position para determinar la posición del divider que se
+                determinará por el atributo custom-divider donde definiremos la imagen que utilizaremos para este.</p>
+            <p>A continuación se muestran dos ejemplos de su posible uso</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-divider variant="custom" height="175"
+                        custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
+                    <plz-divider variant="custom" height="250" custom-divider="../assets/icon/Divider-orange.svg"
+                        custom-position="bottom left"></plz-divider>
+                </plz-showcase-render>
+                <plz-showcase-code
+                    text-code='<plz-divider variant="custom" height="175" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
             <plz-divider variant="custom" height="250" custom-divider="../assets/icon/Divider-orange.svg" custom-position="bottom left"></plz-divider>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Grosor del separador</h3>
-    <p>Usaremos el atributo height para elegir el grosor del separador.</p>
-    <p>Pese a que lo más común es utilizar un grosor pequeño, en algunas ocasiones puede verse el caso de necesitar un
-        grosor más grande.</p>
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-divider space-top="10" space-bottom="15" height="7" type="solid"></plz-divider>
-        </plz-showcase-render>
-        <plz-showcase-code
-            text-code='<plz-divider space-top="10" space-bottom="15" height="8" type="solid"></plz-divider>'>
-        </plz-showcase-code>
-    </plz-showcase>
+            <h3>Grosor del separador</h3>
+            <p>Usaremos el atributo height para elegir el grosor del separador.</p>
+            <p>Pese a que lo más común es utilizar un grosor pequeño, en algunas ocasiones puede verse el caso de
+                necesitar
+                un
+                grosor más grande.</p>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-divider space-top="10" space-bottom="15" height="7" type="solid"></plz-divider>
+                </plz-showcase-render>
+                <plz-showcase-code
+                    text-code='<plz-divider space-top="10" space-bottom="15" height="8" type="solid"></plz-divider>'>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Color del separador</h3>
-    <p>Usaremos el atributo color para elegir el color más adecuado según nuestro estilo de página web. Por defecto será
-        black-4 (meter un tooltip aquí).</p> <!-- Revisar-->
-    <p>Se puede usar tanto hex, rgb o rgba para el atributo color.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
-            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
-                color="rgb(212,104,62,100%)"></plz-divider>
-            <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
-                color="rgba(205, 84, 82, 1)"></plz-divider>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
+            <h3>Color del separador</h3>
+            <p>Usaremos el atributo color para elegir el color más adecuado según nuestro estilo de página web. Por
+                defecto
+                será
+                black-4 (meter un tooltip aquí).</p> <!-- Revisar-->
+            <p>Se puede usar tanto hex, rgb o rgba para el atributo color.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
+                    <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
+                        color="rgb(212,104,62,100%)"></plz-divider>
+                    <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
+                        color="rgba(205, 84, 82, 1)"></plz-divider>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-divider space-top="10" space-bottom="15" height="3" type="solid" color="#FACCAC"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
                 color="rgb(212,104,62,100%)"></plz-divider>
             <plz-divider space-top="10" space-bottom="15" height="3" type="solid"
                 color="rgba(205, 84, 82, 1)"></plz-divider>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Margen superior e inferior del separador</h3>
-    <p>Usaremos el atributo space-top y space-bottom para añadir espacio entre los elementos y el separador.</p>
-    <p>En algunos casos es necesario añadir un margen extra para que la colocación de nuestro elemento separador se
-        visualice correctamente con nuestro contenido.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
-            <plz-divider space-top="10" space-bottom="20" height="2" type="solid"></plz-divider>
-            <p style="border: 1px solid gray">El separador estará a 20px de este elemento.</p>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
+            <h3>Margen superior e inferior del separador</h3>
+            <p>Usaremos el atributo space-top y space-bottom para añadir espacio entre los elementos y el separador.</p>
+            <p>En algunos casos es necesario añadir un margen extra para que la colocación de nuestro elemento separador
+                se
+                visualice correctamente con nuestro contenido.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
+                    <plz-divider space-top="10" space-bottom="20" height="2" type="solid"></plz-divider>
+                    <p style="border: 1px solid gray">El separador estará a 20px de este elemento.</p>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<p style="border: 1px solid gray">El separador estará a 10px de este elemento.</p>
             <plz-divider space-top="10" space-bottom="20" height="2" type="solid"></plz-divider>
             <p style="border: 1px solid gray">El separador estará a 20px de este elemento.</p>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Combinaciones para crear dividers originales</h3>
-    <p>Podemos usar combinaciones de los atributos vistos para crear separadores originales.</p>
-    <p>En ocasiones se da el caso de necesitar un separador con distintos colores para hacer el cambio de sección más
-        visual, pudiendo cambiar grosor, forma, etc. pudiendo ser así más creativo.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <p>En este caso obtenemos un separador de distintos colores.</p>
-            <plz-divider space-top="10" height="3" type="solid" color="#FACCAC"></plz-divider>
-            <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
-            <plz-divider space-bottom="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
+            <h3>Combinaciones para crear dividers originales</h3>
+            <p>Podemos usar combinaciones de los atributos vistos para crear separadores originales.</p>
+            <p>En ocasiones se da el caso de necesitar un separador con distintos colores para hacer el cambio de
+                sección
+                más
+                visual, pudiendo cambiar grosor, forma, etc. pudiendo ser así más creativo.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <p>En este caso obtenemos un separador de distintos colores.</p>
+                    <plz-divider space-top="10" height="3" type="solid" color="#FACCAC"></plz-divider>
+                    <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
+                    <plz-divider space-bottom="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
 
-            <plz-divider space-top="15" height="1.5" type="solid" color="#ee4a00"></plz-divider>
-            <plz-divider height="1.5" type="solid" color="#e28000"></plz-divider>
-            <plz-divider height="1.5" type="solid" color="#f9a72f"></plz-divider>
-            <plz-divider height="1.5" type="solid" color="#fbbd5e"></plz-divider>
-            <plz-divider space-bottom="15" height="1.5" type="solid" color="#fde9b0"></plz-divider>
-            <p>En este caso obtenemos uno con colores y tipos distintos que se parece a una cremallera.</p>
-            <plz-divider space-top="10" height="2" type="dotted" color="#FACCAC"></plz-divider>
-            <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
-            <plz-divider space-bottom="10" height="2" type="dotted" color="rgba(205, 84, 82, 1)"></plz-divider>
-            <p>Hay distintas combinaciones para investigar.</p>
-            <plz-divider space-top="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
-            <plz-divider height="2" type="dashed" color="rgb(212,104,62,100%)"></plz-divider>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<p>En este caso obtenemos un separador de distintos colores.</p>
+                    <plz-divider space-top="15" height="1.5" type="solid" color="#ee4a00"></plz-divider>
+                    <plz-divider height="1.5" type="solid" color="#e28000"></plz-divider>
+                    <plz-divider height="1.5" type="solid" color="#f9a72f"></plz-divider>
+                    <plz-divider height="1.5" type="solid" color="#fbbd5e"></plz-divider>
+                    <plz-divider space-bottom="15" height="1.5" type="solid" color="#fde9b0"></plz-divider>
+                    <p>En este caso obtenemos uno con colores y tipos distintos que se parece a una cremallera.</p>
+                    <plz-divider space-top="10" height="2" type="dotted" color="#FACCAC"></plz-divider>
+                    <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
+                    <plz-divider space-bottom="10" height="2" type="dotted" color="rgba(205, 84, 82, 1)"></plz-divider>
+                    <p>Hay distintas combinaciones para investigar.</p>
+                    <plz-divider space-top="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
+                    <plz-divider height="2" type="dashed" color="rgb(212,104,62,100%)"></plz-divider>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<p>En este caso obtenemos un separador de distintos colores.</p>
             <plz-divider space-top="10" height="3" type="solid" color="#FACCAC"></plz-divider>
             <plz-divider height="3" type="solid" color="rgb(212,104,62,100%)"></plz-divider>
             <plz-divider space-bottom="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
@@ -140,63 +196,67 @@
             <p>Hay distintas combinaciones para investigar.</p>
             <plz-divider space-top="10" height="3" type="solid" color="rgba(205, 84, 82, 1)"></plz-divider>
             <plz-divider height="2" type="dashed" color="rgb(212,104,62,100%)"></plz-divider>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Sección de los atributos -->
-    <h2>Atributos</h2>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>variant</td>
-                <td>Distintas tipos del componente separador</td>
-                <td>'default' - 'custom'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>type</td>
-                <td>Distintas variantes del componente separador</td>
-                <td>'solid' - 'dashed' - 'dotted'</td>
-                <td>'default'</td>
-            </tr>
-            <tr>
-                <td>color</td>
-                <td>Distintos colores del componente separador</td>
-                <td>hex, rgb, rgba</td>
-                <td>black-4</td>
-            </tr>
-            <tr>
-                <td>space-top</td>
-                <td>Separación superior del componente separador</td>
-                <td>Number</td>
-                <td>'0'</td>
-            </tr>
-            <tr>
-                <td>space-bottom</td>
-                <td>Separación inferior del componente separador</td>
-                <td>Number</td>
-                <td>'0'</td>
-            </tr>
-            <tr>
-                <td>custom-divider</td>
-                <td>Referencia a una imagen</td>
-                <td>'../assets/icon/...'</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>custom-position</td>
-                <td>Distintas posiciones de imagen del componente separador</td>
-                <td></td>
-                <td>'top left'</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <!-- Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variant</td>
+                        <td>Distintas tipos del componente separador</td>
+                        <td>'default' - 'custom'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>type</td>
+                        <td>Distintas variantes del componente separador</td>
+                        <td>'solid' - 'dashed' - 'dotted'</td>
+                        <td>'default'</td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>Distintos colores del componente separador</td>
+                        <td>hex, rgb, rgba</td>
+                        <td>black-4</td>
+                    </tr>
+                    <tr>
+                        <td>space-top</td>
+                        <td>Separación superior del componente separador</td>
+                        <td>Number</td>
+                        <td>'0'</td>
+                    </tr>
+                    <tr>
+                        <td>space-bottom</td>
+                        <td>Separación inferior del componente separador</td>
+                        <td>Number</td>
+                        <td>'0'</td>
+                    </tr>
+                    <tr>
+                        <td>custom-divider</td>
+                        <td>Referencia a una imagen</td>
+                        <td>'../assets/icon/...'</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>custom-position</td>
+                        <td>Distintas posiciones de imagen del componente separador</td>
+                        <td></td>
+                        <td>'top left'</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

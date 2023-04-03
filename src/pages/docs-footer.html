@@ -1,56 +1,100 @@
-<section class="content-detail">
-    <h1>Footer</h1>
-    <p class="component-tag">&lt;plz-footer&gt; &#124; PlzFooter</p> <!-- Dar forma y poner letra de consola-->
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>El componente footer se utiliza para mostrar información en forma de sección al final de la página. En suele
-        aparecer información acerca de colaboradores, redes sociales, opciones de contacto, politicas de privacidad y
-        términos de uso, enlaces a páginas relevantes...</p>
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- Ejemplos de las posibilidades del componente-->
-    <h2>Ejemplos</h2>
-    <plz-divider></plz-divider>
-    <h3>Footer simple</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de footer "simple".</p>
-    <p>Esta variante es un footer básico con una fina línea en la parte superior para separar el contenido del footer
-        del contenido principal de la página.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <p>Contenido de la página principal</p>
-            <br><br>
-            <plz-footer variant="simple">
-                <h3>Footer info</h3>
-                <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
-                    código a través de nuestro Github.</p>
-            </plz-footer>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-footer variant="simple">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white" active="true">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Footer</h1>
+            <p class="component-tag">&lt;plz-footer&gt; &#124; PlzFooter</p> <!-- Dar forma y poner letra de consola-->
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>El componente footer se utiliza para mostrar información en forma de sección al final de la página. En
+                suele
+                aparecer información acerca de colaboradores, redes sociales, opciones de contacto, politicas de
+                privacidad
+                y
+                términos de uso, enlaces a páginas relevantes...</p>
+
+            <!-- Ejemplos de las posibilidades del componente-->
+            <h2>Ejemplos</h2>
+            <plz-divider></plz-divider>
+            <h3>Footer simple</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de footer "simple".</p>
+            <p>Esta variante es un footer básico con una fina línea en la parte superior para separar el contenido del
+                footer
+                del contenido principal de la página.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <p>Contenido de la página principal</p>
+                    <br><br>
+                    <plz-footer variant="simple">
+                        <h3>Footer info</h3>
+                        <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                            código a través de nuestro Github.</p>
+                    </plz-footer>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-footer variant="simple">
             <h3>Footer info</h3>
             <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
                 código a través de nuestro Github.</p>
         </plz-footer>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Footer con imagen con dos columnas</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de footer "block".</p>
-    <p>Esta variante consta de un bloque central personalizable. También se podrá elegir el fondo del footer pasando por
-        atributo la url de una imagen.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg">
-                <h3>Contacto</h3>
-                <p>
-                    Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
-                    tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
-                    Agradecemos vuestra comprensión.
-                </p>
-                <plz-button variant="icon" icon="github"></plz-button>
-                <plz-button variant="icon" icon="linkedin"></plz-button>
-                <plz-button variant="icon" icon="mail"></plz-button>
-            </plz-footer>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg">
+            <h3>Footer con imagen con dos columnas</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de footer "block".</p>
+            <p>Esta variante consta de un bloque central personalizable. También se podrá elegir el fondo del footer
+                pasando
+                por
+                atributo la url de una imagen.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg">
+                        <h3>Contacto</h3>
+                        <p>
+                            Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
+                            tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
+                            Agradecemos vuestra comprensión.
+                        </p>
+                        <plz-button variant="icon" icon="github"></plz-button>
+                        <plz-button variant="icon" icon="linkedin"></plz-button>
+                        <plz-button variant="icon" icon="mail"></plz-button>
+                    </plz-footer>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg">
             <h3>Contacto</h3>
             <p>
                 Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
@@ -61,26 +105,30 @@
             <plz-button variant="icon" icon="linkedin"></plz-button>
             <plz-button variant="icon" icon="mail"></plz-button>
         </plz-footer>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Footer con imagen con dos columnas</h3>
-    <p>Usaremos el atributo variant para elegir el tipo de footer "two-columns".</p>
-    <p>Esta variante consta de dos columnas que serán personalizables.</p>
-    <p>Para identificar la columna en la que colocaremos el contenido utilizaremos el atributo slot="first-column" o
-        slot="second-column" como se muestra a continuación.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <plz-footer variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
-                <plz-button slot="first-column" variant="icon" icon="palaze"></plz-button>
-                <p slot="first-column">Palace es un proyecto de componentes web con código libre. Podrás acceder al
-                    código a través de nuestro Github.</p>
-                <h3 slot="second-column">Segunda Columna</h3>
-                <p slot="second-column">Dependiendo del contenido de la web, se puede utilizar de distinta manera cada
-                    una de las columnas.</p>
-            </plz-footer>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-footer variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
+            <h3>Footer con imagen con dos columnas</h3>
+            <p>Usaremos el atributo variant para elegir el tipo de footer "two-columns".</p>
+            <p>Esta variante consta de dos columnas que serán personalizables.</p>
+            <p>Para identificar la columna en la que colocaremos el contenido utilizaremos el atributo
+                slot="first-column" o
+                slot="second-column" como se muestra a continuación.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-footer variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
+                        <plz-button slot="first-column" variant="icon" icon="palaze"></plz-button>
+                        <p slot="first-column">Palace es un proyecto de componentes web con código libre. Podrás acceder
+                            al
+                            código a través de nuestro Github.</p>
+                        <h3 slot="second-column">Segunda Columna</h3>
+                        <p slot="second-column">Dependiendo del contenido de la web, se puede utilizar de distinta
+                            manera
+                            cada
+                            una de las columnas.</p>
+                    </plz-footer>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-footer variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
             <plz-button slot="first-column" variant="icon" icon="palaze"></plz-button>
             <p slot="first-column">Palace es un proyecto de componentes web con código libre. Podrás acceder al
                 código a través de nuestro Github.</p>
@@ -88,36 +136,40 @@
             <p slot="second-column">Dependiendo del contenido de la web, se puede utilizar de distinta manera cada
                 una de las columnas.</p>
         </plz-footer>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Personaliza tu footer</h3>
-    <p>En este caso utilizamos la variante "simple" ya que es la más personalizable.</p>
-    <p>Puedes personalizar el contenido como consideres. En este caso hacemos uso
-        de otro componente de la librería (plz-section) para crear dos columnas en la que separaremos el contenido.</p>
-    <plz-showcase>
-        <plz-showcase-render display="block">
-            <p>Contenido de la página principal</p>
-            <br><br>
-            <plz-footer variant="simple">
-                <plz-section variant="columns">
-                    <h3 slot="first">Contacto</h3>
-                    <p slot="first">
-                        Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
-                        tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
-                        Agradecemos vuestra comprensión.
-                    </p>
-                    <plz-button slot="first" variant="icon" icon="github"></plz-button>
-                    <plz-button slot="first" variant="icon" icon="linkedin"></plz-button>
-                    <plz-button slot="first" variant="icon" icon="mail"></plz-button>
-                    <h3 slot="second">Compañía</h3>
-                    <p slot="second">Palaze es una gran comunidad en la que nos centramos en la practicidad y el
-                        minimalismo, buscando aportar el máximo valor posible a nuestros usuarios y desarrolladores.
-                    </p>
-                </plz-section>
-            </plz-footer>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-footer variant="simple">
+            <h3>Personaliza tu footer</h3>
+            <p>En este caso utilizamos la variante "simple" ya que es la más personalizable.</p>
+            <p>Puedes personalizar el contenido como consideres. En este caso hacemos uso
+                de otro componente de la librería (plz-section) para crear dos columnas en la que separaremos el
+                contenido.
+            </p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <p>Contenido de la página principal</p>
+                    <br><br>
+                    <plz-footer variant="simple">
+                        <plz-section variant="columns">
+                            <h3 slot="first">Contacto</h3>
+                            <p slot="first">
+                                Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede
+                                que
+                                tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
+                                Agradecemos vuestra comprensión.
+                            </p>
+                            <plz-button slot="first" variant="icon" icon="github"></plz-button>
+                            <plz-button slot="first" variant="icon" icon="linkedin"></plz-button>
+                            <plz-button slot="first" variant="icon" icon="mail"></plz-button>
+                            <h3 slot="second">Compañía</h3>
+                            <p slot="second">Palaze es una gran comunidad en la que nos centramos en la practicidad y el
+                                minimalismo, buscando aportar el máximo valor posible a nuestros usuarios y
+                                desarrolladores.
+                            </p>
+                        </plz-section>
+                    </plz-footer>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-footer variant="simple">
             <plz-section variant="columns">
                 <h3 slot="first">Contacto</h3>
                 <p slot="first">
@@ -134,40 +186,44 @@
                 </p>
             </plz-section>
         </plz-footer>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Sección de los atributos -->
-    <h2>Atributos</h2>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>variant</td>
-                <td>Distintas variantes del componente heroe</td>
-                <td>'simple' - 'block' - 'two-columns'</td>
-                <td>'simple'</td>
-            </tr>
-            <tr>
-                <td>height</td>
-                <td>Puedes determinar la altura del componente.</td>
-                <td>px</td>
-                <td>'600px'</td>
-            </tr>
-            <tr>
-                <td>image</td>
-                <td>Dirección url de la imagen a colocar en el componente footer con la variante "block" o
-                    "two-column"</td>
-                <td>'./mi-imagen-ejemplo.svg'</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <!-- Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variant</td>
+                        <td>Distintas variantes del componente heroe</td>
+                        <td>'simple' - 'block' - 'two-columns'</td>
+                        <td>'simple'</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>Puedes determinar la altura del componente.</td>
+                        <td>px</td>
+                        <td>'600px'</td>
+                    </tr>
+                    <tr>
+                        <td>image</td>
+                        <td>Dirección url de la imagen a colocar en el componente footer con la variante "block" o
+                            "two-column"</td>
+                        <td>'./mi-imagen-ejemplo.svg'</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

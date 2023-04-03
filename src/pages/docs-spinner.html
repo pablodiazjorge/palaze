@@ -1,106 +1,160 @@
-<section class="content-detail">
-    <h1>Spinner</h1>
-    <p class="component-tag">&lt;plz-spinner&gt; &#124; PlzSpinner</p>
-    <plz-divider space-bottom="10" space-top="4"></plz-divider>
-    <!-- Pequeña descripción -->
-    <p>Los componentes de tipo spinner se utilizan principalmente para indicar que algo está cargando/procesando algún
-        tipo de información. Se suele utilizar haciendo visible el componente spinner al hacer una petición que puede
-        demorar algo de tiempo y cuando se recibe la petición con la información, se vuelve a hacer invisible el
-        componente, de esta forma se indica que algo está sucediendo en ese tiempo de espera.</p>
-    <!-- Muestra del componente -->
-    <plz-showcase>
-        <plz-showcase-render>
-            <plz-spinner></plz-spinner>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-spinner></plz-spinner>'>
-        </plz-showcase-code>
-    </plz-showcase>
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- Ejemplos de las posibilidades del componente-->
-    <h2>Ejemplos</h2>
-    <plz-divider></plz-divider>
-    <h3>Distintos tipos de spinner</h3>
-    <p>Usaremos el atributo variant para elegir la variante de spinner que consideremos entre "simple", "normal",
-        "wave",
-        "atom",
-        "bola".</p>
-    <p>Considerando la gran variedad de spinners que puedes encontrar en sitios web, se puede decir que estas son las
-        variantes más utilizadas. En cada sitio web estará desarrollado de una manera distinta, en este caso se ha
-        desarrollado intentando mantener el minimalismo, pero a la vez manteniendo su atractivo visual.</p>
-    <plz-showcase>
-        <plz-showcase-render gap="25">
-            <plz-spinner variant="simple"></plz-spinner>
-            <plz-spinner variant="normal"></plz-spinner>
-            <plz-spinner variant="wave"></plz-spinner>
-            <plz-spinner variant="atom"></plz-spinner>
-            <plz-spinner variant="bola"></plz-spinner>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-spinner variant="simple"></plz-spinner>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-sidebar id-main="main">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white" active="true">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Spinner</h1>
+            <p class="component-tag">&lt;plz-spinner&gt; &#124; PlzSpinner</p>
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>Los componentes de tipo spinner se utilizan principalmente para indicar que algo está cargando/procesando
+                algún
+                tipo de información. Se suele utilizar haciendo visible el componente spinner al hacer una petición que
+                puede
+                demorar algo de tiempo y cuando se recibe la petición con la información, se vuelve a hacer invisible el
+                componente, de esta forma se indica que algo está sucediendo en ese tiempo de espera.</p>
+            <!-- Muestra del componente -->
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-spinner></plz-spinner>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-spinner></plz-spinner>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
+            <!-- Ejemplos de las posibilidades del componente-->
+            <h2>Ejemplos</h2>
+            <plz-divider></plz-divider>
+            <h3>Distintos tipos de spinner</h3>
+            <p>Usaremos el atributo variant para elegir la variante de spinner que consideremos entre "simple",
+                "normal",
+                "wave",
+                "atom",
+                "bola".</p>
+            <p>Considerando la gran variedad de spinners que puedes encontrar en sitios web, se puede decir que estas
+                son
+                las
+                variantes más utilizadas. En cada sitio web estará desarrollado de una manera distinta, en este caso se
+                ha
+                desarrollado intentando mantener el minimalismo, pero a la vez manteniendo su atractivo visual.</p>
+            <plz-showcase>
+                <plz-showcase-render gap="25">
+                    <plz-spinner variant="simple"></plz-spinner>
+                    <plz-spinner variant="normal"></plz-spinner>
+                    <plz-spinner variant="wave"></plz-spinner>
+                    <plz-spinner variant="atom"></plz-spinner>
+                    <plz-spinner variant="bola"></plz-spinner>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-spinner variant="simple"></plz-spinner>
             <plz-spinner variant="normal"></plz-spinner>
             <plz-spinner variant="wave"></plz-spinner>
             <plz-spinner variant="atom"></plz-spinner>
             <plz-spinner variant="bola"></plz-spinner>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <h3>Distintos colores de spinner</h3>
-    <p>Usaremos el atributo color-primary, color-secundary o colors-bola dependiendo del spinner que utilicemos.</p>
-    <p>No hay limitación en cuanto a la elección de colores del spinner, podrás pasar el color mediente los tipos hex,
-        rgb o rgba. A continuación un ejemplo de cada tipo de spinner.</p>
-    <plz-showcase>
-        <plz-showcase-render gap="25">
-            <plz-spinner variant="simple" color-primary="#4cb05b" color-secondary="#1B4332"></plz-spinner>
-            <plz-spinner variant="normal" color-primary="#340856" color-secondary="#a167c9"></plz-spinner>
-            <plz-spinner variant="wave" color-primary="#A4133C" color-secondary="#FFB3C1"></plz-spinner>
-            <plz-spinner variant="atom" color-primary="#b88900"></plz-spinner>
-            <plz-spinner variant="bola" colors-bola="#023E8A,#1B4332,#4cb05b,#d3a007,#732487,#ee4a00"></plz-spinner>
-        </plz-showcase-render>
-        <plz-showcase-code text-code='<plz-spinner variant="simple" color-primary="#4cb05b" color-secondary="#1B4332"></plz-spinner>
+            <h3>Distintos colores de spinner</h3>
+            <p>Usaremos el atributo color-primary, color-secundary o colors-bola dependiendo del spinner que utilicemos.
+            </p>
+            <p>No hay limitación en cuanto a la elección de colores del spinner, podrás pasar el color mediente los
+                tipos
+                hex,
+                rgb o rgba. A continuación un ejemplo de cada tipo de spinner.</p>
+            <plz-showcase>
+                <plz-showcase-render gap="25">
+                    <plz-spinner variant="simple" color-primary="#4cb05b" color-secondary="#1B4332"></plz-spinner>
+                    <plz-spinner variant="normal" color-primary="#340856" color-secondary="#a167c9"></plz-spinner>
+                    <plz-spinner variant="wave" color-primary="#A4133C" color-secondary="#FFB3C1"></plz-spinner>
+                    <plz-spinner variant="atom" color-primary="#b88900"></plz-spinner>
+                    <plz-spinner variant="bola"
+                        colors-bola="#023E8A,#1B4332,#4cb05b,#d3a007,#732487,#ee4a00"></plz-spinner>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-spinner variant="simple" color-primary="#4cb05b" color-secondary="#1B4332"></plz-spinner>
             <plz-spinner variant="normal" color-primary="#340856" color-secondary="#a167c9"></plz-spinner>
             <plz-spinner variant="wave" color-primary="#A4133C" color-secondary="#FFB3C1"></plz-spinner>
             <plz-spinner variant="atom" color-primary="#b88900"></plz-spinner>
             <plz-spinner variant="bola" colors-bola="#023E8A,#1B4332,#4cb05b,#d3a007,#732487,#ee4a00"></plz-spinner>'>
-        </plz-showcase-code>
-    </plz-showcase>
+                </plz-showcase-code>
+            </plz-showcase>
 
-    <!-- Sección de los atributos -->
-    <h2>Atributos</h2>
-    <table class="table-atr">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Posibilidades</th>
-                <th>Por defecto</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>variant</td>
-                <td>Distintas variantes del componente spinner.</td>
-                <td>'normal' - 'simple' - 'wave' - 'atom' - 'bola'</td>
-                <td>'normal'</td>
-            </tr>
-            <tr>
-                <td>color-primary</td>
-                <td>Distintas variantes del componente spinner.</td>
-                <td>hex, rgb o rgba</td>
-                <td>'#023E8A'</td>
-            </tr>
-            <tr>
-                <td>color-secondary</td>
-                <td>Color secundario del componente spinner.</td>
-                <td>hex, rgb o rgba</td>
-                <td>'#a7b3e9'</td>
-            </tr>
-            <tr>
-                <td>color-bola</td>
-                <td>Cadena con los colores de las bolas en tipo hex, rgb o rgba(Escribir todo junto y sin comillas como en el ejemplo de arriba).</td>
-                <td>hex, rgb o rgba</td>
-                <td>'#023E8A,#a7b3e9,
-                    #023E8A,#0096C7,
-                    #0077B6,#0096C7'</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+            <!-- Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>variant</td>
+                        <td>Distintas variantes del componente spinner.</td>
+                        <td>'normal' - 'simple' - 'wave' - 'atom' - 'bola'</td>
+                        <td>'normal'</td>
+                    </tr>
+                    <tr>
+                        <td>color-primary</td>
+                        <td>Distintas variantes del componente spinner.</td>
+                        <td>hex, rgb o rgba</td>
+                        <td>'#023E8A'</td>
+                    </tr>
+                    <tr>
+                        <td>color-secondary</td>
+                        <td>Color secundario del componente spinner.</td>
+                        <td>hex, rgb o rgba</td>
+                        <td>'#a7b3e9'</td>
+                    </tr>
+                    <tr>
+                        <td>color-bola</td>
+                        <td>Cadena con los colores de las bolas en tipo hex, rgb o rgba(Escribir todo junto y sin
+                            comillas
+                            como en el ejemplo de arriba).</td>
+                        <td>hex, rgb o rgba</td>
+                        <td>'#023E8A,#a7b3e9,
+                            #023E8A,#0096C7,
+                            #0077B6,#0096C7'</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
