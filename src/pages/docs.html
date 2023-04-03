@@ -29,9 +29,7 @@
         });
     });
 
-    var designActive = false;
     var toggled = false;
-    let sideWidth = 0;
     function toggle() {
         if (toggled === false) {
             toggled = true;
@@ -40,7 +38,6 @@
             document.getElementById("sidebar").style.borderLeft = "none";
         } else if (toggled === true) {
             toggled = false;
-            sideWidth = document.getElementById("main").clientLeft;
             document.getElementById("sidebar").style.width = "270px";
             document.getElementById("main").style.left = "30%";
             document.getElementById("sidebar").style.borderLeft = "1px solid #495057";
@@ -81,6 +78,7 @@
             <li onclick="loadSection('docs-figure.html')">Figure</li>
             <li onclick="loadSection('docs-section.html')">Section</li>
             <li onclick="loadSection('docs-footer.html')">Footer</li>
+            <a href="demo.html">click</a>
             <plz-divider></plz-divider>
             <li onclick="loadSection('docs-design-system.html')">Design System</li>
             <li class="sub-option">Colores</li>

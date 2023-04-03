@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  --plz-border-radius-low-rounded: 20px;
+}
+
+.sidebar {
+  z-index: 1;
+  height: 100%;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  border-right: 1px solid var(--plz-color-black-4);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.sidebar img {
+  width: 225px;
+  border-radius: var(--plz-border-radius-low-rounded);
+  margin-left: 28px;
+}
+
+.button-sidebar {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  padding: 6px 6px;
+  font-size: var(--plz-font-size-below-titles);
+  cursor: pointer;
+  display: inline-block;
+}

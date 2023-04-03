@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'plz-menu',
@@ -6,9 +6,11 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class PlzMenu {
+  @Prop() borderMenu:string = 'all'
+
   render() {
     return (
-      <ul class="simple">
+      <ul class={`simple border-${this.borderMenu}`}>
         <slot></slot>
       </ul>
     );

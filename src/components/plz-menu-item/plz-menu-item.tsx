@@ -15,14 +15,14 @@ export class PlzMenuItem {
 
   @Prop() active: boolean = false;
 
-  handleClick() {
+  activate() {
     this.active = !this.active;
   }
 
   render() {
     return this.variant == 'simple' ? (
       <Host>
-        <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.handleClick()}>
+        <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.activate()}>
           <li class="item">
             <slot></slot>
           </li>
@@ -34,7 +34,7 @@ export class PlzMenuItem {
           href={this.link}
           target={this.target}
           class={`link custom ${this.active ? 'active' : ''}`}
-          onClick={() => this.handleClick()}
+          onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
           <li class="item">
@@ -46,7 +46,7 @@ export class PlzMenuItem {
       <Host>
         <li
           class={`item custom ${this.active ? 'active' : ''}`}
-          onClick={() => this.handleClick()}
+          onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
           <slot></slot>
@@ -54,7 +54,7 @@ export class PlzMenuItem {
       </Host>
     ) : this.variant == 'custom' ? (
       <Host>
-        <li class={{ item: true, active: this.active }} onClick={() => this.handleClick()}>
+        <li class={{ item: true, active: this.active }} onClick={() => this.activate()}>
           <slot></slot>
         </li>
       </Host>
@@ -65,9 +65,9 @@ export class PlzMenuItem {
           target={this.target}
           class="link custom"
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-          onClick={() => this.handleClick()}
+          onClick={() => this.activate()}
         >
-          <li class={`item-image grid-container ${this.active ? 'active' : ''}`} onClick={() => this.handleClick()}>
+          <li class={`item-image grid-container ${this.active ? 'active' : ''}`} onClick={() => this.activate()}>
             <div class="grid-item">
               <img src={this.imageUrl} />
             </div>
@@ -79,7 +79,7 @@ export class PlzMenuItem {
       <Host>
         <li
           class={`item-image grid-container ${this.active ? 'active' : ''}`}
-          onClick={() => this.handleClick()}
+          onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
           <div class="grid-item">
@@ -90,7 +90,7 @@ export class PlzMenuItem {
       </Host>
     ) : this.variant == 'image' ? (
       <Host>
-        <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''}`} onClick={() => this.handleClick()}>
+        <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''}`} onClick={() => this.activate()}>
           <div class="grid-item">
             <img src={this.imageUrl} />
           </div>

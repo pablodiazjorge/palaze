@@ -64,6 +64,7 @@ export namespace Components {
         "variant": string;
     }
     interface PlzMenu {
+        "borderMenu": string;
     }
     interface PlzMenuItem {
         "active": boolean;
@@ -91,6 +92,10 @@ export namespace Components {
         "paddingRight": string;
         "paddingTop": string;
         "verticalAlign": string;
+    }
+    interface PlzSidebar {
+        "idMain": string;
+        "width": string;
     }
     interface PlzSpinner {
         "colorPrimary": string;
@@ -189,6 +194,12 @@ declare global {
         prototype: HTMLPlzShowcaseRenderElement;
         new (): HTMLPlzShowcaseRenderElement;
     };
+    interface HTMLPlzSidebarElement extends Components.PlzSidebar, HTMLStencilElement {
+    }
+    var HTMLPlzSidebarElement: {
+        prototype: HTMLPlzSidebarElement;
+        new (): HTMLPlzSidebarElement;
+    };
     interface HTMLPlzSpinnerElement extends Components.PlzSpinner, HTMLStencilElement {
     }
     var HTMLPlzSpinnerElement: {
@@ -216,6 +227,7 @@ declare global {
         "plz-showcase": HTMLPlzShowcaseElement;
         "plz-showcase-code": HTMLPlzShowcaseCodeElement;
         "plz-showcase-render": HTMLPlzShowcaseRenderElement;
+        "plz-sidebar": HTMLPlzSidebarElement;
         "plz-spinner": HTMLPlzSpinnerElement;
         "plz-tooltip": HTMLPlzTooltipElement;
     }
@@ -279,6 +291,7 @@ declare namespace LocalJSX {
         "variant"?: string;
     }
     interface PlzMenu {
+        "borderMenu"?: string;
     }
     interface PlzMenuItem {
         "active"?: boolean;
@@ -307,6 +320,10 @@ declare namespace LocalJSX {
         "paddingTop"?: string;
         "verticalAlign"?: string;
     }
+    interface PlzSidebar {
+        "idMain"?: string;
+        "width"?: string;
+    }
     interface PlzSpinner {
         "colorPrimary"?: string;
         "colorSecondary"?: string;
@@ -333,6 +350,7 @@ declare namespace LocalJSX {
         "plz-showcase": PlzShowcase;
         "plz-showcase-code": PlzShowcaseCode;
         "plz-showcase-render": PlzShowcaseRender;
+        "plz-sidebar": PlzSidebar;
         "plz-spinner": PlzSpinner;
         "plz-tooltip": PlzTooltip;
     }
@@ -355,6 +373,7 @@ declare module "@stencil/core" {
             "plz-showcase": LocalJSX.PlzShowcase & JSXBase.HTMLAttributes<HTMLPlzShowcaseElement>;
             "plz-showcase-code": LocalJSX.PlzShowcaseCode & JSXBase.HTMLAttributes<HTMLPlzShowcaseCodeElement>;
             "plz-showcase-render": LocalJSX.PlzShowcaseRender & JSXBase.HTMLAttributes<HTMLPlzShowcaseRenderElement>;
+            "plz-sidebar": LocalJSX.PlzSidebar & JSXBase.HTMLAttributes<HTMLPlzSidebarElement>;
             "plz-spinner": LocalJSX.PlzSpinner & JSXBase.HTMLAttributes<HTMLPlzSpinnerElement>;
             "plz-tooltip": LocalJSX.PlzTooltip & JSXBase.HTMLAttributes<HTMLPlzTooltipElement>;
         }

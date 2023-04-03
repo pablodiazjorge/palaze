@@ -8,10 +8,41 @@
   width: 100%;
   list-style: none;
   list-style-type: none;
-  border: 1px solid var(--plz-color-black-4);;
   margin: 0;
   padding: 0;
   padding-top: 5px;
   padding-bottom: 5px;
   user-select: none;
+}
+
+.border-all {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-top-bottom {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-left-right {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-top {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-bottom {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-right {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-left {
+  border: 1px solid var(--plz-color-black-4);
+}
+
+.border-none {
+  border: none;
 }
