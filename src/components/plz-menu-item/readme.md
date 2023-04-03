@@ -7,9 +7,15 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `type`   | `type`    |             | `string` | `'default'` |
+| Property     | Attribute     | Description | Type      | Default    |
+| ------------ | ------------- | ----------- | --------- | ---------- |
+| `active`     | `active`      |             | `boolean` | `false`    |
+| `colorHover` | `color-hover` |             | `string`  | `''`       |
+| `colorText`  | `color-text`  |             | `string`  | `'white'`  |
+| `imageUrl`   | `image-url`   |             | `string`  | `''`       |
+| `link`       | `link`        |             | `string`  | `''`       |
+| `target`     | `target`      |             | `string`  | `'_self'`  |
+| `variant`    | `variant`     |             | `string`  | `'simple'` |
 
 
 ----------------------------------------------
