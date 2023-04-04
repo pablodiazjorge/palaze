@@ -10,11 +10,9 @@ export class PlzSection {
 
   render() {
     return this.variant == 'wrapper' ? (
-      <Host>
         <div class="wrapper">
           <slot></slot>
         </div>
-      </Host>
     ) : this.variant == 'columns' ? (
       <Host>
         <div class="columns">

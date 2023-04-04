@@ -106,22 +106,26 @@
 
 .hero-default-content {
   box-sizing: border-box;
-  margin: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
   padding: 40px;
   background-color: var(--plz-color-white);
   border-radius: 50px;
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-  .hero {
-    width: 100%;
+@media screen and (max-width: 500px) {
+  .hero-default-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
   }
 }
 
 @media screen and (max-width: 1140px) {
-  .hero-content {
-    margin: 50px;
+  .hero-default-content {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 

@@ -4,6 +4,7 @@
 :host {
   box-sizing: border-box;
   display: block;
+  overflow-x: auto;
   width: 100%;
   border: 1px solid #d4d4d8;
   border-bottom-left-radius: 10px;

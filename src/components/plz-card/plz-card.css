@@ -107,6 +107,7 @@
 }
 
 .image-container-default {
+  box-sizing: border-box;
   display: flex;
   position: relative;
   min-width: 200px;
@@ -122,6 +123,7 @@
 .text-container-default {
   box-sizing: border-box;
   display: grid;
+  min-width: 200px;
   position: relative;
   align-self: start;
   padding: 20px;
@@ -279,4 +281,18 @@
 
 .glow-red:hover {
   background-color: var(--plz-color-red-4);
+}
+
+@media (max-width:520px) {
+  .a-default {
+    max-width: 250px;
+  }
+  
+  .image-container-default {
+    max-width: 250px;
+  }
+
+  .text-container-default {
+    max-width: 250px;
+  }
 }

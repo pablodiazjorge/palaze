@@ -3,12 +3,6 @@
   --plz-color-black-3: #495057;
 }
 
-:host([variant=wrapper]) {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
 .wrapper {
   box-sizing: border-box;
   display: flex;

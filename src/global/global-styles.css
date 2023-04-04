@@ -90,24 +90,69 @@
     --plz-color-white: white;
 }
 
+/* ## ESTILOS GENERALES ## */
+
 body,
 div,
-h1,
-h2,
-h3,
-p,
-span
-{
+span {
     margin: 0;
     padding: 0;
 }
 
-a {
-    font-size: 20px;
-}
-
 body {
     font-family: var(--plz-font-primary);
+    font-size: var(--plz-font-size-sub-section);
+}
+
+p {
+    font-size: var(--plz-font-size-sub-section);
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+h1 {
+    font-size: var(--plz-font-size-titles);
+    letter-spacing: var(--plz-letter-space-smaller);
+    margin-block-start: 5px;
+    margin-block-end: 10px;
+}
+
+h2 {
+    font-size: var(--plz-font-size-section);
+    margin-block-start: 5px;
+    margin-block-end: 10px;
+}
+
+h3 {
+    font-size: var(--plz-font-size-mid-section);
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+h4 {
+    font-size: var(--plz-font-size-below-titles);
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        line-height: var(--plz-line-height-smaller);
+    }
+
+    h2 {
+        line-height: var(--plz-line-height-smaller);
+    }
+
+    .about-us-section {
+        box-sizing: border-box;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .about-us-section h2 {
+        text-align: center;
+    }
 }
 
 /*
@@ -115,38 +160,33 @@ body {
 */
 
 .landing-main {
-    font-family: var(--plz-font-primary);
-    margin: 0;
+    margin-top: 44px;
+    /* Header content */
     background-color: var(--plz-color-black-5);
+    text-align: center;
 }
 
+/* ## CARDS SECTION ## */
+
 .cards-section h2 {
-    text-align: center;
-    font-size: var(--plz-font-size-section);
-    margin: 15px;
+    margin-block-start: 25px;
 }
 
 .cards-section h3 {
-    font-size: var(--plz-font-size-mid-section);
+    text-align: start;
 }
 
 .cards-section p {
-    font-size: var(--plz-font-size-sub-section);
+    text-align: justify;
 }
 
- .about-us-section {
+/* ## ABOUT US SECTION ## */
+
+.about-us-section {
     box-sizing: border-box;
     margin-left: 10%;
     margin-right: 10%;
-    text-align: justify;
     margin-bottom: 70px;
-}
-
-.about-us-section h2 {
-    margin-top: var(--plz-font-size-mid-section);
-    font-size: var(--plz-font-size-section);
-    text-align: center;
-    margin-bottom: var(--plz-font-size-mid-section);
 }
 
 .about-us-section h3 {
@@ -155,54 +195,31 @@ body {
 }
 
 .about-us-section p {
-    font-size: var(--plz-font-size-sub-section);
     text-align: justify;
 }
 
-/*
-    ###      HERO      ###
-*/
+/* ## INFO SECTION ## */
 
-.hero-content h1 {
-    box-sizing: border-box;
-    font-size: var(--plz-font-size-titles);
-    font-weight: var(--plz-font-weight-bold);
-    letter-spacing: var(--plz-letter-space-smaller);
-    line-height: var(--plz-line-height-small);
-}
-
-.hero-content p {
-    box-sizing: border-box;
-    font-size: var(--plz-font-size-below-titles);
-}
-
-/*
-    ###      SUB-HERO      ###
-*/
-
-.sub-hero {
+.info-section {
     margin: 0 auto;
-    display: grid;
+    display: block;
+    min-width: 340px;
+    width: 600px;
     margin-top: 60px;
-    width: 660px;
-    max-width: 660px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
-.sub-hero h2 {
-    box-sizing: border-box;
-    font-size: var(--plz-font-size-section);
-    line-height: var(--plz-line-height-small);
-    letter-spacing: var(--plz-letter-space-smaller);
+.info-section p {
+    padding: 0 90px;
 }
 
-.sub-hero p {
-    box-sizing: border-box;
-    padding-left: 90px;
-    padding-right: 90px;
-    font-size: var(--plz-font-size-sub-section);
+@media screen and (max-width: 600px) {
+    .info-section {
+        width: auto;
+    }
+    .info-section p {
+        padding: 0 30px;
+    }
 }
 
 /*-------------------------------------------------------------------------------------------------------------*/
@@ -221,6 +238,7 @@ body {
     transition: all 0.3s;
 }
 
+/*
 .docs-main h1 {
     font-size: var(--plz-font-size-titles);
 }
@@ -235,7 +253,7 @@ body {
 
 .docs-main p {
     font-size: var(--plz-font-size-sub-section);
-}
+} */
 
 .component-tag {
     font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Sans Unicode';
@@ -315,7 +333,7 @@ body {
 
 
 
-.content-detail h1 {
+/* .content-detail h1 {
     font-size: var(--plz-font-size-titles);
     line-height: var(--plz-line-height-small);
 }
@@ -342,7 +360,7 @@ body {
 .content-detail p {
     font-size: var(--plz-font-size-sub-section);
     text-align: justify;
-}
+} */
 
 /*
     ###      SYSTEM DESIGN SECTION      ###
@@ -369,6 +387,7 @@ body {
         width: 100%;
         margin-bottom: 5px;
     }
+
     .design-block-image-left {
         width: 100%;
         margin-bottom: 5px;

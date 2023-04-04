@@ -1,5 +1,8 @@
 :host {
   display: block;
+  /* Altura de linea */
+  --plz-line-height-smaller: 1;
+
   --color: white;
   --color-text: black;
   --color-hover: white;
@@ -10,6 +13,7 @@
   position: fixed;
   display: inline-flex;
   width: 100%;
+  text-align: center;
   align-items: center;
   background-color: var(--color);
   top: 0;
@@ -24,6 +28,7 @@
   height: 100%;
   margin-left: auto;
 }
+
 .header .left {
   padding-left: 10px;
   display: flex;
@@ -86,4 +91,44 @@
 
 :host ::slotted([slot="left"]) img {
   vertical-align: middle;
+}
+
+/* 
+    ## AJUSTE RESPONSIVE ##
+  Cuando se reduce el tamaño de pantalla es preferible reducir los padding de los
+  elementos para juntar y aprovechar el espacio del header.
+*/
+
+@media screen and (max-width: 550px) {
+  .header .right {
+    padding-right: 0;
+  }
+
+  .header .left {
+    padding-left: 0;
+  }
+
+  :host ::slotted([slot="left"]) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  :host ::slotted([slot="right"]) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  :host ::slotted([slot="left-select"]) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  :host ::slotted([slot="right-select"]) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  :host ::slotted(a) {
+    line-height: var(--plz-line-height-smaller);
+  }
 }
