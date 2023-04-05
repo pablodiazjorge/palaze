@@ -10,6 +10,7 @@ export namespace Components {
         "active": boolean;
         "color"?: string;
         "corners"?: string;
+        "hoverColor": string;
         "icon"?: string;
         "link": string;
         "shadowColor"?: string;
@@ -21,6 +22,7 @@ export namespace Components {
     interface PlzCard {
         "hover": string;
         "image": string;
+        "target": string;
         "url": string;
         "variant": string;
         "width": string;
@@ -239,6 +241,7 @@ declare namespace LocalJSX {
         "active"?: boolean;
         "color"?: string;
         "corners"?: string;
+        "hoverColor"?: string;
         "icon"?: string;
         "link"?: string;
         "shadowColor"?: string;
@@ -250,6 +253,7 @@ declare namespace LocalJSX {
     interface PlzCard {
         "hover"?: string;
         "image"?: string;
+        "target"?: string;
         "url"?: string;
         "variant"?: string;
         "width"?: string;

@@ -68,23 +68,21 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <h3>Variantes de botón</h3>
             <p>Usaremos el atributo variant para elegir el estilo de botón que se prefiera entre "default",
-                "pop-shadow",
+                "shadow",
                 "progress" y "icon".
             </p>
             <p>Dentro de los usos del componente, los más usados son estas cuatro variantes.</p>
             <plz-showcase>
                 <plz-showcase-render>
                     <plz-button>Default</plz-button>
-                    <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Shadow
-                        Pop</plz-button>
+                    <plz-button variant="shadow" color="green" shadow-color="green" corners="low-rounded">Shadow</plz-button>
                     <plz-button variant="progress" active="true" text="Progress" color="purple"
                         corners="low-rounded"></plz-button>
                     <plz-button variant="icon" icon="github" size="small"></plz-button>
                     <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-button>Default</plz-button>
-            <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Shadow
-                Pop</plz-button>
+            <plz-button variant="shadow" color="green" shadow-color="green" corners="low-rounded">Shadow</plz-button>
             <plz-button variant="progress" active="true" text="Progress" color="red"
                 corners="low-rounded"></plz-button>
             <plz-button variant="icon" icon="github" size="small"></plz-button>
@@ -143,6 +141,20 @@
                 </plz-showcase-code>
             </plz-showcase>
 
+            <!-- Colors -->
+            <h3>Colores para hover de botón</h3>
+            <p>Usaremos el atributo hover-color para elegir el color de componente para cuando pasemos por encima de este el cursor,
+                 si no haces uso de este atributo, no habrá hover en el componente.
+            </p>
+            <p>Se puede usar tanto hex, rgb o rgba para el atributo hover-color.</p>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button color="black" hover-color="#495057" corners="low-rounded">Docs</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button color="black" hover-color="#495057" corners="low-rounded">Docs</plz-button>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
             <!-- Variant Progress -->
             <h3>Variante Progress</h3>
             <p>Usaremos el atributo variant para elegir "progress". A diferencia de un botón normal, deberemos de hacer
@@ -179,9 +191,9 @@
         corners="low-rounded"></plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
-            <!-- Pop Shadow Colors -->
-            <h3>Sobras de botón y variante PopShadow</h3>
-            <p>Usaremos el atributo variant para elegir "pop-shadow" y el atributo shadow-color para elegir entre
+            <!-- Shadow Colors -->
+            <h3>Sobras de botón y variante shadow</h3>
+            <p>Usaremos el atributo variant para elegir "shadow" y el atributo shadow-color para elegir entre
                 "black",
                 "purple", "blue",
                 "green", "red", "orange" y "yellow". También puedes elegir colores como hemos visto anteriormente con el
@@ -192,32 +204,32 @@
                 lo que estés buscando para tu sitio web.</p>
             <plz-showcase>
                 <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-                    <plz-button variant="pop-shadow" corners="low-rounded">Basic</plz-button>
-                    <plz-button variant="pop-shadow" color="black" shadow-color="black"
+                    <plz-button variant="shadow" corners="low-rounded">Basic</plz-button>
+                    <plz-button variant="shadow" color="black" shadow-color="black"
                         corners="low-rounded">Negro</plz-button>
-                    <plz-button variant="pop-shadow" color="purple" shadow-color="purple"
+                    <plz-button variant="shadow" color="purple" shadow-color="purple"
                         corners="low-rounded">Morado</plz-button>
-                    <plz-button variant="pop-shadow" color="blue" shadow-color="blue"
+                    <plz-button variant="shadow" color="blue" shadow-color="blue"
                         corners="low-rounded">Azul</plz-button>
-                    <plz-button variant="pop-shadow" color="green" shadow-color="green"
+                    <plz-button variant="shadow" color="green" shadow-color="green"
                         corners="low-rounded">Verde</plz-button>
-                    <plz-button variant="pop-shadow" color="red" shadow-color="red"
+                    <plz-button variant="shadow" color="red" shadow-color="red"
                         corners="low-rounded">Rojo</plz-button>
-                    <plz-button variant="pop-shadow" color="orange" shadow-color="orange"
+                    <plz-button variant="shadow" color="orange" shadow-color="orange"
                         corners="low-rounded">Naranja</plz-button>
-                    <plz-button variant="pop-shadow" color="yellow" shadow-color="yellow"
+                    <plz-button variant="shadow" color="yellow" shadow-color="yellow"
                         corners="low-rounded">Amarillo</plz-button>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-button variant="pop-shadow" corners="low-rounded">Basic</plz-button>
-            <plz-button variant="pop-shadow" color="black" shadow-color="black" corners="low-rounded">Negro</plz-button>
-            <plz-button variant="pop-shadow" color="purple" shadow-color="purple"
+                <plz-showcase-code text-code='<plz-button variant="shadow" corners="low-rounded">Basic</plz-button>
+            <plz-button variant="shadow" color="black" shadow-color="black" corners="low-rounded">Negro</plz-button>
+            <plz-button variant="shadow" color="purple" shadow-color="purple"
                 corners="low-rounded">Morado</plz-button>
-            <plz-button variant="pop-shadow" color="blue" shadow-color="blue" corners="low-rounded">Azul</plz-button>
-            <plz-button variant="pop-shadow" color="green" shadow-color="green" corners="low-rounded">Verde</plz-button>
-            <plz-button variant="pop-shadow" color="red" shadow-color="red" corners="low-rounded">Rojo</plz-button>
-            <plz-button variant="pop-shadow" color="orange" shadow-color="orange"
+            <plz-button variant="shadow" color="blue" shadow-color="blue" corners="low-rounded">Azul</plz-button>
+            <plz-button variant="shadow" color="green" shadow-color="green" corners="low-rounded">Verde</plz-button>
+            <plz-button variant="shadow" color="red" shadow-color="red" corners="low-rounded">Rojo</plz-button>
+            <plz-button variant="shadow" color="orange" shadow-color="orange"
                 corners="low-rounded">Naranja</plz-button>
-            <plz-button variant="pop-shadow" color="yellow" shadow-color="yellow"
+            <plz-button variant="shadow" color="yellow" shadow-color="yellow"
                 corners="low-rounded">Amarillo</plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
@@ -340,7 +352,7 @@
                     <tr>
                         <td data-label="Nombre">variant</td>
                         <td data-label="Descripción">Distintas variantes del componente botón</td>
-                        <td data-label="Posibilidades">'default' - 'icon' - 'progress' - 'pop-shadow'</td>
+                        <td data-label="Posibilidades">'default' - 'icon' - 'progress' - 'shadow'</td>
                         <td data-label="Por defecto">'default'</td>
                     </tr>
                     <tr>
@@ -360,6 +372,12 @@
                         <td data-label="Descripción">Distintos colores del componente botón</td>
                         <td data-label="Posibilidades">'default' - 'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
                         <td data-label="Por defecto">'default'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">hover-color</td>
+                        <td data-label="Descripción" >Distintos colores para el hover del componente</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">shadow-color</td>

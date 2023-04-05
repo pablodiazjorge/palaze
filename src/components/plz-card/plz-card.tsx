@@ -8,13 +8,14 @@ import { Component, h, Host, Prop } from '@stencil/core';
 export class PlzCard {
   @Prop() variant: string = 'default';
   @Prop() url: string = '#';
+  @Prop() target: string = '_self';
   @Prop() image: string = '';
   @Prop() hover: string = 'blue';
   @Prop() width: string = '220';
 
   render() {
     return this.variant == 'default' ? (
-      <a class={`a-${this.variant + ' ' + 'glow-' + this.hover}`} href={this.url}>
+      <a class={`a-${this.variant + ' ' + 'glow-' + this.hover}`} href={this.url} target={this.target}>
         <div class={`image-container-${this.variant}`} style={{ 'background-image': `url(${this.image})`, 'width': `${this.width}px` }}></div>
         <div class={`text-container-${this.variant}`} style={{ width: `${this.width}px` }}>
           <slot></slot>

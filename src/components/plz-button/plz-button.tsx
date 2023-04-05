@@ -16,20 +16,37 @@ export class PlzButton {
   @Prop() text: string = '';
   @Prop() link: string = '';
   @Prop() target: string = '_self';
+  @Prop() hoverColor: string = '';
 
   render() {
-    return this.variant == 'default' && this.link != '' ? (
+    return this.variant == 'default' && this.link != '' && this.hoverColor != '' ? (
       <Host>
         <a href={this.link} target={this.target}>
-          <button class={this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}>
+          <button class={'hover-color ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor} style={{'--bg-color-hover':`${this.hoverColor}`}}>
             <slot></slot>
           </button>
         </a>
       </Host>
-    ) : this.variant == 'pop-shadow' && this.link != '' ? (
+    ) : this.variant == 'shadow' && this.link != '' && this.hoverColor != '' ? (
       <Host>
         <a href={this.link} target={this.target}>
-          <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}>
+          <button class={'hover-color ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor} style={{'--bg-color-hover':`${this.hoverColor}`}}>
+            <slot></slot>
+          </button>
+        </a>
+      </Host>
+    ) : this.variant == 'default' && this.link != '' ? (
+      <Host>
+        <a href={this.link} target={this.target}>
+          <button class={this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor}>
+            <slot></slot>
+          </button>
+        </a>
+      </Host>
+    ) : this.variant == 'shadow' && this.link != '' ? (
+      <Host>
+        <a href={this.link} target={this.target}>
+          <button class={this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor}>
             <slot></slot>
           </button>
         </a>
@@ -42,15 +59,27 @@ export class PlzButton {
           </button>
         </a>
       </Host>
-    ) : this.variant == 'default' ? (
+    ) : this.variant == 'default' && this.hoverColor != '' ? (
       <Host>
-        <button class={this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}>
+        <button class={'hover-color ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor} style={{'--bg-color-hover':`${this.hoverColor}`}}>
           <slot></slot>
         </button>
       </Host>
-    ) : this.variant == 'pop-shadow' ? (
+    ) : this.variant == 'shadow' && this.hoverColor != '' ? (
       <Host>
-        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}>
+        <button class={'hover-color ' + this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor} style={{'--bg-color-hover':`${this.hoverColor}`}}>
+          <slot></slot>
+        </button>
+      </Host>
+    ) : this.variant == 'default' ? (
+      <Host>
+        <button class={this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor}>
+          <slot></slot>
+        </button>
+      </Host>
+    ) : this.variant == 'shadow' ? (
+      <Host>
+        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor}>
           <slot></slot>
         </button>
       </Host>
@@ -63,13 +92,13 @@ export class PlzButton {
     ) : this.variant == 'progress' && this.active == true ? (
       <Host>
         <button
-          class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor}
+          class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor}
           innerHTML="<div class='playa'><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div></div>"
         ></button>
       </Host>
     ) : this.variant == 'progress' && this.active == false ? (
       <Host>
-        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border pop-shadow-' + this.shadowColor} innerHTML={this.text}></button>
+        <button class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor} innerHTML={this.text}></button>
       </Host>
     ) : null;
   }
