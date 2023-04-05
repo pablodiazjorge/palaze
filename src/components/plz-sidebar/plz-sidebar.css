@@ -1,12 +1,14 @@
 :host {
   display: block;
   --plz-border-radius-low-rounded: 20px;
+  --bg-color: white;
 }
 
 .sidebar {
   z-index: 1;
   height: 100%;
   position: fixed;
+  background-color: var(--bg-color);
   overflow-x: hidden;
   overflow-y: auto;
   transition-property: width;

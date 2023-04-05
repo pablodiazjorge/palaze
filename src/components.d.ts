@@ -94,7 +94,9 @@ export namespace Components {
         "verticalAlign": string;
     }
     interface PlzSidebar {
+        "color": string;
         "idMain": string;
+        "spaceTop": string;
         "width": string;
     }
     interface PlzSpinner {
@@ -321,7 +323,9 @@ declare namespace LocalJSX {
         "verticalAlign"?: string;
     }
     interface PlzSidebar {
+        "color"?: string;
         "idMain"?: string;
+        "spaceTop"?: string;
         "width"?: string;
     }
     interface PlzSpinner {
