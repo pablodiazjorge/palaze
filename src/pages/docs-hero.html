@@ -15,7 +15,17 @@
 </head>
 
 <body>
-    <plz-sidebar id-main="main">
+    <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
+        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
+                height="40px"></a>
+        <a slot="left" href="index.html">Palaze web</a>
+
+        <a slot="right-select" href="docs.html" target="_blank">Docs</a>
+        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
+            target="_blank">Github</a>
+    </plz-header>
+    
+    <plz-sidebar id-main="main" space-top="45">
         <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
         <plz-menu border-menu="none">
             <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
@@ -114,13 +124,8 @@
 
             <h3>Heroe dos columnas</h3>
             <p>Usaremos el atributo variant para elegir el tipo de heroe "two-columns".</p>
-            <p>En algunos casos se reutiliza el mismo componente para una sección footer o pre-footer. Esta variante
-                consta
-                de
-                dos columnas que serán personalizables.</p>
-            <p>Para identificar la columna en la que colocaremos el contenido utilizaremos el atributo
-                slot="first-column" o
-                slot="second-column".</p>
+            <p>Consta de dos columnas personalizables. Para identificar la columna en la que colocaremos
+                 el contenido utilizaremos el atributo slot="first-column" o slot="second-column".</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <plz-hero variant="two-column" height="600" image="../assets/icon/Footer-img.svg">
@@ -188,24 +193,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>variant</td>
-                        <td>Distintas variantes del componente heroe</td>
-                        <td>'default' - 'simple' - 'image' - 'two-column'</td>
-                        <td>'default'</td>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Distintas variantes del componente heroe</td>
+                        <td data-label="Posibilidades">'default' - 'simple' - 'image' - 'two-column'</td>
+                        <td data-label="Por defecto">'default'</td>
                     </tr>
                     <tr>
-                        <td>height</td>
-                        <td>Puedes determinar la altura del componente.</td>
-                        <td>px</td>
-                        <td>'600px'</td>
+                        <td data-label="Nombre">height</td>
+                        <td data-label="Descripción">Puedes determinar la altura del componente.</td>
+                        <td data-label="Posibilidades">px</td>
+                        <td data-label="Por defecto">'600px'</td>
                     </tr>
                     <tr>
-                        <td>image</td>
-                        <td>Dirección url de la imagen a colocar en el componente heroe con la variante "default",
+                        <td data-label="Nombre">image</td>
+                        <td data-label="Descripción">Dirección url de la imagen a colocar en el componente heroe con la variante "default",
                             "image" o
                             "two-column"</td>
-                        <td>'./mi-imagen-ejemplo.svg'</td>
-                        <td></td>
+                        <td data-label="Posibilidades">'./mi-imagen-ejemplo.svg'</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                 </tbody>
             </table>

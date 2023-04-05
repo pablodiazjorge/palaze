@@ -15,7 +15,17 @@
 </head>
 
 <body>
-    <plz-sidebar id-main="main">
+    <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
+        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
+                height="40px"></a>
+        <a slot="left" href="index.html">Palaze web</a>
+
+        <a slot="right-select" href="docs.html" target="_blank">Docs</a>
+        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
+            target="_blank">Github</a>
+    </plz-header>
+    
+    <plz-sidebar id-main="main" space-top="45">
         <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
         <plz-menu border-menu="none">
             <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
@@ -180,10 +190,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>variant</td>
-                        <td>Distintas variantes del componente section</td>
-                        <td>'wrapper' - 'columns'</td>
-                        <td>'wrapper'</td>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Distintas variantes del componente section</td>
+                        <td data-label="Posibilidades">'wrapper' - 'columns'</td>
+                        <td data-label="Por defecto">'wrapper'</td>
                     </tr>
                 </tbody>
             </table>

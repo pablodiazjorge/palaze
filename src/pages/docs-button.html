@@ -15,7 +15,17 @@
 </head>
 
 <body>
-    <plz-sidebar id-main="main">
+    <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
+        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
+                height="40px"></a>
+        <a slot="left" href="index.html">Palaze web</a>
+
+        <a slot="right-select" href="docs.html" target="_blank">Docs</a>
+        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
+            target="_blank">Github</a>
+    </plz-header>
+
+    <plz-sidebar id-main="main" space-top="45">
         <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
         <plz-menu border-menu="none">
             <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
@@ -328,52 +338,52 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>variant</td>
-                        <td>Distintas variantes del componente botón</td>
-                        <td>'default' - 'icon' - 'progress' - 'pop-shadow'</td>
-                        <td>'default'</td>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Distintas variantes del componente botón</td>
+                        <td data-label="Posibilidades">'default' - 'icon' - 'progress' - 'pop-shadow'</td>
+                        <td data-label="Por defecto">'default'</td>
                     </tr>
                     <tr>
-                        <td>link</td>
-                        <td>Url a la que se accedera a partir del botón.</td>
-                        <td>'docs-ejemplo.html'</td>
-                        <td></td>
+                        <td data-label="Nombre">link</td>
+                        <td data-label="Descripción">Url a la que se accedera a partir del botón.</td>
+                        <td data-label="Posibilidades">'docs-ejemplo.html'</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
-                        <td>target</td>
-                        <td>Distintas formas de mostart el link del componente botón</td>
-                        <td>'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
-                        <td>'_self'</td>
+                        <td data-label="Nombre">target</td>
+                        <td data-label="Descripción">Distintas formas de mostart el link del componente botón</td>
+                        <td data-label="Posibilidades">'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
+                        <td data-label="Por defecto">'_self'</td>
                     </tr>
                     <tr>
-                        <td>color</td>
-                        <td>Distintos colores del componente botón</td>
-                        <td>'default' - 'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
-                        <td>'default'</td>
+                        <td data-label="Nombre">color</td>
+                        <td data-label="Descripción">Distintos colores del componente botón</td>
+                        <td data-label="Posibilidades">'default' - 'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
+                        <td data-label="Por defecto">'default'</td>
                     </tr>
                     <tr>
-                        <td>shadow-color</td>
-                        <td>Distintos colores de sombra para el componente botón</td>
-                        <td>'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
-                        <td></td>
+                        <td data-label="Nombre">shadow-color</td>
+                        <td data-label="Descripción">Distintos colores de sombra para el componente botón</td>
+                        <td data-label="Posibilidades">'black' - 'purple' - 'blue' - 'green' - 'red' - 'orange' - 'yellow'</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
-                        <td>size</td>
-                        <td>Distintos tamaños del componente botón</td>
-                        <td>'default' - 'small' - 'big'</td>
-                        <td>'default'</td>
+                        <td data-label="Nombre">size</td>
+                        <td data-label="Descripción">Distintos tamaños del componente botón</td>
+                        <td data-label="Posibilidades">'default' - 'small' - 'big'</td>
+                        <td data-label="Por defecto">'default'</td>
                     </tr>
                     <tr>
-                        <td>corners</td>
-                        <td>Distintas formas de las esquinas del componente botón</td>
-                        <td>'default' - 'low-rounded' - 'rounded' - 'square' - 'circle'</td>
-                        <td>'default'</td>
+                        <td data-label="Nombre">corners</td>
+                        <td data-label="Descripción">Distintas formas de las esquinas del componente botón</td>
+                        <td data-label="Posibilidades">'default' - 'low-rounded' - 'rounded' - 'square' - 'circle'</td>
+                        <td data-label="Por defecto">'default'</td>
                     </tr>
                     <tr>
-                        <td>icon</td>
-                        <td>Solo compatible con la variante "icon". Distintos iconos para la variante</td>
-                        <td>'github' - 'linkedin' - 'mail' - 'palaze'</td>
-                        <td></td>
+                        <td data-label="Nombre">icon</td>
+                        <td data-label="Descripción">Solo compatible con la variante "icon". Distintos iconos para la variante</td>
+                        <td data-label="Posibilidades">'github' - 'linkedin' - 'mail' - 'palaze'</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                 </tbody>
             </table>

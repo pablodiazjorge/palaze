@@ -237,8 +237,12 @@ h4 {
 }
 
 .content-detail {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.content-detail p {
+    text-align: justify;
 }
 
 @media screen and (max-width: 1024px) {
@@ -260,16 +264,6 @@ h4 {
     color: #495057;
     letter-spacing: var(--plz-letter-space-normal);
     line-height: var(--plz-line-height-small);
-}
-
-
-/*
-    ###      OVERVIEW      ###
-*/
-
-.overview {
-    width: 100%;
-    border-radius: var(--plz-border-radius-low-rounded);
 }
 
 /*
@@ -344,24 +338,44 @@ h4 {
 }
 
 /*
-    ###      DESIGN SYSTEM      ###
+    ###      OVERVIEW      ###
 */
 
-.colors-design {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.overview {
+    width: 100%;
+    border-radius: var(--plz-border-radius-low-rounded);
 }
 
-.paleta {
-    box-sizing: border-box;
-    margin: 5px;
+/*
+    ###      DESIGN SYSTEM SECTION     ###
+*/
+
+.design-block-image-right {
+    width: 350px;
+    float: right;
+    border-radius: var(--plz-border-radius-low-rounded);
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.design-block-image-left {
+    width: 350px;
+    float: left;
+    border-radius: var(--plz-border-radius-low-rounded);
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+@media (max-width:1092px) {
+    .design-block-image-right {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .design-block-image-left {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
 
 
@@ -400,35 +414,3 @@ h4 {
     font-size: var(--plz-font-size-sub-section);
     text-align: justify;
 } */
-
-/*
-    ###      SYSTEM DESIGN SECTION      ###
-*/
-
-.design-block-image-right {
-    width: 350px;
-    float: right;
-    border-radius: var(--plz-border-radius-low-rounded);
-    margin-left: 15px;
-    margin-bottom: 5px;
-}
-
-.design-block-image-left {
-    width: 350px;
-    float: left;
-    border-radius: var(--plz-border-radius-low-rounded);
-    margin-right: 15px;
-    margin-bottom: 5px;
-}
-
-@media (max-width:1092px) {
-    .design-block-image-right {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .design-block-image-left {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-}
