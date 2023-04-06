@@ -7,11 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type     | Default     |
-| ---------- | ---------- | ----------- | -------- | ----------- |
-| `adjust`   | `adjust`   |             | `string` | `''`        |
-| `position` | `position` |             | `string` | `'bottom'`  |
-| `variant`  | `variant`  |             | `string` | `'default'` |
+| Property   | Attribute  | Description | Type               | Default     |
+| ---------- | ---------- | ----------- | ------------------ | ----------- |
+| `link`     | `link`     |             | `string`           | `undefined` |
+| `position` | `position` |             | `string`           | `'top'`     |
+| `target`   | `target`   |             | `string`           | `'_self'`   |
+| `text`     | `text`     |             | `string`           | `undefined` |
+| `variant`  | `variant`  |             | `"link" \| "text"` | `undefined` |
 
 
 ----------------------------------------------

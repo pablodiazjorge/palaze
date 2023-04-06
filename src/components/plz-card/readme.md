@@ -11,6 +11,7 @@
 | --------- | --------- | ----------- | -------- | ----------- |
 | `hover`   | `hover`   |             | `string` | `'blue'`    |
 | `image`   | `image`   |             | `string` | `''`        |
+| `target`  | `target`  |             | `string` | `'_self'`   |
 | `url`     | `url`     |             | `string` | `'#'`       |
 | `variant` | `variant` |             | `string` | `'default'` |
 | `width`   | `width`   |             | `string` | `'220'`     |

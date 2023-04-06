@@ -12,6 +12,7 @@
 | `active`      | `active`       |             | `boolean` | `false`     |
 | `color`       | `color`        |             | `string`  | `'default'` |
 | `corners`     | `corners`      |             | `string`  | `'default'` |
+| `hoverColor`  | `hover-color`  |             | `string`  | `''`        |
 | `icon`        | `icon`         |             | `string`  | `''`        |
 | `link`        | `link`         |             | `string`  | `''`        |
 | `shadowColor` | `shadow-color` |             | `string`  | `''`        |

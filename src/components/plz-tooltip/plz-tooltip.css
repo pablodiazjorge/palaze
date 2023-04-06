@@ -106,7 +106,7 @@ a {
   border-radius: var(--plz-border-radius-default);
 }
 
-/* ## SIMPLE VARIANT ## */
+/* ## SIMPLE VARIANT ## */ 
 
 .tooltip {
   box-sizing: border-box;
@@ -115,25 +115,45 @@ a {
 .tooltip::before,
 .tooltip::after {
   position: absolute;
-  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
   transition: 200ms transform;
+  z-index: 1;
+}
+
+.tooltip.top::before,
+.tooltip.top::after {
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
   transform-origin: bottom center;
-  top: -0.25rem;
+  top: 2px;
+  left: 50%;
+}
+
+.tooltip.bottom::before,
+.tooltip.bottom::after {
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transform-origin: top center;
+  bottom: 2px;
   left: 50%;
 }
 
 .tooltip::before {
-  --translate-y: calc(-100% - var(--arrow));
   /* Para controlar la flecha del tooltip */
   background-color: var(--plz-color-black-2);
   color: var(--plz-color-white);
   text-align: center;
   border-radius: var(--plz-border-radius-default);
   content: attr(data-tool);
-  padding: 0.5rem;
+  padding: 5px;
   /* Esto hará que el texto se distribuya mejor dentro del espacio */
   width: max-content;
   max-width: 100%;
+}
+
+.tooltip.top::before {
+  --translate-y: calc(-100% - var(--arrow));
+}
+
+.tooltip.bottom::before {
+  --translate-y: calc(100% - var(--arrow));
 }
 
 .tooltip:hover::before,
@@ -142,15 +162,23 @@ a {
 }
 
 .tooltip::after {
-  --translate-y: calc(-1 * var(--arrow));
-  transform-origin: top center;
   content: '';
   border: var(--arrow) solid transparent;
+}
+
+.tooltip.top::after {
+  --translate-y: calc(-1 * var(--arrow));
+  transform-origin: top center;
   border-top-color: var(--plz-color-black-2);
   border-top-width: --arrow;
 }
 
-
+.tooltip.bottom::after {
+  --translate-y: calc(-1 * var(--arrow));
+  transform-origin: bottom center;
+  border-bottom-color: var(--plz-color-black-2);
+  border-bottom-width: --arrow;
+}
 
 /* ## LINK VARIANT ## */
 
@@ -271,4 +299,8 @@ a {
 .container:hover .tooltip-link-horizontal {
   visibility: visible;
   transform: translateY(0%) scale(1);
+}
+
+.no-select {
+  user-select: none;
 }

@@ -112,7 +112,7 @@ export namespace Components {
         "position": string;
         "target": string;
         "text": string;
-        "variant": 'simple';
+        "variant": 'text' | 'link';
     }
 }
 declare global {
@@ -345,7 +345,7 @@ declare namespace LocalJSX {
         "position"?: string;
         "target"?: string;
         "text"?: string;
-        "variant"?: 'simple';
+        "variant"?: 'text' | 'link';
     }
     interface IntrinsicElements {
         "plz-button": PlzButton;
