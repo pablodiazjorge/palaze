@@ -108,9 +108,10 @@ export namespace Components {
         "variant": string;
     }
     interface PlzTooltip {
-        "adjust": string;
+        "link": string;
         "position": string;
-        "variant": string;
+        "text": string;
+        "variant": 'simple';
     }
 }
 declare global {
@@ -339,9 +340,10 @@ declare namespace LocalJSX {
         "variant"?: string;
     }
     interface PlzTooltip {
-        "adjust"?: string;
+        "link"?: string;
         "position"?: string;
-        "variant"?: string;
+        "text"?: string;
+        "variant"?: 'simple';
     }
     interface IntrinsicElements {
         "plz-button": PlzButton;

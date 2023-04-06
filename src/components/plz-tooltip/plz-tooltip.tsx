@@ -6,23 +6,25 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzTooltip {
-  @Prop() variant: string = 'default';
-  @Prop() position: string = 'bottom';
-  @Prop() adjust: string = '';
+  @Prop() text: string;
+  @Prop() variant: 'simple';
+  @Prop() link: string;
+  @Prop() position: string = 'top';
+
+  openLink() {
+    window.open(this.link);
+  }
 
   render() {
-    return this.adjust != '' && this.variant == 'default' ? (
-      <div class="container">
+    return this.variant == 'simple' ? (
+      <div class="container tooltip" data-tool={this.text}>
         <slot></slot>
-        <div class={`tooltip ${this.position} `} style={{ transform: `translate(-50%,${this.adjust}%` }}>
-          <slot name="tooltip"></slot>
-        </div>
       </div>
-    ) : this.variant == 'default' ? (
+    ) : this.variant == 'link' ? (
       <div class="container">
         <slot></slot>
-        <div class={`tooltip ${this.position} `}>
-          <slot name="tooltip"></slot>
+        <div class={`tooltip-link ${this.position}`}>
+          <a href={this.link}>{this.text}</a>
         </div>
       </div>
     ) : null;
