@@ -37,7 +37,7 @@ export class PlzShowcaseRender {
       <Host>
         <div
           class={this.display}
-          style={{ paddingTop: `${this.paddingTop}px`, padding: `${this.paddingBottom}px`, paddingLeft: `${this.paddingLeft}px`, paddingRight: `${this.paddingRight}px`, alignItems: `${this.verticalAlign}`, gap: `${this.gap}px` }}>
+          style={{ paddingTop: `${this.paddingTop}px`, paddingBottom: `${this.paddingBottom}px`, paddingLeft: `${this.paddingLeft}px`, paddingRight: `${this.paddingRight}px`, alignItems: `${this.verticalAlign}`, gap: `${this.gap}px` }}>
           <slot></slot>
         </div>
       </Host>

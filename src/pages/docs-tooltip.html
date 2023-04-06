@@ -58,38 +58,11 @@
             <!-- Muestra del componente -->
 
             <plz-showcase>
-                <plz-showcase-render display="block" height="300">
-                    <plz-tooltip variant="prueba" prueba-texto="Docs"><p>Esto es una muestra de tooltip</p></plz-tooltip>
+                <plz-showcase-render display="block" padding-top="65" padding-left="20" padding-top="20">
+                    <p>Desplaza el cursor por el<plz-tooltip variant="simple" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
                 </plz-showcase-render>
-                <plz-showcase-code text-code=''>
-                </plz-showcase-code>
-            </plz-showcase>
-
-            <plz-showcase>
-                <plz-showcase-render display="block" height="100" padding-top="20" padding-left="20" padding-top="20">
-                    <p style="display: inline-block;">Puedes recorrer el cursor hasta</p>
-                    <plz-tooltip style="display: inline-block;">
-                        <p style="display: inline-block;">aquí,</p>
-                        <p slot="tooltip">tool1</p>
-                    </plz-tooltip>
-                    <p style="display: inline-block;">o seguir por</p>
-                    <plz-tooltip style="display: inline-block;">
-                        <p style="display: inline-block;">aquí</p>
-                        <p slot="tooltip">tool2</p>
-                    </plz-tooltip>
-                    <p style="display: inline-block;">hasta encontrar el tooltip.</p>
-                </plz-showcase-render>
-                <plz-showcase-code text-code='<p style="display: inline-block;">Puedes recorrer el cursor hasta</p>
-            <plz-tooltip style="display: inline-block;">
-                <p style="display: inline-block;">aquí,</p>
-                <p slot="tooltip">tool1</p>
-            </plz-tooltip>
-            <p style="display: inline-block;">o seguir por</p>
-            <plz-tooltip style="display: inline-block;">
-                <p style="display: inline-block;">aquí</p>
-                <p slot="tooltip">tool2</p>
-            </plz-tooltip>
-            <p style="display: inline-block;">hasta encontrar el tooltip.</p>'>
+                <plz-showcase-code text-code='<p>Desplaza el cursor por el<plz-tooltip variant="simple" text="tooltip">
+                    texto</plz-tooltip>hasta encontrar el tooltip.</p>'>
                 </plz-showcase-code>
             </plz-showcase>
 
@@ -97,114 +70,41 @@
             <h2>Ejemplos</h2>
             <plz-divider></plz-divider>
             <h3>Distintas posiciones para el tooltip</h3>
-            <p>Usaremos el atributo position para elegir la posición del tooltip entre "top" y "bottom".</p>
-            <p>Como se puede observar, el componente tooltip puede adaptarse a distintos tipos de elementos, ya sean
-                botones,
-                icones, imagenes, textos, etc. Recalcar que lo más normal es utilizar palabras o frases concretas y
-                resaltar información adicional interesante.</p>
+            <p>Usaremos el atributo position para elegir la posición del tooltip entre "top", "bottom", "right" y "left".</p>
+            <p>Ajustaremos la posición de nuestro componente para adaptarse a cualquier situación.</p>
             <plz-showcase>
-                <plz-showcase-render height="250" padding-top="0" padding-left="25" gap="60">
-                    <plz-tooltip adjust="80">
-                        <plz-button variant="icon" icon="github" size="default"></plz-button>
-                        <p slot="tooltip" style="font-size: 20px;">icon</p>
-                    </plz-tooltip>
-                    <plz-tooltip position="top" adjust="-160">
-                        <p>Texto ejemplo</p>
-                        <p slot="tooltip">tool</p>
-                    </plz-tooltip>
+                <plz-showcase-render display="block" padding-top="20" padding-left="20" padding-top="20">
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="bottom" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="right" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="left" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="top" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-tooltip adjust="80">
-            <plz-button variant="icon" icon="github" size="default"></plz-button>
-            <p slot="tooltip" style="font-size: 20px;">icon</p>
-        </plz-tooltip>
-        <plz-tooltip position="top" adjust="-160">
-            <p>Texto ejemplo</p>
-            <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
-        </plz-tooltip>'>
+                <plz-showcase-code text-code='<p>Desplaza el cursor por el<plz-tooltip variant="link" position="bottom" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="right" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="left" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>
+                    <p>Desplaza el cursor por el<plz-tooltip variant="link" position="top" text="tooltip">texto</plz-tooltip>hasta encontrar el tooltip.</p>'>
                 </plz-showcase-code>
             </plz-showcase>
 
-            <h3>Distintos usos para el tooltip</h3>
-            <p>En este ejemplo a continuación se observa que en el tooltip pueden aparecer otros elementos a parte de
-                texto
-                simple. Se puede introducir en el tooltip un elemento link para poder accder a más documentación o lo
-                que
-                consideres importante. También puedes dejar libre tu imaginación y añadir una pequeña separación en el
-                texto
-                para hacerlo más extenso, aunque no suele ser este el uso para el componente tooltip.</p>
-            <p>Una forma común de hacer uso del tooltip es como en este ejemplo de la derecha (icono github) donde
-                aparece
-                un
-                link en el
-                tooltip.</p>
+            <h3>Variante simple y variante link para el tooltip</h3>
+            <p>Usaremos el atributo variant para elegir entre "simple" o "link".</p>
+            <p>Este componente suele usarse de dos formas, una es la que hemos visto anteriormente, 
+                donde aparece información brebe y relevante para el contexto y otra es usandolo para
+                 anclar enlaces. En el siguiente ejemplo aparecen los dos tipos, uno con solo texto
+                  y otro con link hacia la documentación del icon button.</p>
+            <p>Como se puede observar se pueden utilizar otros elementos que no sean texto para que sean nuestro tooltip. En este caso un icon button.</p>
             <plz-showcase>
-                <plz-showcase-render vertical-align="normal" height="450" padding-bottom="100" padding-left="20"
-                    padding-bottom="0" gap="60">
-                    <plz-tooltip position="bottom" adjust="8">
-                        <p style="padding-left: 20px; padding-right: 20px;">Esto es diferente pero puede hacerse.</p>
-                        <p slot="tooltip">Info</p>
-                        <plz-divider slot="tooltip"></plz-divider>
-                        <p slot="tooltip" style="text-align: justify;">Se suelen usar textos pequeños y dependiendo de
-                            la
-                            página,
-                            podrías querer llegar a utilizarlo de esta forma.</p>
-                        <plz-button slot="tooltip">Info</plz-button>
-                    </plz-tooltip>
-                    <plz-tooltip adjust="80">
+                <plz-showcase-render vertical-align="normal" padding-left="20" padding-top="80"
+                    padding-right="20" gap="30">
+                    <plz-tooltip variant="simple" text="Relevante">Todo es tooltip</plz-tooltip>
+                    <plz-tooltip variant="link" link="docs-button.html" target="_blank" text="Docs Section">
                         <plz-button variant="icon" icon="github" size="default"></plz-button>
-                        <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
                     </plz-tooltip>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-tooltip position="bottom" adjust="8">
-            <p style="padding-left: 20px; padding-right: 20px;">Esto es diferente pero puede hacerse.</p>
-            <p slot="tooltip">Info</p>
-            <plz-divider slot="tooltip"></plz-divider>
-            <p slot="tooltip" style="text-align: justify;">Se suelen usar textos pequeños y dependiendo de la página,
-                podrías querer llegar a utilizarlo de esta forma.</p>
-            <plz-button slot="tooltip">Info</plz-button>
-        </plz-tooltip>
-        <plz-tooltip adjust="80">
-            <plz-button variant="icon" icon="github" size="default"></plz-button>
-            <a href="#" slot="tooltip" style="text-decoration: none; color:white; font-size: 20px;">link</a>
-        </plz-tooltip>'>
-                </plz-showcase-code>
-            </plz-showcase>
-
-            <h3>Ajustes para el tooltip</h3>
-            <p>Usaremos el atributo adjust para modificar la altura del tooltip respecto al elemento.</p>
-            <p>Debido a que en el desarrollo web hay múltiples formas de construir una web, se ha considerado el poder
-                modificar
-                la distancia de aparición del tooltip respecto al elemento para ajustarlo a los distintos casos que se
-                puedan
-                producir.</p>
-            <plz-showcase>
-                <plz-showcase-render vertical-align="normal" height="300" padding-bottom="100" padding-left="20"
-                    padding-bottom="0" gap="50">
-                    <plz-tooltip position="bottom">
-                        <p>Ajuste normal</p>
-                        <p slot="tooltip">tool</p>
-                    </plz-tooltip>
-                    <plz-tooltip position="bottom" adjust="120">
-                        <p>Ajuste diferente</p>
-                        <p slot="tooltip">tool</p>
-                    </plz-tooltip>
-                    <plz-tooltip position="bottom" adjust="150">
-                        <p>Ajuste diferente</p>
-                        <p slot="tooltip">tool</p>
-                    </plz-tooltip>
-                </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-tooltip position="bottom">
-            <p>Ajuste normal</p>
-            <p slot="tooltip">tool</p>
-        </plz-tooltip>
-        <plz-tooltip position="bottom" adjust="120">
-            <p>Ajuste diferente</p>
-            <p slot="tooltip">tool</p>
-        </plz-tooltip>
-        <plz-tooltip position="bottom" adjust="150">
-            <p>Ajuste diferente</p>
-            <p slot="tooltip">tool</p>
-        </plz-tooltip>'>
+                <plz-showcase-code text-code='<plz-tooltip variant="simple" text="Relevante">Todo es tooltip</plz-tooltip>
+                    <plz-tooltip variant="link" link="docs-button.html" text="Docs Section">
+                        <plz-button variant="icon" icon="github" size="default"></plz-button>
+                    </plz-tooltip>'>
                 </plz-showcase-code>
             </plz-showcase>
 
@@ -221,17 +121,30 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Nombre">position</td>
-                        <td data-label="Descripción">Posiciones para el tooltip respecto al elemento.</td>
-                        <td data-label="Posibilidades">'top' - 'bottom'</td>
-                        <td data-label="Por defecto">'bottom'</td>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Distintas variantes del componente.</td>
+                        <td data-label="Posibilidades">'simple' - 'link'</td>
+                        <td data-label="Por defecto">'simple'</td>
                     </tr>
                     <tr>
-                        <td data-label="Nombre">adjust</td>
-                        <td data-label="Descripción">Ajuste de la posición del tooltip respecto al elemento.</td>
-                        <td data-label="Posibilidades">'+x' - '-x'</td>
+                        <td data-label="Nombre">position</td>
+                        <td data-label="Descripción">Posiciones para el tooltip respecto al elemento.</td>
+                        <td data-label="Posibilidades">'top' - 'bottom' - 'right' - 'left'</td>
+                        <td data-label="Por defecto">'top'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">link</td>
+                        <td data-label="Descripción">Url a la que se accedera a partir del tooltip.</td>
+                        <td data-label="Posibilidades">'docs-ejemplo.html'</td>
                         <td data-label="Por defecto"></td>
                     </tr>
+                    <tr>
+                        <td data-label="Nombre">target</td>
+                        <td data-label="Descripción">Distintas formas de mostart el link del componente.</td>
+                        <td data-label="Posibilidades">'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
+                        <td data-label="Por defecto">'_self'</td>
+                    </tr>
+                    
                 </tbody>
             </table>
         </section>

@@ -110,6 +110,7 @@ export namespace Components {
     interface PlzTooltip {
         "link": string;
         "position": string;
+        "target": string;
         "text": string;
         "variant": 'simple';
     }
@@ -342,6 +343,7 @@ declare namespace LocalJSX {
     interface PlzTooltip {
         "link"?: string;
         "position"?: string;
+        "target"?: string;
         "text"?: string;
         "variant"?: 'simple';
     }

@@ -10,21 +10,25 @@ export class PlzTooltip {
   @Prop() variant: 'simple';
   @Prop() link: string;
   @Prop() position: string = 'top';
-
-  openLink() {
-    window.open(this.link);
-  }
+  @Prop() target: string = '_self'
 
   render() {
     return this.variant == 'simple' ? (
-      <div class="container tooltip" data-tool={this.text}>
+      <div class={`container tooltip ${this.position}`} data-tool={this.text}>
         <slot></slot>
       </div>
-    ) : this.variant == 'link' ? (
+    ) : this.variant == 'link' && (this.position == 'top' || this.position == 'bottom')  ? (
       <div class="container">
         <slot></slot>
-        <div class={`tooltip-link ${this.position}`}>
-          <a href={this.link}>{this.text}</a>
+        <div class={`tooltip-link-vertical ${this.position}`}>
+          <a href={this.link} target={this.target}>{this.text}</a>
+        </div>
+      </div>
+    ) : this.variant == 'link' && (this.position == 'left' || this.position == 'right') ? (
+      <div class="container">
+        <slot></slot>
+        <div class={`tooltip-link-horizontal ${this.position}`}>
+          <a href={this.link} target={this.target}>{this.text}</a>
         </div>
       </div>
     ) : null;

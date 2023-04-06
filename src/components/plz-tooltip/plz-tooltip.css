@@ -101,9 +101,12 @@ a {
 .container {
   display: inline-block;
   position: relative;
-  padding: 0.5em;
-  border-radius: 0.2em;
+  padding: 8px;
+  margin: 0;
+  border-radius: var(--plz-border-radius-default);
 }
+
+/* ## SIMPLE VARIANT ## */
 
 .tooltip {
   box-sizing: border-box;
@@ -144,14 +147,14 @@ a {
   content: '';
   border: var(--arrow) solid transparent;
   border-top-color: var(--plz-color-black-2);
-  border-top-width: 5px;
+  border-top-width: --arrow;
 }
 
 
 
 /* ## LINK VARIANT ## */
 
-.tooltip-link {
+.tooltip-link-vertical {
   visibility: hidden;
   position: absolute;
   background-color: var(--plz-color-black-2);
@@ -162,21 +165,35 @@ a {
   text-align: center;
   width: max-content;
   max-width: 100%;
-  top: -30px;
   left: 50%;
   transform: translateX(-50%) scale(0);
   transition: transform 0.3s ease-in-out;
 }
 
-.tooltip-link.top {
+.tooltip-link-horizontal {
+  visibility: hidden;
+  position: absolute;
+  background-color: var(--plz-color-black-2);
+  color: var(--plz-color-white);
+  padding: 5px;
+  border-radius: var(--plz-border-radius-default);
+  z-index: 1;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Posicion tooltip top */
+.tooltip-link-vertical.top {
   bottom: 100%;
   top: auto;
 }
 
-.tooltip-link::after {
-  content: "";
-  position: absolute;
-  border: 5px solid transparent;
+/* Flecha del tooltip para position top */
+.tooltip-link-vertical.top::after {
   border-top: 5px solid var(--plz-color-black-2);
   top: 100%;
   left: 50%;
@@ -184,7 +201,74 @@ a {
   transform: translateX(-50%);
 }
 
-.container:hover .tooltip-link {
+/* Posicion tooltip bottom */
+.tooltip-link-vertical.bottom {
+  top: 100%;
+  bottom: auto;
+}
+
+/* Flecha del tooltip para position bottom */
+.tooltip-link-vertical.bottom::after {
+  border-bottom: 5px solid var(--plz-color-black-2);
+  bottom: 100%;
+  left: 50%;
+  transform-origin: top center;
+  transform: translateX(-50%);
+}
+
+
+/* Posicion tooltip left */
+.tooltip-link-horizontal.left {
+  right: 100%;
+  left: auto;
+  top: 3px;
+}
+
+/* Flecha del tooltip para position left */
+.tooltip-link-horizontal.left::after {
+  border-left: 5px solid var(--plz-color-black-2);
+  top: 50%;
+  left: 100%;
+  transform-origin: center left;
+  transform: translateY(-50%);
+}
+
+/* Posicion tooltip right */
+.tooltip-link-horizontal.right {
+  left: 100%;
+  right: auto;
+  top: 3px;
+}
+
+/* Flecha del tooltip para position right */
+.tooltip-link-horizontal.right::after {
+  border-right: 5px solid var(--plz-color-black-2);
+  top: 50%;
+  right: 100%;
+  transform-origin: center right;
+  transform: translateY(-50%);
+}
+
+/* Estilos generales flecha del tooltip */
+.tooltip-link-horizontal::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+}
+
+/* Estilos generales flecha del tooltip */
+.tooltip-link-vertical::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+}
+
+.container:hover .tooltip-link-vertical {
   visibility: visible;
   transform: translateX(-50%) scale(1);
+}
+
+.container:hover .tooltip-link-horizontal {
+  visibility: visible;
+  transform: translateY(0%) scale(1);
 }
