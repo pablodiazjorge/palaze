@@ -164,7 +164,8 @@ a {
   max-width: 100%;
   top: -30px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease-in-out;
 }
 
 .tooltip-link.top {
@@ -179,10 +180,11 @@ a {
   border-top: 5px solid var(--plz-color-black-2);
   top: 100%;
   left: 50%;
-  transform-origin: top center;
+  transform-origin: bottom center;
   transform: translateX(-50%);
 }
 
 .container:hover .tooltip-link {
   visibility: visible;
+  transform: translateX(-50%) scale(1);
 }
