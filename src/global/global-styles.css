@@ -186,7 +186,7 @@ h4 {
     box-sizing: border-box;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 70px;
+    padding-bottom: 70px;
 }
 
 .about-us-section h3 {
@@ -414,3 +414,7 @@ h4 {
     font-size: var(--plz-font-size-sub-section);
     text-align: justify;
 } */
+
+.demo-image {
+    border: 2px solid var(--plz-color-green-2);
+}

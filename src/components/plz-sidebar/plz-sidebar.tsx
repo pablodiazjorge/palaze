@@ -33,6 +33,7 @@ export class PlzSidebar {
   toggleDisabled(left: string, right: string) {
     this.toggled = false;
     document.getElementById('sidebar').style.width = '0';
+    document.getElementById('sidebar').style.borderRight = 'none';
     document.getElementById(this.idMain).style.marginLeft = left;
     document.getElementById(this.idMain).style.marginRight = right;
   }
@@ -40,6 +41,7 @@ export class PlzSidebar {
   toggleActivated(left: string, right: string) {
     this.toggled = true;
     document.getElementById('sidebar').style.width = `${this.width}px`;
+    document.getElementById('sidebar').style.borderRight = '1px solid #d4d4d8';
     document.getElementById(this.idMain).style.marginLeft = left;
     document.getElementById(this.idMain).style.marginRight = right;
   }

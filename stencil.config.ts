@@ -30,7 +30,10 @@ export const config: Config = {
         { src: 'pages/docs-design-system.html', dest: 'docs-design-system.html' },
         { src: 'pages/docs-section.html', dest: 'docs-section.html' },
         { src: 'pages/docs-footer.html', dest: 'docs-footer.html' },
-        { src: 'pages/demo.html', dest: 'demo.html' }
+        { src: 'pages/docs-demo.html', dest: 'docs-demo.html' },
+        { src: 'pages/docs-header.html', dest: 'docs-header.html' },
+        { src: 'pages/docs-sidebar.html', dest: 'docs-sidebar.html' },
+        { src: 'pages/docs-dropdown-menu.html', dest: 'docs-dropdown-menu.html' }
       ],
     },
   ],

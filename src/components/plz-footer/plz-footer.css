@@ -63,10 +63,25 @@
 
 .block-content {
   box-sizing: border-box;
-  margin: 200px;
-  min-width: 250px;
+  margin-left: 200px;
+  margin-right: 200px;
   padding: 40px;
   background-color: var(--plz-color-white);
   border-radius: 50px;
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .block-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .block-content {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }

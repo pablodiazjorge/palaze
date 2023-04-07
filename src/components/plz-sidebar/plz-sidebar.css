@@ -1,6 +1,7 @@
 :host {
   display: block;
   --plz-border-radius-low-rounded: 20px;
+  --plz-color-black-4: #d4d4d8;
   --bg-color: white;
 }
 
