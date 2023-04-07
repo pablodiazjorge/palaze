@@ -59,19 +59,27 @@
             <!-- Muestra del componente -->
             <plz-showcase>
                 <plz-showcase-render>
-                    <plz-button color="green" hover-color="#52B788" corners="low-rounded" link="docs-demo.html" target="_blank">Demo</plz-button>
+                    <plz-button color="green" hover-color="#52B788" corners="low-rounded" link="docs-demo-sidebar.html" target="_blank">Demo</plz-button>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-sidebar id-main="main" space-top="45" color="#D8F3DC">
                     <img src="../assets/icon/log-mask-demo.svg" width="225px" alt="demo-image" class="demo-image">
                     <plz-menu border-menu="none">
                         <plz-menu-item link="docs.html" variant="custom" color-hover="#1B4332" color-text="white">Componentes</plz-menu-item>
                         <plz-divider></plz-divider>
-                        <plz-menu-item link="docs-sidebar.html" variant="custom" color-hover="#1B4332" color-text="white">Sidebar</plz-menu-item>
-                        <plz-menu-item link="docs-header.html" variant="custom" color-hover="#1B4332" color-text="white">Header</plz-menu-item>
+                        <plz-menu-item link="docs-demo-sidebar.html" variant="custom" color-hover="#1B4332" color-text="white" active="true">Sidebar</plz-menu-item>
+                        <plz-menu-item link="docs-demo-header.html" variant="custom" color-hover="#1B4332" color-text="white">Header</plz-menu-item>
                     </plz-menu>
                 </plz-sidebar>'>
                 </plz-showcase-code>
             </plz-showcase>
+
+            <p>Como se puede observar en el código de muestra del ejemplo anterior, se puede cambiar el color del sidebar haciendo uso del
+                atributo color y se podrá introducir colores en hex, rgb y rgba (por defecto será blanco).
+            </p>
+            <p>También podremos determinar el ancho de nuestro sidebar con el atributo width y deberemos indicar mediante el atributo
+                id-main el id de la seccion principal para que puedan funcionar las animaciones toggle de nuestro componente.
+            </p>
+            <p>Por otra parte se podrá ajustar la posición verticalmente del botón toggle mediante el uso del atributo space-top.</p>
             <!-- Sección de los atributos -->
             <h2>Atributos</h2>
             <table class="table-atr">

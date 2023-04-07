@@ -49,36 +49,38 @@
     </plz-sidebar>
     <main id="main" class="docs-main">
         <section class="content-detail">
-            <h1>Menu</h1>
-            <p class="component-tag">&lt;plz-menu&gt; &#124; PlzMenu</p> <!-- Dar forma y poner letra de consola-->
+            <h1>Header</h1>
+            <p class="component-tag">&lt;plz-header&gt; &#124; PlzHeader</p> <!-- Dar forma y poner letra de consola-->
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
-            <p>El componente menu sirve para agrupar distintos elementos con una estructura concreta.</p>
-            <p>Dentro del mundo del desarrollo web proporciona una lista de opciones para navegar por secciones de una
-                misma
-                web.</p>
+            <p>El componente header es el primer elemento de una página, generalmente se encuentra en la parte superior,
+                 pero también la podemos encontrar en ambos lados de la página verticalmente.
+            Suele contener elementos enlace o de navegación para acceder a páginas relacionadas con el contenido donde se encuentre.</p>
+            <p>Los header son sencillos y atractivos visualmente para que la interacción del usuario sea sencilla.</p>
             <!-- Muestra del componente -->
-            <plz-showcase-render display="block">
-                <plz-menu style="width: 200px;">
-                    <plz-menu-item link="#">Acciones</plz-menu-item>
-                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-                    <plz-menu-item link="#">Subir</plz-menu-item>
-                    <plz-menu-item link="#">Bajar</plz-menu-item>
-                    <plz-menu-item link="#">Girar</plz-menu-item>
-                    <plz-menu-item link="#">Rodar</plz-menu-item>
-                    <plz-menu-item link="#">Saltar</plz-menu-item>
-                </plz-menu>
-            </plz-showcase-render>
-            <plz-showcase-code text-code='<plz-menu style="font-size: 20px; font-weight: 100; width: 150px;">
-        <plz-menu-item>Acciones</plz-menu-item>
-        <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-        <plz-menu-item>Subir</plz-menu-item>
-        <plz-menu-item>Bajar</plz-menu-item>
-        <plz-menu-item>Girar</plz-menu-item>
-        <plz-menu-item>Rodar</plz-menu-item>
-        <plz-menu-item>Saltar</plz-menu-item>
-    </plz-menu>'>
-            </plz-showcase-code>
+            <plz-showcase>
+                <plz-showcase-render>
+                    <plz-button color="green" hover-color="#52B788" corners="low-rounded" link="docs-demo-header.html" target="_blank">Demo</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-sidebar id-main="main" space-top="45" color="#D8F3DC">
+                    <img src="../assets/icon/log-mask-demo.svg" width="225px" alt="demo-image" class="demo-image">
+                    <plz-menu border-menu="none">
+                        <plz-menu-item link="docs.html" variant="custom" color-hover="#1B4332" color-text="white">Componentes</plz-menu-item>
+                        <plz-divider></plz-divider>
+                        <plz-menu-item link="docs-sidebar.html" variant="custom" color-hover="#1B4332" color-text="white">Sidebar</plz-menu-item>
+                        <plz-menu-item link="docs-header.html" variant="custom" color-hover="#1B4332" color-text="white">Header</plz-menu-item>
+                    </plz-menu>
+                </plz-sidebar>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
+            <p>Como se puede observar en el código de muestra del ejemplo anterior, se puede cambiar el color del sidebar haciendo uso del
+                atributo color y se podrá introducir colores en hex, rgb y rgba (por defecto será blanco).
+            </p>
+            <p>También podremos determinar el ancho de nuestro sidebar con el atributo width y deberemos indicar mediante el atributo
+                id-main el id de la seccion principal para que puedan funcionar las animaciones toggle de nuestro componente.
+            </p>
+            <p>Por otra parte se podrá ajustar la posición verticalmente del botón toggle mediante el uso del atributo space-top.</p>
             <!-- Sección de los atributos -->
             <h2>Atributos</h2>
             <table class="table-atr">
@@ -92,10 +94,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Nombre">border-menu</td>
-                        <td data-label="Descripción">Distintas ubicaciones para bordes aplicados al componente separador</td>
-                        <td data-label="Posibilidades">'all' - 'top-bottom' - 'left-right' - 'top' - 'bottom' - 'right' - 'left' - 'none'</td>
-                        <td data-label="Por defecto">'all'</td>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Ancho que ocupara el sidebar.</td>
+                        <td data-label="Posibilidades">px</td>
+                        <td data-label="Por defecto">'right'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color</td>
+                        <td data-label="Descripción">Color que tendrá el sidebar.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto">'white'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-text</td>
+                        <td data-label="Descripción">Distancia a la parte superior de la página respecto al toggle button.</td>
+                        <td data-label="Posibilidades">px</td>
+                        <td data-label="Por defecto">'black'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-hover</td>
+                        <td data-label="Descripción">Color que tendrá el sidebar.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto">td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-text-hover</td>
+                        <td data-label="Descripción">Distancia a la parte superior de la página respecto al toggle button.</td>
+                        <td data-label="Posibilidades">px</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                 </tbody>
             </table>
