@@ -6,7 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class PlzMenu {
-  @Prop() borderMenu:string = 'all'
+  @Prop() borderMenu: string = 'all';
 
   render() {
     return (

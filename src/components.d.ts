@@ -41,6 +41,11 @@ export namespace Components {
         "type": string;
         "variant": string;
     }
+    interface PlzDropdownMenu {
+        "active": boolean;
+        "link": string;
+        "variant": string;
+    }
     interface PlzFigure {
         "alt": string;
         "footer": string;
@@ -141,6 +146,12 @@ declare global {
         prototype: HTMLPlzDividerElement;
         new (): HTMLPlzDividerElement;
     };
+    interface HTMLPlzDropdownMenuElement extends Components.PlzDropdownMenu, HTMLStencilElement {
+    }
+    var HTMLPlzDropdownMenuElement: {
+        prototype: HTMLPlzDropdownMenuElement;
+        new (): HTMLPlzDropdownMenuElement;
+    };
     interface HTMLPlzFigureElement extends Components.PlzFigure, HTMLStencilElement {
     }
     var HTMLPlzFigureElement: {
@@ -224,6 +235,7 @@ declare global {
         "plz-card": HTMLPlzCardElement;
         "plz-colors": HTMLPlzColorsElement;
         "plz-divider": HTMLPlzDividerElement;
+        "plz-dropdown-menu": HTMLPlzDropdownMenuElement;
         "plz-figure": HTMLPlzFigureElement;
         "plz-footer": HTMLPlzFooterElement;
         "plz-header": HTMLPlzHeaderElement;
@@ -273,6 +285,11 @@ declare namespace LocalJSX {
         "spaceBottom"?: string;
         "spaceTop"?: string;
         "type"?: string;
+        "variant"?: string;
+    }
+    interface PlzDropdownMenu {
+        "active"?: boolean;
+        "link"?: string;
         "variant"?: string;
     }
     interface PlzFigure {
@@ -354,6 +371,7 @@ declare namespace LocalJSX {
         "plz-card": PlzCard;
         "plz-colors": PlzColors;
         "plz-divider": PlzDivider;
+        "plz-dropdown-menu": PlzDropdownMenu;
         "plz-figure": PlzFigure;
         "plz-footer": PlzFooter;
         "plz-header": PlzHeader;
@@ -377,6 +395,7 @@ declare module "@stencil/core" {
             "plz-card": LocalJSX.PlzCard & JSXBase.HTMLAttributes<HTMLPlzCardElement>;
             "plz-colors": LocalJSX.PlzColors & JSXBase.HTMLAttributes<HTMLPlzColorsElement>;
             "plz-divider": LocalJSX.PlzDivider & JSXBase.HTMLAttributes<HTMLPlzDividerElement>;
+            "plz-dropdown-menu": LocalJSX.PlzDropdownMenu & JSXBase.HTMLAttributes<HTMLPlzDropdownMenuElement>;
             "plz-figure": LocalJSX.PlzFigure & JSXBase.HTMLAttributes<HTMLPlzFigureElement>;
             "plz-footer": LocalJSX.PlzFooter & JSXBase.HTMLAttributes<HTMLPlzFooterElement>;
             "plz-header": LocalJSX.PlzHeader & JSXBase.HTMLAttributes<HTMLPlzHeaderElement>;
