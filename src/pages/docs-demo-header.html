@@ -36,7 +36,84 @@
     </plz-sidebar>
 
     <main id="main" class="docs-main">
-        
+        <section class="content-detail">
+            <h1>Header</h1>
+            <p class="component-tag">&lt;plz-header&gt; &#124; PlzHeader</p> <!-- Dar forma y poner letra de consola-->
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>El componente header es el primer elemento de una página, generalmente se encuentra en la parte superior,
+                 pero también la podemos encontrar en ambos lados de la página verticalmente.
+            Suele contener elementos enlace o de navegación para acceder a páginas relacionadas con el contenido donde se encuentre.</p>
+            <p>Los header son sencillos y atractivos visualmente para que la interacción del usuario sea sencilla.</p>
+            <!-- Muestra del componente -->
+            <plz-showcase>
+                <plz-showcase-code text-code='<plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
+                    <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
+                            height="40px"></a>
+                    <a slot="left" href="index.html">Palaze web</a>
+            
+                    <a slot="right-select" href="docs.html" target="_blank">Docs</a>
+                    <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
+                        target="_blank">Github</a>
+                </plz-header>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
+            <p>Dependiendo de la variante que usemos, podremos acceder a unos slots o a otros. Para la variante right-hover,
+                 usaremos el slot name "left" para la parte izquierda del header y el slot name "right-select" para la parte derecha del header.
+                Para la variante "left-hover", usaremos el slot name "left-selected" para la parte izquierda del header y el slot name "right" para
+                la parte derecha del header. Por último, la variante both-hover, usaremos "left-selected" y "right-selected" para ambas partes del header 
+                respectivamente.</p>
+            <p>Se puede cambiar el color del header haciendo uso del atributo color, con atributo color-text se puede cambiar
+                 el color del texto de dentro del header. Para cambiar el tanto el color del header como el texto de este cuando se pasa el 
+                 cursor por encima de los distintos elementos del header, usaremos color-hover y color-text-hover.
+            </p>
+            <p>Se podrá introducir colores en hex, rgb y rgba.</p>
+            <!-- Sección de los atributos -->
+            <h2>Atributos</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Distintas variantes del componente.</td>
+                        <td data-label="Posibilidades">'right-hover' - 'left-hover' - 'both-hover'</td>
+                        <td data-label="Por defecto">'right-hover'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color</td>
+                        <td data-label="Descripción">Color que tendrá el componente.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto">'white'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-text</td>
+                        <td data-label="Descripción">Color que tendra el texto de dentro del componente.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto">'black'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-hover</td>
+                        <td data-label="Descripción">Color que tendrá el componente al pasar el cursor por encima.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-text-hover</td>
+                        <td data-label="Descripción">Color del texto que tendrá el componente al pasar el cursor por encima.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
     
 </body>
