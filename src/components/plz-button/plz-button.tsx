@@ -17,6 +17,7 @@ export class PlzButton {
   @Prop() link: string = '';
   @Prop() target: string = '_self';
   @Prop() hoverColor: string = '';
+  @Prop() colorProgress: string = 'white';
 
   render() {
     return this.variant == 'default' && this.link != '' && this.hoverColor != '' ? (
@@ -92,7 +93,7 @@ export class PlzButton {
     ) : this.variant == 'progress' && this.active == true ? (
       <Host>
         <button
-          class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor}
+          class={this.variant + ' ' + this.color + ' ' + this.size + '-size ' + this.corners + '-border shadow-' + this.shadowColor} style={{'--wave-color':`${this.colorProgress}`}}
           innerHTML="<div class='playa'><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div><div class='wave'></div></div>"
         ></button>
       </Host>

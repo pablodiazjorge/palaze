@@ -89,6 +89,7 @@
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
+  --wave-color: var(--plz-color-white);
   --bg-color-hover: var(--plz-color-black-4);
 }
 
@@ -181,8 +182,7 @@ img {
   margin: 2px;
   width: 4px;
   height: 16px;
-  background: linear-gradient(80deg, var(--plz-color-blue-1), var(--plz-color-blue-4));
-  mix-blend-mode: color-dodge; /* luminosity y color-dodge se distinguen bien*/
+  background: var(--wave-color);
   animation: wave 1.5s linear infinite;
 }
 

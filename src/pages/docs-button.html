@@ -76,17 +76,17 @@
                 <plz-showcase-render>
                     <plz-button>Default</plz-button>
                     <plz-button variant="shadow" color="green" shadow-color="green" corners="low-rounded">Shadow</plz-button>
-                    <plz-button variant="progress" active="true" text="Progress" color="purple"
+                    <plz-button variant="progress" active="true" text="Progress" color="purple" color-progress="white"
                         corners="low-rounded"></plz-button>
                     <plz-button variant="icon" icon="github" size="small"></plz-button>
                     <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-button>Default</plz-button>
-            <plz-button variant="shadow" color="green" shadow-color="green" corners="low-rounded">Shadow</plz-button>
-            <plz-button variant="progress" active="true" text="Progress" color="red"
-                corners="low-rounded"></plz-button>
-            <plz-button variant="icon" icon="github" size="small"></plz-button>
-            <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>'>
+                    <plz-button variant="shadow" color="green" shadow-color="green" corners="low-rounded">Shadow</plz-button>
+                    <plz-button variant="progress" active="true" text="Progress" color="purple" color-progress="white"
+                        corners="low-rounded"></plz-button>
+                    <plz-button variant="icon" icon="github" size="small"></plz-button>
+                    <plz-button color="black" corners="low-rounded" link="docs.html">Link</plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
 
@@ -170,15 +170,16 @@
                 principalmente en formularios, ya que puedes indicar al usuario que su petición se está procesando y una
                 vez
                 termine volverá a la normalidad (es dinámico).</p>
+            <p>Podremos elegir el color de la animación de carga del interior del componente mediante el atributo color-progress.</p>
             <p>A continuación ejemplos de los botones de carga en sus dos versiones (activado y no activado).</p>
             <plz-showcase>
                 <plz-showcase-render display="block" padding-top="20" padding-bottom="20" padding-left="20"
                     padding-right="20">
-                    <plz-button variant="progress" active="true" text="Progress" color="blue"
+                    <plz-button variant="progress" active="true" text="Progress" color="blue" color-progress="white"
                         corners="low-rounded"></plz-button>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-button variant="progress" active="true" text="Progress" color="blue"
-        corners="low-rounded"></plz-button>'>
+                <plz-showcase-code text-code='<plz-button variant="progress" active="true" text="Progress" color="blue" color-progress="white"
+                corners="low-rounded"></plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
             <plz-showcase>
@@ -378,6 +379,12 @@
                         <td data-label="Descripción" >Distintos colores para el hover del componente</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-progress</td>
+                        <td data-label="Descripción" >Distintos colores para la animación de carga del componente</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto">'white'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">shadow-color</td>

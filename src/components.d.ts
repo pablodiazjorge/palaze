@@ -9,6 +9,7 @@ export namespace Components {
     interface PlzButton {
         "active": boolean;
         "color"?: string;
+        "colorProgress": string;
         "corners"?: string;
         "hoverColor": string;
         "icon"?: string;
@@ -242,6 +243,7 @@ declare namespace LocalJSX {
     interface PlzButton {
         "active"?: boolean;
         "color"?: string;
+        "colorProgress"?: string;
         "corners"?: string;
         "hoverColor"?: string;
         "icon"?: string;
