@@ -18,7 +18,7 @@
 
 /* ## TWO-COLUMNS VARIANT ## */
 
-.hero-columns {
+.footer-columns {
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -28,18 +28,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.hero-columns-container {
-  box-sizing: border-box;
+.footer-columns-container {
   display: grid;
   justify-content: center;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "content content";
 }
 
-.hero-columns-content {
+.footer-columns-content {
   box-sizing: border-box;
   padding: 40px;
   margin: 50px;
@@ -47,6 +46,26 @@
   min-width: 200px;
   background-color: var(--plz-color-white);
   border-radius: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-columns-content {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-columns-container {
+    display: block;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .footer-columns {
+    height: fit-content;
+  }
 }
 
 /* ## BLOCK VARIANT ## */

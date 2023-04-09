@@ -32,12 +32,12 @@ export class PlzFooter {
     ) : this.variant == 'two-column' ? (
       <Host>
         <footer>
-          <div class="hero-columns" style={{ 'background-image': `url(${this.image})`, 'height': `${this.height}px` }}>
-            <div class="hero-columns-container">
-              <div class="hero-columns-content">
+          <div class="footer-columns" style={{ 'background-image': `url(${this.image})`, 'height': `${this.height}px` }}>
+            <div class="footer-columns-container">
+              <div class="footer-columns-content">
                 <slot name="first-column"></slot>
               </div>
-              <div class="hero-columns-content">
+              <div class="footer-columns-content">
                 <slot name="second-column"></slot>
               </div>
             </div>
