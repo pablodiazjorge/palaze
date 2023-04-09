@@ -61,21 +61,17 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
             <p>El componente<plz-tooltip variant="link" link="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" 
-                target="_blank" text="More info"><u>footer</u></plz-tooltip>se utiliza para mostrar información en forma de sección al final de la página. En
-                suele
-                aparecer información acerca de colaboradores, redes sociales, opciones de contacto, politicas de
-                privacidad
-                y
-                términos de uso, enlaces a páginas relevantes...</p>
+                target="_blank" text="Más info"><u>footer</u></plz-tooltip>se utiliza para mostrar información en forma de sección
+                 al final de la página. En el footer suele aparecer información acerca de colaboradores, redes sociales, opciones de contacto,
+                 politicas de privacidad y términos de uso, enlaces a páginas relevantes...</p>
 
             <!-- Ejemplos de las posibilidades del componente-->
             <h2>Ejemplos</h2>
             <plz-divider></plz-divider>
             <h3>Footer simple</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de footer "simple".</p>
+            <p>Usaremos el atributo <b>variant</b> para elegir el tipo de footer "simple".</p>
             <p>Esta variante es un footer básico con una fina línea en la parte superior para separar el contenido del
-                footer
-                del contenido principal de la página.</p>
+                footer del contenido principal de la página.</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <p>Contenido de la página principal</p>
@@ -87,19 +83,17 @@
                     </plz-footer>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-footer variant="simple">
-            <h3>Footer info</h3>
-            <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
-                código a través de nuestro Github.</p>
-        </plz-footer>'>
+                        <h3>Footer info</h3>
+                        <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
+                            código a través de nuestro Github.</p>
+                    </plz-footer>'>
                 </plz-showcase-code>
             </plz-showcase>
 
             <h3>Footer con imagen con dos columnas</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de footer "block".</p>
+            <p>Usaremos el atributo <b>variant</b> para elegir el tipo de footer "block".</p>
             <p>Esta variante consta de un bloque central personalizable. También se podrá elegir el fondo del footer
-                pasando
-                por
-                atributo la url de una imagen.</p>
+                pasando por el atributo <b>image</b> la url de una imagen.</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg">
@@ -113,25 +107,22 @@
                     </plz-footer>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-footer variant="block" height="600" image="../assets/icon/Footer-img.svg">
-            <h3>Contacto</h3>
-            <p>
-                Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
-                tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
-                Agradecemos vuestra comprensión.
-            </p>
-            <plz-button variant="icon" icon="github"></plz-button>
-            <plz-button variant="icon" icon="linkedin"></plz-button>
-            <plz-button variant="icon" icon="mail"></plz-button>
-        </plz-footer>'>
+                    <h3>Contacto</h3>
+                    <p>
+                        Puedes consultar o contactar con nosotros via los siguientes enlaces.
+                    </p>
+                    <plz-button variant="icon" icon="github"></plz-button>
+                    <plz-button variant="icon" icon="linkedin"></plz-button>
+                    <plz-button variant="icon" icon="mail"></plz-button>
+                </plz-footer>'>
                 </plz-showcase-code>
             </plz-showcase>
 
             <h3>Footer con imagen con dos columnas</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de footer "two-columns".</p>
+            <p>Usaremos el atributo <b>variant</b> para elegir el tipo de footer "two-columns".</p>
             <p>Esta variante consta de dos columnas que serán personalizables.</p>
             <p>Para identificar la columna en la que colocaremos el contenido utilizaremos el atributo
-                slot="first-column" o
-                slot="second-column" como se muestra a continuación.</p>
+                <b>slot="first-column"</b> o <b>slot="second-column"</b> como se muestra a continuación.</p>
                 <plz-showcase>
                     <plz-showcase-render display="block">
                         <plz-footer variant="two-column" height="650" image="../assets/icon/Footer-img.svg">
@@ -155,7 +146,8 @@
             <h3>Personaliza tu footer</h3>
             <p>En este caso utilizamos la variante "simple" ya que es la más personalizable.</p>
             <p>Puedes personalizar el contenido como consideres. En este caso hacemos uso
-                de otro componente de la librería (plz-section) para crear dos columnas en la que separaremos el
+                de otro componente de la librería<plz-tooltip variant="link" link="docs-section.html" 
+                target="_blank" text="Más info"><u>(plz-section)</u></plz-tooltip>para crear dos columnas en la que separaremos el
                 contenido.
             </p>
             <plz-showcase>
@@ -183,22 +175,24 @@
                     </plz-footer>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-footer variant="simple">
-            <plz-section variant="columns">
-                <h3 slot="first">Contacto</h3>
-                <p slot="first">
-                    Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede que
-                    tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
-                    Agradecemos vuestra comprensión.
-                </p>
-                <plz-button slot="first" variant="icon" icon="github"></plz-button>
-                <plz-button slot="first" variant="icon" icon="linkedin"></plz-button>
-                <plz-button slot="first" variant="icon" icon="mail"></plz-button>
-                <h3 slot="second">Compañía</h3>
-                <p slot="second">Palaze es una gran comunidad en la que nos centramos en la practicidad y el
-                    minimalismo, buscando aportar el máximo valor posible a nuestros usuarios y desarrolladores.
-                </p>
-            </plz-section>
-        </plz-footer>'>
+                    <plz-section variant="columns">
+                        <h3 slot="first">Contacto</h3>
+                        <p slot="first">
+                            Puedes consultar o contactar con nosotros via los siguientes enlaces, recordar que puede
+                            que
+                            tardermos en contestar debido a la gran cantidad de mensajes que nos envían cada día.
+                            Agradecemos vuestra comprensión.
+                        </p>
+                        <plz-button slot="first" variant="icon" icon="github"></plz-button>
+                        <plz-button slot="first" variant="icon" icon="linkedin"></plz-button>
+                        <plz-button slot="first" variant="icon" icon="mail"></plz-button>
+                        <h3 slot="second">Compañía</h3>
+                        <p slot="second">Palaze es una gran comunidad en la que nos centramos en la practicidad y el
+                            minimalismo, buscando aportar el máximo valor posible a nuestros usuarios y
+                            desarrolladores.
+                        </p>
+                    </plz-section>
+                </plz-footer>'>
                 </plz-showcase-code>
             </plz-showcase>
 
@@ -216,15 +210,15 @@
                 <tbody>
                     <tr>
                         <td data-label="Nombre">variant</td>
-                        <td data-label="Descripción">Distintas variantes del componente heroe</td>
+                        <td data-label="Descripción">Distintas variantes del componente</td>
                         <td data-label="Nombre">'simple' - 'block' - 'two-columns'</td>
                         <td data-label="Por defecto">'simple'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">height</td>
                         <td data-label="Descripción">Puedes determinar la altura del componente.</td>
-                        <td data-label="Posibilidades">px</td>
-                        <td data-label="Por defecto">'600px'</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'600'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">image</td>
