@@ -32,20 +32,25 @@
             <plz-divider></plz-divider>
             <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
             <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-colors.html" variant="custom" color-hover="#495057" color-text="white">Colors</plz-menu-item>
             <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
             <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
             <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
             <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
             <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-dropdown-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu-dropdown</plz-menu-item>
             <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
             <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-sidebar.html" variant="custom" color-hover="#495057" color-text="white">Sidebar</plz-menu-item>
             <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
             <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
             <plz-divider></plz-divider>
-            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white" active="true">Design System</plz-menu-item>
-            <plz-menu-item class="sub-option" variant="custom" color-hover="#495057" color-text="white">Colores</plz-menu-item>
-            <plz-menu-item class="sub-option" variant="custom" color-hover="#495057" color-text="white">Tipografía</plz-menu-item>
-            <plz-menu-item class="sub-option" variant="custom" color-hover="#495057" color-text="white">Formas</plz-menu-item>
+            <plz-dropdown-menu link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white" active="true">
+                Design System
+                <plz-menu-item slot="dropdown" link="#colores" variant="simple" color-hover="#495057" color-text="white" submenu="true">Colores</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#tipografia" variant="simple" color-hover="#495057" color-text="white" submenu="true">Tipografia</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#formas" variant="simple" color-hover="#495057" color-text="white" submenu="true">Formas</plz-menu-item>   
+            </plz-menu-item>
         </plz-menu>
     </plz-sidebar>
     <main id="main" class="docs-main">
@@ -133,7 +138,7 @@
                 usuario
                 con
                 elementos excesivamente llamativos que distraigan el foco de lo verdaderamente importante.</p>
-            <h3 style="text-decoration: underline;">Paletas de colores</h3>
+            <h3 id="colores" style="text-decoration: underline;">Paletas de colores</h3>
             <p>Las paletas de colores que se muestran a continuación son las que se usan en Palaze, tokens incluidos.
             </p>
 
@@ -147,7 +152,7 @@
                 <plz-colors variant="black"></plz-colors>
             </plz-section>
 
-            <h3 style="text-decoration: underline;">Tipografía</h3>
+            <h3 id="tipografia" style="text-decoration: underline;">Tipografía</h3>
             <p>A continuación se muestra un ejemplo de los distintos tipos de letra, tamaño, espacio entre lineas,
                 espacio
                 entre
@@ -163,11 +168,11 @@
                 <thead>
                     <tr>
                         <th
-                            style="background-color: #FF4D6D; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            style="background-color: #FF4D6D;">
                             Token</th>
                         <th style="background-color: #e67a8d;">Valor</th>
                         <th
-                            style="background-color: #FFB3C1; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            style="background-color: #FFB3C1;color: black;">
                             Ejemplo</th>
                     </tr>
                 </thead>
@@ -194,11 +199,11 @@
                 <thead>
                     <tr>
                         <th
-                            style="background-color: #f9a72f; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            style="background-color: #f9a72f;">
                             Token</th>
                         <th style="background-color: #fbbd5e;">Valor</th>
                         <th
-                            style="background-color: #fde9b0; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            style="background-color: #fde9b0;color: black;">
                             Ejemplo</th>
                     </tr>
                 </thead>
@@ -252,11 +257,11 @@
                 <thead>
                     <tr>
                         <th
-                            style="background-color: #4cb05b; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            style="background-color: #4cb05b;">
                             Token</th>
                         <th style="background-color: #52B788;">Valor</th>
                         <th
-                            style="background-color: #D8F3DC; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            style="background-color: #D8F3DC;color: black;">
                             Ejemplo</th>
                     </tr>
                 </thead>
@@ -279,11 +284,11 @@
                 <thead>
                     <tr>
                         <th
-                            style="background-color: #0096C7; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            style="background-color: #0096C7;">
                             Token</th>
                         <th style="background-color: #a7b3e9;">Valor</th>
                         <th
-                            style="background-color: #CAF0F8; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            style="background-color: #CAF0F8;color: black;">
                             Ejemplo</th>
                     </tr>
                 </thead>
@@ -332,11 +337,11 @@
                 <thead>
                     <tr>
                         <th
-                            style="background-color: #b88900; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            style="background-color: #b88900;">
                             Token</th>
                         <th style="background-color: #d3a007;">Valor</th>
                         <th
-                            style="background-color: #fbf451; border-top-right-radius: 15px;border-bottom-right-radius: 15px;color: black;">
+                            style="background-color: #fbf451;color: black;">
                             Ejemplo</th>
                     </tr>
                 </thead>
@@ -369,18 +374,18 @@
                 </tbody>
             </table>
 
-            <h3 style="text-decoration: underline;">Formas de los bloques</h3>
+            <h3 id="formas" style="text-decoration: underline;">Formas de los bloques</h3>
             <p>Cada elemento, ya sea componente o no puede cambiar visualmente de una manera drástica cambiando su
                 "border-radius".</p>
             <table class="table-atr">
                 <thead>
                     <tr>
                         <th
-                            style="background-color: #732487; border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+                            style="background-color: #732487;">
                             Token</th>
                         <th style="background-color: #a167c9;">Valor</th>
                         <th
-                            style="background-color: #fff0ff; border-top-right-radius: 15px;border-bottom-right-radius: 15px; color: black;">
+                            style="background-color: #fff0ff; color: black;">
                             Ejemplo</th>
                     </tr>
                 </thead>
@@ -414,10 +419,10 @@
                     </tr>
                     <tr>
                         <td data-label="Token">--plz-border-radius-default</td>
-                        <td data-label="Valor">0.25rem</td>
+                        <td data-label="Valor">4px</td>
                         <td data-label="Ejemplo">
                             <div
-                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 0.25rem;background-color: #a7b3e9;">
+                                style="position: relative; left: 50%; transform: translateX(-50%); width: 80px; height: 40px; border-radius: 4px;background-color: #a7b3e9;">
                             </div>
                         </td>
                     </tr>

@@ -1,7 +1,7 @@
 :host {
   /* Radio borde */
   --plz-border-radius-low-rounded: 20px;
-  --plz-border-radius-default: 0.25rem;
+  --plz-border-radius-default: 4px;
 
   /*    ## COLORES ##   */
 

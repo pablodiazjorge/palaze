@@ -1,11 +1,13 @@
 :host {
-  --plz-color-black-very-low: #F8F9FA;
-  --plz-color-black-low: #d4d4d8;
+  /* Primarios-gamma-negro */
+  --plz-color-black-4: #d4d4d8;
+  --plz-color-black-5: #F8F9FA;
+  /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
   box-sizing: border-box;
   display: block;
-  border: 1px solid var(--plz-color-black-low);
+  border: 1px solid var(--plz-color-black-4);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -13,7 +15,7 @@
 div {
   background-color: var(--plz-color-white);
   box-sizing: border-box;
-  border-right: 2px solid var(--plz-color-black-low);
+  border-right: 2px solid var(--plz-color-black-4);
   padding: 10px;
   width: 100%;
   min-width: 33%;

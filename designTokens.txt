@@ -5,12 +5,11 @@ TIPOGRAFIA
 
 /*    ## FUENTES ##   */
   --plz-font-primary: Padauk, sans-serif;
-
-/* Peso fuente */
+  /* Peso fuente */
   --plz-font-weight-regular: 400;
   --plz-font-weight-bold: 700;
 
-/* Tamaño fuente */
+  /* Tamaño fuente */
   --plz-font-size-very-small: 12px;
   --plz-font-size-small: 14px;
   --plz-font-size-normal: 16px;
@@ -20,13 +19,13 @@ TIPOGRAFIA
   --plz-font-size-titles: 64px;
   --plz-font-size-below-titles: 24px;
 
-/* Altura de linea */
+  /* Altura de linea */
   --plz-line-height-smaller: 1;
   --plz-line-height-small: 1.4;
   --plz-line-height-normal: 1.8;
   --plz-line-height-big: 2.4;
 
-/* Espacio entre letras */
+  /* Espacio entre letras */
   --plz-letter-space-smaller: -0.48px;
   --plz-letter-space-small: -0.24px;
   --plz-letter-space-normal: normal;
@@ -92,8 +91,9 @@ COLORES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 BORDER RADIUS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  /* Radio borde */
   --plz-border-radius-circle: 50%;
   --plz-border-radius-rounded: 9999px;
-  --plz-border-radius-low-rounded: 25px;
-  --plz-border-radius-default: 0.25rem;
+  --plz-border-radius-low-rounded: 20px;
+  --plz-border-radius-default: 4px;
   --plz-border-radius-square: 0px;

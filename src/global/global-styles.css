@@ -32,7 +32,7 @@
     --plz-border-radius-circle: 50%;
     --plz-border-radius-rounded: 9999px;
     --plz-border-radius-low-rounded: 20px;
-    --plz-border-radius-default: 0.25rem;
+    --plz-border-radius-default: 4px;
     --plz-border-radius-square: 0px;
 
     /*    ## COLORES ##   */
@@ -156,11 +156,10 @@ h4 {
 }
 
 /*
-    ###      LANDING-PAGE      ###
+    ## LANDING-PAGE ##
 */
 
 .landing-main {
-    /* Header content */
     margin-top: 44px;
     background-color: var(--plz-color-black-5);
     text-align: center;
@@ -223,10 +222,8 @@ h4 {
     }
 }
 
-/*-------------------------------------------------------------------------------------------------------------*/
-
 /*
-    ######      DOCS      ######
+    ## DOCS ##
 */
 
 .docs-main {
@@ -267,7 +264,7 @@ h4 {
 }
 
 /*
-    ###      ATTRIBUTE TABLE      ###
+    ## ATTRIBUTE TABLE ##
 */
 
 .table-atr {
@@ -286,6 +283,16 @@ h4 {
     color: var(--plz-color-white);
     background-color: var(--plz-color-black-3);
     font-size: var(--plz-font-size-sub-section);
+}
+
+.table-atr thead th:first-child {
+    border-top-left-radius: var(--plz-border-radius-low-rounded);
+    border-bottom-left-radius: var(--plz-border-radius-low-rounded);
+}
+
+.table-atr thead th:last-child {
+    border-top-right-radius: var(--plz-border-radius-low-rounded);
+    border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
 .table-atr th,
@@ -338,7 +345,7 @@ h4 {
 }
 
 /*
-    ###      OVERVIEW      ###
+    ## OVERVIEW ##
 */
 
 .overview {
@@ -347,7 +354,7 @@ h4 {
 }
 
 /*
-    ###      DESIGN SYSTEM SECTION     ###
+    ## DESIGN SYSTEM SECTION ##
 */
 
 .design-block-image-right {
@@ -378,42 +385,7 @@ h4 {
     }
 }
 
-
-
-/*
-    ###      GENERAL      ###
-*/
-
-
-
-/* .content-detail h1 {
-    font-size: var(--plz-font-size-titles);
-    line-height: var(--plz-line-height-small);
-}
-
-.content-detail h2 {
-    font-size: var(--plz-font-size-section);
-    line-height: var(--plz-line-height-small);
-}
-
-.content-detail h3 {
-    font-size: var(--plz-font-size-mid-section);
-    margin-block-start: var(--plz-font-size-sub-section);
-    margin-block-end: 0px;
-    letter-spacing: var(--plz-letter-space-small);
-}
-
-.content-detail h4 {
-    font-size: var(--plz-font-size-below-titles);
-    margin-block-start: var(--plz-font-size-sub-section);
-    margin-block-end: 0px;
-    line-height: var(--plz-line-height-normal);
-}
-
-.content-detail p {
-    font-size: var(--plz-font-size-sub-section);
-    text-align: justify;
-} */
+/* ## DEMO VIEW ## */
 
 .demo-image {
     border: 2px solid var(--plz-color-green-2);

@@ -1,8 +1,15 @@
 :host {
-  display: block;
+  /* Tamaño fuente */
+  --plz-font-size-below-titles: 24px;
+  /* Radio borde */
   --plz-border-radius-low-rounded: 20px;
+  /* Primarios-gamma-negro */
   --plz-color-black-4: #d4d4d8;
-  --bg-color: white;
+  /* Primarios-gamma-blanco */
+  --plz-color-white: white;
+
+  --bg-color: var(--plz-color-white);
+  display: block;
 }
 
 .sidebar {

@@ -11,6 +11,7 @@ import parserHtml from 'prettier/parser-html';
 })
 export class PlzShowcaseCode {
   @Prop() textCode: string;
+  @Prop() textSize: string = '18';
   private highlightedCode: string;
 
   componentWillLoad() {
@@ -24,7 +25,7 @@ export class PlzShowcaseCode {
   render() {
     return (
       <Host>
-        <pre>
+        <pre style={{ 'font-size': `${this.textSize}px` }}>
           <code innerHTML={this.highlightedCode}></code>
         </pre>
       </Host>

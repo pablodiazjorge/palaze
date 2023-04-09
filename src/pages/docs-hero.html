@@ -32,17 +32,25 @@
             <plz-divider></plz-divider>
             <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
             <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-colors.html" variant="custom" color-hover="#495057" color-text="white">Colors</plz-menu-item>
             <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
             <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
             <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
             <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white" active="true">Hero</plz-menu-item>
             <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-dropdown-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu-dropdown</plz-menu-item>
             <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
             <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-sidebar.html" variant="custom" color-hover="#495057" color-text="white">Sidebar</plz-menu-item>
             <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
             <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
             <plz-divider></plz-divider>
-            <plz-menu-item link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">Design System</plz-menu-item>
+            <plz-dropdown-menu link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">
+                Design System
+                <plz-menu-item slot="dropdown" link="#colores" variant="simple" color-hover="#495057" color-text="white" submenu="true">Colores</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#tipografia" variant="simple" color-hover="#495057" color-text="white" submenu="true">Tipografia</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#formas" variant="simple" color-hover="#495057" color-text="white" submenu="true">Formas</plz-menu-item>   
+            </plz-menu-item>
         </plz-menu>
     </plz-sidebar>
     <main id="main" class="docs-main">

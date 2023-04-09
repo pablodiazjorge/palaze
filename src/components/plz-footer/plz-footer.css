@@ -1,7 +1,10 @@
 :host {
-  display: block;
-  --plz-color-black-3: #495057;
-  --plz-color-black-4: #d4d4d8;
+    /* Primarios-gamma-negro */
+    --plz-color-black-4: #d4d4d8;
+    /* Primarios-gamma-blanco */
+    --plz-color-white: white;
+
+    display: block;
 }
 
 /* ## SIMPLE VARIANT ## */

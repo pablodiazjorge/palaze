@@ -11,7 +11,6 @@ export class PlzShowcase {
     return (
       <div class="showcase">
         <div><slot></slot></div>
-        <div><slot></slot></div>
       </div>
     );
   }

@@ -94,6 +94,7 @@ export namespace Components {
     }
     interface PlzShowcaseCode {
         "textCode": string;
+        "textSize": string;
     }
     interface PlzShowcaseRender {
         "display": string;
@@ -344,6 +345,7 @@ declare namespace LocalJSX {
     }
     interface PlzShowcaseCode {
         "textCode"?: string;
+        "textSize"?: string;
     }
     interface PlzShowcaseRender {
         "display"?: string;

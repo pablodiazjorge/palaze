@@ -21,7 +21,7 @@ export class PlzSidebar {
       this.toggleDisabled('10%', '10%');
     } else if (this.toggled == false && ancho >= 920 && ancho < 1440) {
       this.toggleActivated('30%', '10%');
-    }  else if (this.toggled === true && ancho < 920) {
+    } else if (this.toggled === true && ancho < 920) {
       this.toggled = false;
       document.getElementById('sidebar').style.width = '0';
     } else if (this.toggled === false && ancho < 920) {
@@ -50,7 +50,7 @@ export class PlzSidebar {
     return (
       <Host>
         <button class="button-sidebar" style={{ 'margin-top': `${this.spaceTop}px` }} onClick={() => this.toggle()} innerHTML="&#9776"></button>
-        <nav id="sidebar" class="sidebar" style={{ 'width': `${this.width}px`, '--bg-color': `${this.color}`}}>
+        <nav id="sidebar" class="sidebar" style={{ 'width': `${this.width}px`, '--bg-color': `${this.color}` }}>
           <slot></slot>
         </nav>
       </Host>

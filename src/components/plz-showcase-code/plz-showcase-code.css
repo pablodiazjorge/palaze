@@ -1,14 +1,18 @@
-/* @import '~highlight.js/styles/vs.css'; */
 @import '~highlight.js/styles/github.css';
 
 :host {
+  /* Primarios-gamma-negro */
+  --plz-color-black-4: #d4d4d8;
+  /* Primarios-gamma-blanco */
+  --plz-color-white: white;
+
   box-sizing: border-box;
   display: block;
   overflow-x: auto;
   width: 100%;
-  border: 1px solid #d4d4d8;
+  border: 1px solid var(--plz-color-black-4);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: white;
+  background-color: var(--plz-color-white);
   padding: 15px 15px;
 }

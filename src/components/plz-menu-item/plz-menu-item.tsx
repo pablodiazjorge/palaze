@@ -21,10 +21,19 @@ export class PlzMenuItem {
   }
 
   render() {
-    return this.variant == 'simple' ? (
+    return this.variant == 'simple' && this.colorHover != '' ? (
       <Host>
-        <a target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.activate()}>
-          <li class={{item: true, submenu: this.submenu}}>
+        <a href={this.link} target={this.target} class={`link simple-custom`}
+        style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
+          <li class={{ item: true, submenu: this.submenu }}>
+            <slot></slot>
+          </li>
+        </a>
+      </Host>
+    ) : this.variant == 'simple' ? (
+      <Host>
+        <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.activate()}>
+          <li class={{ item: true, submenu: this.submenu }}>
             <slot></slot>
           </li>
         </a>
@@ -38,7 +47,7 @@ export class PlzMenuItem {
           onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
-          <li class={{item: true, submenu: this.submenu}}>
+          <li class={{ item: true, submenu: this.submenu }}>
             <slot></slot>
           </li>
         </a>

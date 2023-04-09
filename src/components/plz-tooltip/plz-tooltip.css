@@ -1,91 +1,8 @@
 :host {
-  /*    ## FUENTES ##   */
-  --plz-font-primary: Padauk, sans-serif;
-  /* Peso fuente */
-  --plz-font-weight-regular: 400;
-  --plz-font-weight-bold: 700;
-
-  /* Tamaño fuente */
-  --plz-font-size-very-small: 12px;
-  --plz-font-size-small: 14px;
-  --plz-font-size-normal: 16px;
-  --plz-font-size-sub-section: 20px;
-  --plz-font-size-mid-section: 30px;
-  --plz-font-size-section: 48px;
-  --plz-font-size-titles: 64px;
-  --plz-font-size-below-titles: 24px;
-
-  /* Altura de linea */
-  --plz-line-height-smaller: 1;
-  --plz-line-height-small: 1.4;
-  --plz-line-height-normal: 1.8;
-  --plz-line-height-big: 2.4;
-
-  /* Espacio entre letras */
-  --plz-letter-space-smaller: -0.48px;
-  --plz-letter-space-small: -0.24px;
-  --plz-letter-space-normal: normal;
-  --plz-letter-space-big: 1.2px;
-  --plz-letter-space-biger: 2.4px;
-
   /* Radio borde */
-  --plz-border-radius-circle: 50%;
-  --plz-border-radius-rounded: 9999px;
-  --plz-border-radius-low-rounded: 25px;
-  --plz-border-radius-default: 0.25rem;
-  --plz-border-radius-square: 0px;
-
-  /*    ## COLORES ##   */
-
-  /* Primarios-gamma-azul */
-  --plz-color-blue-1: #023E8A;
-  --plz-color-blue-2: #0077B6;
-  --plz-color-blue-3: #0096C7;
-  --plz-color-blue-4: #a7b3e9;
-  --plz-color-blue-5: #CAF0F8;
-
-  /* Primarios-gamma-verde */
-  --plz-color-green-1: #081C15;
-  --plz-color-green-2: #1B4332;
-  --plz-color-green-3: #4cb05b;
-  --plz-color-green-4: #52B788;
-  --plz-color-green-5: #D8F3DC;
-
-  /* Primarios-gamma-rojo  */
-  --plz-color-red-1: #A4133C;
-  --plz-color-red-2: #FF4D6D;
-  --plz-color-red-3: #e67a8d;
-  --plz-color-red-4: #FFB3C1;
-  --plz-color-red-5: #FFF0F3;
-
-  /* Primarios-gamma-yellow */
-  --plz-color-yellow-1: #b88900;
-  --plz-color-yellow-2: #d3a007;
-  --plz-color-yellow-3: #fbf451;
-  --plz-color-yellow-4: #ffff7d;
-  --plz-color-yellow-5: #ffffdb;
-
-  /* Primarios-gamma-purple */
-  --plz-color-purple-1: #340856;
-  --plz-color-purple-2: #5d1372;
-  --plz-color-purple-3: #732487;
-  --plz-color-purple-4: #a167c9;
-  --plz-color-purple-5: #fff0ff;
-
-  /* Primarios-gamma-orange */
-  --plz-color-orange-1: #ee4a00;
-  --plz-color-orange-2: #e28000;
-  --plz-color-orange-3: #f9a72f;
-  --plz-color-orange-4: #fbbd5e;
-  --plz-color-orange-5: #fde9b0;
-
+  --plz-border-radius-default: 4px;
   /* Primarios-gamma-negro */
-  --plz-color-black-1: black;
   --plz-color-black-2: #212529;
-  --plz-color-black-3: #495057;
-  --plz-color-black-4: #d4d4d8;
-  --plz-color-black-5: #F8F9FA;
-
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
@@ -106,7 +23,7 @@ a {
   border-radius: var(--plz-border-radius-default);
 }
 
-/* ## SIMPLE VARIANT ## */ 
+/* ## SIMPLE VARIANT ## */
 
 .tooltip {
   box-sizing: border-box;
