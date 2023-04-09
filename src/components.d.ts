@@ -29,6 +29,7 @@ export namespace Components {
         "width": string;
     }
     interface PlzColors {
+        "colors": string;
         "variant": string;
     }
     interface PlzDivider {
@@ -278,6 +279,7 @@ declare namespace LocalJSX {
         "width"?: string;
     }
     interface PlzColors {
+        "colors"?: string;
         "variant"?: string;
     }
     interface PlzDivider {

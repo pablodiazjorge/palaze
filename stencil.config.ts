@@ -34,7 +34,8 @@ export const config: Config = {
         { src: 'pages/docs-demo-header.html', dest: 'docs-demo-header.html' },
         { src: 'pages/docs-header.html', dest: 'docs-header.html' },
         { src: 'pages/docs-sidebar.html', dest: 'docs-sidebar.html' },
-        { src: 'pages/docs-dropdown-menu.html', dest: 'docs-dropdown-menu.html' }
+        { src: 'pages/docs-dropdown-menu.html', dest: 'docs-dropdown-menu.html' },
+        { src: 'pages/docs-colors.html', dest: 'docs-colors.html' }
       ],
     },
   ],
