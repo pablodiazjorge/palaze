@@ -7,7 +7,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 })
 export class PlzCard {
   @Prop() variant: string = 'default';
-  @Prop() url: string = '#';
+  @Prop() url: string = '';
   @Prop() target: string = '_self';
   @Prop() image: string = '';
   @Prop() hover: string = 'blue';
