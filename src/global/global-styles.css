@@ -160,7 +160,6 @@ h4 {
 */
 
 .landing-main {
-    margin-top: 44px;
     background-color: var(--plz-color-black-5);
     text-align: center;
 }
@@ -227,7 +226,6 @@ h4 {
 */
 
 .docs-main {
-    margin-top: 45px;
     margin-left: 30%;
     margin-right: 20%;
     transition: all 0.3s;

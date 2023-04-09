@@ -10,6 +10,7 @@
 | Property   | Attribute   | Description | Type     | Default     |
 | ---------- | ----------- | ----------- | -------- | ----------- |
 | `textCode` | `text-code` |             | `string` | `undefined` |
+| `textSize` | `text-size` |             | `string` | `'18'`      |
 
 
 ----------------------------------------------
