@@ -60,27 +60,51 @@
             <!-- Muestra del componente -->
             <plz-showcase-render display="block">
                 <plz-menu style="width: 200px;">
-                    <plz-menu-item link="#">Primer</plz-menu-item>
-                    <plz-drowpdown-menu link="#">Acciones
-                        <plz-menu-item slot="dropdown" link="#">Subir</plz-menu-item>
-                        <plz-menu-item slot="dropdown" link="#">Bajar</plz-menu-item>
-                        <plz-menu-item slot="dropdown" link="#">Girar</plz-menu-item>
-                        <plz-menu-item slot="dropdown" link="#">Rodar</plz-menu-item>
-                        <plz-menu-item slot="dropdown" link="#">Saltar</plz-menu-item>
-                    </plz-drowpdown-menu>
+                    <plz-dropdown-menu variant="simple" link="#">Acciones
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
+                    </plz-dropdown-menu>
                     <plz-menu-item link="#">Configuraciones</plz-menu-item>
                 </plz-menu>
             </plz-showcase-render>
-            <plz-showcase-code text-code='<plz-menu style="font-size: 20px; font-weight: 100; width: 150px;">
-        <plz-menu-item>Acciones</plz-menu-item>
-        <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-        <plz-menu-item>Subir</plz-menu-item>
-        <plz-menu-item>Bajar</plz-menu-item>
-        <plz-menu-item>Girar</plz-menu-item>
-        <plz-menu-item>Rodar</plz-menu-item>
-        <plz-menu-item>Saltar</plz-menu-item>
-    </plz-menu>'>
+            <plz-showcase-code text-code='<plz-menu style="width: 200px;">
+                <plz-dropdown-menu variant="simple">Acciones
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
+                </plz-dropdown-menu>
+                <plz-menu-item link="#">Configuraciones</plz-menu-item>
+            </plz-menu>'>
             </plz-showcase-code>
+            <h3>Variante custom</h3>
+            <p>sdasd asdasd a</p>
+            <plz-showcase-render display="block">
+                <plz-menu style="width: 200px;">
+                    <plz-dropdown-menu variant="custom" color-hover="#732487" color-text="white" active="true">Acciones
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
+                        <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
+                    </plz-dropdown-menu>
+                    <plz-menu-item>Configuraciones</plz-menu-item>
+                </plz-menu>
+            </plz-showcase-render>
+            <plz-showcase-code text-code='<plz-menu style="width: 200px;">
+                <plz-dropdown-menu variant="simple">Acciones
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
+                    <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
+                </plz-dropdown-menu>
+                <plz-menu-item link="#">Configuraciones</plz-menu-item>
+            </plz-menu>'>
             <!-- Sección de los atributos -->
             <h2>Atributos</h2>
             <table class="table-atr">

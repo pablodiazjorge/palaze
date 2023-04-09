@@ -43,6 +43,8 @@ export namespace Components {
     }
     interface PlzDropdownMenu {
         "active": boolean;
+        "colorHover": string;
+        "colorText": string;
         "link": string;
         "variant": string;
     }
@@ -80,6 +82,7 @@ export namespace Components {
         "colorText": string;
         "imageUrl": string;
         "link": string;
+        "submenu": boolean;
         "target": string;
         "variant": string;
     }
@@ -289,6 +292,8 @@ declare namespace LocalJSX {
     }
     interface PlzDropdownMenu {
         "active"?: boolean;
+        "colorHover"?: string;
+        "colorText"?: string;
         "link"?: string;
         "variant"?: string;
     }
@@ -326,6 +331,7 @@ declare namespace LocalJSX {
         "colorText"?: string;
         "imageUrl"?: string;
         "link"?: string;
+        "submenu"?: boolean;
         "target"?: string;
         "variant"?: string;
     }

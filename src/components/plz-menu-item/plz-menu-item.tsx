@@ -12,6 +12,7 @@ export class PlzMenuItem {
   @Prop() colorHover: string = '';
   @Prop() colorText: string = 'white';
   @Prop() imageUrl: string = '';
+  @Prop() submenu: boolean = false;
 
   @Prop() active: boolean = false;
 
@@ -22,8 +23,8 @@ export class PlzMenuItem {
   render() {
     return this.variant == 'simple' ? (
       <Host>
-        <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.activate()}>
-          <li class="item">
+        <a target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.activate()}>
+          <li class={{item: true, submenu: this.submenu}}>
             <slot></slot>
           </li>
         </a>
@@ -37,7 +38,7 @@ export class PlzMenuItem {
           onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
-          <li class="item">
+          <li class={{item: true, submenu: this.submenu}}>
             <slot></slot>
           </li>
         </a>
@@ -45,7 +46,7 @@ export class PlzMenuItem {
     ) : this.variant == 'custom' && this.colorHover != '' ? (
       <Host>
         <li
-          class={`item custom ${this.active ? 'active' : ''}`}
+          class={`item custom ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}
           onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
@@ -54,7 +55,7 @@ export class PlzMenuItem {
       </Host>
     ) : this.variant == 'custom' ? (
       <Host>
-        <li class={{ item: true, active: this.active }} onClick={() => this.activate()}>
+        <li class={{ item: true, active: this.active, submenu: this.submenu }} onClick={() => this.activate()}>
           <slot></slot>
         </li>
       </Host>
@@ -67,7 +68,7 @@ export class PlzMenuItem {
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
           onClick={() => this.activate()}
         >
-          <li class={`item-image grid-container ${this.active ? 'active' : ''}`} onClick={() => this.activate()}>
+          <li class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`} onClick={() => this.activate()}>
             <div class="grid-item">
               <img src={this.imageUrl} />
             </div>
@@ -78,7 +79,7 @@ export class PlzMenuItem {
     ) : this.variant == 'image' && this.colorHover ? (
       <Host>
         <li
-          class={`item-image grid-container ${this.active ? 'active' : ''}`}
+          class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}
           onClick={() => this.activate()}
           style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
         >
@@ -90,7 +91,7 @@ export class PlzMenuItem {
       </Host>
     ) : this.variant == 'image' ? (
       <Host>
-        <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''}`} onClick={() => this.activate()}>
+        <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`} onClick={() => this.activate()}>
           <div class="grid-item">
             <img src={this.imageUrl} />
           </div>

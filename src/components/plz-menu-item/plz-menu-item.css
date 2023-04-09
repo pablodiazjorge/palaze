@@ -122,6 +122,10 @@
   background-color: var(--plz-color-black-4);
 }
 
+.submenu {
+  padding-left: 50px;
+}
+
 /* ## CUSTOM VARIANT ## */
 
 .custom:hover {

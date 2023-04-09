@@ -8,7 +8,9 @@ import { Component, Host, Prop, h } from '@stencil/core';
 export class PlzDropdownMenu {
   @Prop() variant: string = 'simple';
   @Prop() active: boolean = false;
-  @Prop() link: string;
+  @Prop() link: string = '';
+  @Prop() colorHover: string = '';
+  @Prop() colorText: string = 'white';
 
   changeActive() {
     this.active = !this.active;
@@ -17,40 +19,54 @@ export class PlzDropdownMenu {
   render() {
     return this.variant == 'simple' && this.link != '' ? (
       <Host>
-        <li class={{active: this.active, link: true, simple: true}} onClick={() => this.changeActive()}>
-          <a href={this.link}>
+        <li>
+          <a href={this.link} class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
+            <slot></slot>
             <slot></slot>
           </a>
-          <ul id="#sub-menu">
+          <ul class={{ dropdown: this.active }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>
       </Host>
     ) : this.variant == 'simple' ? (
       <Host>
-        <li class={{active: this.active, simple: true}} onClick={() => this.changeActive()}>
-          <slot></slot>
-          <ul id="#sub-menu">
+        <li>
+          <a class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
+            <slot></slot>
+          </a>
+          <ul id="#sub-menu" class={{ dropdown: this.active }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>
       </Host>
     ) : this.variant == 'custom' && this.link != '' ? (
       <Host>
-        <li class={{active: this.active, link: true, custom: true}} onClick={() => this.changeActive()}>
-          <a href={this.link}>
+        <li>
+          <a
+            href={this.link}
+            class={{ custom: true, item: true, active: this.active }}
+            style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+            onClick={() => this.changeActive()}
+          >
             <slot></slot>
           </a>
-          <ul id="#sub-menu">
+          <ul id="#sub-menu" class={{ dropdown: this.active }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>
       </Host>
     ) : this.variant == 'custom' ? (
       <Host>
-        <li class={{active: this.active, custom: true}} onClick={() => this.changeActive()}>
-          <slot></slot>
-          <ul id="#sub-menu">
+        <li>
+          <a
+            class={{ custom: true, item: true, active: this.active }}
+            style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+            onClick={() => this.changeActive()}
+          >
+            <slot></slot>
+          </a>
+          <ul id="#sub-menu" class={{ dropdown: this.active }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>
