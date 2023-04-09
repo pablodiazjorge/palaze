@@ -14,6 +14,7 @@
 | `colorText`  | `color-text`  |             | `string`  | `'white'`  |
 | `imageUrl`   | `image-url`   |             | `string`  | `''`       |
 | `link`       | `link`        |             | `string`  | `''`       |
+| `submenu`    | `submenu`     |             | `boolean` | `false`    |
 | `target`     | `target`      |             | `string`  | `'_self'`  |
 | `variant`    | `variant`     |             | `string`  | `'simple'` |
 

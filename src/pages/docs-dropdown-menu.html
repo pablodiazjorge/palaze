@@ -57,9 +57,22 @@
             <p>Dentro del mundo del desarrollo web proporciona una lista de opciones para navegar por secciones de una
                 misma
                 web.</p>
+            <p>Las opciones se asemejan a las del componente Menu-item, ya que el uso principal se situa dentro del componente Menu.</p>
             <!-- Muestra del componente -->
-            <plz-showcase-render display="block">
-                <plz-menu style="width: 200px;">
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-menu style="width: 200px;">
+                        <plz-dropdown-menu variant="simple" link="#">Acciones
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
+                        </plz-dropdown-menu>
+                        <plz-menu-item link="#">Configuraciones</plz-menu-item>
+                    </plz-menu>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-menu>
                     <plz-dropdown-menu variant="simple" link="#">Acciones
                         <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
                         <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
@@ -68,23 +81,35 @@
                         <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
                     </plz-dropdown-menu>
                     <plz-menu-item link="#">Configuraciones</plz-menu-item>
-                </plz-menu>
-            </plz-showcase-render>
-            <plz-showcase-code text-code='<plz-menu style="width: 200px;">
-                <plz-dropdown-menu variant="simple">Acciones
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
-                </plz-dropdown-menu>
-                <plz-menu-item link="#">Configuraciones</plz-menu-item>
-            </plz-menu>'>
-            </plz-showcase-code>
+                </plz-menu>'>
+                </plz-showcase-code>
+            </plz-showcase>
+            <h2>Ejemplos</h2>
+            <plz-divider></plz-divider>
             <h3>Variante custom</h3>
-            <p>sdasd asdasd a</p>
-            <plz-showcase-render display="block">
-                <plz-menu style="width: 200px;">
+            <p>Usaremos la variante "custom" para desbloquear las opciones de cambiar color al seleccionar y poder elegir colores para cuando pasas
+                el cursor por encima del elemento.
+            </p>
+            <p>Usaremos el atributo color-hover para elegir nuestro color al pasar por encima con el cursor, también determinará el color al ser seleccionado.
+                Usaremos el atributo color-text para determinar el color del texto cuando hagamos hover y cuando esté seleccionado el elemento.
+            </p>
+            <p>Se podrá introducir colores en hex, rgb y rgba.</p>
+            <p>Usaremos el atributo link para introducir una url cuando sea necesario.</p>
+            <p>Por otra parte usaremos el atributo active con las opciones "true" o "false" para elegir si queremos el menu desplegado o sin desplegar.</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-menu style="width: 200px;">
+                        <plz-dropdown-menu variant="custom" color-hover="#732487" color-text="white" active="true">Acciones
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
+                            <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
+                        </plz-dropdown-menu>
+                        <plz-menu-item>Configuraciones</plz-menu-item>
+                    </plz-menu>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-menu>
                     <plz-dropdown-menu variant="custom" color-hover="#732487" color-text="white" active="true">Acciones
                         <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
                         <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
@@ -93,18 +118,9 @@
                         <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
                     </plz-dropdown-menu>
                     <plz-menu-item>Configuraciones</plz-menu-item>
-                </plz-menu>
-            </plz-showcase-render>
-            <plz-showcase-code text-code='<plz-menu style="width: 200px;">
-                <plz-dropdown-menu variant="simple">Acciones
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Subir</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Bajar</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Girar</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Rodar</plz-menu-item>
-                    <plz-menu-item slot="dropdown" submenu="true" link="#">Saltar</plz-menu-item>
-                </plz-dropdown-menu>
-                <plz-menu-item link="#">Configuraciones</plz-menu-item>
-            </plz-menu>'>
+                </plz-menu>'>
+                </plz-showcase-code>
+            </plz-showcase>
             <!-- Sección de los atributos -->
             <h2>Atributos</h2>
             <table class="table-atr">
@@ -118,10 +134,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Nombre">border-menu</td>
-                        <td data-label="Descripción">Distintas ubicaciones para bordes aplicados al componente separador</td>
-                        <td data-label="Posibilidades">'all' - 'top-bottom' - 'left-right' - 'top' - 'bottom' - 'right' - 'left' - 'none'</td>
-                        <td data-label="Por defecto">'all'</td>
+                        <td data-label="Nombre">variant</td>
+                        <td data-label="Descripción">Distintas variantes del componente.</td>
+                        <td data-label="Posibilidades">'simple' - 'custom'</td>
+                        <td data-label="Por defecto">'simple'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-text</td>
+                        <td data-label="Descripción">Color que tendra el texto de dentro del componente.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto">'black'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">color-hover</td>
+                        <td data-label="Descripción">Color que tendrá el componente al pasar el cursor por encima.</td>
+                        <td data-label="Posibilidades">hex, rgb, rgba</td>
+                        <td data-label="Por defecto"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">active</td>
+                        <td data-label="Descripción">Determina si el menu está desplegado o no lo está.</td>
+                        <td data-label="Posibilidades">'false' - 'true'</td>
+                        <td data-label="Por defecto">'false'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">link</td>
+                        <td data-label="Descripción">Url a la que se accedera a partir del componente.</td>
+                        <td data-label="Posibilidades">'docs-ejemplo.html'</td>
+                        <td data-label="Por defecto"></td>
                     </tr>
                 </tbody>
             </table>
