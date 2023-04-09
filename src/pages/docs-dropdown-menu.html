@@ -61,12 +61,13 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
             <p>El componente<plz-tooltip variant="link" link="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" 
-                target="_blank" text="More info"><u>dropdown-menu</u></plz-tooltip> sirve para agrupar distintos elementos con una estructura concreta
-                con la funcionalidad de desplegarse y recogerse como un acordeon.</p>
+                target="_blank" text="More info"><u>dropdown-menu</u></plz-tooltip>sirve para agrupar distintos elementos con una
+                 estructura concreta con la funcionalidad de desplegarse y recogerse como un acordeon.</p>
             <p>Dentro del mundo del desarrollo web proporciona una lista de opciones para navegar por secciones de una
-                misma
-                web.</p>
-            <p>Las opciones se asemejan a las del componente Menu-item, ya que el uso principal se situa dentro del componente Menu.</p>
+                misma web.</p>
+            <p>Las opciones se asemejan a las del componente<plz-tooltip variant="link" link="docs-menu-item.html" 
+                target="_blank" text="Más info"><u>menu-item</u></plz-tooltip>ya que el uso principal se situa dentro del componente<plz-tooltip variant="link" link="docs-menu.html" 
+                target="_blank" text="Más info"><u>menu.</u></p>
             <!-- Muestra del componente -->
             <plz-showcase>
                 <plz-showcase-render display="block">
@@ -96,15 +97,16 @@
             <h2>Ejemplos</h2>
             <plz-divider></plz-divider>
             <h3>Variante custom</h3>
-            <p>Usaremos la variante "custom" para desbloquear las opciones de cambiar color al seleccionar y poder elegir colores para cuando pasas
-                el cursor por encima del elemento.
-            </p>
-            <p>Usaremos el atributo color-hover para elegir nuestro color al pasar por encima con el cursor, también determinará el color al ser seleccionado.
-                Usaremos el atributo color-text para determinar el color del texto cuando hagamos hover y cuando esté seleccionado el elemento.
+            <p>Usaremos el atributo <b>variant</b> para elegir la variante "custom", pudiendo así utilizar la opción para cambiar color al seleccionar
+                y para poder elegir colores cuando pasas el cursor por encima del elemento (hover).</p>
+            <p>Usaremos el atributo <b>color-hover</b> para elegir nuestro color al pasar por encima con el cursor (hover), también determinará
+                el color cuando el componente sea seleccionado.
+                Usaremos el atributo <b>color-text</b> para determinar el color del texto cuando hagamos hover y cuando esté seleccionado el elemento.
             </p>
             <p>Se podrá introducir colores en hex, rgb y rgba.</p>
-            <p>Usaremos el atributo link para introducir una url cuando sea necesario.</p>
-            <p>Por otra parte usaremos el atributo active con las opciones "true" o "false" para elegir si queremos el menu desplegado o sin desplegar.</p>
+            <p>Usaremos el atributo <b>link</b> para introducir una url cuando sea necesario.</p>
+            <p>Por otra parte usaremos el atributo <b>active</b> con las opciones "true" o "false" para elegir si queremos el menu desplegado
+                o sin desplegar.</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <plz-menu style="width: 200px;">
@@ -156,13 +158,13 @@
                     </tr>
                     <tr>
                         <td data-label="Nombre">color-hover</td>
-                        <td data-label="Descripción">Color que tendrá el componente al pasar el cursor por encima.</td>
+                        <td data-label="Descripción">Color que tendrá el componente al pasar el cursor por encima (hover).</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">active</td>
-                        <td data-label="Descripción">Determina si el menu está desplegado o no lo está.</td>
+                        <td data-label="Descripción">Determina si el componente está desplegado o no lo está.</td>
                         <td data-label="Posibilidades">'false' - 'true'</td>
                         <td data-label="Por defecto">'false'</td>
                     </tr>
