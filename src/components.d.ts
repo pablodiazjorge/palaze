@@ -48,6 +48,7 @@ export namespace Components {
         "colorHover": string;
         "colorText": string;
         "link": string;
+        "static": boolean;
         "target": string;
         "variant": string;
     }
@@ -301,6 +302,7 @@ declare namespace LocalJSX {
         "colorHover"?: string;
         "colorText"?: string;
         "link"?: string;
+        "static"?: boolean;
         "target"?: string;
         "variant"?: string;
     }

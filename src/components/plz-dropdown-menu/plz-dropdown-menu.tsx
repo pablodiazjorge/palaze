@@ -12,20 +12,42 @@ export class PlzDropdownMenu {
   @Prop() target: string = '_self';
   @Prop() colorHover: string = '';
   @Prop() colorText: string = 'white';
+  @Prop() static: boolean = false;
 
   changeActive() {
     this.active = !this.active;
   }
 
   render() {
-    return this.variant == 'simple' && this.link != '' ? (
+    return this.variant == 'simple' && this.link != '' && this.static ? (
+      <Host>
+        <li>
+          <a href={this.link} target={this.target} class={{ simple: true, item: true }}>
+            <slot></slot>
+          </a>
+          <ul class={{ dropdown: this.static }}>
+            <slot name="dropdown"></slot>
+          </ul>
+        </li>
+      </Host>
+    ) : this.variant == 'simple' && this.link != '' ? (
       <Host>
         <li>
           <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
             <slot></slot>
-            <slot></slot>
           </a>
           <ul class={{ dropdown: this.active }}>
+            <slot name="dropdown"></slot>
+          </ul>
+        </li>
+      </Host>
+    ) : this.variant == 'simple' && this.static ? (
+      <Host>
+        <li>
+          <a class={{ simple: true, item: true}}>
+            <slot></slot>
+          </a>
+          <ul id="#sub-menu" class={{ dropdown: this.static }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>
@@ -37,6 +59,21 @@ export class PlzDropdownMenu {
             <slot></slot>
           </a>
           <ul id="#sub-menu" class={{ dropdown: this.active }}>
+            <slot name="dropdown"></slot>
+          </ul>
+        </li>
+      </Host>
+    ) : this.variant == 'custom' && this.link != '' && this.static ? (
+      <Host>
+        <li>
+          <a
+            href={this.link} target={this.target}
+            class={{ custom: true, item: true }}
+            style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+          >
+            <slot></slot>
+          </a>
+          <ul id="#sub-menu" class={{ dropdown: this.static }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>
@@ -53,6 +90,20 @@ export class PlzDropdownMenu {
             <slot></slot>
           </a>
           <ul id="#sub-menu" class={{ dropdown: this.active }}>
+            <slot name="dropdown"></slot>
+          </ul>
+        </li>
+      </Host>
+    ) : this.variant == 'custom' && this.static ? (
+      <Host>
+        <li>
+          <a
+            class={{ custom: true, item: true }}
+            style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+          >
+            <slot></slot>
+          </a>
+          <ul id="#sub-menu" class={{ dropdown: this.static }}>
             <slot name="dropdown"></slot>
           </ul>
         </li>

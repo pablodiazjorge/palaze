@@ -13,6 +13,7 @@
 | `colorHover` | `color-hover` |             | `string`  | `''`       |
 | `colorText`  | `color-text`  |             | `string`  | `'white'`  |
 | `link`       | `link`        |             | `string`  | `''`       |
+| `static`     | `static`      |             | `boolean` | `false`    |
 | `target`     | `target`      |             | `string`  | `'_self'`  |
 | `variant`    | `variant`     |             | `string`  | `'simple'` |
 
