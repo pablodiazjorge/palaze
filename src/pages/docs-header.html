@@ -61,8 +61,8 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
             <p>El componente<plz-tooltip variant="link" link="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" 
-                target="_blank" text="More info"><u>header</u></plz-tooltip>es el primer elemento de una página, generalmente se encuentra en la parte superior,
-                 pero también la podemos encontrar en ambos lados de la página verticalmente.
+                target="_blank" text="Más info"><u>header</u></plz-tooltip>es el primer elemento de una página, generalmente se
+                 encuentra en la parte superior, pero también la podemos encontrar en ambos lados de la página verticalmente.
             Suele contener elementos enlace o de navegación para acceder a páginas relacionadas con el contenido donde se encuentre.</p>
             <p>Los header son sencillos y atractivos visualmente para que la interacción del usuario sea sencilla.</p>
             <!-- Muestra del componente -->
@@ -70,7 +70,7 @@
                 <plz-showcase-render>
                     <plz-button color="green" hover-color="#52B788" corners="low-rounded" link="docs-demo-header.html" target="_blank">Demo</plz-button>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
+                <plz-showcase-code text-code='<plz-header variant="right-hover" color="#1B4332" color-text="white" color-hover="#52B788" color-text-hover="white">
                     <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
                             height="40px"></a>
                     <a slot="left" href="index.html">Palaze web</a>
@@ -82,14 +82,14 @@
                 </plz-showcase-code>
             </plz-showcase>
 
-            <p>Dependiendo de la variante que usemos, podremos acceder a unos slots o a otros. Para la variante right-hover,
-                 usaremos el slot name "left" para la parte izquierda del header y el slot name "right-select" para la parte derecha del header.
-                Para la variante "left-hover", usaremos el slot name "left-selected" para la parte izquierda del header y el slot name "right" para
-                la parte derecha del header. Por último, la variante both-hover, usaremos "left-selected" y "right-selected" para ambas partes del header 
-                respectivamente.</p>
-            <p>Se puede cambiar el color del header haciendo uso del atributo color, con atributo color-text se puede cambiar
-                 el color del texto de dentro del header. Para cambiar el tanto el color del header como el texto de este cuando se pasa el 
-                 cursor por encima de los distintos elementos del header, usaremos color-hover y color-text-hover.
+            <p>Dependiendo de la variante que usemos, podremos acceder a unos slots o a otros. Para la variante "right-hover",
+                usaremos el <b>slot</b> name "left" para la parte izquierda del header y el <b>slot</b> name "right-select" para la
+                parte derecha del header. Para la variante "left-hover", usaremos el <b>slot</b> name "left-selected" para la parte
+                izquierda del header y el <b>slot</b> name "right" para la parte derecha del header. Por último, la variante "both-hover",
+                usaremos "left-selected" y "right-selected" para ambas partes del header respectivamente.</p>
+            <p>Se puede cambiar el color del header haciendo uso del atributo <b>color</b>, con atributo <b>color-text</b> se puede cambiar
+                el color del texto de dentro del header. Para cambiar el tanto el color del header como el texto de este cuando se pasa el 
+                cursor por encima de los distintos elementos del header, usaremos <b>color-hover</b> y <b>color-text-hover</b>.
             </p>
             <p>Se podrá introducir colores en hex, rgb y rgba.</p>
             <!-- Sección de los atributos -->
@@ -106,13 +106,13 @@
                 <tbody>
                     <tr>
                         <td data-label="Nombre">variant</td>
-                        <td data-label="Descripción">Distintas variantes del componente.</td>
+                        <td data-label="Descripción">Distintas variantes del componente</td>
                         <td data-label="Posibilidades">'right-hover' - 'left-hover' - 'both-hover'</td>
                         <td data-label="Por defecto">'right-hover'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">color</td>
-                        <td data-label="Descripción">Color que tendrá el componente.</td>
+                        <td data-label="Descripción">Distintos colores del componente</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto">'white'</td>
                     </tr>
@@ -124,13 +124,13 @@
                     </tr>
                     <tr>
                         <td data-label="Nombre">color-hover</td>
-                        <td data-label="Descripción">Color que tendrá el componente al pasar el cursor por encima.</td>
+                        <td data-label="Descripción">Color que tendrá el componente al pasar el cursor por encima</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">color-text-hover</td>
-                        <td data-label="Descripción">Color del texto que tendrá el componente al pasar el cursor por encima.</td>
+                        <td data-label="Descripción">Color del texto que tendrá el componente al pasar el cursor por encima</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto"></td>
                     </tr>

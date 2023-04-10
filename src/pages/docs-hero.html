@@ -61,13 +61,11 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
             <p>El componente<plz-tooltip variant="link" link="https://www.optimizely.com/optimization-glossary/hero-image/" 
-                target="_blank" text="More info"><u>hero</u></plz-tooltip>sirve para introducir un contenido de una forma atractiva. Se suelen usar en
-                landing
-                pages al inicio de la página.</p>
-            <p>En al gran mayoría de ocasiones se usa una imagen de fondo, un título y un subtítulo. En algunos casos,
-                se
-                usan
-                botones o algún tipo de elementos con el que interactuar (a gusto el cliente).</p>
+                target="_blank" text="Más info"><u>hero</u></plz-tooltip>sirve para introducir un contenido de una forma atractiva.
+                Se suelen usar en landing pages al inicio de la página.</p>
+            <p>En al gran mayoría de ocasiones se usa una imagen de fondo, un título y un subtítulo. En algunos casos, se 
+                usan<plz-tooltip variant="link" link="docs-button.html" target="_blank" text="Más info"><u>buttons</u></plz-tooltip>o 
+                algún tipo de elementos con el que interactuar (a gusto el cliente).</p>
             <!-- Muestra del componente -->
             <plz-showcase>
                 <plz-showcase-render display="block">
@@ -81,22 +79,25 @@
                     </plz-hero>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-hero image="../assets/icon/Hero-img.svg">
-            <h1 style="line-height: 1;">Hero</h1>
-            <p style=" text-align: center;">Aquí suele ir una pequeña introducción al contenido de tu landing page,
-                 algo que capte la atención de los usuarios al visitar tu web.</p>
-        </plz-hero>'>
+                    <h1 style="line-height: 1;">Hero</h1>
+                    <p style=" text-align: center;">Aquí suele ir una pequeña introducción al contenido de tu
+                        landing
+                        page,
+                        algo que capte la atención de
+                        los usuarios al visitar tu web.</p>
+                </plz-hero>'>
                 </plz-showcase-code>
             </plz-showcase>
 
             <!-- Ejemplos de las posibilidades del componente-->
             <h2>Ejemplos</h2>
             <plz-divider></plz-divider>
-            <h3>Heroe simple</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de heroe "simple".</p>
+            <h3>Variante hero simple</h3>
+            <p>Usaremos el atributo <b>variant</b> para elegir la variante de hero "simple".</p>
             <p>En este caso, se opta por un componente básico, título y subtítulo. Debido a ser un componente, es
-                personalizable
-                y puedes variar según tus necesidades, se podría añadir tarjetas o un botón para acceder a otra sección,
-                etc.
+                personalizable y puedes variar según tus necesidades, se podría añadir<plz-tooltip variant="link"
+                link="docs-card.html" target="_blank" text="Más info"><u>cards</u></plz-tooltip>o un<plz-tooltip variant="link"
+                link="docs-button.html" target="_blank" text="Más info"><u>button</u></plz-tooltip>para acceder a otra sección, etc.
             </p>
             <plz-showcase>
                 <plz-showcase-render display="block">
@@ -110,32 +111,36 @@
                     </plz-hero>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-hero variant="simple" height="400">
-            <h1 style="line-height: 1;">Hero</h1>
-            <p style=" text-align: center;">Aquí suele ir una pequeña introducción al contenido de tu landing page, algo que capte la atención de
-                los usuarios al visitar tu web.</p>
-        </plz-hero>'>
+                    <h1 style="line-height: 1;">Hero</h1>
+                    <p style=" text-align: center;">Aquí suele ir una pequeña introducción al contenido de tu
+                        landing
+                        page,
+                        algo que capte la atención de
+                        los usuarios al visitar tu web.</p>
+                </plz-hero>'>
                 </plz-showcase-code>
             </plz-showcase>
 
-            <h3>Heroe image</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de heroe "image".</p>
-            <p>En algunas ocasiones, solo querremos una imagen como nuestro componente heroe, para ello hemos creado
-                esta
-                variante.</p>
+            <h3>Variant hero image</h3>
+            <p>Usaremos el atributo <b>variant</b> para elegir la variante de hero "image".</p>
+            <p>En algunas ocasiones, solo querremos una imagen como nuestro componente hero, para ello hemos creado
+                esta variante.</p>
+            <p>Usaremos el atributo <b>image</b> para introducir la url a nuestra imagen. Ajustaremos la altura de la imagen
+            con el atributo <b>height</b>.</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <plz-hero variant="image" height="600" image="../assets/icon/log-mask-overview.svg">
                     </plz-hero>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-hero variant="image" height="600" image="../assets/icon/log-mask-overview.svg">
-        </plz-hero>'>
+                </plz-hero>'>
                 </plz-showcase-code>
             </plz-showcase>
 
-            <h3>Heroe dos columnas</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de heroe "two-columns".</p>
+            <h3>Variante hero two-column</h3>
+            <p>Usaremos el atributo <b>variant</b> para elegir la variante de hero "two-column".</p>
             <p>Consta de dos columnas personalizables. Para identificar la columna en la que colocaremos
-                 el contenido utilizaremos el atributo slot="first-column" o slot="second-column".</p>
+                el contenido utilizaremos el atributo <b>slot</b>="first-column" o <b>slot</b>="second-column".</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <plz-hero variant="two-column" height="650" image="../assets/icon/Footer-img.svg">
@@ -156,16 +161,12 @@
                 </plz-showcase-code>
             </plz-showcase>
 
-            <h3>Heroe predeterminado</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de heroe "default".</p>
-            <p>Esta variante corresponde a la vertiente más usada del componente heroe. Consta de una imagen de fondo,
-                un
-                título
-                y un subtítulo.</p>
+            <h3>Variante hero default</h3>
+            <p>Usaremos el atributo <b>variant</b> para elegir la variante de hero "default".</p>
+            <p>Esta variante corresponde a la vertiente más usada del componente hero. Consta de una imagen de fondo,
+                un título y un subtítulo.</p>
             <p>En el caso de querer personalizar el contenido, se podría realizar mediante el uso de otros elementos
-                dentro
-                de
-                este.</p>
+                dentro de este.</p>
             <plz-showcase>
                 <plz-showcase-render display="block">
                     <plz-hero image="../assets/icon/card-ejemplo.png">
