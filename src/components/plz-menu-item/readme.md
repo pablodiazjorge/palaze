@@ -16,4 +16,4 @@ Los componentes menu-item forman parte del componente padre plz-menu.Se utilizan
 
 --------------------------------------------------------------------------------------------------------------
 
-*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*
+*Puedes acceder a una documentación más detallada en [Palaze-web](https://palaze-pablodiazjorge.netlify.app/)*

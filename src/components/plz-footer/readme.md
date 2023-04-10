@@ -12,4 +12,4 @@ El componente footer se utiliza para mostrar información en forma de sección a
 
 --------------------------------------------------------------------------------------------------------------
 
-*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*
+*Puedes acceder a una documentación más detallada en [Palaze-web](https://palaze-pablodiazjorge.netlify.app/)*

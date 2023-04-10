@@ -13,4 +13,4 @@ El componente spinner se utiliza principalmente para indicar que algo está carg
 
 --------------------------------------------------------------------------------------------------------------
 
-*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*
+*Puedes acceder a una documentación más detallada en [Palaze-web](https://palaze-pablodiazjorge.netlify.app/)*

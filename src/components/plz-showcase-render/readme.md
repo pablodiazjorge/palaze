@@ -18,4 +18,4 @@ El componente dispone de la opción de hacer resize para poder ver los cambios e
 
 --------------------------------------------------------------------------------------------------------------
 
-*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*
+*Puedes acceder a una documentación más detallada en [Palaze-web](https://palaze-pablodiazjorge.netlify.app/)*

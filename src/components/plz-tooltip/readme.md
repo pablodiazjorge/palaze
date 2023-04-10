@@ -14,4 +14,4 @@ El componente tooltip consiste en un mensaje emergente que aparece en pantalla c
 
 --------------------------------------------------------------------------------------------------------------
 
-*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*
+*Puedes acceder a una documentación más detallada en [Palaze-web](https://palaze-pablodiazjorge.netlify.app/)*
