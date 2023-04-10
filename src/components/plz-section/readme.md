@@ -1,17 +1,15 @@
 # plz-section
 
+El componente section constará de varias opciones para estructurar secciones en una página web.
 
+La función de este componente es meramente organizativa.
 
-<!-- Auto Generated Below -->
+## Atributos
 
+| Nombre | Descripción | Posibilidades | Por defecto |
+| --- | --- | --- | --- |
+| variant | Distintas variantes del componente | 'wrapper' - 'columns' | 'wrapper' |
 
-## Properties
+--------------------------------------------------------------------------------------------------------------
 
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `variant` | `variant` |             | `string` | `'wrapper'` |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*

@@ -1,19 +1,15 @@
 # plz-footer
 
+El componente footer se utiliza para mostrar información en forma de sección al final de la página. En el footer suele aparecer información acerca de colaboradores, redes sociales, opciones de contacto, politicas de privacidad y términos de uso, enlaces a páginas relevantes...
 
+## Atributos
 
-<!-- Auto Generated Below -->
+| Nombre | Descripción | Posibilidades | Por defecto |
+| --- | --- | --- | --- |
+| variant | Distintas variantes del componente | 'simple' - 'block' - 'two-columns' | 'simple' |
+| height | Puedes determinar la altura del componente. | Number(px) | '600' |
+| image | Dirección url de la imagen a colocar en el componente footer con la variante "block" o "two-column" | './mi-imagen-ejemplo.svg' |  |
 
+--------------------------------------------------------------------------------------------------------------
 
-## Properties
-
-| Property  | Attribute | Description | Type     | Default     |
-| --------- | --------- | ----------- | -------- | ----------- |
-| `height`  | `height`  |             | `string` | `'auto'`    |
-| `image`   | `image`   |             | `string` | `undefined` |
-| `variant` | `variant` |             | `string` | `'simple'`  |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*

@@ -15,11 +15,8 @@ export class PlzShowcaseCode {
   private highlightedCode: string;
 
   componentWillLoad() {
-    this.highlightedCode = hljs.highlight('html', this.textCode).value;
-    this.highlightedCode = prettier.format(this.highlightedCode, {
-      parser: 'html',
-      plugins: [parserHtml],
-    });
+    this.highlightedCode = hljs.highlight(this.textCode, {language: "html", ignoreIllegals: true }).value;
+    this.highlightedCode = prettier.format(this.highlightedCode, {parser: 'html', plugins: [parserHtml],});
   }
 
   render() {

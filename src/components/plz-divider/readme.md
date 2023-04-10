@@ -1,24 +1,19 @@
 # plz-divider
 
+El componente divider sirve para dividir distintas partes del contenido y hacer que se diferencien.
 
+## Atributos
 
-<!-- Auto Generated Below -->
+| Nombre          | Descripción                                       | Posibilidades                                     | Por defecto                                    |
+| --------------- | ------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------- |
+| variant         | Distintas variantes del componente                | 'default' - 'custom'                              | 'default'                                      |
+| type            | Distintas tipos del componente                    | 'solid' - 'dashed' - 'dotted'                     | 'default'                                      |
+| color           | Distintos colores del componente                  | hex, rgb, rgba                                    | <plz-tooltip variant="link" link="docs-design-system.html" target="_blank" text="Tokens Diseño"><u>black-4</u></plz-tooltip> |
+| space-top       | Separación superior del componente                | Number(px)                                        | '0'                                            |
+| space-bottom    | Separación inferior del componente                | Number(px)                                        | '0'                                            |
+| custom-divider  | Referencia a una imagen                           | '../assets/icon/...'                              |                                                |
+| custom-position | Distintas posiciones de imagen del componente     | 'example'          | 'top left'                                     |
 
+--------------------------------------------------------------------------------------------------------------
 
-## Properties
-
-| Property         | Attribute         | Description | Type     | Default      |
-| ---------------- | ----------------- | ----------- | -------- | ------------ |
-| `color`          | `color`           |             | `string` | `'#d4d4d8'`  |
-| `customDivider`  | `custom-divider`  |             | `string` | `''`         |
-| `customPosition` | `custom-position` |             | `string` | `'top left'` |
-| `height`         | `height`          |             | `string` | `'1'`        |
-| `spaceBottom`    | `space-bottom`    |             | `string` | `'0'`        |
-| `spaceTop`       | `space-top`       |             | `string` | `'0'`        |
-| `type`           | `type`            |             | `string` | `'solid'`    |
-| `variant`        | `variant`         |             | `string` | `'default'`  |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*

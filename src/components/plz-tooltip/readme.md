@@ -1,21 +1,17 @@
 # plz-tooltip
 
+El componente tooltip consiste en un mensaje emergente que aparece en pantalla cuando el usuario pasa el cursor sobre un elemento concreto (hover).
 
+## Atributos
 
-<!-- Auto Generated Below -->
+| Nombre | Descripción | Posibilidades | Por defecto |
+|--------|-------------|---------------|-------------|
+| variant | Distintas variantes del componente | 'text' - 'link' | 'text' |
+| text | Texto que se mostrará dentro del tooltip | 'ejemplo texto' | |
+| position | Posiciones para el tooltip respecto al elemento | 'top' - 'bottom' - 'right' - 'left' | 'top' |
+| link | Url a la que se accedera a partir del tooltip | 'docs-ejemplo.html' | |
+| target | Distintas formas de mostar el link del componente | '_self' - '_blank' - '_parent' - '_top' - 'framename' | '_self' |
 
+--------------------------------------------------------------------------------------------------------------
 
-## Properties
-
-| Property   | Attribute  | Description | Type               | Default     |
-| ---------- | ---------- | ----------- | ------------------ | ----------- |
-| `link`     | `link`     |             | `string`           | `undefined` |
-| `position` | `position` |             | `string`           | `'top'`     |
-| `target`   | `target`   |             | `string`           | `'_self'`   |
-| `text`     | `text`     |             | `string`           | `undefined` |
-| `variant`  | `variant`  |             | `"link" \| "text"` | `undefined` |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*

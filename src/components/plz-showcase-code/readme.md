@@ -1,18 +1,15 @@
 # plz-showcase-code
 
+Componente que sirve para mostrar código html con formato.
+En este componente se han utilizado dos librerias,highlight.jspara interpretar el texto con código html que pasaremos por el atributo text-code y la libreríaprettierpara dar estilo y formatear el código html.
 
+## Atributos
 
-<!-- Auto Generated Below -->
+| Nombre     | Descripción              | Posibilidades | Por defecto |
+|------------|-------------------------|---------------|-------------|
+| text-code  | Texto html a representar | 'string'      |             |
+| text-size  | Tamaño de letra para el text html | Number(px) | '18'        |
 
+--------------------------------------------------------------------------------------------------------------
 
-## Properties
-
-| Property   | Attribute   | Description | Type     | Default     |
-| ---------- | ----------- | ----------- | -------- | ----------- |
-| `textCode` | `text-code` |             | `string` | `undefined` |
-| `textSize` | `text-size` |             | `string` | `'18'`      |
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+*Puedes acceder a una documentación más detallada en [StencilJS](https://palaze-pablodiazjorge.netlify.app/)*
