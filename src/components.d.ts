@@ -47,6 +47,7 @@ export namespace Components {
         "colorHover": string;
         "colorText": string;
         "link": string;
+        "target": string;
         "variant": string;
     }
     interface PlzFigure {
@@ -298,6 +299,7 @@ declare namespace LocalJSX {
         "colorHover"?: string;
         "colorText"?: string;
         "link"?: string;
+        "target"?: string;
         "variant"?: string;
     }
     interface PlzFigure {

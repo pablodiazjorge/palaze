@@ -24,7 +24,7 @@ a {
   border-radius: var(--plz-border-radius-default);
 }
 
-/* ## SIMPLE VARIANT ## */
+/* ## SIMPLE VARIANT ## */ 
 
 .tooltip {
   box-sizing: border-box;
@@ -41,7 +41,7 @@ a {
 .tooltip.top::after {
   transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
   transform-origin: bottom center;
-  top: 50px;
+  top: 3px;
   left: 50%;
 }
 
@@ -49,7 +49,7 @@ a {
 .tooltip.bottom::after {
   transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
   transform-origin: top center;
-  bottom: -6px;
+  bottom: -5px;
   left: 50%;
 }
 

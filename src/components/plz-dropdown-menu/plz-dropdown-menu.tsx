@@ -9,6 +9,7 @@ export class PlzDropdownMenu {
   @Prop() variant: string = 'simple';
   @Prop() active: boolean = false;
   @Prop() link: string = '';
+  @Prop() target: string = '_self';
   @Prop() colorHover: string = '';
   @Prop() colorText: string = 'white';
 
@@ -20,7 +21,7 @@ export class PlzDropdownMenu {
     return this.variant == 'simple' && this.link != '' ? (
       <Host>
         <li>
-          <a href={this.link} class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
+          <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
             <slot></slot>
             <slot></slot>
           </a>
@@ -44,7 +45,7 @@ export class PlzDropdownMenu {
       <Host>
         <li>
           <a
-            href={this.link}
+            href={this.link} target={this.target}
             class={{ custom: true, item: true, active: this.active }}
             style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
             onClick={() => this.changeActive()}

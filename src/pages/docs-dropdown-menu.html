@@ -67,7 +67,7 @@
                 misma web.</p>
             <p>Las opciones se asemejan a las del componente<plz-tooltip variant="link" link="docs-menu-item.html" 
                 target="_blank" text="Más info"><u>menu-item</u></plz-tooltip>ya que el uso principal se situa dentro del componente<plz-tooltip variant="link" link="docs-menu.html" 
-                target="_blank" text="Más info"><u>menu.</u></p>
+                target="_blank" text="Más info"><u>menu.</u></plz-tooltip></p>
             <!-- Muestra del componente -->
             <plz-showcase>
                 <plz-showcase-render display="block">
@@ -105,6 +105,11 @@
             </p>
             <p>Se podrá introducir colores en hex, rgb y rgba.</p>
             <p>Usaremos el atributo <b>link</b> para introducir una url cuando sea necesario.</p>
+            <p>Para asegurarnos que el link se abre como queremos, haremos uso del atributo <b>target</b>, en este podremos
+                elegir entre "_blank", "_self", "_parent", "_top" y "framename". En el caso de no hacer uso de este
+                atributo, se utilizará por defecto "_self" (se abrirá la página en el mismo marco en el que se ha 
+                hecho el click).
+            </p>
             <p>Por otra parte usaremos el atributo <b>active</b> con las opciones "true" o "false" para elegir si queremos el menu desplegado
                 o sin desplegar.</p>
             <plz-showcase>
@@ -173,6 +178,13 @@
                         <td data-label="Descripción">Url a la que se accedera a partir del componente.</td>
                         <td data-label="Posibilidades">'docs-ejemplo.html'</td>
                         <td data-label="Por defecto"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre"><plz-tooltip variant="link" link="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" 
+                            target="_blank" text="Más info"><u>target</u></plz-tooltip></td>
+                        <td data-label="Descripción">Distintas formas de mostar el link del componente</td>
+                        <td data-label="Posibilidades">'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
+                        <td data-label="Por defecto">'_self'</td>
                     </tr>
                 </tbody>
             </table>

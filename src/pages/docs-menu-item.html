@@ -62,8 +62,9 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
             <p>Los componentes<plz-tooltip variant="link" link="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" 
-                target="_blank" text="More info"><u>menu-item</u></plz-tooltip>forman parte del componente padre Menu. Se utilizan como parte del menu para
-                identificar las distintas secciones que se requieren.</p>
+                target="_blank" text="Más info"><u>menu-item</u></plz-tooltip>forman parte del componente padre<plz-tooltip variant="link"
+                link="docs-menu.html" target="_blank" text="Más info"><u>Menu.</u></plz-tooltip>Se utilizan como parte del
+                menu para funcionar como enlaces para las distintas secciones que se requieren en una página web.</p>
             <p>El hecho de ser un componente web hace que sea escalable y personalizable.</p>
             <!-- Muestra del componente -->
             <plz-showcase>
@@ -78,15 +79,15 @@
                         <plz-menu-item link="#">Saltar</plz-menu-item>
                     </plz-menu>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-menu style="font-size: 20px; font-weight: 100; width: 150px;">
-            <plz-menu-item>Acciones</plz-menu-item>
-            <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-            <plz-menu-item>Subir</plz-menu-item>
-            <plz-menu-item>Bajar</plz-menu-item>
-            <plz-menu-item>Girar</plz-menu-item>
-            <plz-menu-item>Rodar</plz-menu-item>
-            <plz-menu-item>Saltar</plz-menu-item>
-        </plz-menu>'>
+                <plz-showcase-code text-code='<plz-menu>
+                    <plz-menu-item link="#">Acciones</plz-menu-item>
+                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                    <plz-menu-item link="#">Subir</plz-menu-item>
+                    <plz-menu-item link="#">Bajar</plz-menu-item>
+                    <plz-menu-item link="#">Girar</plz-menu-item>
+                    <plz-menu-item link="#">Rodar</plz-menu-item>
+                    <plz-menu-item link="#">Saltar</plz-menu-item>
+                </plz-menu>'>
                 </plz-showcase-code>
             </plz-showcase>
 
@@ -94,21 +95,16 @@
             <h2>Ejemplos</h2>
             <plz-divider></plz-divider>
             <h3>Colores en menu-item</h3>
-            <p>Usaremos el atributo color-hover para elegir el color al que cambiará el elemento al pasar el cursor por
-                encima
-                de este. También haremos uso del atributo color-text para determinar el color del texto al pasar el
-                cursor
-                por
-                encima.</p>
-            <p>Se puede usar tanto hex, rgb o rgba para el atributo color-hover y color-text.</p>
-            <p>El atributo color-hover también se usará para determinar el color cuando el componente esté activo como
-                se
-                mostrará en el ejemplo siguiente. Para determinar qué elemento está activado haremos uso del atributo
-                active
-                con
-                las opciones "true" o "false".
+            <p>Usaremos el atributo <b>color-hover</b> para elegir el color al que cambiará el elemento al pasar el cursor por
+                encima de este. También haremos uso del atributo <b>color-text</b> para determinar el color del texto al pasar el
+                cursor por encima.</p>
+            <p>Se puede usar tanto hex, rgb o rgba para el atributo <b>color-hover</b> y <b>color-text</b>.</p>
+            <p>El atributo <b>color-hover</b> también se usará para determinar el color cuando el componente esté activo como
+                se mostrará en el ejemplo siguiente. Para determinar qué elemento está activado haremos uso del atributo
+                <b>active</b> con las opciones "true" o "false".
                 Cuando se haga click sobre un componente menu-item, este cambiará al color especificado y en caso de no
-                especificar a nuestro color black-3.</p>
+                especificar a nuestro color<plz-tooltip variant="link" link="docs-design-system.html" target="_blank" 
+                text="Tokens Diseño"><u>black-3.</u></plz-tooltip></p>
             <plz-showcase>
                 <plz-showcase-render>
                     <plz-menu style="width: 200px;">
@@ -127,30 +123,26 @@
                     </plz-menu>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-menu>
-            <plz-menu-item variant="custom">Acciones</plz-menu-item>
-            <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white" link="docs-menu-item.html"
-                active="true">Subir</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html">Bajar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html">Girar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html">Rodar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html">Saltar</plz-menu-item>
-        </plz-menu>'>
+                    <plz-menu-item variant="custom">Acciones</plz-menu-item>
+                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                    <plz-menu-item variant="custom" color-hover="#732487" color-text="white"
+                        link="docs-menu-item.html" active="true">Subir</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#FF4D6D" color-text="white"
+                        link="docs-menu-item.html">Bajar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#1B4332" color-text="white"
+                        link="docs-menu-item.html">Girar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#d3a007" color-text="white"
+                        link="docs-menu-item.html">Rodar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html">Saltar</plz-menu-item>
+                </plz-menu>'>
                 </plz-showcase-code>
             </plz-showcase>
             <h3>Link en menu-item</h3>
-            <p>Usaremos el atributo link para determinar hacia que página accederemos al hacer click sobre el menu-item.
-                En
-                caso
-                de elegir un link, el desarrollador en cuestión podrá realizar las modificaciones que se ajusten al
-                contexto
-                de
-                su página web.</p>
-            <p>Haremos uso del atributo target y elegiremos entre las opciones "_self", "_blank", "_parent", "_top",
+            <p>Usaremos el atributo <b>link</b> para determinar hacia que página accederemos al hacer click sobre el menu-item.
+                En caso de elegir un link, el desarrollador en cuestión podrá realizar las modificaciones que se ajusten al
+                contexto de su página web.</p>
+            <p>Haremos uso del atributo <b>target</b> y elegiremos entre las opciones "_self", "_blank", "_parent", "_top",
                 "framename", por defecto será "_self". Con esto determinaremos cómo queremos que se abra el link.</p>
             <plz-showcase>
                 <plz-showcase-render>
@@ -170,34 +162,31 @@
                     </plz-menu>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-menu>
-            <plz-menu-item variant="custom">Acciones</plz-menu-item>
-            <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white" link="docs-menu-item.html"
-                active="true" target="_self">Subir</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html" target="_self">Bajar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html" target="_self">Girar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html" target="_self">Rodar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html" target="_self">Saltar</plz-menu-item>
-        </plz-menu>'>
+                    <plz-menu-item variant="custom">Acciones</plz-menu-item>
+                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html" active="true" target="_self">Subir</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html" target="_self">Bajar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html" target="_self">Girar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html" target="_self">Rodar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html" target="_self">Saltar</plz-menu-item>
+                </plz-menu>'>
                 </plz-showcase-code>
             </plz-showcase>
 
             <h3>Variantes de menu-item</h3>
-            <p>Usaremos el atributo variant para elegir el tipo de menu-item que consideremos entre "simple", "custom" o
+            <p>Usaremos el atributo <b>variant</b> para elegir el tipo de menu-item que consideremos entre "simple", "custom" o
                 "image".</p>
             <p>Como se puede observar en el ejemplo siguiente, se pueden crear menus que se adapten a tus necesidades,
-                tambien
-                puedes incorporar otros componentes o elementos web al componente padre "menu" para hacerlo así todavía
-                más
-                personalizable.</p>
-            <p>En la variante simple obtendremos el menú más básico sin configuraciones.</p>
-            <p>En la variante image podremos determinar la imagen localizada en la parte izquierda del menu-item
-                mediante el
-                atributo image-url que recibirá la url a la imagen como se muestra a continuación.</p>
+                tambien puedes incorporar otros componentes o elementos web al componente padre <em>"menu"</em> para hacerlo así todavía
+                más personalizable.</p>
+            <p>En la variante "simple" obtendremos el menú más básico sin configuraciones.</p>
+            <p>En la variante "image" podremos determinar la imagen localizada en la parte izquierda del menu-item
+                mediante el atributo <b>image-url</b> que recibirá la url a la imagen como se muestra a continuación.</p>
             <plz-showcase>
                 <plz-showcase-render>
                     <plz-menu style="width: 200px;">
@@ -218,36 +207,37 @@
                         <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
                             link="docs-menu-item.html">Calendar</plz-menu-item>
                         <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                            link="docs-menu-item.html">Log
-                            out</plz-menu-item>
+                            link="docs-menu-item.html">Log out</plz-menu-item>
                     </plz-menu>
                 </plz-showcase-render>
                 <plz-showcase-code text-code='<plz-menu>
-            <plz-menu-item variant="simple">Panel Admin</plz-menu-item>
-            <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-            <plz-menu-item variant="image" image-url="../assets/icon/Icon-home.svg" color-hover="#b88900"
-                color-text="white" link="docs-menu-item.html">Overview</plz-menu-item>
-            <plz-menu-item variant="image" image-url="../assets/icon/Icon-settings.svg" color-hover="#b88900"
-                color-text="white" link="docs-menu-item.html" active="true">Configuration</plz-menu-item>
-            <plz-menu-item variant="image" image-url="../assets/icon/Icon-user.svg" color-hover="#b88900"
-                color-text="white" link="docs-menu-item.html">Users</plz-menu-item>
-            <plz-menu-item variant="image" image-url="../assets/icon/Icon-message.svg" color-hover="#b88900"
-                color-text="white" link="docs-menu-item.html">Notifications</plz-menu-item>
-            <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html">Register</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
-                link="docs-menu-item.html">Calendar</plz-menu-item>
-            <plz-menu-item variant="custom" color-hover="#b88900" color-text="white" link="docs-menu-item.html">Log
-                out</plz-menu-item>
-        </plz-menu>'>
+                    <plz-menu-item variant="simple">Panel Admin</plz-menu-item>
+                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                    <plz-menu-item variant="image" image-url="../assets/icon/Icon-home.svg" color-hover="#b88900"
+                        color-text="white" link="docs-menu-item.html">Overview</plz-menu-item>
+                    <plz-menu-item variant="image" image-url="../assets/icon/Icon-settings.svg"
+                        color-hover="#b88900" color-text="white" link="docs-menu-item.html"
+                        active="true">Configuration</plz-menu-item>
+                    <plz-menu-item variant="image" image-url="../assets/icon/Icon-user.svg" color-hover="#b88900"
+                        color-text="white" link="docs-menu-item.html">Users</plz-menu-item>
+                    <plz-menu-item variant="image" image-url="../assets/icon/Icon-message.svg" color-hover="#b88900"
+                        color-text="white" link="docs-menu-item.html">Notifications</plz-menu-item>
+                    <plz-divider space-top="5" space-bottom="5" height="0.5" color="#d4d4d8"></plz-divider>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html">Register</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html">Calendar</plz-menu-item>
+                    <plz-menu-item variant="custom" color-hover="#b88900" color-text="white"
+                        link="docs-menu-item.html">Log out</plz-menu-item>
+                </plz-menu>'>
                 </plz-showcase-code>
             </plz-showcase>
 
             <h3>Submenu</h3>
-            <p>Usaremos el atributo submenu para elegir el tipo entre "true" o "false". Por defecto será false.</p>
+            <p>Usaremos el atributo <b>submenu</b> para elegir el tipo entre "true" o "false". Por defecto será "false".</p>
             <p>Este atributo determinará una indentación más en el componente para cuando sea necesario. Uno de sus usos
-                más frecuentes será cuando utilicemos el componente dropdown-menu con elementos menu-item en su interior.
+                más frecuentes será cuando utilicemos el componente dropdown-menu con elementos<plz-tooltip variant="link"
+                link="docs-dropdown-menu.html" target="_blank" text="Más info"><u>dropdown-menu</u></plz-tooltip>en su interior.
             </p>
             <plz-showcase>
                 <plz-showcase-render>
@@ -283,43 +273,46 @@
                 <tbody>
                     <tr>
                         <td data-label="Nombre">variant</td>
-                        <td data-label="Descripción">Distintas variantes del componente menu-item</td>
+                        <td data-label="Descripción">Distintas variantes del componente</td>
                         <td data-label="Posibilidades">'simple' - 'custom' - 'image'</td>
                         <td data-label="Por defecto">'simple'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">color-hover</td>
-                        <td data-label="Descripción">Distintos colores para el hover y para active:true del componente menu-item</td>
+                        <td data-label="Descripción">Distintos colores para el hover y para active:true del componente</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto">black-3</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">color-text</td>
-                        <td data-label="Descripción">Distintos colores para texto del componente menu-item en hover o active:true</td>
+                        <td data-label="Descripción">Distintos colores para texto del componente en hover o active:true</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto">white</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">link</td>
-                        <td data-label="Descripción">Url a la que se accedera a partir del componente menu-item.</td>
+                        <td data-label="Descripción">Url a la que se accedera a partir del componente</td>
                         <td data-label="Posibilidades">'docs-ejemplo.html'</td>
                         <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
-                        <td data-label="Nombre">target</td>
-                        <td data-label="Descripción">Distintas formas de mostart el link del componente menu-item</td>
+                        <td data-label="Nombre"><plz-tooltip variant="link" 
+                            link="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" 
+                            target="_blank"
+                            text="Más info"><u>target</u></plz-tooltipt></td>
+                        <td data-label="Descripción">Distintas formas de mostar el link del componente</td>
                         <td data-label="Posibilidades">'_self' - '_blank' - '_parent' - '_top' - 'framename'</td>
                         <td data-label="Por defecto">'_self'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">image-url</td>
-                        <td data-label="Descripción">Url a la imagen del componente menu-item.</td>
+                        <td data-label="Descripción">Url a la imagen para el componente</td>
                         <td data-label="Posibilidades">'icon-ejemplo.svg'</td>
                         <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">submenu</td>
-                        <td data-label="Descripción">Determina una indentación mayor para casos especificos.</td>
+                        <td data-label="Descripción">Determina una indentación mayor para casos especificos</td>
                         <td data-label="Posibilidades">'true' - 'false'</td>
                         <td data-label="Por defecto">'false'</td>
                     </tr>

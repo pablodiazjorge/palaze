@@ -61,8 +61,9 @@
             <plz-divider space-bottom="10" space-top="4"></plz-divider>
             <!-- Pequeña descripción -->
             <p>El componente<plz-tooltip variant="link" link="https://web.dev/i18n/en/building-a-sidenav-component/" 
-                target="_blank" text="More info"><u>sidebar</u></plz-tooltip>es una columna generalmente vertical que sirve para agrupar distintos elementos
-                 enlace o de navegación para acceder a páginas relacionadas con el contenido donde se encuentre.</p>
+                target="_blank" text="Más info"><u>sidebar</u></plz-tooltip>es una columna generalmente vertical que sirve
+                para agrupar distintos elementos enlace o de navegación para acceder a páginas relacionadas con el contenido
+                donde se encuentre el elemento.</p>
             <p>Los sidebar son sencillos y atractivos visualmente para que la interacción del usuario sea sencilla.</p>
             <!-- Muestra del componente -->
             <plz-showcase>
@@ -82,12 +83,14 @@
             </plz-showcase>
 
             <p>Como se puede observar en el código de muestra del ejemplo anterior, se puede cambiar el color del sidebar haciendo uso del
-                atributo color y se podrá introducir colores en hex, rgb y rgba (por defecto será blanco).
+                atributo <b>color</b> y se podrá introducir colores en hex, rgb y rgba (por defecto será blanco).
             </p>
-            <p>También podremos determinar el ancho de nuestro sidebar con el atributo width y deberemos indicar mediante el atributo
-                id-main el id de la seccion principal para que puedan funcionar las animaciones toggle de nuestro componente.
+            <p>También podremos determinar el ancho de nuestro sidebar con el atributo <b>width</b> y deberemos indicar mediante el atributo
+                <b>id-main</b> el id de la seccion principal para que puedan funcionar las animaciones<plz-tooltip variant="link"
+                link="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle" target="_blank"
+                text="Más info"><u>toggle</u></plz-tooltip>de nuestro componente.
             </p>
-            <p>Por otra parte se podrá ajustar la posición verticalmente del botón toggle mediante el uso del atributo space-top.</p>
+            <p>Por otra parte se podrá ajustar la posición verticalmente del button toggle mediante el uso del atributo <b>space-top</b>.</p>
             <!-- Sección de los atributos -->
             <h2>Atributos</h2>
             <table class="table-atr">
@@ -102,26 +105,28 @@
                 <tbody>
                     <tr>
                         <td data-label="Nombre">width</td>
-                        <td data-label="Descripción">Ancho que ocupara el sidebar.</td>
-                        <td data-label="Posibilidades">px</td>
+                        <td data-label="Descripción">Ancho que ocupara el componente.</td>
+                        <td data-label="Posibilidades">Number(px)</td>
                         <td data-label="Por defecto">'275'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">id-main</td>
-                        <td data-label="Descripción">Id de referencia del contenido principal que no es sidebar.</td>
+                        <td data-label="Descripción">Id de referencia del contenido principal que no forma parte del componente.</td>
                         <td data-label="Posibilidades">'id-ejemplo'</td>
                         <td data-label="Por defecto"></td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">color</td>
-                        <td data-label="Descripción">Color que tendrá el sidebar.</td>
+                        <td data-label="Descripción">Color que tendrá el componente.</td>
                         <td data-label="Posibilidades">hex, rgb, rgba</td>
                         <td data-label="Por defecto">'white'</td>
                     </tr>
                     <tr>
                         <td data-label="Nombre">space-top</td>
-                        <td data-label="Descripción">Distancia a la parte superior de la página respecto al toggle button.</td>
-                        <td data-label="Posibilidades">px</td>
+                        <td data-label="Descripción">Distancia a la parte superior de la página respecto al<plz-tooltip variant="link"
+                            link="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle" target="_blank"
+                            text="Más info"><u>toggle</u></plz-tooltip>button.</td>
+                        <td data-label="Posibilidades">Number(px)</td>
                         <td data-label="Por defecto">'0'</td>
                     </tr>
                 </tbody>
