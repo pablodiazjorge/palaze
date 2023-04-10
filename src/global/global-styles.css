@@ -126,7 +126,7 @@ h2 {
 h3 {
     font-size: var(--plz-font-size-mid-section);
     margin-block-start: 5px;
-    margin-block-end: 5px;
+    margin-block-end: 10px;
 }
 
 h4 {
@@ -138,10 +138,14 @@ h4 {
 @media screen and (max-width: 550px) {
     h1 {
         line-height: var(--plz-line-height-smaller);
+        margin-block-start: 10px;
+        margin-block-end: 15px;
     }
 
     h2 {
         line-height: var(--plz-line-height-smaller);
+        margin-block-start: 10px;
+        margin-block-end: 15px;
     }
 
     .about-us-section {
