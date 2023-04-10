@@ -6,7 +6,7 @@ Este proyecto consiste en la creación de un conjunto de componentes web y una p
 
 ## Empezando:s
 
-Para colonar el repositorio se puede usar:
+Para clonar el repositorio se puede usar:
 
 ```bash
 git clone https://github.com/pablodiazjorge/palaze-web.git plz-demo
