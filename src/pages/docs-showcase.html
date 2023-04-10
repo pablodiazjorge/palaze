@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palaze-Documentación</title>
+    <link rel="stylesheet" href="/build/palaze-web.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="/build/palaze-web.esm.js"></script>
+    <script nomodule src="/build/palaze-web.js"></script>
+</head>
+
+<body>
+    <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
+        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
+                height="40px"></a>
+        <a slot="left" href="index.html">Palaze web</a>
+
+        <a slot="right-select" href="docs.html" target="_blank">Docs</a>
+        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze-web/tree/develop"
+            target="_blank">Github</a>
+    </plz-header>
+    
+    <plz-sidebar id-main="main" space-top="45">
+        <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="">
+        <plz-menu border-menu="none">
+            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Componentes</plz-menu-item>
+            <plz-divider></plz-divider>
+            <plz-menu-item link="docs-button.html" variant="custom" color-hover="#495057" color-text="white">Button</plz-menu-item>
+            <plz-menu-item link="docs-card.html" variant="custom" color-hover="#495057" color-text="white">Card</plz-menu-item>
+            <plz-menu-item link="docs-colors.html" variant="custom" color-hover="#495057" color-text="white">Colors</plz-menu-item>
+            <plz-menu-item link="docs-divider.html" variant="custom" color-hover="#495057" color-text="white">Divider</plz-menu-item>
+            <plz-menu-item link="docs-footer.html" variant="custom" color-hover="#495057" color-text="white">Footer</plz-menu-item>
+            <plz-menu-item link="docs-header.html" variant="custom" color-hover="#495057" color-text="white">Header</plz-menu-item>
+            <plz-menu-item link="docs-hero.html" variant="custom" color-hover="#495057" color-text="white">Hero</plz-menu-item>
+            <plz-menu-item link="docs-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu</plz-menu-item>
+            <plz-menu-item link="docs-dropdown-menu.html" variant="custom" color-hover="#495057" color-text="white">Menu-dropdown</plz-menu-item>
+            <plz-menu-item link="docs-menu-item.html" variant="custom" color-hover="#495057" color-text="white">Menu-item</plz-menu-item>
+            <plz-menu-item link="docs-section.html" variant="custom" color-hover="#495057" color-text="white">Section</plz-menu-item>
+            <plz-menu-item link="docs-showcase.html" variant="custom" color-hover="#495057" color-text="white" active="true">Showcase</plz-menu-item>
+            <plz-menu-item link="docs-sidebar.html" variant="custom" color-hover="#495057" color-text="white">Sidebar</plz-menu-item>
+            <plz-menu-item link="docs-spinner.html" variant="custom" color-hover="#495057" color-text="white">Spinner</plz-menu-item>
+            <plz-menu-item link="docs-tooltip.html" variant="custom" color-hover="#495057" color-text="white">Tooltip</plz-menu-item>          
+            <plz-divider></plz-divider>
+            <plz-dropdown-menu link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">
+                Design System
+                <plz-menu-item slot="dropdown" link="#colores" variant="simple" color-hover="#495057" color-text="white" submenu="true">Colores</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#tipografia" variant="simple" color-hover="#495057" color-text="white" submenu="true">Tipografia</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#formas" variant="simple" color-hover="#495057" color-text="white" submenu="true">Formas</plz-menu-item>   
+            </plz-menu-item>
+        </plz-menu>
+    </plz-sidebar>
+    <main id="main" class="docs-main">
+        <section class="content-detail">
+            <h1>Showcase</h1>
+            <p class="component-tag">&lt;plz-showcase&gt; &#124; PlzShowcase</p> 
+            <plz-divider space-bottom="10" space-top="4"></plz-divider>
+            <!-- Pequeña descripción -->
+            <p>El componente <b>showcase</b> sirve para mostrar tanto elementos html renderizados, como código html para hacerlo posible.</p>
+            <p>Este componente showcase se utiliza con dos sub-componentes <b>showcase-render</b> y <b>showcase-code</b>. Se podrá hacer uso del showcase
+                con los dos sub-componentes o haciendo uso de uno solo, esto dependerá de las necesidades del usuario.</p>
+        
+            <h2>Ejemplos</h2>
+            <plz-divider></plz-divider>
+            <h3>Distintos usos</h3>
+            <p>Se podrá hacer uso de atributos para configurar la vista del componente renderizado <b>plz-showcase-render</b><plz-tooltip variant="link" link="#render" target="_self"
+                text="Más info"><u>(atributos)</u></plz-tooltip></p>
+            <p>A continuación se ve un ejemplo del uso de los dos sub-componentes dentro del componente padre showcase:</p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-section variant="wrapper">
+                        <plz-card image="../assets/icon/card-section.png" hover="blue" width="250">
+                            <h3>Componente tarjeta</h3>
+                            <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
+                        </plz-card>
+                        <plz-card image="../assets/icon/divider-section.png" hover="blue" width="250">
+                            <h3>Componente Separador</h3>
+                            <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
+                        </plz-card>
+                        <plz-card image="../assets/icon/hero-section.png" hover="blue" width="250">
+                            <h3>Componente Heroe</h3>
+                            <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
+                        </plz-card>
+                    </plz-section>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-showcase>
+                    <plz-showcase-render display="block">
+                        <!-- CODE -->
+                    </plz-showcase-render>
+                    <plz-showcase-code text-code=" CODE HTML "></plz-showcase-code>
+                </plz-showcase>'>
+                </plz-showcase-code>
+            </plz-showcase>
+
+            <p>Ahora veremos un ejemplo haciendo uso de solo el sub-componente <b>plz-showcase-render</b>.</p>
+            <p>Cabe recalcar que el sub-componente plz-showcase-render dispone de la opción de hacer resize para poder ver los
+                cambios en las estructuras de los elementos que se ubican en su interior.
+            </p>
+            <plz-showcase>
+                <plz-showcase-render display="block">
+                    <plz-section variant="wrapper">
+                        <plz-card image="../assets/icon/card-section.png" hover="blue" width="250">
+                            <h3>Componente tarjeta</h3>
+                            <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
+                        </plz-card>
+                        <plz-card image="../assets/icon/divider-section.png" hover="blue" width="250">
+                            <h3>Componente Separador</h3>
+                            <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
+                        </plz-card>
+                        <plz-card image="../assets/icon/hero-section.png" hover="blue" width="250">
+                            <h3>Componente Heroe</h3>
+                            <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
+                        </plz-card>
+                    </plz-section>
+                </plz-showcase-render>
+            </plz-showcase>
+
+            <p>Por último verermos un ejemplo del componente showcase haciendo uso de solo el sub-componente <b>plz-showcase-code</b>.</p>
+            <p>Recalcar que para este componente se han utilizado dos librerias,<plz-tooltip variant="link" link="https://highlightjs.org/"
+                target="_blank" text="Más info"><u>highlight.js</u></plz-tooltip>para interpretar el texto con código
+                html que pasaremos por el atributo <b>text-code</b> y la librería<plz-tooltip variant="link" link="https://prettier.io/"
+                target="_blank" text="Más info"><u>prettier</u></plz-tooltip>para dar estilo y formatear el código html.
+            </p>
+            <plz-showcase>
+                <plz-showcase-code text-code='<plz-showcase>
+                    <plz-showcase-render display="block">
+                        <!-- CODE -->
+                    </plz-showcase-render>
+                    <plz-showcase-code text-code=" CODE HTML "></plz-showcase-code>
+                </plz-showcase>'>
+                </plz-showcase-code>
+            </plz-showcase>
+            <!-- Sección de los atributos -->
+            <h2 id="render">Atributos showcase-code</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nombre">text-code</td>
+                        <td data-label="Descripción">Texto html a representar</td>
+                        <td data-label="Posibilidades">'string'</td>
+                        <td data-label="Por defecto"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">text-size</td>
+                        <td data-label="Descripción">Tamaño de letra para el text html</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'18'</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="render">Atributos showcase-render</h2>
+            <table class="table-atr">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Posibilidades</th>
+                        <th>Por defecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Nombre">display</td>
+                        <td data-label="Descripción">Elección del display del contenido a renderizar</td>
+                        <td data-label="Posibilidades">'block' - 'inline-flex'</td>
+                        <td data-label="Por defecto">'inline-flex'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">gap</td>
+                        <td data-label="Descripción">Distancia entre componentes renderizados</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'10'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre"><plz-tooltip variant="link"
+                            link="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
+                            target="_blank" text="Más info"><u>vertical-align</u></plz-tooltip</td>
+                        <td data-label="Descripción">Posición en el contenedor verticalmente</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'center'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">height</td>
+                        <td data-label="Descripción">Altura del contenedor de renderizado</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto"></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">padding-top</td>
+                        <td data-label="Descripción">Relleno superior del componente render</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'10'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">padding-bottom</td>
+                        <td data-label="Descripción">Relleno inferior del componente render</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'10'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">padding-left</td>
+                        <td data-label="Descripción">Relleno a la izquierda del componente render</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'10'</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Nombre">padding-right</td>
+                        <td data-label="Descripción">Relleno a la derecha del componente render</td>
+                        <td data-label="Posibilidades">Number(px)</td>
+                        <td data-label="Por defecto">'10'</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

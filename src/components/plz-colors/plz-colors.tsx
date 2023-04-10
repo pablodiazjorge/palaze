@@ -8,8 +8,10 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class PlzColors {
 
   @Prop() variant: string = 'black';
-  @Prop() colors: string = '#023E8A,#a7b3e9,#023E8A,#0096C7,#0077B6';
+  @Prop() colors: string = '#732487,#023E8A,#0077B6,#0096C7,#a7b3e9';
+  @Prop() colorsText: string = '#ffffff,#ffffff,#ffffff,#ffffff,#ffffff';
   private colorsArray: string[] = [];
+  private colorsTextArray: string[] = [];
 
   connectedCallback() {
     this.convertStringToArray();
@@ -17,6 +19,7 @@ export class PlzColors {
 
   convertStringToArray() {
     this.colorsArray = this.colors.split(',').map(color => color.trim());
+    this.colorsTextArray = this.colorsText.split(',').map(color => color.trim());
   }
 
   render() {
@@ -30,17 +33,16 @@ export class PlzColors {
           <div class={`${this.variant}5 color`}><p>--plz-color-{this.variant}-5</p></div>
         </div>
       </Host>
-    ) : this.variant != 'custom' ? (
+    ) : this.variant == 'custom' ? (
       <Host>
         <div class="container">
-          <div class={`${this.colorsArray[0]}1 color`}><p>{this.colorsArray[0]}</p></div>
-          <div class={`${this.colorsArray[0]}2 color`}><p>{this.colorsArray[1]}</p></div>
-          <div class={`${this.colorsArray[0]}3 color`}><p>{this.colorsArray[2]}</p></div>
-          <div class={`${this.colorsArray[0]}4 color`}><p>{this.colorsArray[3]}</p></div>
-          <div class={`${this.colorsArray[0]}5 color`}><p>{this.colorsArray[4]}</p></div>
+          <div class={`color custom-color1 custom-text-color1`} style={{'--color1':`${this.colorsArray[0]}`, '--color-text1':`${this.colorsTextArray[0]}`}}><p>{this.colorsArray[0]}</p></div>
+          <div class={`color custom-color2 custom-text-color2`} style={{'--color2':`${this.colorsArray[1]}`, '--color-text2':`${this.colorsTextArray[1]}`}}><p>{this.colorsArray[1]}</p></div>
+          <div class={`color custom-color3 custom-text-color3`} style={{'--color3':`${this.colorsArray[2]}`, '--color-text3':`${this.colorsTextArray[2]}`}}><p>{this.colorsArray[2]}</p></div>
+          <div class={`color custom-color4 custom-text-color4`} style={{'--color4':`${this.colorsArray[3]}`, '--color-text4':`${this.colorsTextArray[3]}`}}><p>{this.colorsArray[3]}</p></div>
+          <div class={`color custom-color5 custom-text-color5`} style={{'--color5':`${this.colorsArray[4]}`, '--color-text5':`${this.colorsTextArray[4]}`}}><p>{this.colorsArray[4]}</p></div>
         </div>
       </Host>
     ) : null;
   }
-
 }

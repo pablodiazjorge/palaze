@@ -30,6 +30,7 @@ export namespace Components {
     }
     interface PlzColors {
         "colors": string;
+        "colorsText": string;
         "variant": string;
     }
     interface PlzDivider {
@@ -282,6 +283,7 @@ declare namespace LocalJSX {
     }
     interface PlzColors {
         "colors"?: string;
+        "colorsText"?: string;
         "variant"?: string;
     }
     interface PlzDivider {

@@ -56,6 +56,16 @@
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
+  --color1: var(--plz-color-black-2);
+  --color2: var(--plz-color-black-2);
+  --color3: var(--plz-color-black-2);
+  --color4: var(--plz-color-black-2);
+  --color5: var(--plz-color-black-2);
+  --color-text1: var(--plz-color-white);
+  --color-text2: var(--plz-color-white);
+  --color-text3: var(--plz-color-white);
+  --color-text4: var(--plz-color-white);
+  --color-text5: var(--plz-color-white);
   display: block;
   border-radius: var(--plz-border-radius-rounded);
 }
@@ -78,6 +88,50 @@ p {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.custom-color1 {
+  border-top-left-radius: var(--plz-border-radius-rounded);
+  border-top-right-radius: var(--plz-border-radius-rounded);
+  background-color: var(--color1);
+}
+
+.custom-color2 {
+  background-color: var(--color2);
+}
+
+.custom-color3 {
+  background-color: var(--color3);
+}
+
+.custom-color4 {
+  background-color: var(--color4);
+}
+
+.custom-color5 {
+  background-color: var(--color5);
+  border-bottom-left-radius: var(--plz-border-radius-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-rounded);
+}
+
+.custom-text-color1 p {
+  color: var(--color-text1);
+}
+
+.custom-text-color2 p {
+  color: var(--color-text2);
+}
+
+.custom-text-color3 p {
+  color: var(--color-text3);
+}
+
+.custom-text-color4 p {
+  color: var(--color-text4);
+}
+
+.custom-text-color5 p {
+  color: var(--color-text5);
 }
 
 .blue1 {
