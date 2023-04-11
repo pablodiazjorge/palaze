@@ -4,7 +4,7 @@
 
 Este proyecto consiste en la creación de un conjunto de componentes web y una página en la que se haga uso de estos.
 
-## Empezando:s
+## Empezando:
 
 Para clonar el repositorio se puede usar:
 
