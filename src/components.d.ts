@@ -17,7 +17,6 @@ export namespace Components {
         "shadowColor"?: string;
         "size"?: string;
         "target": string;
-        "text": string;
         "variant"?: string;
     }
     interface PlzCard {
@@ -256,7 +255,6 @@ declare namespace LocalJSX {
         "shadowColor"?: string;
         "size"?: string;
         "target"?: string;
-        "text"?: string;
         "variant"?: string;
     }
     interface PlzCard {
