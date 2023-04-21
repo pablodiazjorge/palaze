@@ -7,16 +7,23 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class PlzColors {
 
-  @Prop() variant: string = 'black';
-  @Prop() colors: string = '#732487,#023E8A,#0077B6,#0096C7,#a7b3e9';
-  @Prop() colorsText: string = '#ffffff,#ffffff,#ffffff,#ffffff,#ffffff';
-  private colorsArray: string[] = [];
-  private colorsTextArray: string[] = [];
+  @Prop() variant?: 'black' | 'green' | 'blue' | 'red' | 'yellow' | 'orange' | 'purple' | 'custom' = 'black'; //Variantes del componente 
+  @Prop() colors: string = '#732487,#023E8A,#0077B6,#0096C7,#a7b3e9'; //colores custom para la paleta del componente
+  @Prop() colorsText: string = '#ffffff,#ffffff,#ffffff,#ffffff,#ffffff'; //colores custom para los identificadores de texto de la paleta del componente
+  private colorsArray: string[] = []; //array para conversion de colores
+  private colorsTextArray: string[] = []; //array para conversion de colores de texto
 
+  /**
+   * Función que se inicia antes de renderizar el componente
+   */
   connectedCallback() {
     this.convertStringToArray();
   }
 
+  /**
+   * Convierte el atributo colorText y colors pasado por componente en un array de strings y lo
+   * almacena en colorsTextArray y colorsArray respectivamente
+   */
   convertStringToArray() {
     this.colorsArray = this.colors.split(',').map(color => color.trim());
     this.colorsTextArray = this.colorsText.split(',').map(color => color.trim());
@@ -24,6 +31,9 @@ export class PlzColors {
 
   render() {
     return this.variant != 'custom' ? (
+      /*
+      * Variant de las 7 paletas del Design System 'black'-'green'-'blue'-'red'-'yellow'-'orange'-'purple'
+      */
       <Host>
         <div class="container">
           <div class={`${this.variant}1 color`}><p>--plz-color-{this.variant}-1</p></div>
@@ -34,6 +44,10 @@ export class PlzColors {
         </div>
       </Host>
     ) : this.variant == 'custom' ? (
+      /*
+      * Variant custom del componente colors que permite elegir los colores de la paleta y del texto mediante
+      * los atributos color y color-text
+      */
       <Host>
         <div class="container">
           <div class={`color custom-color1 custom-text-color1`} style={{'--color1':`${this.colorsArray[0]}`, '--color-text1':`${this.colorsTextArray[0]}`}}><p>{this.colorsArray[0]}</p></div>

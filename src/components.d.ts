@@ -7,30 +7,30 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlzButton {
-        "active": boolean;
-        "color"?: string;
-        "colorProgress": string;
-        "corners"?: string;
-        "hoverColor": string;
+        "active"?: boolean;
+        "color"?: 'default' | 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow';
+        "colorProgress"?: string;
+        "corners"?: 'default' | 'low-rounded' | 'rounded' | 'square' | 'circle';
+        "hoverColor"?: string;
         "icon"?: string;
-        "link": string;
-        "shadowColor"?: string;
-        "size"?: string;
-        "target": string;
-        "variant"?: string;
+        "link"?: string;
+        "shadowColor"?: 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow' | '';
+        "size"?: 'default' | 'small' | 'big';
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
+        "variant"?: 'default' | 'icon' | 'progress';
     }
     interface PlzCard {
-        "hover": string;
-        "image": string;
-        "target": string;
-        "url": string;
-        "variant": string;
-        "width": string;
+        "hover"?: string;
+        "image"?: string;
+        "target"?: string;
+        "url"?: string;
+        "variant"?: 'default' | 'simple' | 'header' | 'footer' | 'image';
+        "width"?: string;
     }
     interface PlzColors {
         "colors": string;
         "colorsText": string;
-        "variant": string;
+        "variant"?: 'black' | 'green' | 'blue' | 'red' | 'yellow' | 'orange' | 'purple' | 'custom';
     }
     interface PlzDivider {
         "color": string;
@@ -39,8 +39,8 @@ export namespace Components {
         "height": string;
         "spaceBottom": string;
         "spaceTop": string;
-        "type": string;
-        "variant": string;
+        "type": 'solid' | 'dashed' | 'dotted';
+        "variant": 'default' | 'custom';
     }
     interface PlzDropdownMenu {
         "active": boolean;
@@ -246,29 +246,29 @@ declare global {
 declare namespace LocalJSX {
     interface PlzButton {
         "active"?: boolean;
-        "color"?: string;
+        "color"?: 'default' | 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow';
         "colorProgress"?: string;
-        "corners"?: string;
+        "corners"?: 'default' | 'low-rounded' | 'rounded' | 'square' | 'circle';
         "hoverColor"?: string;
         "icon"?: string;
         "link"?: string;
-        "shadowColor"?: string;
-        "size"?: string;
-        "target"?: string;
-        "variant"?: string;
+        "shadowColor"?: 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow' | '';
+        "size"?: 'default' | 'small' | 'big';
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
+        "variant"?: 'default' | 'icon' | 'progress';
     }
     interface PlzCard {
         "hover"?: string;
         "image"?: string;
         "target"?: string;
         "url"?: string;
-        "variant"?: string;
+        "variant"?: 'default' | 'simple' | 'header' | 'footer' | 'image';
         "width"?: string;
     }
     interface PlzColors {
         "colors"?: string;
         "colorsText"?: string;
-        "variant"?: string;
+        "variant"?: 'black' | 'green' | 'blue' | 'red' | 'yellow' | 'orange' | 'purple' | 'custom';
     }
     interface PlzDivider {
         "color"?: string;
@@ -277,8 +277,8 @@ declare namespace LocalJSX {
         "height"?: string;
         "spaceBottom"?: string;
         "spaceTop"?: string;
-        "type"?: string;
-        "variant"?: string;
+        "type"?: 'solid' | 'dashed' | 'dotted';
+        "variant"?: 'default' | 'custom';
     }
     interface PlzDropdownMenu {
         "active"?: boolean;
