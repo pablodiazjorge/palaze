@@ -28,6 +28,7 @@
   list-style: none;
 }
 
+/* Retirados estilos del link*/
 .link {
   display: block;
   text-decoration: none;
@@ -35,6 +36,7 @@
   width: 100%;
 }
 
+/* Dropdown menu con animación para transitar */
 ul {
   box-sizing: border-box;
   width: 100%;
@@ -49,6 +51,7 @@ ul {
   transition-timing-function: ease-out;
 }
 
+/* Quitando formato al link */
 a {
   color: inherit;
   text-decoration: none;

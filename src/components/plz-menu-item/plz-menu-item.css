@@ -33,12 +33,19 @@
   list-style: none;
 }
 
+/* Retirados estilos del link*/
 .link {
   display: block;
   text-decoration: none;
   color: inherit;
   width: 100%;
 }
+
+.submenu {
+  padding-left: 50px;
+}
+
+/* ## VARIANTE SIMPLE ## */
 
 .simple:hover {
   background-color: var(--plz-color-black-4);
@@ -52,11 +59,7 @@
   border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
-.submenu {
-  padding-left: 50px;
-}
-
-/* ## CUSTOM VARIANT ## */
+/* ## VARIANTE CUSTOM ## */
 
 .custom:hover {
   background-color: var(--bg-color-hover);
@@ -66,7 +69,7 @@
   border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
-/* ## VARIANT CUSTOM ## */
+/* ## VARIANTE CUSTOM ## */
 
 .active {
   background-color: var(--bg-color-hover);
@@ -76,8 +79,9 @@
   border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
-/* ## VARIANT IMAGE ## */
+/* ## VARIANTE IMAGE ## */
 
+/* Elemento imagen y formatos */
 img {
   height: 23px;
   width: 23px;
@@ -97,6 +101,7 @@ img {
   background-color: var(--plz-color-black-4);
 }
 
+/* Organización del contenedor dividido en items para una mejor disposición */
 .grid-container {
   box-sizing: border-box;
   display: grid;
