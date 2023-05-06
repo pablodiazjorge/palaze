@@ -26,14 +26,14 @@ export class PlzDropdownMenu {
       /**
        * Variante simple
        * Dropdown, estilo simple con cuatro posibilidades
-       *    Dropdown estatico, link
-       *    Link
-       *    Estatico
-       *    No link, no estatico
+       *    1.Dropdown estatico, link
+       *    2.Link
+       *    3.Estatico
+       *    4.No link, no estatico
        */
       case 'simple':
         return this.link != '' && this.static ? (
-          /* Dropdown estatico, link */
+          /* 1.Dropdown estatico, link */
           <Host>
             <li>
               <a href={this.link} target={this.target} class={{ simple: true, item: true }}>
@@ -45,7 +45,7 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : this.link != '' ? (
-          /* Link */
+          /* 2.Link */
           <Host>
             <li>
               <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
@@ -57,7 +57,7 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : this.static ? (
-          /* Estatico */
+          /* 3.Estatico */
           <Host>
             <li>
               <a class={{ simple: true, item: true }}>
@@ -69,7 +69,7 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : (
-          /* No link, no estatico */
+          /* 4.No link, no estatico */
           <Host>
             <li>
               <a class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
@@ -85,13 +85,13 @@ export class PlzDropdownMenu {
       /**
        * Variante custom
        * Dropdown, estilo propio palaze con cuatro posibilidades
-       *    Dropdown estatico, link
-       *    Link
-       *    Estatico
-       *    No link, no estatico
+       *    1.Dropdown estatico, link
+       *    2.Link
+       *    3.Estatico
+       *    4.No link, no estatico
       */
         return this.link != '' && this.static ? (
-          /* Dropdown estatico, link */
+          /* 1.Dropdown estatico, link */
           <Host>
             <li>
               <a
@@ -108,7 +108,7 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : this.link != '' ? (
-          /* Link */
+          /* 2.Link */
           <Host>
             <li>
               <a
@@ -126,7 +126,7 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : this.static ? (
-          /* Estatico */
+          /* 3.Estatico */
           <Host>
             <li>
               <a class={{ custom: true, item: true }} style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
@@ -138,7 +138,7 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : (
-          /* No link, no estatico */
+          /* 4.No link, no estatico */
           <Host>
             <li>
               <a

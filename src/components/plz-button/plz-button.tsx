@@ -43,10 +43,12 @@ export class PlzButton {
             }
             >
               {
-                //Si se usa la variante icon, permite hacer uso de esta sección de código
+                //Si se usa la variante icon, se renderiza esta sección de código
+                //Opciones de iconos predefinidas
                 this.variant == 'icon' && (this.icon == 'github' || this.icon == 'linkedin' || this.icon == 'palaze' || this.icon == 'mail') ?
                 <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
                 : this.variant == 'icon' ?
+                //Opción de icono custom
                 <img class={`${this.variant}-${this.size}-size`} src={`${this.icon}`} alt={this.icon} />
                 :null
               }
@@ -76,10 +78,12 @@ export class PlzButton {
           }
           >
             {
-              //Si se usa la variante icon, permite hacer uso de esta sección de código
+              //Si se usa la variante icon, se renderiza esta sección de código
+              //Opciones de iconos predefinidas
               this.variant == 'icon' && (this.icon == 'github' || this.icon == 'linkedin' || this.icon == 'palaze' || this.icon == 'mail') ?
                 <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
                 : this.variant == 'icon' ?
+              //Opción de icono custom
                 <img class={`${this.variant}-${this.size}-size`} src={`${this.icon}`} alt={this.icon} />
                 :null
               }
