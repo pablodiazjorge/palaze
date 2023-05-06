@@ -12,6 +12,7 @@
   display: block;
 }
 
+/* Contenedor del sidebar, scroll automático en vertical y transiciones de toggle */
 .sidebar {
   box-sizing: border-box;
   z-index: 1;
@@ -28,12 +29,16 @@
   padding-bottom: 120px;
 }
 
+/* Ajuste de tamaño de imagenes en caso de no venir definido su tamaño
+   Ajuste de forma y margen para seguir los patrones de diseño del sidebar
+*/
 .sidebar img {
   width: 225px;
   border-radius: var(--plz-border-radius-low-rounded);
   margin-left: 28px;
 }
 
+/* Botón toggle con posición fija en la parte superior izquierda */
 .button-sidebar {
   z-index: 999;
   position: fixed;

@@ -3,6 +3,7 @@
   --plz-color-black-5: #F8F9FA;
 }
 
+/* Contenedor padre */
 .showcase {
   display: block;
   background-color: var(--plz-color-black-5);

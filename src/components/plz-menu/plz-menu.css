@@ -3,6 +3,8 @@
   --plz-color-black-4: #d4d4d8;
 }
 
+/* ## UL MENU ## */
+
 .simple {
   box-sizing: border-box;
   width: 100%;
@@ -14,6 +16,8 @@
   padding-bottom: 5px;
   user-select: none;
 }
+
+/* ## ESTILOS DE BORDE ## */
 
 .border-all {
   border: 1px solid var(--plz-color-black-4);

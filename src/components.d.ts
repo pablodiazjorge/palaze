@@ -52,24 +52,24 @@ export namespace Components {
         "variant": string;
     }
     interface PlzFooter {
-        "height": string;
-        "image": string;
-        "variant": string;
+        "height"?: string;
+        "image"?: string;
+        "variant"?: 'simple' | 'block' | 'two-column';
     }
     interface PlzHeader {
         "color": string;
         "colorHover": string;
         "colorText": string;
         "colorTextHover": string;
-        "variant": string;
+        "variant": 'right-hover' | 'left-hover' | 'both-hover';
     }
     interface PlzHero {
         "height": string;
         "image": string;
-        "variant": string;
+        "variant": 'default' | 'simple' | 'image' | 'two-column';
     }
     interface PlzMenu {
-        "borderMenu": string;
+        "borderMenu": 'all' | 'top|bottom' | 'left|right' | 'top' | 'bottom' | 'right' | 'left' | 'none';
     }
     interface PlzMenuItem {
         "active": boolean;
@@ -82,7 +82,7 @@ export namespace Components {
         "variant": string;
     }
     interface PlzSection {
-        "variant": string;
+        "variant": 'wrapper' | 'columns';
     }
     interface PlzShowcase {
     }
@@ -91,14 +91,14 @@ export namespace Components {
         "textSize": string;
     }
     interface PlzShowcaseRender {
-        "display": string;
+        "display": 'inline-flex' | 'block';
         "gap": string;
         "height": string;
         "paddingBottom": string;
         "paddingLeft": string;
         "paddingRight": string;
         "paddingTop": string;
-        "verticalAlign": string;
+        "verticalAlign": 'center' | 'stretch' | 'start' | 'end';
     }
     interface PlzSidebar {
         "color": string;
@@ -110,7 +110,7 @@ export namespace Components {
         "colorPrimary": string;
         "colorSecondary": string;
         "colorsBola": string;
-        "variant": string;
+        "variant": 'normal' | 'simple' | 'wave' | 'atom' | 'bola';
     }
     interface PlzTooltip {
         "link": string;
@@ -292,22 +292,22 @@ declare namespace LocalJSX {
     interface PlzFooter {
         "height"?: string;
         "image"?: string;
-        "variant"?: string;
+        "variant"?: 'simple' | 'block' | 'two-column';
     }
     interface PlzHeader {
         "color"?: string;
         "colorHover"?: string;
         "colorText"?: string;
         "colorTextHover"?: string;
-        "variant"?: string;
+        "variant"?: 'right-hover' | 'left-hover' | 'both-hover';
     }
     interface PlzHero {
         "height"?: string;
         "image"?: string;
-        "variant"?: string;
+        "variant"?: 'default' | 'simple' | 'image' | 'two-column';
     }
     interface PlzMenu {
-        "borderMenu"?: string;
+        "borderMenu"?: 'all' | 'top|bottom' | 'left|right' | 'top' | 'bottom' | 'right' | 'left' | 'none';
     }
     interface PlzMenuItem {
         "active"?: boolean;
@@ -320,7 +320,7 @@ declare namespace LocalJSX {
         "variant"?: string;
     }
     interface PlzSection {
-        "variant"?: string;
+        "variant"?: 'wrapper' | 'columns';
     }
     interface PlzShowcase {
     }
@@ -329,14 +329,14 @@ declare namespace LocalJSX {
         "textSize"?: string;
     }
     interface PlzShowcaseRender {
-        "display"?: string;
+        "display"?: 'inline-flex' | 'block';
         "gap"?: string;
         "height"?: string;
         "paddingBottom"?: string;
         "paddingLeft"?: string;
         "paddingRight"?: string;
         "paddingTop"?: string;
-        "verticalAlign"?: string;
+        "verticalAlign"?: 'center' | 'stretch' | 'start' | 'end';
     }
     interface PlzSidebar {
         "color"?: string;
@@ -348,7 +348,7 @@ declare namespace LocalJSX {
         "colorPrimary"?: string;
         "colorSecondary"?: string;
         "colorsBola"?: string;
-        "variant"?: string;
+        "variant"?: 'normal' | 'simple' | 'wave' | 'atom' | 'bola';
     }
     interface PlzTooltip {
         "link"?: string;

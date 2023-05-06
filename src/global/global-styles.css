@@ -127,6 +127,7 @@ h3 {
     font-size: var(--plz-font-size-mid-section);
     margin-block-start: 5px;
     margin-block-end: 10px;
+    word-spacing: var(--plz-letter-space-smaller);
 }
 
 h4 {

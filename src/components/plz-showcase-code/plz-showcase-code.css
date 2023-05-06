@@ -1,4 +1,5 @@
 @import '~highlight.js/styles/github.css';
+/* Estilos de libreria para cambiar el estilo a las palabras dependiendo de su tipo */
 
 :host {
   /* Primarios-gamma-negro */

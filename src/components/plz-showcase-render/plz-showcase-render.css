@@ -7,11 +7,14 @@
 
   box-sizing: border-box;
   display: block;
+  /* Borde aplicado al contenedor padre con forma en esquinas superiores */
   border: 1px solid var(--plz-color-black-4);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
+
+/* Contenedor con funcionalidad de resize del contenido*/
 div {
   background-color: var(--plz-color-white);
   box-sizing: border-box;
@@ -25,6 +28,8 @@ div {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
+/* ## DISPLAYS ## */
 
 .inline-flex {
   display: inline-flex;

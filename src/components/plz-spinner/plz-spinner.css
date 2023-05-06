@@ -8,20 +8,26 @@
   display: block;
 }
 
-/* ## Normal ## */
+/* ## Variante Normal ## */
 
+/* Componente padre */
 .spinner {
   width: 24px;
   height: 24px;
   border-radius: var(--plz-border-radius-circle);
 }
 
+/* Componente hijo
+  Contiene una animación y será el contenedor que gire
+*/
 .spin {
   width: 24px;
   height: 24px;
   border-radius: var(--plz-border-radius-circle);
   animation: spin-girar 1.5s ease-in-out infinite;
 }
+
+/* Animación de rotación del componente hijo spin */
 
 @keyframes spin-girar {
   0% {
@@ -33,9 +39,10 @@
   }
 }
 
-/* Simple */
+/* ## Variante Simple ## */
 
-/* Spinner parameters */
+/* Giro del contenedor donde uno de los bordes tiene uyn cambio de color, dando la sensación
+  de que solo gira la parte del borde */
 .simple-spinner {
   box-sizing: border-box;
   position: relative;
@@ -48,21 +55,25 @@
   animation: s-spinner 1.5s infinite linear;
 }
 
+/* Animación de rotación de la variante simple */
+
 @keyframes s-spinner {
   100% {
     transform: rotate(360deg);
   }
 }
 
-/* ## ATOM ## */
+/* ## Variante ATOM ## */
 
-.carga {
+/* Contenedor padre, átomo, donde orbitarán los componentes hijo, electrones */
+.atomo {
   position: relative;
   width: 40px;
   height: 40px;
 }
 
-.carga .combo {
+/* Electrones que orbitan al átomo */
+.atomo .electron {
   position: absolute;
   content: "";
   width: 100%;
@@ -70,20 +81,22 @@
   border-radius: var(--plz-border-radius-circle);
 }
 
-.carga .combo:nth-child(1) {
+.atomo .electron:nth-child(1) {
   animation: rotar-hijo-1 2.3s linear infinite;
   animation-delay: -1.6s;
 }
 
-.carga .combo:nth-child(2) {
+.atomo .electron:nth-child(2) {
   animation: rotar-hijo-2 2.3s linear infinite;
   animation-delay: -0.8s;
 }
 
-.carga .combo:nth-child(3) {
+.atomo .electron:nth-child(3) {
   animation: rotar-hijo-3 2.3s linear infinite;
   animation-delay: 0s;
 }
+
+/* ANIMACIONES DE ROTACIÓN 3D (Orbitas) de los electrones */
 
 @keyframes rotar-hijo-1 {
   from {
@@ -116,8 +129,9 @@
 }
 
 
-/* ## WAVE ## */
+/* ## Varainte WAVE ## */
 
+/* Contenedor padre de la variante wave */
 .playa {
   box-sizing: border-box;
   display: flex;
@@ -126,12 +140,16 @@
   background: transparent;
 }
 
+/* Subcontenedor ola */
 .wave {
   margin: 2px;
   width: 6px;
   height: 40px;
   animation: wave 1.5s linear infinite;
 }
+
+/* ANIMACIONES, se determina el delay en cada ola para hacer el efecto deseado al cambiar
+  de escala cada contenedor */
 
 .wave:nth-child(1) {
   animation-delay: 0.4s;
@@ -153,6 +171,8 @@
   animation-delay: 0.8s;
 }
 
+/* Animación de ola de la variante wave */
+
 @keyframes wave {
   0% {
     transform: scale(0);
@@ -167,14 +187,16 @@
   }
 }
 
-/* bolas */
+/* ## Variante Bolas ## */
 
+/* Contenedor padre */
 .bolas {
   position: relative;
   height: 32px;
   width: 32px;
 }
 
+/* Contenedores hijo (bola individual) */
 .bolas>.bola {
   position: absolute;
   height: 32px;
@@ -182,6 +204,7 @@
   border-radius: var(--plz-border-radius-circle);
 }
 
+/* Tamaño visible de la bola */
 .bolas>.bola:after {
   position: absolute;
   content: '';
@@ -189,6 +212,8 @@
   width: 6px;
   border-radius: var(--plz-border-radius-circle);
 }
+
+/* MOVIMIENTO ANIMADO DE CADA UNA DE LAS BOLAS CON SU COLOR DETERMINADO */
 
 .bolas>.bola:nth-child(1) {
   animation: bola-gira 3.7s cubic-bezier(.17, .67, .83, .67) infinite;
@@ -243,6 +268,8 @@
   transform: translateX(-50%);
   background-color: var(--color-bola-5);
 }
+
+/* Animación de rotación de las bolas */
 
 @keyframes bola-gira {
   from {
