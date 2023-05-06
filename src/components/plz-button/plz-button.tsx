@@ -13,7 +13,7 @@ export class PlzButton {
   @Prop() corners?: 'default' | 'low-rounded' | 'rounded' | 'square' | 'circle' = 'default'; //Forma 
   @Prop() shadowColor?: 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow' | '' = ''; //Color de sombra de componente
   @Prop() icon?: string = ''; //nombre de icono o url del icono custom
-  @Prop() active?: boolean = false; //Boolean que determina si la variante progress está activada
+  @Prop({ mutable: true }) active?: boolean = false; //Boolean que determina si la variante progress está activada
   @Prop() link?: string = ''; //Url a la que se accederá desde el botón
   @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self'; //Forma de acceder a la url
   @Prop() hoverColor?: string = ''; //Color del hover

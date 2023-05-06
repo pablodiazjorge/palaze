@@ -46,10 +46,10 @@ export namespace Components {
         "active": boolean;
         "colorHover": string;
         "colorText": string;
-        "link": string;
+        "link"?: string;
         "static": boolean;
-        "target": string;
-        "variant": string;
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
+        "variant": 'simple' | 'custom';
     }
     interface PlzFooter {
         "height"?: string;
@@ -73,13 +73,13 @@ export namespace Components {
     }
     interface PlzMenuItem {
         "active": boolean;
-        "colorHover": string;
-        "colorText": string;
-        "imageUrl": string;
-        "link": string;
+        "colorHover"?: string;
+        "colorText"?: string;
+        "imageUrl"?: string;
+        "link"?: string;
         "submenu": boolean;
-        "target": string;
-        "variant": string;
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
+        "variant"?: 'simple' | 'custom' | 'image';
     }
     interface PlzSection {
         "variant": 'wrapper' | 'columns';
@@ -286,8 +286,8 @@ declare namespace LocalJSX {
         "colorText"?: string;
         "link"?: string;
         "static"?: boolean;
-        "target"?: string;
-        "variant"?: string;
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
+        "variant"?: 'simple' | 'custom';
     }
     interface PlzFooter {
         "height"?: string;
@@ -316,8 +316,8 @@ declare namespace LocalJSX {
         "imageUrl"?: string;
         "link"?: string;
         "submenu"?: boolean;
-        "target"?: string;
-        "variant"?: string;
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
+        "variant"?: 'simple' | 'custom' | 'image';
     }
     interface PlzSection {
         "variant"?: 'wrapper' | 'columns';
