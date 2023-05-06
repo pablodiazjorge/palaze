@@ -22,7 +22,7 @@ export namespace Components {
     interface PlzCard {
         "hover"?: string;
         "image"?: string;
-        "target"?: string;
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "url"?: string;
         "variant"?: 'default' | 'simple' | 'header' | 'footer' | 'image';
         "width"?: string;
@@ -33,14 +33,14 @@ export namespace Components {
         "variant"?: 'black' | 'green' | 'blue' | 'red' | 'yellow' | 'orange' | 'purple' | 'custom';
     }
     interface PlzDivider {
-        "color": string;
-        "customDivider": string;
-        "customPosition": string;
-        "height": string;
-        "spaceBottom": string;
-        "spaceTop": string;
-        "type": 'solid' | 'dashed' | 'dotted';
-        "variant": 'default' | 'custom';
+        "color"?: string;
+        "customDivider"?: string;
+        "customPosition"?: string;
+        "height"?: string;
+        "spaceBottom"?: string;
+        "spaceTop"?: string;
+        "type"?: 'solid' | 'dashed' | 'dotted';
+        "variant"?: 'default' | 'custom';
     }
     interface PlzDropdownMenu {
         "active": boolean;
@@ -58,18 +58,18 @@ export namespace Components {
     }
     interface PlzHeader {
         "color": string;
-        "colorHover": string;
+        "colorHover"?: string;
         "colorText": string;
-        "colorTextHover": string;
-        "variant": 'right-hover' | 'left-hover' | 'both-hover';
+        "colorTextHover"?: string;
+        "variant"?: 'right-hover' | 'left-hover' | 'both-hover';
     }
     interface PlzHero {
         "height": string;
-        "image": string;
-        "variant": 'default' | 'simple' | 'image' | 'two-column';
+        "image"?: string;
+        "variant"?: 'default' | 'simple' | 'image' | 'two-column';
     }
     interface PlzMenu {
-        "borderMenu": 'all' | 'top|bottom' | 'left|right' | 'top' | 'bottom' | 'right' | 'left' | 'none';
+        "borderMenu"?: 'all' | 'top|bottom' | 'left|right' | 'top' | 'bottom' | 'right' | 'left' | 'none';
     }
     interface PlzMenuItem {
         "active": boolean;
@@ -114,8 +114,8 @@ export namespace Components {
     }
     interface PlzTooltip {
         "link": string;
-        "position": string;
-        "target": string;
+        "position": 'top' | 'bottom' | 'left' | 'right';
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "text": string;
         "variant": 'text' | 'link';
     }
@@ -260,7 +260,7 @@ declare namespace LocalJSX {
     interface PlzCard {
         "hover"?: string;
         "image"?: string;
-        "target"?: string;
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "url"?: string;
         "variant"?: 'default' | 'simple' | 'header' | 'footer' | 'image';
         "width"?: string;
@@ -352,8 +352,8 @@ declare namespace LocalJSX {
     }
     interface PlzTooltip {
         "link"?: string;
-        "position"?: string;
-        "target"?: string;
+        "position"?: 'top' | 'bottom' | 'left' | 'right';
+        "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "text"?: string;
         "variant"?: 'text' | 'link';
     }

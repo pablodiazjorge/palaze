@@ -56,6 +56,10 @@
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
+
+  display: block;
+  border-radius: var(--plz-border-radius-rounded);
+  /* CUSTOM PROPERTIES */
   --color1: var(--plz-color-black-2);
   --color2: var(--plz-color-black-2);
   --color3: var(--plz-color-black-2);
@@ -66,14 +70,23 @@
   --color-text3: var(--plz-color-white);
   --color-text4: var(--plz-color-white);
   --color-text5: var(--plz-color-white);
-  display: block;
-  border-radius: var(--plz-border-radius-rounded);
 }
 
+/* Estilo general parrafo */
+p {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Contenedor padre */
 .container {
   border-radius: var(--plz-border-radius-rounded);
 }
 
+/* Formato del contenedor de color individual */
 .color {
   box-sizing: border-box;
   height: 40px;
@@ -82,13 +95,7 @@
   text-align: center;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+/* Custom color para cada elemento de la paleta */
 
 .custom-color1 {
   border-top-left-radius: var(--plz-border-radius-rounded);
@@ -114,6 +121,8 @@ p {
   border-bottom-right-radius: var(--plz-border-radius-rounded);
 }
 
+/* Custom color del texto para cada elemento de la paleta */
+
 .custom-text-color1 p {
   color: var(--color-text1);
 }
@@ -133,6 +142,8 @@ p {
 .custom-text-color5 p {
   color: var(--color-text5);
 }
+
+/* COLORES PREDEFINIDOS DEL DESIGN SYSTEM */
 
 .blue1 {
   border-top-left-radius: var(--plz-border-radius-rounded);

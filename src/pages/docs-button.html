@@ -241,11 +241,9 @@
             <!-- Icon variant -->
             <h3>Variante icon</h3>
             <p>Usaremos el atributo <b>variant</b> para elegir "icon" y el atributo <b>icon</b> para elegir entre "github", "linkedin"
-                y "mail". Este tipo de button se usa en gran variedad de ocasiones, pero siempre va a destacar para compartir 
-                información de redes sociales.</p>
-            <p>A continuación un ejemplo de los distintos iconos con diferentes tamaños. Recalcar que si deseas un icono
-                distinto, siempre puedes acceder al fichero <em>assets/icon</em> e importar ahí una imagen con esta estructura
-                "Icon-imagen.svg". La imagen será detectada como podemos observar en la segunda tanda de ejemplo.</p>
+                y "mail" en el caso de querer los icon button predefinidos. Este tipo de button se usa en gran variedad de ocasiones,
+                pero siempre va a destacar para compartir información de redes sociales.</p>
+            <p>A continuación un ejemplo de los distintos iconos con diferentes tamaños:</p>
             <plz-showcase>
                 <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
                     <plz-button variant="icon" icon="github" size="small"></plz-button>
@@ -271,19 +269,21 @@
                     <plz-button variant="icon" icon="mail" size="big"></plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
+            <p>Recalcar que si deseas un icono distinto, siempre puedes añadirlo pasando por el atributo <b>icon</b> la ruto
+                de la imagen que deseas como botton. La imagen será detectada como podemos observar en la segunda tanda de ejemplo.</p>
             <plz-showcase>
                 <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
-                    <plz-button variant="icon" icon="home" size="small"></plz-button>
-                    <plz-button variant="icon" icon="user" size="small"></plz-button>
-                    <plz-button variant="icon" icon="message" size="small"></plz-button>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-home.svg" size="small"></plz-button>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-user.svg" size="small"></plz-button>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-message.svg" size="small"></plz-button>
                     <plz-button variant="icon" icon="palaze" size="small"></plz-button>
-                    <plz-button variant="icon" icon="settings" size="small"></plz-button>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-settings.svg" size="small"></plz-button>
                 </plz-showcase-render>
-                <plz-showcase-code text-code='<plz-button variant="icon" icon="home" size="small"></plz-button>
-                    <plz-button variant="icon" icon="user" size="small"></plz-button>
-                    <plz-button variant="icon" icon="message" size="small"></plz-button>
+                <plz-showcase-code text-code='<plz-button variant="icon" icon="./assets/icon/Icon-home.svg" size="small"></plz-button>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-user.svg" size="small"></plz-button>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-message.svg" size="small"></plz-button>
                     <plz-button variant="icon" icon="palaze" size="small"></plz-button>
-                    <plz-button variant="icon" icon="settings" size="small"></plz-button>'>
+                    <plz-button variant="icon" icon="./assets/icon/Icon-settings.svg" size="small"></plz-button>'>
                 </plz-showcase-code>
             </plz-showcase>
             <!-- Radio borde -->
@@ -404,7 +404,7 @@
                     <tr>
                         <td data-label="Nombre">icon</td>
                         <td data-label="Descripción">Solo compatible con la variante "icon". Distintos iconos para la variante</td>
-                        <td data-label="Posibilidades">'github' - 'linkedin' - 'mail' - 'palaze'</td>
+                        <td data-label="Posibilidades">'github' - 'linkedin' - 'mail' - 'palaze' - '..url..'</td>
                         <td data-label="Por defecto"></td>
                     </tr>
                 </tbody>

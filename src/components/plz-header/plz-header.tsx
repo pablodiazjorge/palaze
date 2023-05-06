@@ -6,11 +6,11 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzHeader {
-  @Prop() variant: 'right-hover' | 'left-hover' | 'both-hover' = 'right-hover'; //Variantes del componente
+  @Prop() variant?: 'right-hover' | 'left-hover' | 'both-hover' = 'right-hover'; //Variantes del componente
   @Prop() color: string = 'white'; //Color de fondo del componente
   @Prop() colorText = 'black'; //Color del texto de dentro del componente
-  @Prop() colorHover: string = ''; //Color del hover dependiendo de la variante elegida
-  @Prop() colorTextHover: string = ''; //Color del texto cuando hay hover de la variante elegida
+  @Prop() colorHover?: string = ''; //Color del hover dependiendo de la variante elegida
+  @Prop() colorTextHover?: string = ''; //Color del texto cuando hay hover de la variante elegida
 
   render() {
     switch (this.variant) {

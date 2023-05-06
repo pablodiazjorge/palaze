@@ -21,6 +21,7 @@
 
 /* ## TWO-COLUMNS VARIANT ## */
 
+/* Contenedor padre */
 .footer-columns {
   box-sizing: border-box;
   display: flex;
@@ -34,6 +35,7 @@
   overflow: hidden;
 }
 
+/* Contenedor dividido en dos columnas */
 .footer-columns-container {
   display: grid;
   justify-content: center;
@@ -41,6 +43,7 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* Contenido del interior de las columnas */
 .footer-columns-content {
   box-sizing: border-box;
   padding: 40px;
@@ -51,6 +54,9 @@
   border-radius: 50px;
 }
 
+/* Adaptación para las distintas dimensiones de dipositivos
+   Cuando se alcance una determinada dimensión, Se cambiará de columnas a filas
+*/
 @media only screen and (max-width: 600px) {
   .footer-columns-content {
     display: block;
@@ -73,6 +79,7 @@
 
 /* ## BLOCK VARIANT ## */
 
+/* Contenedor padre */
 .block {
   display: flex;
   align-items: center;
@@ -83,6 +90,7 @@
   background-repeat: no-repeat;
 }
 
+/* Contenido del contenedor */
 .block-content {
   box-sizing: border-box;
   margin-left: 200px;
@@ -93,6 +101,9 @@
   text-align: center;
 }
 
+/* Adaptación para las distintas dimensiones de dipositivos
+  Se ajustan los espacios para tener menos huecos y más espacio para contenido
+*/
 @media screen and (max-width: 500px) {
   .block-content {
     margin-left: 20px;

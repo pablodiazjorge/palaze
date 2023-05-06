@@ -6,29 +6,33 @@
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
 
+  /* CUSTOM PROPERTIES */
   --scale: 0;
   --arrow: 5px;
 }
 
+/* Quitar estilo a los links */
 a {
   text-decoration: none;
   color: var(--plz-color-white);
 }
 
+/* Contenedor padre general */
 .container {
   display: inline-block;
   position: relative;
   padding-left: 8px;
   padding-right: 8px;
   margin: 0;
-  border-radius: var(--plz-border-radius-default);
 }
 
-/* ## SIMPLE VARIANT ## */ 
+/* ## VARIANTE SIMPLE ## */ 
 
 .tooltip {
   box-sizing: border-box;
 }
+
+/* Animación del tooltip */
 
 .tooltip::before,
 .tooltip::after {
@@ -37,6 +41,8 @@ a {
   z-index: 1;
 }
 
+/* Animación de la flecha del tooltip */
+
 .tooltip.top::before,
 .tooltip.top::after {
   transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
@@ -44,6 +50,8 @@ a {
   top: 3px;
   left: 50%;
 }
+
+/* Animación del tooltip */
 
 .tooltip.bottom::before,
 .tooltip.bottom::after {
@@ -209,16 +217,21 @@ a {
   border: 5px solid transparent;
 }
 
+/* Cuando se pase el cursor por encima */
+
 .container:hover .tooltip-link-vertical {
   visibility: visible;
   transform: translateX(-50%) scale(1);
 }
+
+/* Cuando se pase el cursor por encima */
 
 .container:hover .tooltip-link-horizontal {
   visibility: visible;
   transform: translateY(0%) scale(1);
 }
 
+/* Clase para que no se pueda seleccionar */
 .no-select {
   user-select: none;
 }

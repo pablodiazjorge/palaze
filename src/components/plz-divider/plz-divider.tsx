@@ -6,14 +6,14 @@ import { Component, h, Prop, Host } from '@stencil/core';
   shadow: true,
 })
 export class PlzDivider {
-  @Prop() type: 'solid' | 'dashed' | 'dotted' = 'solid';
-  @Prop() variant: 'default' | 'custom' = 'default';
-  @Prop() color: string = '#d4d4d8';
-  @Prop() height: string = '1';
-  @Prop() spaceTop: string = '0';
-  @Prop() spaceBottom: string = '0';
-  @Prop() customDivider: string = '';
-  @Prop() customPosition: string = 'top left';
+  @Prop() type?: 'solid' | 'dashed' | 'dotted' = 'solid'; //Tipos de formas
+  @Prop() variant?: 'default' | 'custom' = 'default'; //Varaintes del componente
+  @Prop() color?: string = '#d4d4d8'; //Color del divider
+  @Prop() height?: string = '1'; //Altura del divider
+  @Prop() spaceTop?: string = '0'; //Espacio superior con el contenido
+  @Prop() spaceBottom?: string = '0'; //Espacio inferior con el contenido
+  @Prop() customDivider?: string = ''; //url de imagen custom para divider
+  @Prop() customPosition?: string = 'top left'; //posicion de la imagen
 
   render() {
     switch (this.variant) {

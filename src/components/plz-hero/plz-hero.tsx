@@ -6,9 +6,9 @@ import { Component, h, Host, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzHero {
-  @Prop() variant: 'default' | 'simple' | 'image' | 'two-column' = 'default'; //Variantes del componente
+  @Prop() variant?: 'default' | 'simple' | 'image' | 'two-column' = 'default'; //Variantes del componente
   @Prop() height: string = '600'; //Height del componente en px
-  @Prop() image: string = ''; //Url de imagen
+  @Prop() image?: string = ''; //Url de imagen
 
   render() {
     switch (this.variant) {

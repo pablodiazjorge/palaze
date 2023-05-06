@@ -4,7 +4,6 @@
   --plz-border-radius-default: 4px;
 
   /*    ## COLORES ##   */
-
   /* Primarios-gamma-azul */
   --plz-color-blue-5: #CAF0F8;
 
@@ -18,10 +17,8 @@
   --plz-color-black-4: #d4d4d8;
 }
 
-/*
-  ### VARIANT DEFAULT
-*/
-
+/* ## VARIANT DEFAULT ##*/
+/* Contenedor padre con link */
 .a-default {
   box-sizing: border-box;
   display: inline-flex;
@@ -34,6 +31,7 @@
   text-decoration: none;
 }
 
+/* Contenedor hijo en donde irá la imagen */
 .image-container-default {
   box-sizing: border-box;
   display: flex;
@@ -48,6 +46,7 @@
   overflow: hidden;
 }
 
+/* Contenedor hijo donde irá el contenido slot */
 .text-container-default {
   box-sizing: border-box;
   display: grid;
@@ -60,9 +59,7 @@
   vertical-align: baseline;
 }
 
-/*
-  ### VARIANT SIMPLE
-*/
+/*## VARIANT SIMPLE ##*/
 
 .card-simple {
   box-sizing: border-box;
@@ -79,10 +76,9 @@
   border-radius: var(--plz-border-radius-default);
 }
 
-/*
-  ### VARIANT HEADER
-*/
+/*## VARIANT HEADER ##*/
 
+/* Contenedor padre header */
 .card-header {
   box-sizing: border-box;
   display: grid;
@@ -99,6 +95,8 @@
   padding: 20px;
 }
 
+/* Sección header de la card */
+
 .header-top {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -107,16 +105,17 @@
   border-top-left-radius: var(--plz-border-radius-default);
 }
 
+/* Sección de contenido del header */
+
 .header-bottom {
   border-bottom-right-radius: var(--plz-border-radius-default);
   border-bottom-left-radius: var(--plz-border-radius-default);
   border-bottom: 1px solid var(--plz-color-black-4);
 }
 
-/*
-  ### VARIANT FOOTER
-*/
+/*## VARIANT FOOTER ##*/
 
+/* Contenedor padre footer */
 .card-footer {
   box-sizing: border-box;
   display: grid;
@@ -133,11 +132,13 @@
   padding: 20px;
 }
 
+/* Sección de contenido del footer */
 .footer-top {
   border-top-right-radius: var(--plz-border-radius-default);
   border-top-left-radius: var(--plz-border-radius-default);
 }
 
+/* Sección footer de la card */
 .footer-bottom {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -147,9 +148,7 @@
   border-bottom: 1px solid var(--plz-color-black-4);
 }
 
-/* 
-  ### VARIANT IMAGE
-*/
+/*## VARIANT IMAGE ##*/
 
 .container-image {
   box-sizing: border-box;
@@ -210,6 +209,7 @@
   background-color: var(--plz-color-red-4);
 }
 
+/* Cambio dimensiones estilo responsive */
 @media (max-width:520px) {
   .a-default {
     max-width: 250px;

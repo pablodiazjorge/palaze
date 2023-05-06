@@ -136,6 +136,13 @@ h4 {
     margin-block-end: 5px;
 }
 
+/*
+    AJUSTE DE DIMENSIONES PARA DISPOSITIVOS
+        - Cambio en espacios entre elementos para mantener una mejor distribución
+    AJUSTES GENERALES Y ABOUT-US SECTION
+    RESPONSIVE
+*/
+
 @media screen and (max-width: 550px) {
     h1 {
         line-height: var(--plz-line-height-smaller);
@@ -216,6 +223,12 @@ h4 {
     padding: 0 90px;
 }
 
+/*
+    AJUSTE DE DIMENSIONES PARA DISPOSITIVOS
+        - Cambio en espacios entre elementos para mantener una mejor distribución
+    AJUSTES INFO-SECTION
+    RESPONSIVE
+*/
 @media screen and (max-width: 600px) {
     .info-section {
         width: auto;
@@ -230,12 +243,14 @@ h4 {
     ## DOCS ##
 */
 
+/* Sección padre documentación */
 .docs-main {
     margin-left: 30%;
     margin-right: 20%;
     transition: all 0.3s;
 }
 
+/* Contenido de la sección documentación */
 .content-detail {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -245,6 +260,12 @@ h4 {
     text-align: justify;
 }
 
+/*
+    AJUSTE DE DIMENSIONES PARA DISPOSITIVOS
+        - Cambio en espacios entre elementos para mantener una mejor distribución
+    AJUSTES DOCS-MAIN
+    RESPONSIVE
+*/
 @media screen and (max-width: 1024px) {
     .docs-main {
         margin-left: 30%;
@@ -259,6 +280,7 @@ h4 {
     }
 }
 
+/* Texto con estilo código para las nomenclaturas de los componentes */
 .component-tag {
     font-family: 'Lucida Console', 'Lucida Sans Regular', 'Lucida Sans Unicode';
     color: #495057;
@@ -270,6 +292,7 @@ h4 {
     ## ATTRIBUTE TABLE ##
 */
 
+/* Estilo general de tabla */
 .table-atr {
     box-sizing: border-box;
     border: none;
@@ -281,6 +304,7 @@ h4 {
     table-layout: fixed;
 }
 
+/* CABECERAS */
 .table-atr thead th {
     box-sizing: border-box;
     color: var(--plz-color-white);
@@ -298,6 +322,8 @@ h4 {
     border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
+/* CONTENIDO */
+
 .table-atr th,
 .table-atr td {
     box-sizing: border-box;
@@ -311,8 +337,17 @@ h4 {
     font-size: var(--plz-font-size-sub-section);
 }
 
+/*
+    AJUSTE DE DIMENSIONES PARA DISPOSITIVOS
+        - Cambio en espacios entre elementos para mantener una mejor distribución
+        - Cambio de columnas a filas en la tabla añadiendo cabecera para cada una
+          de las filas.
+    AJUSTES GENERALES TABLA
+    RESPONSIVE
+*/
 @media screen and (max-width: 600px) {
 
+    /* CABECERA */
     .table-atr thead {
         clip: rect(0 0 0 0);
         overflow: hidden;
@@ -326,6 +361,7 @@ h4 {
         margin-bottom: 25px;
     }
 
+    /* CONTENIDO */
     .table-atr td {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -351,6 +387,7 @@ h4 {
     ## OVERVIEW ##
 */
 
+/* Imagen Seccion empezando */
 .overview {
     width: 100%;
     border-radius: var(--plz-border-radius-low-rounded);
@@ -360,6 +397,7 @@ h4 {
     ## DESIGN SYSTEM SECTION ##
 */
 
+/* Imagen posición derecha. Sin solape de texto */
 .design-block-image-right {
     width: 350px;
     float: right;
@@ -368,6 +406,7 @@ h4 {
     margin-bottom: 5px;
 }
 
+/* Imagen posición izquierda. Sin solape de texto */
 .design-block-image-left {
     width: 350px;
     float: left;
@@ -376,6 +415,13 @@ h4 {
     margin-bottom: 5px;
 }
 
+/*
+    AJUSTE DE DIMENSIONES PARA DISPOSITIVOS
+        - Cambio en espacios entre elementos para mantener una mejor distribución
+        - Las imagenes cambian a ocupar todo el ancho disponible
+    AJUSTES Design System section
+    RESPONSIVE
+*/
 @media (max-width:1092px) {
     .design-block-image-right {
         width: 100%;
@@ -390,6 +436,7 @@ h4 {
 
 /* ## DEMO VIEW ## */
 
+/* Imagen del sidebar en las versiones demo de muestra de componente */
 .demo-image {
     border: 2px solid var(--plz-color-green-2);
 }

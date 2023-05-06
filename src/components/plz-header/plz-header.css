@@ -11,6 +11,7 @@
   height: 45px;
 }
 
+/* Contenedor padre */
 .header {
   position: fixed;
   display: inline-flex;
@@ -24,6 +25,7 @@
   z-index: 1;
 }
 
+/* Elementos de navegación situados a la derecha */
 .header .right {
   padding-right: 10px;
   display: flex;
@@ -31,6 +33,7 @@
   margin-left: auto;
 }
 
+/* Elementos de navegación situados a la izquierda */
 .header .left {
   padding-left: 10px;
   display: flex;
@@ -38,6 +41,7 @@
   margin-right: auto;
 }
 
+/* Elementos de navegación pasados por slot situados a la derecha con opción de hover*/
 :host ::slotted([slot="right-select"]) {
   display: flex;
   align-items: center;
@@ -47,12 +51,14 @@
   padding-right: 10px;
 }
 
+/* Elementos de navegación pasados por slot situados a la derecha con hover*/
 :host ::slotted([slot="right-select"]:hover) {
   background-color: var(--color-hover);
   color: var(--color-text-hover);
   height: 100%;
 }
 
+/* Elementos de navegación pasados por slot situados a la izquierda con opción de hover*/
 :host ::slotted([slot="left-select"]) {
   display: flex;
   align-items: center;
@@ -62,12 +68,14 @@
   padding-right: 10px;
 }
 
+/* Elementos de navegación pasados por slot situados a la izquierda con hover*/
 :host ::slotted([slot="left-select"]:hover) {
   background-color: var(--color-hover);
   color: var(--color-text-hover);
   height: 100%;
 }
 
+/* Elementos de navegación pasados por slot situados a la izquierda*/
 :host ::slotted([slot="left"]) {
   display: flex;
   align-items: center;
@@ -77,6 +85,7 @@
   padding-right: 10px;
 }
 
+/* Elementos de navegación pasados por slot situados a la derecha*/
 :host ::slotted([slot="right"]) {
   display: flex;
   align-items: center;
@@ -86,11 +95,13 @@
   padding-right: 10px;
 }
 
+/* Elementos link pasados por slot*/
 :host ::slotted(a) {
   text-decoration: none;
   color: var(--color-text);
 }
 
+/* Elementos iamgen pasados por slot situados a la izquierda*/
 :host ::slotted([slot="left"]) img {
   vertical-align: middle;
 }

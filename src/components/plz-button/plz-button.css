@@ -47,31 +47,38 @@
   --bg-color-hover: var(--plz-color-black-4);
 }
 
+/* Quitamos estilo al link */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* Estilo único variante icon */
 :host([variant=icon]) {
   display: inline-block;
   height: 50px;
   width: 50px;
 }
 
+/* Tamaño único variante icon */
 :host([variant=icon][size=small]) {
   height: 40px;
   width: 40px;
 }
 
+/* Tamaño único variante icon */
 :host([variant=icon][size=big]) {
   height: 60px;
   width: 60px;
 }
 
+/* Estilo único variante default */
 :host([variant=default]) {
   display: inline-block;
 }
 
+
+/* Estilo general para los botones */
 button {
   display: inline-block;
   text-align: center;
@@ -81,10 +88,12 @@ button {
   user-select: none;
 }
 
+/* Color del hover para las variantes que lo permitan */
 .hover-color:hover {
   background-color: var(--bg-color-hover);
 }
 
+/* Variante icon forma y formato */
 .icon {
   display: inline-flex;
   align-items: center;
@@ -96,6 +105,7 @@ button {
   border-radius: var(--plz-border-radius-circle);
 }
 
+/* Tamaño variante icon */
 .icon .icon-default-size {
   margin: 0;
   padding: 0;
@@ -103,6 +113,7 @@ button {
   width: 50px;
 }
 
+/* Tamaño variante icon */
 .icon .icon-small-size {
   margin: 0;
   padding: 0;
@@ -110,6 +121,7 @@ button {
   width: 40px;
 }
 
+/* Tamaño variante icon */
 .icon .icon-big-size {
   margin: 0;
   padding: 0;
@@ -117,13 +129,14 @@ button {
   width: 60px;
 }
 
+/* Estilo global para imagenes, forma circular. Solo se usa en la variante icon */
 img {
   border-radius: var(--plz-border-radius-circle);
   cursor: pointer;
 }
 
 /* ## PROGRESS VARIANT ## */
-
+/* Contenedor padre de la variante wave */
 .playa {
   box-sizing: border-box;
   display: flex;
@@ -132,6 +145,7 @@ img {
   background: transparent;
 }
 
+/* Subcontenedor ola */
 .wave {
   margin: 2px;
   width: 4px;
@@ -139,6 +153,9 @@ img {
   background: var(--wave-color);
   animation: wave 1.5s linear infinite;
 }
+
+/* ANIMACIONES, se determina el delay en cada ola para hacer el efecto deseado al cambiar
+  de escala cada contenedor */
 
 .wave:nth-child(1) {
   animation-delay: 0.4s;
@@ -160,6 +177,8 @@ img {
   animation-delay: 0.8s;
 }
 
+/* Animación de ola de la variante wave */
+
 @keyframes wave {
   0% {
     transform: scale(0);
@@ -175,6 +194,7 @@ img {
 }
 
 /* ## SHADOW COLORS ## */
+/* Se aplican las sombras de color para cada una de las posibilidades */
 
 .shadow-blue {
   border: 1px solid var(--plz-color-blue-2);
@@ -227,6 +247,7 @@ img {
 
 
 /* ## SIZE ## */
+/* Distintos tamaños prefedinidos de botones */
 
 .default-size {
   font-size: var(--plz-font-size-normal);
@@ -247,6 +268,7 @@ img {
 }
 
 /* ## BORDER ## */
+/* Distintas formas predefinidas del botón */
 
 .default-border {
   border-radius: var(--plz-border-radius-default);
@@ -269,6 +291,7 @@ img {
 }
 
 /* ## COLORS ## */
+/* Colores predefinidos para los botones */
 
 .blue {
   background-color: var(--plz-color-blue-2);

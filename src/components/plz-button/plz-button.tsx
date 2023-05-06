@@ -12,7 +12,7 @@ export class PlzButton {
   @Prop() color?: 'default' | 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow' = 'default'; //Colores del botón default y progress
   @Prop() corners?: 'default' | 'low-rounded' | 'rounded' | 'square' | 'circle' = 'default'; //Forma 
   @Prop() shadowColor?: 'black' | 'purple' | 'blue' | 'green' | 'red' | 'orange' | 'yellow' | '' = ''; //Color de sombra de componente
-  @Prop() icon?: string = ''; //nombre de icono
+  @Prop() icon?: string = ''; //nombre de icono o url del icono custom
   @Prop() active?: boolean = false; //Boolean que determina si la variante progress está activada
   @Prop() link?: string = ''; //Url a la que se accederá desde el botón
   @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self'; //Forma de acceder a la url
@@ -44,9 +44,11 @@ export class PlzButton {
             >
               {
                 //Si se usa la variante icon, permite hacer uso de esta sección de código
-                this.variant == 'icon' ?
+                this.variant == 'icon' && (this.icon == 'github' || this.icon == 'linkedin' || this.icon == 'palaze' || this.icon == 'mail') ?
                 <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
-                : null
+                : this.variant == 'icon' ?
+                <img class={`${this.variant}-${this.size}-size`} src={`${this.icon}`} alt={this.icon} />
+                :null
               }
               <slot></slot>
           </button>
@@ -75,10 +77,12 @@ export class PlzButton {
           >
             {
               //Si se usa la variante icon, permite hacer uso de esta sección de código
-              this.variant == 'icon' ?
-              <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
-              : null
-            }
+              this.variant == 'icon' && (this.icon == 'github' || this.icon == 'linkedin' || this.icon == 'palaze' || this.icon == 'mail') ?
+                <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
+                : this.variant == 'icon' ?
+                <img class={`${this.variant}-${this.size}-size`} src={`${this.icon}`} alt={this.icon} />
+                :null
+              }
             <slot></slot>
           </button>
       </Host>

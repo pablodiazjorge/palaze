@@ -3,6 +3,10 @@
   --plz-color-black-3: #495057;
 }
 
+/* VARIANTE WRAPPER */
+/* Agrupa los elementos en fila, tantos elementos como de espacio disponga
+   Cuando no quepan todos los elementos, se añadirá otro fila y se distribuirán en el
+   centro y con el espacio entre ellos determinado */
 .wrapper {
   box-sizing: border-box;
   margin-top: 15px;
@@ -14,6 +18,8 @@
   gap: 10px;
 }
 
+/* VARIANTE COLUMNS */
+/* Contenedor padre. Organización en dos columnas del contenido */
 .columns {
   box-sizing: border-box;
   display: grid;
@@ -22,20 +28,28 @@
   grid-template-areas: "content content";
 }
 
+/* Contenedor hijo. Estilo general */
 .column-content {
   padding: 5%;
 }
 
+/* Contenedor primer hijo. Separación entre componentes mediante una linea lateral. */
 .column-content:first-child {
   border-right: 1px solid var(--plz-color-black-3);
 }
 
+/* RESPONSIVE */
+/* Ajuste de columnas para cuando las dimensiones del dispositivo no permitan una distribución adecuada
+   Se pasará de columnas a filas cuando se requiera */
+
 @media (max-width: 756px) {
+  /* Cambio de columnas a filas */
   .columns {
     grid-template-columns: 1fr;
     grid-template-areas: "content" "content";
   }
 
+  /* Contenedor primer hijo. Separación entre componentes mediante una linea horizontal. */
   .column-content:first-child {
     border-right: none;
     border-bottom: 1px solid var(--plz-color-black-3);

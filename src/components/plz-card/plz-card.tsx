@@ -8,7 +8,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 export class PlzCard {
   @Prop() variant?: 'default' | 'simple' | 'header' | 'footer' | 'image' = 'default'; //Variantes del componente
   @Prop() url?: string = ''; //URL a enlace externo o interno
-  @Prop() target?: string = '_self'; //Como se abrirá el link
+  @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self'; //Forma de acceder a la url
   @Prop() image?: string = ''; //URL de la imagen de fondo
   @Prop() hover?: string = 'blue'; //Color del hover para variante default
   @Prop() width?: string = '220'; //Ancho de tarjeta para variante default
