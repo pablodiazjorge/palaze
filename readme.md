@@ -9,7 +9,7 @@ Este proyecto consiste en la creación de un conjunto de componentes web y una p
 Para clonar el repositorio se puede usar:
 
 ```bash
-git clone https://github.com/pablodiazjorge/palaze-web.git plz-demo
+git clone https://github.com/pablodiazjorge/palaze.git plz-demo
 cd plz-demo
 git remote rm origin
 ```

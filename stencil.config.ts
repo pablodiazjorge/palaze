@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'palaze-web',
+  namespace: 'palaze',
   globalStyle: 'src/global/global-styles.css',
   outputTargets: [
     {

@@ -1,5 +1,5 @@
 {
-  "name": "palaze-web",
+  "name": "palaze",
   "version": "0.0.1",
   "description": "Palaze web components",
   "author": "Pablo Diaz-Jorge Garcia <palaze@gmail.com>",
@@ -10,10 +10,10 @@
   "types": "dist/components/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/palaze-web/palaze-web.esm.js",
+  "unpkg": "dist/palaze/palaze.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pablodiazjorge/palaze-web.git"
+    "url": "https://github.com/pablodiazjorge/palaze.git"
   },
   "files": [
     "dist/",
