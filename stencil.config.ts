@@ -10,13 +10,14 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      generateTypeDeclarations: true,
     },
     {
       type: 'docs-readme',
     },
     {
       type: 'www',
-      serviceWorker: null, // disable service workers
+      serviceWorker: null, //disable service workers
       copy: [
         { src: 'pages/docs.html', dest: 'docs.html' },
         { src: 'pages/docs-button.html', dest: 'docs-button.html' },
@@ -36,7 +37,7 @@ export const config: Config = {
         { src: 'pages/docs-sidebar.html', dest: 'docs-sidebar.html' },
         { src: 'pages/docs-dropdown-menu.html', dest: 'docs-dropdown-menu.html' },
         { src: 'pages/docs-colors.html', dest: 'docs-colors.html' },
-        { src: 'pages/docs-showcase.html', dest: 'docs-showcase.html' }
+        { src: 'pages/docs-showcase.html', dest: 'docs-showcase.html' },
       ],
     },
   ],
