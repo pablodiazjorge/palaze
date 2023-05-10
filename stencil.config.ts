@@ -11,6 +11,12 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
       generateTypeDeclarations: true,
+      copy: [
+        { src: 'assets/icon/Icon-github.svg', dest: 'assets/icon/Icon-github.svg' },
+        { src: 'assets/icon/Icon-linkedin.svg', dest: 'assets/icon/Icon-linkedin.svg' },
+        { src: 'assets/icon/Icon-mail.svg', dest: 'assets/icon/Icon-mail.svg' },
+        { src: 'assets/icon/Icon-palaze.svg', dest: 'assets/icon/Icon-palaze.svg' },
+      ],
     },
     {
       type: 'docs-readme',

@@ -1,4 +1,8 @@
 import { Component, h, Host, Prop } from '@stencil/core';
+import Github from "../../assets/icon/Icon-github.svg";
+import Linkedin from "../../assets/icon/Icon-linkedin.svg";
+import Mail from "../../assets/icon/Icon-mail.svg";
+import Palaze from "../../assets/icon/Icon-palaze.svg";
 
 @Component({
   tag: 'plz-button',
@@ -45,8 +49,14 @@ export class PlzButton {
               {
                 //Si se usa la variante icon, se renderiza esta sección de código
                 //Opciones de iconos predefinidas
-                this.variant == 'icon' && (this.icon == 'github' || this.icon == 'linkedin' || this.icon == 'palaze' || this.icon == 'mail') ?
-                <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
+                this.variant == 'icon' && this.icon == 'github' ?
+                <img class={`${this.variant}-${this.size}-size`} src={Github} alt={this.icon} />
+                : this.variant == 'icon' && this.icon == 'linkedin' ?
+                <img class={`${this.variant}-${this.size}-size`} src={Linkedin} alt={this.icon} />
+                : this.variant == 'icon' && this.icon == 'palaze' ?
+                <img class={`${this.variant}-${this.size}-size`} src={Palaze} alt={this.icon} />
+                : this.variant == 'icon' && this.icon == 'mail' ?
+                <img class={`${this.variant}-${this.size}-size`} src={Mail} alt={this.icon} />
                 : this.variant == 'icon' ?
                 //Opción de icono custom
                 <img class={`${this.variant}-${this.size}-size`} src={`${this.icon}`} alt={this.icon} />
@@ -80,9 +90,15 @@ export class PlzButton {
             {
               //Si se usa la variante icon, se renderiza esta sección de código
               //Opciones de iconos predefinidas
-              this.variant == 'icon' && (this.icon == 'github' || this.icon == 'linkedin' || this.icon == 'palaze' || this.icon == 'mail') ?
-                <img class={`${this.variant}-${this.size}-size`} src={`./assets/icon/Icon-${this.icon}.svg`} alt={this.icon} />
-                : this.variant == 'icon' ?
+              this.variant == 'icon' && this.icon == 'github' ?
+              <img class={`${this.variant}-${this.size}-size`} src={Github} alt={this.icon} />
+              : this.variant == 'icon' && this.icon == 'linkedin' ?
+              <img class={`${this.variant}-${this.size}-size`} src={Linkedin} alt={this.icon} />
+              : this.variant == 'icon' && this.icon == 'palaze' ?
+              <img class={`${this.variant}-${this.size}-size`} src={Palaze} alt={this.icon} />
+              : this.variant == 'icon' && this.icon == 'mail' ?
+              <img class={`${this.variant}-${this.size}-size`} src={Mail} alt={this.icon} />
+              : this.variant == 'icon' ?
               //Opción de icono custom
                 <img class={`${this.variant}-${this.size}-size`} src={`${this.icon}`} alt={this.icon} />
                 :null
