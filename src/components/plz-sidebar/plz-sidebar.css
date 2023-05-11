@@ -1,13 +1,6 @@
 :host {
-  /* Tamaño fuente */
-  --plz-font-size-below-titles: 24px;
-  /* Radio borde */
-  --plz-border-radius-low-rounded: 20px;
-  /* Primarios-gamma-negro */
-  --plz-color-black-4: #d4d4d8;
   /* Primarios-gamma-blanco */
   --plz-color-white: white;
-
   --bg-color: var(--plz-color-white);
   display: block;
 }
@@ -24,7 +17,7 @@
   transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
-  border-right: 1px solid var(--plz-color-black-4);
+  border-right: 1px solid #d4d4d8;
   padding-top: 40px;
   padding-bottom: 120px;
 }
@@ -34,7 +27,7 @@
 */
 .sidebar img {
   width: 225px;
-  border-radius: var(--plz-border-radius-low-rounded);
+  border-radius: 20px;
   margin-left: 28px;
 }
 
@@ -47,7 +40,7 @@
   background-color: transparent;
   border: none;
   padding: 6px 6px;
-  font-size: var(--plz-font-size-below-titles);
+  font-size: 24px;
   cursor: pointer;
   display: inline-block;
 }
