@@ -1,6 +1,6 @@
 {
   "name": "palaze",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Palaze web components",
   "author": "Pablo Diaz-Jorge Garcia <palaze@gmail.com>",
   "main": "dist/index.cjs.js",
