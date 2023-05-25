@@ -27,7 +27,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0",
+    "@stencil/core": "^3.3.0",
     "highlight.js": "^11.7.0",
     "prettier": "^2.8.4"
   },
