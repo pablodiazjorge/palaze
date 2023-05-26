@@ -260,6 +260,18 @@ h4 {
     text-align: justify;
 }
 
+.overview {
+    padding-bottom: 0px;
+}
+
+.overview h2 {
+    margin-block-end: 0px;
+}
+
+.overview h1 {
+    line-height: 1.1em;
+}
+
 /*
     AJUSTE DE DIMENSIONES PARA DISPOSITIVOS
         - Cambio en espacios entre elementos para mantener una mejor distribución
@@ -388,7 +400,7 @@ h4 {
 */
 
 /* Imagen Seccion empezando */
-.overview {
+.overview-image {
     width: 100%;
     border-radius: var(--plz-border-radius-low-rounded);
 }
