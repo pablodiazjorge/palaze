@@ -12,7 +12,6 @@ Documentación: [palaze-web](https://palaze-pablodiazjorge.netlify.app/)
 Fuente: [github.com/pablodiazjorge/palaze](https://github.com/pablodiazjorge/palaze)
 
 ## Empezando:
----
 
 ### Instalación local
 
@@ -62,7 +61,6 @@ Una vez instalado el paquete, deberás añadir unas líneas de código en tu pá
 Recomendamos encarecidamente consultar la documentación acerca del uso de los componentes en [palaze-web](https://palaze-pablodiazjorge.netlify.app/).
 
 ## Cómo contribuir
----
 Para contribuir recomendamos utilizar el apartado Issue en nuestro repositorio [palaze](https://github.com/pablodiazjorge/palaze/issues) en GitHub desde esta sección podrás crear sugerencias sobre futuras actualizaciones, señalar errores que se encuentren y crear pull request.
 
 Para ello mostramos una guía de como clonar el proyecto:
