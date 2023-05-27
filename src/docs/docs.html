@@ -29,7 +29,12 @@
     <plz-sidebar id-main="main" space-top="45">
         <img src="../assets/icon/log-mask-overview.svg" width="225px" alt="sidebar-img">
         <plz-menu border-menu="none">
-            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white" active="true">Empezando</plz-menu-item>
+            <plz-dropdown-menu link="docs.html" variant="custom" color-hover="#495057" color-text="white" active="true">
+                Empezando
+                <plz-menu-item slot="dropdown" link="#acerca" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Acerca de</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#instalacion" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Instalacion</plz-menu-item>
+                <plz-menu-item slot="dropdown" link="#uso" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Uso</plz-menu-item>   
+            </plz-dropdown-menu>
             <plz-divider></plz-divider>
             <plz-dropdown-menu link="docs-button.html" variant="custom" color-hover="#495057" color-text="white" static="true">
                 Componentes
@@ -61,12 +66,148 @@
 
     <!-- Main section -->
     <main id="main" class="docs-main">
-        <section class="content-detail">
-            <div>
-                <img class="overview" src="../assets/icon/log-mask-overview.svg" alt="logo">
-                <h1>¿Cómo empezar?</h1>
-                <p>Explicación con código de como usar los componentes y brebe descripción de que aportan</p>
-            </div>
+        <!-- Overview de la librería, acerca de -->
+        <section id="acerca" class="content-detail overview">
+            <img class="overview-image" src="../assets/icon/log-mask-overview.svg" alt="logo">
+            <h1>Acerca de nuestra librería de componentes</h1>
+            <p>Palaze ofrece una colección de componentes nativos que mejoran la funcionalidad y el diseño de tu sitio web.
+                Nuestros componentes son fáciles de implementar, livianos y proporcionan una carga rápida que los convierte
+                en una opción a tener en cuenta a la hora de elegir una librería.
+            </p>
+            <h2>Origen y solución de problemas</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>Esta librería surgió de un proyecto de un alumno de universidad. Quería utilizar la novedosa tecnología de "Web Components"
+                para desarrollar los componentes necesarios de una página de presentación y una página de documentación. Para ello
+                se recurrió a una herramienta de diseño, concretamente Figma, y se definió un Design System junto con unas plantillas de
+                las páginas web y los componentes desglosados a raíz de estos diseños.
+            </p>
+            <p>A partir de la necesidad, se crearon los Web Components necesarios para poder disponer de la web asemejandose a los diseños
+                y se juntaron todos los componentes en una librería de código abierto para así hacer posible que otros desarrolladores usen
+                los componentes y puedan modificarlos en el caso de necesitarlo, adaptandolos así a sus respectivos casos concretos de proyecto.
+            </p>
+            <h2>Soporte en navegadores</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>La librería palaze ha sido probada en distintos navegadores y podemos confirmar que todas las características y
+                funcionalidades de los componentes creados funcionan correctamente en buscadores como, Google Chrome, Firefox, Safari,
+                Opera, Brave, Microsoft Edge...
+            </p>
+            <p>Puedes consultar este<plz-tooltip variant="link" link="https://developer.mozilla.org/en-US/docs/Web/API/Web_components#browser_compatibility" 
+                target="_blank" text="Más info"><u>enlace</u></plz-tooltip>para informárte más acerca de la compatibilidad de los Web Component actualmente en los
+                navegadores.
+            </p>
+            <h2>Contribuyentes</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>Actualmente, el único controbuyente en el desarroyo de este proyecto es Pablo Díaz-Jorge con usuario 
+                en github<plz-tooltip variant="link" link="https://github.com/pablodiazjorge" 
+                target="_blank" text="Más info"><u>@pablodiazjorge.</u></plz-tooltip></p>
+            <p>También se ha hecho cargo del Design System diseñado en Figma al que puedes acceder mediante
+                 este<plz-tooltip variant="link" link="docs-design-system.html" 
+                target="_blank" text="Más info"><u>enlace.</u></plz-tooltip>y quien ha definido los tokens de diseño.
+            </p>
+        </section>
+        <!-- Instalación de la librería -->
+        <section id="instalacion" class="content-detail overview">
+            <h1>¿Cómo empezar?</h1>
+            <p>Hay varias formas de empezar a utilizar la librería de componentes palaze, pero actualmente disponemos de dos formas.</p>
+            <p>- Instalación Local.</p>
+            <p>- Instalación vía CDN.</p>
+            <h2>Instalación local</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>Para poder disponer de la librería en local haremos uso del siguiente comando por consola:
+            </p>
+            <plz-showcase-code text-code='npm i palaze'></plz-showcase-code>
+            <p>En el caso de querer versiones anteriores del paquete de producción, deberás especificar tu versión como mostraremos a 
+                continuación:
+            </p>
+            <plz-showcase-code text-code='npm i palaze@0.0.3'></plz-showcase-code>
+            <p>Una vez instalado el paquete, deberás añadir unas líneas de código en tu página para poder hacer uso de los componentes. A
+                continuación se muestra como hacerlo:
+            </p>
+            <plz-showcase-code text-code='<script type="module" src="/node_modules/palaze/dist/palaze/palaze.esm.js"></script>'></plz-showcase-code>
+            <p>Será trabajo del desarrollador que haga uso de la librería de ajustar las configuraciones para su proyecto en concreto.</p>
+            <p>En el caso del ejemplo, se almacena dentro del fichero "node_modules/palaze/". En esta ubicación encontraremos la instalación
+                del paquete.
+            </p>
+            <h2>Instalación vía CDN</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>Este tipo de instalación es el más sencillo, ya que para poder disponer de la librería no necesitamos hacer uso de ningún
+                comando ni instalar nada, todo será online vía referencia al paquete.
+            </p>
+            <p>A continuación se muestra un ejemplo de cómo instalar o implementar la librería vía CDN:</p>
+            <plz-showcase-code text-code='<script type="module" src="https://cdn.jsdelivr.net/npm/palaze/dist/palaze/palaze.esm.js"></script>'></plz-showcase-code>
+            <p>Para ver una demo online del uso de la librería podrás acceder a un CodePen vía el siguiente<plz-tooltip variant="link" link="https://codepen.io/BitBlo/pen/PoyLRQq?editors=1101" 
+                target="_blank" text="CodePen"><u>enlace.</u></plz-tooltip></p>
+        </section>
+        <!-- Uso de los componentes
+            Ejemplo
+            Atributos y propiedades
+            Slots
+            Curiosidades
+        -->
+        <section id="uso" class="content-detail">
+            <h1>Uso de los componentes</h1>
+            <p>Los componentes palaze se utilizan como se utilizan elementos HTML. Para hacer uso de ellos debes conocer sus atributos,
+                slots y funcionalidades. Para conocerlos mejor deberás acceder a la documentación de cada componente, donde se explica
+                detalladamente lo mencionado anteriormente.
+            </p>
+            <p>A continuación verás un ejemplo de como usar uno de nuestros componentes:</p>
+            <plz-showcase>
+                <plz-showcase-render padding-top="20" padding-bottom="20" padding-left="20" padding-right="20">
+                    <plz-button color="black" hover-color="#495057" corners="low-rounded">Docs</plz-button>
+                </plz-showcase-render>
+                <plz-showcase-code text-code='<plz-button color="black" hover-color="#495057" corners="low-rounded">Docs</plz-button>'>
+                </plz-showcase-code>
+            </plz-showcase>
+            <p>En el caso de ser nuevo en el mundo de los Web Components, en esta sección podrás ir familiarizandote con ellos.</p>
+            <h2>Atributos y propiedades</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>Todos los componentes de la librería palaze disponen de propiedades a las que se puede acceder usando atributos.
+                A continuación enseñaremos un ejemplo de un atributo del botón, usaremos <b>color</b>, el cual se asignará a la propiedad
+                de <i>color</i> para determinar el color final del botón.
+            </p>
+            <plz-showcase-code text-code='<plz-button color="green">Acción</plz-button>'>
+            </plz-showcase-code>
+            <p>Es recomendable acceder a la sección de documentación de los componentes donde se enseñan y explican
+                ejemplos de cada una de las propiedades de los componentes. También se puede visualizar más rápidamente yendo
+                al final de cada sección de documentación del componente en cuestión, ya que habrá una tabla con todas las propiedades
+                de este.
+            </p>
+            <h2>Slots</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <p>Algunos componentes utilizan slots para organizar o aceptar el contenido dentro de ellos. Si haciendo uso de este tipo
+                de componentes no determinas el tipo de slot en el que irá el contenido, no se renderizará.
+            </p>
+            <p>A continuación se muestra un ejemplo del componente Card:</p>
+            <plz-showcase-code text-code='<plz-card variant="footer">
+                <div slot="content">
+                    <!--Contenido-->
+                </div>
+                <div slot="footer-content">
+                    <!--Contenido-->
+                </div>
+            </plz-card>'></plz-showcase-code>
+            <p>Cabe recalcar que la ubicación donde se nombra al slot no tiene que seguir ningún orden, puedes definir atributos antes
+                 y después del slot y no afectará en su funcionamiento.</p>
+            <p>Es recomendable revisar la documentación de los componentes en la que se explica todas las posibilidades y características
+                de estos detenidamente.
+            </p>
+            <h2>Curiosidades</h2>
+            <plz-divider space-bottom="10" space-top="0"></plz-divider>
+            <h3>No hacer uso del cierre automático de etiquetas "/>"</h3>
+            <p>La tecnología Custom Elements no admite el cierre automático de etiquetas. El comportamiento se asemeja al de una
+                etiqueta "&lt;script&gt;". Siempre se debe incluir el cierre completo:
+            </p>
+            <plz-showcase-code text-code='<!--Nunca utilizar así los componentes--> <plz-section />
+                <!--Forma correcta de utilizar los componentes--> <plz-section><plz-section/>''>
+            </plz-showcase-code>
+            <h3>Diferencias en componentes nativos</h3>
+            <p>Aunque pueda haber similitudes de comportamiento entre componentes nativos html y web components de nuestra librería,
+                no siempre se dará el caso que tengan mismas funcionalidades y no están diseñados con la intención de replicar a estos
+                componentes nativos html.
+            </p>
+            <p>Recomendamos que antes de utilizar cualquier componente se acceda a la documentación y se revise las carácterísticas
+                del componente a utilizar.
+            </p>
         </section>
     </main>
 </body>
