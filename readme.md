@@ -3,7 +3,7 @@
 # Palaze
 ## Acerca de nuestra librería de componentes
 Palaze ofrece una colección de componentes nativos que mejoran la funcionalidad y el diseño de tu sitio web.
-Nuestros componentes son fáciles de implementar, livianos y proporcionan una carga rápida que los convierte en una opción a tener en cuenta a la hora de elegir una librería.
+Los componentes son fáciles de implementar, livianos y proporcionan una carga rápida que los convierte en una opción a tener en cuenta a la hora de elegir una librería.
 
 ---
 
@@ -21,7 +21,7 @@ Puedes empezar a utilizar la librería haciendo uso de los siguientes comandos p
 npm i palaze
 ```
 
-En el caso de querer versiones diferentes del paquete de producción, deberás especificar tu versión como mostraremos a continuación:
+En el caso de querer versiones diferentes del paquete de producción, deberás especificar tu versión como se muestra a continuación:
 
 ```bash
 npm i palaze@1.0.0
@@ -34,18 +34,18 @@ Una vez instalado el paquete, deberás añadir unas líneas de código en tu pá
 ```
 
 Será trabajo del desarrollador que haga uso de la librería de ajustar las configuraciones para su proyecto en concreto.
-En el caso del ejemplo, se almacena dentro del fichero "node_modules/palaze/". En esta ubicación encontraremos la instalación del paquete.
+En el caso del ejemplo, se almacena dentro del fichero "node_modules/palaze/". En esta ubicación se encontrará el paquete instalado.
 
 ### Instalación vía CDN
 
-Este tipo de instalación es el más sencillo, ya que para poder disponer de la librería no necesitamos hacer uso de ningún comando ni instalar nada, todo será online vía referencia al paquete.
+Este tipo de instalación es el más sencillo, ya que para poder disponer de la librería no se necesita hacer uso de ningún comando ni instalar nada, todo será online vía referencia al paquete.
 A continuación se muestra un ejemplo de cómo instalar o implementar la librería vía CDN:
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/palaze/dist/palaze/palaze.esm.js"></script>
 ```
 
-En el caso de querer versiones diferentes del paquete de producción, deberás especificar tu versión como mostraremos a continuación:
+En el caso de querer versiones diferentes del paquete de producción, deberás especificar tu versión como se muestra a continuación:
 
 ```bash
 npm i palaze@0.0.3
@@ -58,12 +58,12 @@ Una vez instalado el paquete, deberás añadir unas líneas de código en tu pá
 ```
 
 ### Recomendación
-Recomendamos encarecidamente consultar la documentación acerca del uso de los componentes en [palaze-web](https://palaze-pablodiazjorge.netlify.app/).
+Se recomienda encarecidamente consultar la documentación acerca del uso de los componentes en [palaze-web](https://palaze-pablodiazjorge.netlify.app/).
 
 ## Cómo contribuir
-Para contribuir recomendamos utilizar el apartado Issue en nuestro repositorio [palaze](https://github.com/pablodiazjorge/palaze/issues) en GitHub desde esta sección podrás crear sugerencias sobre futuras actualizaciones, señalar errores que se encuentren y crear pull request.
+Para contribuir se recomienda utilizar el apartado Issue en nuestro repositorio [palaze](https://github.com/pablodiazjorge/palaze/issues) en GitHub desde esta sección podrás crear sugerencias sobre futuras actualizaciones, señalar errores que se encuentren y crear pull request.
 
-Para ello mostramos una guía de como clonar el proyecto:
+A continuación, se muestra una guía de cómo clonar el proyecto:
 
 ```bash
 git clone https://github.com/pablodiazjorge/palaze.git palaze-feature
@@ -84,4 +84,4 @@ Para construir el proyecto para producción:
 npm run build
 ```
 ---
-### Disfrute de nuestra librería :blush:
+### Disfrute de la librería palaze :blush:
