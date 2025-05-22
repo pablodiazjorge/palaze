@@ -31,6 +31,8 @@
 .hero-image-only {
   height: var(--hero-height);
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-image-only img {
@@ -43,5 +45,84 @@
   .hero-default-content {
     margin: 0 20px;
     padding: 10px;
+  }
+}
+
+/*## Variante simple ##*/
+/* Contenedor padre*/
+.simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--hero-height);
+  background-color: transparent;
+}
+
+/* Contenido de la variante simple */
+.simple-content {
+  box-sizing: border-box;
+  margin: 200px;
+  padding: 40px;
+  background-color: var(--plz-color-white);
+  border-radius: 50px;
+  text-align: center;
+}
+
+/*## Variante columns ##*/
+/* Contenedor padre*/
+.hero-columns {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--hero-height);
+  background-color: var(--plz-color-black-4);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Distribución en columnas */
+.hero-columns-container {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Contenido de la columna */
+.hero-columns-content {
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 50px;
+  min-height: 200px;
+  min-width: 200px;
+  background-color: var(--plz-color-white);
+  border-radius: 50px;
+}
+
+/* Adaptación a las distintas dimensiones de dispositivos
+   Reducción de espacios entre elementos para ajustar el contenido
+   Cambio de columnas a filas para una mejor distribución
+   RESPONSIVE
+*/
+@media only screen and (max-width: 600px) {
+  .hero-columns-content {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-columns-container {
+    display: block;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .hero-columns {
+    height: fit-content;
   }
 }

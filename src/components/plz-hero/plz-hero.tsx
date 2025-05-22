@@ -18,7 +18,6 @@ export class PlzHero {
         class="hero-image"
         loading="eager"
         decoding="async"
-        part="pattern-hero"
       />
     ) : null;
   }
@@ -55,7 +54,7 @@ export class PlzHero {
       case 'image':
         return (
           <Host style={style}>
-            <div class="hero-image-only">{this.renderImage()}</div>
+            <div class="hero-default">{this.renderImage()}</div>
           </Host>
         );
 
