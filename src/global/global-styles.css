@@ -178,6 +178,11 @@ h4 {
 
 /* ## CARDS SECTION ## */
 
+.cards-section {
+    min-height: 200px;
+    min-width: 500px;
+}
+
 .cards-section h2 {
     margin-block-start: 25px;
 }
