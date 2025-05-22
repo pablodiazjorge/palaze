@@ -31,21 +31,14 @@ hr {
 /*## Variante custom ##*/
 /* Estilo predeterminado variante custom */
 .custom-wrapper {
+  aspect-ratio: 4210 / 743; /* Replace with your actual ratio */
   width: 100%;
   overflow: hidden;
 }
 
 .custom-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   display: block;
-}
-@media screen and (min-width: 2200px) {
-  .custom-wrapper {
-    height: auto;
-  }
-
-  .custom-img {
-    max-height: auto; /* o lo que quieras como límite */
-  }
 }

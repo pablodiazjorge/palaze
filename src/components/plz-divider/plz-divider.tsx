@@ -35,7 +35,11 @@ export class PlzDivider {
         return (
           <Host style={{ 'margin-top': `${this.spaceTop}px`, 'margin-bottom': `${this.spaceBottom}px` }}>
             <div class="custom-wrapper">
-              <img src={this.customDivider} alt="Divider" class="custom-img" />
+              <img
+                src={this.customDivider}
+                alt="Divider"
+                class="custom-img"
+              />
             </div>
           </Host>
         );
