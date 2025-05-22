@@ -37,6 +37,7 @@
   display: flex;
   position: relative;
   min-width: 200px;
+  min-height: 200px;
   height: 200px;
   border-radius: var(--plz-border-radius-low-rounded);
   background-color: var(--plz-color-black-4);
