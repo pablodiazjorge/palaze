@@ -1,132 +1,47 @@
-:host {
-  /* Primarios-gamma-negro */
-  --plz-color-black-4: #d4d4d8;
-
-  /* Primarios-gamma-blanco */
-  --plz-color-white: white;
-
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-/*## Variante default ##*/
-/* Contenedor padre con imagen*/
 .hero-default {
+  position: relative;
+  height: var(--hero-height);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Contenido del componente */
-.hero-default-content {
-  box-sizing: border-box;
-  margin-left: 200px;
-  margin-right: 200px;
-  padding: 40px;
-  background-color: var(--plz-color-white);
-  border-radius: 50px;
-  text-align: center;
-}
-
-/* Adaptación a las distintas dimensiones de dispositivos
-   Reducción de espacios entre elementos para ajustar el contenido
-   RESPONSIVE
-*/
-@media screen and (max-width: 500px) {
-  .hero-default-content {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-  }
-}
-
-@media screen and (max-width: 1140px) {
-  .hero-default-content {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-}
-
-/*## Variante simple ##*/
-/* Contenedor padre*/
-.simple {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 600px;
-  background-color: transparent;
-}
-
-/* Contenido de la variante simple */
-.simple-content {
-  box-sizing: border-box;
-  margin: 200px;
-  padding: 40px;
-  background-color: var(--plz-color-white);
-  border-radius: 50px;
-  text-align: center;
-}
-
-/*## Variante columns ##*/
-/* Contenedor padre*/
-.hero-columns {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  background-color: var(--plz-color-black-4);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
 }
 
-/* Distribución en columnas */
-.hero-columns-container {
-  display: grid;
-  justify-content: center;
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
 }
 
-/* Contenido de la columna */
-.hero-columns-content {
-  box-sizing: border-box;
-  padding: 40px;
-  margin: 50px;
-  min-height: 200px;
-  min-width: 200px;
+.hero-default-content {
+  position: relative;
+  z-index: 1;
   background-color: var(--plz-color-white);
+  padding: 40px;
   border-radius: 50px;
+  text-align: center;
+  margin: 0 200px;
 }
 
-/* Adaptación a las distintas dimensiones de dispositivos
-   Reducción de espacios entre elementos para ajustar el contenido
-   Cambio de columnas a filas para una mejor distribución
-   RESPONSIVE
-*/
-@media only screen and (max-width: 600px) {
-  .hero-columns-content {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.hero-image-only {
+  height: var(--hero-height);
+  display: flex;
+}
 
-  .hero-columns-container {
-    display: block;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
+.hero-image-only img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .hero-columns {
-    height: fit-content;
+@media screen and (max-width: 500px) {
+  .hero-default-content {
+    margin: 0 20px;
+    padding: 10px;
   }
 }

@@ -15,7 +15,7 @@ export const config: Config = {
         { src: 'assets/icon/Icon-github.svg', dest: 'assets/icon/Icon-github.svg' },
         { src: 'assets/icon/Icon-linkedin.svg', dest: 'assets/icon/Icon-linkedin.svg' },
         { src: 'assets/icon/Icon-mail.svg', dest: 'assets/icon/Icon-mail.svg' },
-        { src: 'assets/icon/Icon-palaze.svg', dest: 'assets/icon/Icon-palaze.svg' },
+        { src: 'assets/icon/Icon-palaze.webp', dest: 'assets/icon/Icon-palaze.webp' },
       ],
     },
     {

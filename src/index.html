@@ -1,195 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palaze</title>
-    <link rel="icon" type="image/svg" href="./assets/icon/Icon-palaze.svg">
-    <link rel="stylesheet" href="/build/palaze.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg" href="./assets/icon/Icon-palaze.webp" />
+    <link rel="stylesheet" href="/build/palaze.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Preload the font CSS to avoid render-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <!-- Fallback for when JavaScript is disabled -->
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" />
     </noscript>
+    <link rel="preload" as="image" href="/assets/icon/pattern-hero.webp" type="image/webp" />
     <script type="module" src="/build/palaze.esm.js"></script>
     <script nomodule src="/build/palaze.js"></script>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
-        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.svg" alt="palaze-web" width="40px"
-                height="40px"></a>
-        <a slot="left" href="index.html">Palaze web</a>
+      <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.webp" alt="palaze-web" width="40px" height="40px" /></a>
+      <a slot="left" href="index.html">Palaze web</a>
 
-        <a slot="right-select" href="docs.html" target="_blank">Docs</a>
-        <a slot="right-select" href="#contact">Contacto</a>
-        <a slot="right-select" href="#about-us">Acerca de</a>
-        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze/tree/develop"
-            target="_blank">Github</a>
+      <a slot="right-select" href="docs.html" target="_blank">Docs</a>
+      <a slot="right-select" href="#contact">Contacto</a>
+      <a slot="right-select" href="#about-us">Acerca de</a>
+      <a slot="right-select" href="https://github.com/pablodiazjorge/palaze/tree/develop" target="_blank">Github</a>
     </plz-header>
     <main class="landing-main">
-        <!-- Hero section -->
-        <section>
-            <plz-hero variant="default" height="600" image="../assets/icon/Hero-img.webp">
-                <div>
-                    <h1>Palaze web components</h1>
-                    <p>Mejora el diseño y funcionalidad de su sitio web con nuestra colección de componentes nativos.
-                        Nuestros componentes son fáciles de implementar, livianos y proporcionan una carga rápida que
-                        los convierte en la mejor solución para cualquier sitio web.
-                    </p>
-                </div>
-            </plz-hero>
-        </section>
+      <!-- Hero section -->
+      <section>
+        <plz-hero variant="default" height="600" image="../assets/icon/pattern-hero.webp">
+          <div>
+            <h1>Palaze web components</h1>
+            <p>
+              Mejora el diseño y funcionalidad de su sitio web con nuestra colección de componentes nativos. Nuestros componentes son fáciles de implementar, livianos y
+              proporcionan una carga rápida que los convierte en la mejor solución para cualquier sitio web.
+            </p>
+          </div>
+        </plz-hero>
+      </section>
 
-        <!-- sub-hero section -->
-        <section class="info-section">
-            <h2>Empieza a usar los componentes</h2>
-            <p>Puedes empezar ahora a usar nuestros componentes Palaze. Haz click en el botón a continuación para
-                acceder a nuestra
-                documentación en la que se detalla como implementarlos en tu sitio web.</p>
-            <plz-button color="black" hover-color="#495057" corners="low-rounded" link="docs.html"
-                target="_blank">Docs</plz-button>
-        </section>
-        <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
+      <!-- sub-hero section -->
+      <section class="info-section">
+        <h2>Empieza a usar los componentes</h2>
+        <p>
+          Puedes empezar ahora a usar nuestros componentes Palaze. Haz click en el botón a continuación para acceder a nuestra documentación en la que se detalla como
+          implementarlos en tu sitio web.
+        </p>
+        <plz-button color="black" hover-color="#495057" corners="low-rounded" link="docs.html" target="_blank">Docs</plz-button>
+      </section>
+      <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-green.svg"></plz-divider>
 
-        <!-- Cards updates section -->
-        <section class="cards-section">
-            <h2>Echa un vistazo a los últimos componentes añadidos</h2>
-            <plz-section variant="wrapper">
-                <!-- 3 card section -->
-                <plz-card image="./assets/icon/card-section.webp" url="docs-card.html" hover="blue" width="500"
-                    target="_blank">
-                    <h3>Componente Card</h3>
-                    <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
-                </plz-card>
-                <plz-card image="./assets/icon/divider-section.webp" url="docs-divider.html" hover="blue" width="500"
-                    target="_blank">
-                    <h3>Componente Divider</h3>
-                    <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
-                </plz-card>
-                <plz-card image="./assets/icon/hero-section.webp" url="docs-hero.html" hover="blue" width="500"
-                    target="_blank">
-                    <h3>Componente Hero</h3>
-                    <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
-                </plz-card>
-            </plz-section>
+      <!-- Cards updates section -->
+      <section class="cards-section">
+        <h2>Echa un vistazo a los últimos componentes añadidos</h2>
+        <plz-section variant="wrapper">
+          <!-- 3 card section -->
+          <plz-card image="./assets/icon/card-section.webp" url="docs-card.html" hover="blue" width="500" target="_blank">
+            <h3>Componente Card</h3>
+            <p>Se han añadido atributos para hacer aún más personalizable el componente.</p>
+          </plz-card>
+          <plz-card image="./assets/icon/divider-section.webp" url="docs-divider.html" hover="blue" width="500" target="_blank">
+            <h3>Componente Divider</h3>
+            <p>Se han añadido atributos para hacer posible aumentar el grosor del separador si se desea.</p>
+          </plz-card>
+          <plz-card image="./assets/icon/hero-section.webp" url="docs-hero.html" hover="blue" width="500" target="_blank">
+            <h3>Componente Hero</h3>
+            <p>Se ha añadido una variante en la que se divide el contenido en dos columnas.</p>
+          </plz-card>
+        </plz-section>
 
-            <h2>Consulta nuestro sistema de diseño</h2>
-            <plz-section variant="wrapper">
-                <!-- 3 card section -->
-                <plz-card image="./assets/icon/design-color.webp" url="docs-design-system.html#colores" hover="blue" width="500"
-                    target="_blank">
-                    <h3>Diseño colores</h3>
-                    <p>Se han añadido y modificado colores a nuestro sistema de diseño.</p>
-                </plz-card>
-                <plz-card image="./assets/icon/design-corner.webp" url="docs-design-system.html#formas" hover="blue" width="500"
-                    target="_blank">
-                    <h3>Diseño formas</h3>
-                    <p>Añadidas nuvas formas para nuestros componentes en nuestro sistema de diseño.</p>
-                </plz-card>
-                <plz-card image="./assets/icon/design-typography.webp" url="docs-design-system.html#tipografia" hover="blue"
-                    width="500" target="_blank">
-                    <h3>Diseño tipografía</h3>
-                    <p>Cambios en la tipografía de nuestros componentes web.</p>
-                </plz-card>
-            </plz-section>
-        </section>
+        <h2>Consulta nuestro sistema de diseño</h2>
+        <plz-section variant="wrapper">
+          <!-- 3 card section -->
+          <plz-card image="./assets/icon/design-color.webp" url="docs-design-system.html#colores" hover="blue" width="500" target="_blank">
+            <h3>Diseño colores</h3>
+            <p>Se han añadido y modificado colores a nuestro sistema de diseño.</p>
+          </plz-card>
+          <plz-card image="./assets/icon/design-corner.webp" url="docs-design-system.html#formas" hover="blue" width="500" target="_blank">
+            <h3>Diseño formas</h3>
+            <p>Añadidas nuvas formas para nuestros componentes en nuestro sistema de diseño.</p>
+          </plz-card>
+          <plz-card image="./assets/icon/design-typography.webp" url="docs-design-system.html#tipografia" hover="blue" width="500" target="_blank">
+            <h3>Diseño tipografía</h3>
+            <p>Cambios en la tipografía de nuestros componentes web.</p>
+          </plz-card>
+        </plz-section>
+      </section>
 
-        <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-orange.svg"
-            custom-position="bottom left"></plz-divider>
+      <plz-divider variant="custom" height="400" custom-divider="../assets/icon/Divider-orange.svg" custom-position="bottom left"></plz-divider>
 
-        <!-- About us section -->
-        <section id="about-us" class="about-us-section">
-            <h2>Acerca de</h2>
-            <plz-section variant="columns">
-                <h3 slot="first">Proyecto Palaze</h3>
-                <p slot="first">
-                    En Palaze, nos enorgullece ofrecer componentes web nativos de calidad, diseñados para
-                    mejorar tu experiencia de desarrollo web. Nuestros componentes son fáciles de usar e
-                    intuitivos,
-                    permitiendo así ahorrar más tiempo y esfuerzo en la creación de tus sitios web de forma
-                    profesional.
-                </p>
-                <br slot="first">
-                <p slot="first">
-                    Además, nuestros componentes son totalmente compatibles con los estándares web actuales,
-                    haciendolos así seguros y escalables para adaptarse a tus necesidades de negocio a medida
-                    que
-                    evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una
-                    solución sólida y
-                    confiable que te permitirá crear aplicaciones web atractivas y funcionales de forma rápida y
-                    eficaz.
-                    Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para
-                    adaptarlos a
-                    tus necesidades específicas o integrarlos a las herramientas que se usen en tus proyectos.
-                    Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y
-                    navegador.
-                </p>
-                <br slot="first">
-                <p slot="first">En resumen, en Palaze nos esforzamos por brindar componentes web nativos originales y
-                    con una
-                    implementación sencilla. Puedes unirte a nuestra comunidad de desarrolladores y experimentar
-                    con
-                    el desarrollo tu mismo.
-                </p>
-                <h3 slot="second">Creador</h3>
-                <p slot="second">
-                    <b>Pablo Díaz-Jorge García</b>, estudiante de último año de ingeniería informática.
-                </p>
-                <p slot="second">
-                    "<em>Desde pequeño siempre me ha gustado la tecnología, me decantaba más por el software que
-                        por
-                        el hardware. Conforme fueron pasando los años me decidí por enfocar mi trayectoria
-                        profesional
-                        a la vertiente que más me apasionara, el desarrollo web y concretamente el desarrollo
-                        front-end.</em>
-                </p>
-                <p slot="second">
-                    <em>En el trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente
-                        nueva
-                        que son los componentes web nativos. Aquí fue donde empecé a aprender sobre el
-                        desarrollo
-                        web y
-                        desarrollar mis conocimientos sobre los lenguajes CSS, JavaScript y HTML.</em>
-                </p>
-                <p slot="second">
-                    <em>Este proyecto empezó como una forma de aprender y empezar a encaminar mi carrera
-                        profesional,durante el proceso se han replanteado y rehecho muchas partes una vez
-                        desarrolladas, ya que una sola
-                        persona tenía que hacer de diseñador y desarrollador.</em>
-                </p>
-                <p slot="second">
-                    <em>Después de mucho tiempo empleado y cada vez ir ganando fluidez conforme iba aprendiendo
-                        más
-                        sobre estos lenguajes y los pequeños trucos para hacer que todos los elementos web se
-                        comporten como se
-                        esperaría entre ellos, se puede decir que he alcanzado un buen estado del proyecto.</em>
-                </p>
-                <p slot="second"><em>Mi idea con este proyecto es no dejarlo solo como un trabajo de final de grado,
-                        sino
-                        continuar con su desarrollo conforme pase el tiempo, aprendiendo al crear nuevos
-                        componentes
-                        y funcionalidades.</em>"</p>
-            </plz-section>
-        </section>
+      <!-- About us section -->
+      <section id="about-us" class="about-us-section">
+        <h2>Acerca de</h2>
+        <plz-section variant="columns">
+          <h3 slot="first">Proyecto Palaze</h3>
+          <p slot="first">
+            En Palaze, nos enorgullece ofrecer componentes web nativos de calidad, diseñados para mejorar tu experiencia de desarrollo web. Nuestros componentes son fáciles de usar
+            e intuitivos, permitiendo así ahorrar más tiempo y esfuerzo en la creación de tus sitios web de forma profesional.
+          </p>
+          <br slot="first" />
+          <p slot="first">
+            Además, nuestros componentes son totalmente compatibles con los estándares web actuales, haciendolos así seguros y escalables para adaptarse a tus necesidades de
+            negocio a medida que evolucionan los proyectos. Puedes estar seguro al elegir Palaze ya que es una solución sólida y confiable que te permitirá crear aplicaciones web
+            atractivas y funcionales de forma rápida y eficaz. Debido a la flexibilidad y personalización de los componentes, podrás modificarlos para adaptarlos a tus necesidades
+            específicas o integrarlos a las herramientas que se usen en tus proyectos. Puedes estar seguro de que tus proyectos funcionarán en cualquier dispositivo y navegador.
+          </p>
+          <br slot="first" />
+          <p slot="first">
+            En resumen, en Palaze nos esforzamos por brindar componentes web nativos originales y con una implementación sencilla. Puedes unirte a nuestra comunidad de
+            desarrolladores y experimentar con el desarrollo tu mismo.
+          </p>
+          <h3 slot="second">Creador</h3>
+          <p slot="second"><b>Pablo Díaz-Jorge García</b>, estudiante de último año de ingeniería informática.</p>
+          <p slot="second">
+            "<em
+              >Desde pequeño siempre me ha gustado la tecnología, me decantaba más por el software que por el hardware. Conforme fueron pasando los años me decidí por enfocar mi
+              trayectoria profesional a la vertiente que más me apasionara, el desarrollo web y concretamente el desarrollo front-end.</em
+            >
+          </p>
+          <p slot="second">
+            <em
+              >En el trabajo de final de grado (tfg), decidí apostar por una tecnología relativamente nueva que son los componentes web nativos. Aquí fue donde empecé a aprender
+              sobre el desarrollo web y desarrollar mis conocimientos sobre los lenguajes CSS, JavaScript y HTML.</em
+            >
+          </p>
+          <p slot="second">
+            <em
+              >Este proyecto empezó como una forma de aprender y empezar a encaminar mi carrera profesional,durante el proceso se han replanteado y rehecho muchas partes una vez
+              desarrolladas, ya que una sola persona tenía que hacer de diseñador y desarrollador.</em
+            >
+          </p>
+          <p slot="second">
+            <em
+              >Después de mucho tiempo empleado y cada vez ir ganando fluidez conforme iba aprendiendo más sobre estos lenguajes y los pequeños trucos para hacer que todos los
+              elementos web se comporten como se esperaría entre ellos, se puede decir que he alcanzado un buen estado del proyecto.</em
+            >
+          </p>
+          <p slot="second">
+            <em
+              >Mi idea con este proyecto es no dejarlo solo como un trabajo de final de grado, sino continuar con su desarrollo conforme pase el tiempo, aprendiendo al crear nuevos
+              componentes y funcionalidades.</em
+            >"
+          </p>
+        </plz-section>
+      </section>
     </main>
     <plz-footer variant="block" height="600" image="../assets/icon/Footer-img.webp" id="contact">
-        <plz-button variant="icon" icon="palaze" link="#"></plz-button>
-        <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al
-            código a través de nuestro Github.</p>
-        <h3>Social</h3>
-        <plz-button variant="icon" icon="github" link="https://github.com/pablodiazjorge/palaze/tree/develop"
-            target="_blank"></plz-button>
-        <plz-button variant="icon" icon="linkedin" link="https://www.linkedin.com/in/pablodiazjorge"
-            target="_blank"></plz-button>
-        <plz-button variant="icon" icon="mail" link="mailto:palazeweb@gmail.com" target="_blank"></plz-button>
+      <plz-button variant="icon" icon="palaze" link="#"></plz-button>
+      <p>Palace es un proyecto de componentes web con código libre. Podrás acceder al código a través de nuestro Github.</p>
+      <h3>Social</h3>
+      <plz-button variant="icon" icon="github" link="https://github.com/pablodiazjorge/palaze/tree/develop" target="_blank"></plz-button>
+      <plz-button variant="icon" icon="linkedin" link="https://www.linkedin.com/in/pablodiazjorge" target="_blank"></plz-button>
+      <plz-button variant="icon" icon="mail" link="mailto:palazeweb@gmail.com" target="_blank"></plz-button>
     </plz-footer>
-</body>
-
+  </body>
 </html>

@@ -2,8 +2,9 @@ import { Component, h, Host, Prop } from '@stencil/core';
 import Github from "../../assets/icon/Icon-github.svg";
 import Linkedin from "../../assets/icon/Icon-linkedin.svg";
 import Mail from "../../assets/icon/Icon-mail.svg";
-import Palaze from "../../assets/icon/Icon-palaze.svg";
 
+
+const Palaze = "/assets/icon/Icon-palaze.webp";
 @Component({
   tag: 'plz-button',
   styleUrl: 'plz-button.css',
