@@ -2,18 +2,23 @@
 /* Estilos de libreria para cambiar el estilo a las palabras dependiendo de su tipo */
 
 :host {
-  /* Primarios-gamma-negro */
-  --plz-color-black-4: #d4d4d8;
-  /* Primarios-gamma-blanco */
-  --plz-color-white: white;
-
-  box-sizing: border-box;
   display: block;
-  overflow-x: auto;
   width: 100%;
+  overflow-x: auto;
+  background: var(--plz-color-white);
   border: 1px solid var(--plz-color-black-4);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: var(--plz-color-white);
-  padding: 15px 15px;
+  border-radius: 0 0 10px 10px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+pre {
+  white-space: pre; /* respeta saltos e indentación */
+  overflow-x: auto; /* scroll horizontal si se desborda */
+  font-family: monospace;
+}
+
+code {
+  font-family: monospace;
+  white-space: inherit;
 }
