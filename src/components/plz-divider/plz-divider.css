@@ -30,9 +30,22 @@ hr {
 
 /*## Variante custom ##*/
 /* Estilo predeterminado variante custom */
-.custom {
-  height: 400px;
+.custom-wrapper {
   width: 100%;
-  background-position: top left;
-  background-size: cover;
+  overflow: hidden;
+}
+
+.custom-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen and (min-width: 2200px) {
+  .custom-wrapper {
+    height: auto;
+  }
+
+  .custom-img {
+    max-height: auto; /* o lo que quieras como límite */
+  }
 }
