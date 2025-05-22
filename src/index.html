@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="/build/palaze.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Preload the font CSS to avoid render-blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Fallback for when JavaScript is disabled -->
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap">
+    </noscript>
     <script type="module" src="/build/palaze.esm.js"></script>
     <script nomodule src="/build/palaze.js"></script>
 </head>
@@ -31,7 +36,7 @@
     <main class="landing-main">
         <!-- Hero section -->
         <section>
-            <plz-hero image="../assets/icon/Hero-img.webp">
+            <plz-hero variant="default" height="600" image="../assets/icon/Hero-img.webp">
                 <div>
                     <h1>Palaze web components</h1>
                     <p>Mejora el diseño y funcionalidad de su sitio web con nuestra colección de componentes nativos.
