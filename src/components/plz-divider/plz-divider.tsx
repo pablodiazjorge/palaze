@@ -39,6 +39,7 @@ export class PlzDivider {
                 src={this.customDivider}
                 alt="Divider"
                 class="custom-img"
+                width="100%" height="50"
               />
             </div>
           </Host>

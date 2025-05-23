@@ -1,3 +1,7 @@
+:host {
+  --hero-height: 600px;
+}
+
 .hero-default {
   position: relative;
   height: var(--hero-height);
@@ -20,7 +24,6 @@
 
 .hero-default-content {
   position: relative;
-  z-index: 1;
   background-color: var(--plz-color-white);
   padding: 40px;
   border-radius: 50px;

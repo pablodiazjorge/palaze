@@ -9,6 +9,10 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     {
+      type: 'www',
+      prerenderConfig: './prerender.config.ts',
+    },
+    {
       type: 'dist-custom-elements',
       generateTypeDeclarations: true,
       copy: [
