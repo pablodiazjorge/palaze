@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'plz-menu-item',
@@ -6,64 +6,65 @@ import { Component, h, Host, Prop } from '@stencil/core';
   shadow: true,
 })
 export class PlzMenuItem {
-  @Prop() variant?: 'simple' | 'custom' | 'image' = 'simple'; //Distintas variantes del componente
-  @Prop() link?: string; //url al enlace
-  @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self'; //Forma de acceder a la url
-  @Prop() colorHover?: string = ''; //Color al pasar cursor
-  @Prop() colorText?: string = 'white'; //Color del texto al pasar cursor
-  @Prop() imageUrl?: string = ''; //url de la imagen para la variante del menu-item image
-  @Prop() submenu: boolean = false; //booleano para saber si es submenu
-  @Prop({ mutable: true }) active: boolean = false; //booleano para saber si el item está activado (cambio en color)
+  @Element() el: HTMLElement;
+  @Prop() variant?: 'simple' | 'custom' | 'image' = 'simple';
+  @Prop() link?: string;
+  @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self';
+  @Prop() colorHover?: string = '';
+  @Prop() colorText?: string = 'white';
+  @Prop() imageUrl?: string = '';
+  @Prop() submenu: boolean = false;
+  @Prop({ mutable: true }) active: boolean = false;
+  @Prop() spa: boolean = false;
 
-  /**
-   * Función que cambia el estado de la propiedad active
-   */
+  @Event() plzNavigate: EventEmitter<string>;
+
+  private handleClick(e: Event) {
+    if (this.spa && this.link) {
+      e.preventDefault();
+      this.plzNavigate.emit(this.link);
+    }
+    this.activate();
+  }
+
   activate() {
     this.active = !this.active;
   }
 
   render() {
     switch (this.variant) {
-      /**
-       * Variante simple
-       * Estilo simple con opción de color custom en hover o dejarlo predeterminado
-       */
       case 'simple':
         return this.colorHover != '' ? (
-          /* Custom hover */
           <Host>
-            <a href={this.link} target={this.target} class={`link simple-custom`} style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
+            <a
+              href={this.link}
+              target={this.target}
+              class="link simple-custom"
+              style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+              onClick={e => this.handleClick(e)}
+            >
               <li class={{ item: true, submenu: this.submenu }}>
                 <slot></slot>
               </li>
             </a>
           </Host>
         ) : (
-          /* Hover predeterminado */
           <Host>
-            <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={() => this.activate()}>
+            <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={e => this.handleClick(e)}>
               <li class={{ item: true, submenu: this.submenu }}>
                 <slot></slot>
               </li>
             </a>
           </Host>
         );
-      /**
-       * Variante custom
-       * Estilo propio palaze con tres posibilidades
-       *    Custom color hover, link
-       *    Custom color hover
-       *    Custom (no link, color hover predefinido)
-       */
       case 'custom':
         return this.colorHover != '' && this.link != '' ? (
-          /* Custom color hover, link */
           <Host>
             <a
               href={this.link}
               target={this.target}
               class={`link custom ${this.active ? 'active' : ''}`}
-              onClick={() => this.activate()}
+              onClick={e => this.handleClick(e)}
               style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
             >
               <li class={{ item: true, submenu: this.submenu }}>
@@ -72,7 +73,6 @@ export class PlzMenuItem {
             </a>
           </Host>
         ) : this.colorHover != '' ? (
-          /* Custom color hover */
           <Host>
             <li
               class={`item custom ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}
@@ -83,32 +83,23 @@ export class PlzMenuItem {
             </li>
           </Host>
         ) : (
-          /* Custom (no link, color hover predefinido) */
           <Host>
             <li class={{ item: true, active: this.active, submenu: this.submenu }} onClick={() => this.activate()}>
               <slot></slot>
             </li>
           </Host>
         );
-      /**
-       * Variante image
-       * Menu-item con imagen y estilo propia palaze con tres posibilidades
-       *    Custom color hover, link
-       *    Custom color hover
-       *    Custom (no link, color hover predefinido)
-       */
       case 'image':
         return this.colorHover && this.link != '' ? (
-          /* Custom color hover, link */
           <Host>
             <a
               href={this.link}
               target={this.target}
               class="link custom"
               style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-              onClick={() => this.activate()}
+              onClick={e => this.handleClick(e)}
             >
-              <li class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`} onClick={() => this.activate()}>
+              <li class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}>
                 <div class="grid-item">
                   <img src={this.imageUrl} />
                 </div>
@@ -117,7 +108,6 @@ export class PlzMenuItem {
             </a>
           </Host>
         ) : this.colorHover != '' ? (
-          /* Custom color hover */
           <Host>
             <li
               class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}
@@ -131,9 +121,8 @@ export class PlzMenuItem {
             </li>
           </Host>
         ) : (
-          /* Custom (no link, color hover predefinido) */
           <Host>
-            <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`} onClick={() => this.activate()}>
+            <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}>
               <div class="grid-item">
                 <img src={this.imageUrl} />
               </div>
@@ -142,7 +131,7 @@ export class PlzMenuItem {
           </Host>
         );
       default:
-        null;
+        return null;
     }
   }
 }

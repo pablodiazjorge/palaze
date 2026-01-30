@@ -47,6 +47,7 @@ export namespace Components {
         "colorHover": string;
         "colorText": string;
         "link"?: string;
+        "spa": boolean;
         "static": boolean;
         "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "variant": 'simple' | 'custom';
@@ -77,6 +78,7 @@ export namespace Components {
         "colorText"?: string;
         "imageUrl"?: string;
         "link"?: string;
+        "spa": boolean;
         "submenu": boolean;
         "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "variant"?: 'simple' | 'custom' | 'image';
@@ -120,6 +122,14 @@ export namespace Components {
         "variant": 'text' | 'link';
     }
 }
+export interface PlzDropdownMenuCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPlzDropdownMenuElement;
+}
+export interface PlzMenuItemCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPlzMenuItemElement;
+}
 declare global {
     interface HTMLPlzButtonElement extends Components.PlzButton, HTMLStencilElement {
     }
@@ -145,7 +155,18 @@ declare global {
         prototype: HTMLPlzDividerElement;
         new (): HTMLPlzDividerElement;
     };
+    interface HTMLPlzDropdownMenuElementEventMap {
+        "plzNavigate": string;
+    }
     interface HTMLPlzDropdownMenuElement extends Components.PlzDropdownMenu, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPlzDropdownMenuElementEventMap>(type: K, listener: (this: HTMLPlzDropdownMenuElement, ev: PlzDropdownMenuCustomEvent<HTMLPlzDropdownMenuElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPlzDropdownMenuElementEventMap>(type: K, listener: (this: HTMLPlzDropdownMenuElement, ev: PlzDropdownMenuCustomEvent<HTMLPlzDropdownMenuElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPlzDropdownMenuElement: {
         prototype: HTMLPlzDropdownMenuElement;
@@ -175,7 +196,18 @@ declare global {
         prototype: HTMLPlzMenuElement;
         new (): HTMLPlzMenuElement;
     };
+    interface HTMLPlzMenuItemElementEventMap {
+        "plzNavigate": string;
+    }
     interface HTMLPlzMenuItemElement extends Components.PlzMenuItem, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPlzMenuItemElementEventMap>(type: K, listener: (this: HTMLPlzMenuItemElement, ev: PlzMenuItemCustomEvent<HTMLPlzMenuItemElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPlzMenuItemElementEventMap>(type: K, listener: (this: HTMLPlzMenuItemElement, ev: PlzMenuItemCustomEvent<HTMLPlzMenuItemElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLPlzMenuItemElement: {
         prototype: HTMLPlzMenuItemElement;
@@ -285,6 +317,8 @@ declare namespace LocalJSX {
         "colorHover"?: string;
         "colorText"?: string;
         "link"?: string;
+        "onPlzNavigate"?: (event: PlzDropdownMenuCustomEvent<string>) => void;
+        "spa"?: boolean;
         "static"?: boolean;
         "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "variant"?: 'simple' | 'custom';
@@ -315,6 +349,8 @@ declare namespace LocalJSX {
         "colorText"?: string;
         "imageUrl"?: string;
         "link"?: string;
+        "onPlzNavigate"?: (event: PlzMenuItemCustomEvent<string>) => void;
+        "spa"?: boolean;
         "submenu"?: boolean;
         "target"?: '_self' | '_blank' | '_parent' | '_top' | 'framename';
         "variant"?: 'simple' | 'custom' | 'image';

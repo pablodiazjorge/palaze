@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'plz-dropdown-menu',
@@ -6,49 +6,60 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class PlzDropdownMenu {
-  @Prop() variant: 'simple' | 'custom' = 'simple'; //Distintas variables del componente
-  @Prop({ mutable: true }) active: boolean = false; //booleano para saber si el item está activado (cambio en color)
-  @Prop() link?: string; //url al enlace
-  @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self'; //Forma de acceder a la url
-  @Prop() colorHover: string = ''; //Color del item al pasar el cursor por encima
-  @Prop() colorText: string = 'white'; //color del texto al hacer hover
-  @Prop() static: boolean = false; //booleano para mantener fijo el dropdown
+  @Element() el: HTMLElement;
+  @Prop() variant: 'simple' | 'custom' = 'simple';
+  @Prop({ mutable: true }) active: boolean = false;
+  @Prop() link?: string;
+  @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self';
+  @Prop() colorHover: string = '';
+  @Prop() colorText: string = 'white';
+  @Prop() static: boolean = false;
+  @Prop() spa: boolean = false;
 
-  /**
-   * Función que cambia el estado de la propiedad active
-   */
+  @Event() plzNavigate: EventEmitter<string>;
+
+  private handleClick(e: Event) {
+    if (this.spa && this.link) {
+      e.preventDefault();
+      this.plzNavigate.emit(this.link);
+    }
+    if (!this.static) {
+      this.changeActive();
+    }
+  }
+
   changeActive() {
     this.active = !this.active;
   }
 
+  expand() {
+    this.active = true;
+  }
+
+  collapse() {
+    if (!this.static) {
+      this.active = false;
+    }
+  }
+
   render() {
     switch (this.variant) {
-      /**
-       * Variante simple
-       * Dropdown, estilo simple con cuatro posibilidades
-       *    1.Dropdown estatico, link
-       *    2.Link
-       *    3.Estatico
-       *    4.No link, no estatico
-       */
       case 'simple':
         return this.link != '' && this.static ? (
-          /* 1.Dropdown estatico, link */
           <Host>
             <li>
-              <a href={this.link} target={this.target} class={{ simple: true, item: true }}>
+              <a href={this.link} target={this.target} class={{ simple: true, item: true }} onClick={e => this.handleClick(e)}>
                 <slot></slot>
               </a>
-              <ul class={{ dropdown: this.static }}>
+              <ul class={{ dropdown: true }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         ) : this.link != '' ? (
-          /* 2.Link */
           <Host>
             <li>
-              <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
+              <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }} onClick={e => this.handleClick(e)}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: this.active }}>
@@ -57,41 +68,30 @@ export class PlzDropdownMenu {
             </li>
           </Host>
         ) : this.static ? (
-          /* 3.Estatico */
           <Host>
             <li>
-              <a class={{ simple: true, item: true }}>
+              <a class={{ simple: true, item: true }} onClick={() => this.changeActive()}>
                 <slot></slot>
               </a>
-              <ul id="#sub-menu" class={{ dropdown: this.static }}>
+              <ul class={{ dropdown: true }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         ) : (
-          /* 4.No link, no estatico */
           <Host>
             <li>
               <a class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
                 <slot></slot>
               </a>
-              <ul id="#sub-menu" class={{ dropdown: this.active }}>
+              <ul class={{ dropdown: this.active }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         );
       case 'custom':
-      /**
-       * Variante custom
-       * Dropdown, estilo propio palaze con cuatro posibilidades
-       *    1.Dropdown estatico, link
-       *    2.Link
-       *    3.Estatico
-       *    4.No link, no estatico
-      */
         return this.link != '' && this.static ? (
-          /* 1.Dropdown estatico, link */
           <Host>
             <li>
               <a
@@ -99,16 +99,16 @@ export class PlzDropdownMenu {
                 target={this.target}
                 class={{ custom: true, item: true }}
                 style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+                onClick={e => this.handleClick(e)}
               >
                 <slot></slot>
               </a>
-              <ul id="#sub-menu" class={{ dropdown: this.static }}>
+              <ul class={{ dropdown: true }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         ) : this.link != '' ? (
-          /* 2.Link */
           <Host>
             <li>
               <a
@@ -116,29 +116,31 @@ export class PlzDropdownMenu {
                 target={this.target}
                 class={{ custom: true, item: true, active: this.active }}
                 style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-                onClick={() => this.changeActive()}
+                onClick={e => this.handleClick(e)}
               >
                 <slot></slot>
               </a>
-              <ul id="#sub-menu" class={{ dropdown: this.active }}>
+              <ul class={{ dropdown: this.active }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         ) : this.static ? (
-          /* 3.Estatico */
           <Host>
             <li>
-              <a class={{ custom: true, item: true }} style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
+              <a
+                class={{ custom: true, item: true }}
+                style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+                onClick={() => this.changeActive()}
+              >
                 <slot></slot>
               </a>
-              <ul id="#sub-menu" class={{ dropdown: this.static }}>
+              <ul class={{ dropdown: true }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         ) : (
-          /* 4.No link, no estatico */
           <Host>
             <li>
               <a
@@ -148,14 +150,14 @@ export class PlzDropdownMenu {
               >
                 <slot></slot>
               </a>
-              <ul id="#sub-menu" class={{ dropdown: this.active }}>
+              <ul class={{ dropdown: this.active }}>
                 <slot name="dropdown"></slot>
               </ul>
             </li>
           </Host>
         );
       default:
-        null;
+        return null;
     }
   }
 }

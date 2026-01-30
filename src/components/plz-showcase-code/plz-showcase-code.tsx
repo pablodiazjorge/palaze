@@ -1,5 +1,4 @@
-import { Component, h, Prop, Host } from '@stencil/core';
-
+import { Component, Element, h, Prop, Host, State } from '@stencil/core';
 import hljs from 'highlight.js';
 import prettier from 'prettier/standalone';
 import parserHtml from 'prettier/plugins/html';
@@ -10,11 +9,18 @@ import parserHtml from 'prettier/plugins/html';
   shadow: true,
 })
 export class PlzShowcaseCode {
-  @Prop() textCode: string; //Texto que tomará formato de código html
-  @Prop() textSize: string = '18'; //Tamaño de letra del código html en px
-  private highlightedCode: string = ''; //Cadena con el texto con formato
+  @Element() el: HTMLElement;
+  @Prop() textCode: string;
+  @Prop() textSize: string = '18';
+  @State() private highlightedCode: string = '';
 
-   async componentWillLoad() {
+  async connectedCallback() {
+    await this.formatAndHighlight();
+  }
+
+  private async formatAndHighlight() {
+    if (!this.textCode) return;
+
     try {
       const formatted = await prettier.format(this.textCode, {
         parser: 'html',
@@ -28,18 +34,21 @@ export class PlzShowcaseCode {
         ignoreIllegals: true,
       }).value;
     } catch (error) {
-      console.error('Error en formateo o resaltado:', error);
-      this.highlightedCode = this.textCode;
+      console.error('Error formatting code:', error);
+      this.highlightedCode = this.escapeHtml(this.textCode);
     }
   }
 
+  private escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
   render() {
-    /**
-     * Se utiliza esta estructura para que la librería hightlight.js reconozca el código.
-    */
     return (
       <Host>
-        <pre style={{ 'font-size': `${this.textSize}px`, whiteSpace: 'pre-wrap' }}>
+        <pre style={{ 'font-size': `${this.textSize}px`, 'whiteSpace': 'pre-wrap' }}>
           <code innerHTML={this.highlightedCode}></code>
         </pre>
       </Host>

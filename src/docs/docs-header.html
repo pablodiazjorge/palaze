@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palaze-Documentación</title>
-    <link rel="icon" type="image/webp" href="./assets/icon/Icon-palaze.webp">
-    <link rel="stylesheet" href="/build/palaze.css">
-    <!-- Fonts: Preload CSS, async load -->
-    <link rel="preload" href="/assets/fonts/Padauk-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/assets/fonts/Padauk-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <script type="module" src="/build/palaze.esm.js"></script>
-    <script nomodule src="/build/palaze.js"></script>
-</head>
-
-<body>
-    <plz-header variant="right-hover" color="#212529" color-text="white" color-hover="#495057" color-text-hover="white">
-        <a slot="left" href="index.html"><img src="./assets/icon/Icon-palaze.webp" alt="palaze-web" width="40px"
-                height="40px"></a>
-        <a slot="left" href="index.html">Palaze web</a>
-
-        <a slot="right-select" href="docs.html" target="_blank">Docs</a>
-        <a slot="right-select" href="https://github.com/pablodiazjorge/palaze/tree/develop"
-            target="_blank">Github</a>
-    </plz-header>
-    
-    <plz-sidebar id-main="main" space-top="45">
-        <img src="../assets/icon/log-mask-overview.webp" width="225px" alt="">
-        <plz-menu border-menu="none">
-            <plz-menu-item link="docs.html" variant="custom" color-hover="#495057" color-text="white">Empezando</plz-menu-item>
-            <plz-divider></plz-divider>
-            <plz-dropdown-menu link="docs-button.html" variant="custom" color-hover="#495057" color-text="white" active="true">
-                Componentes
-                <plz-menu-item slot="dropdown" link="docs-button.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Button</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-card.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Card</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-colors.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Colors</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-divider.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Divider</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-footer.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Footer</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-header.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true" active="true">Header</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-hero.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Hero</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-menu.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Menu</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-dropdown-menu.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Menu-dropdown</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-menu-item.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Menu-item</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-section.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Section</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-showcase.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Showcase</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-sidebar.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Sidebar</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-spinner.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Spinner</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="docs-tooltip.html" variant="custom" color-hover="#495057d4" color-text="white" submenu="true">Tooltip</plz-menu-item>
-            </plz-dropdown-menu>
-            <plz-divider></plz-divider>
-            <plz-dropdown-menu link="docs-design-system.html" variant="custom" color-hover="#495057" color-text="white">
-                Design System
-                <plz-menu-item slot="dropdown" link="#colores" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Colores</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="#tipografia" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Tipografia</plz-menu-item>
-                <plz-menu-item slot="dropdown" link="#formas" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Formas</plz-menu-item>   
-            </plz-dropdown-menu>
-        </plz-menu>
-    </plz-sidebar>
-    <main id="main" class="docs-main">
+<main id="main" class="docs-main">
         <section class="content-detail">
             <h1>Header</h1>
             <p class="component-tag">&lt;plz-header&gt; &#124; PlzHeader</p> 
@@ -142,6 +82,3 @@
             </table>
         </section>
     </main>
-</body>
-
-</html>
