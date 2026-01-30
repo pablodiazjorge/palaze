@@ -8,7 +8,7 @@ import { Component, Element, Event, EventEmitter, Host, Prop, h } from '@stencil
 export class PlzDropdownMenu {
   @Element() el: HTMLElement;
   @Prop() variant: 'simple' | 'custom' = 'simple';
-  @Prop({ mutable: true }) active: boolean = false;
+  @Prop({ mutable: true, reflect: true }) active: boolean = false;
   @Prop() link?: string;
   @Prop() target?: '_self' | '_blank' | '_parent' | '_top' | 'framename' = '_self';
   @Prop() colorHover: string = '';
@@ -18,28 +18,46 @@ export class PlzDropdownMenu {
 
   @Event() plzNavigate: EventEmitter<string>;
 
-  private handleClick(e: Event) {
-    if (this.spa && this.link) {
-      e.preventDefault();
-      this.plzNavigate.emit(this.link);
-    }
-    if (!this.static) {
-      this.changeActive();
-    }
-  }
-
   changeActive() {
-    this.active = !this.active;
+    if (!this.static) {
+      this.active = !this.active;
+    }
   }
 
   expand() {
     this.active = true;
+    this.el.dispatchEvent(
+      new CustomEvent('plzDropdownExpanded', {
+        bubbles: true,
+        composed: true,
+        detail: this.link,
+      }),
+    );
   }
 
   collapse() {
     if (!this.static) {
       this.active = false;
     }
+    this.el.dispatchEvent(
+      new CustomEvent('plzDropdownCollapsed', {
+        bubbles: true,
+        composed: true,
+      }),
+    );
+  }
+
+  componentDidLoad() {
+    this.el.addEventListener('click', (e: Event) => {
+      if (this.spa && this.link) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.plzNavigate.emit(this.link);
+      }
+      if (!this.static) {
+        this.changeActive();
+      }
+    });
   }
 
   render() {
@@ -48,7 +66,7 @@ export class PlzDropdownMenu {
         return this.link != '' && this.static ? (
           <Host>
             <li>
-              <a href={this.link} target={this.target} class={{ simple: true, item: true }} onClick={e => this.handleClick(e)}>
+              <a href={this.link} target={this.target} class={{ simple: true, item: true }}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: true }}>
@@ -59,7 +77,7 @@ export class PlzDropdownMenu {
         ) : this.link != '' ? (
           <Host>
             <li>
-              <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }} onClick={e => this.handleClick(e)}>
+              <a href={this.link} target={this.target} class={{ simple: true, item: true, selected: this.active }}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: this.active }}>
@@ -70,7 +88,7 @@ export class PlzDropdownMenu {
         ) : this.static ? (
           <Host>
             <li>
-              <a class={{ simple: true, item: true }} onClick={() => this.changeActive()}>
+              <a class={{ simple: true, item: true }}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: true }}>
@@ -81,7 +99,7 @@ export class PlzDropdownMenu {
         ) : (
           <Host>
             <li>
-              <a class={{ simple: true, item: true, selected: this.active }} onClick={() => this.changeActive()}>
+              <a class={{ simple: true, item: true, selected: this.active }}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: this.active }}>
@@ -99,7 +117,6 @@ export class PlzDropdownMenu {
                 target={this.target}
                 class={{ custom: true, item: true }}
                 style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-                onClick={e => this.handleClick(e)}
               >
                 <slot></slot>
               </a>
@@ -116,7 +133,6 @@ export class PlzDropdownMenu {
                 target={this.target}
                 class={{ custom: true, item: true, active: this.active }}
                 style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-                onClick={e => this.handleClick(e)}
               >
                 <slot></slot>
               </a>
@@ -128,11 +144,7 @@ export class PlzDropdownMenu {
         ) : this.static ? (
           <Host>
             <li>
-              <a
-                class={{ custom: true, item: true }}
-                style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-                onClick={() => this.changeActive()}
-              >
+              <a class={{ custom: true, item: true }} style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: true }}>
@@ -143,11 +155,7 @@ export class PlzDropdownMenu {
         ) : (
           <Host>
             <li>
-              <a
-                class={{ custom: true, item: true, active: this.active }}
-                style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-                onClick={() => this.changeActive()}
-              >
+              <a class={{ custom: true, item: true, active: this.active }} style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}>
                 <slot></slot>
               </a>
               <ul class={{ dropdown: this.active }}>

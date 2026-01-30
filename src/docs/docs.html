@@ -31,14 +31,14 @@
     <plz-sidebar id-main="main" space-top="45">
       <img src="../assets/icon/log-mask-overview.webp" width="225px" alt="sidebar-img" />
       <plz-menu border-menu="none">
-        <plz-dropdown-menu link="#docs" variant="custom" color-hover="#495057" color-text="white" static="true">
+        <plz-dropdown-menu id="dropdown-docs" variant="custom" color-hover="#495057" color-text="white" static="true">
           Empezando
           <plz-menu-item slot="dropdown" link="#acerca" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Acerca de</plz-menu-item>
           <plz-menu-item slot="dropdown" link="#instalacion" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Instalación</plz-menu-item>
           <plz-menu-item slot="dropdown" link="#uso" variant="simple" color-hover="#495057d4" color-text="white" submenu="true">Uso</plz-menu-item>
         </plz-dropdown-menu>
         <plz-divider></plz-divider>
-        <plz-dropdown-menu variant="custom" color-hover="#495057" color-text="white" static="true">
+        <plz-dropdown-menu id="dropdown-componentes" variant="custom" color-hover="#495057" color-text="white" static="true">
           Componentes
           <plz-menu-item slot="dropdown" link="#button" variant="custom" color-hover="#495057" color-text="white" submenu="true">Button</plz-menu-item>
           <plz-menu-item slot="dropdown" link="#card" variant="custom" color-hover="#495057" color-text="white" submenu="true">Card</plz-menu-item>
@@ -57,7 +57,7 @@
           <plz-menu-item slot="dropdown" link="#tooltip" variant="custom" color-hover="#495057" color-text="white" submenu="true">Tooltip</plz-menu-item>
         </plz-dropdown-menu>
         <plz-divider></plz-divider>
-        <plz-dropdown-menu link="#design-system" variant="custom" color-hover="#495057" color-text="white">
+        <plz-dropdown-menu id="dropdown-design-system" variant="custom" color-hover="#495057" color-text="white">
           Design System
           <plz-menu-item slot="dropdown" link="#colores" variant="simple" color-hover="#495057" color-text="white" submenu="true">Colores</plz-menu-item>
           <plz-menu-item slot="dropdown" link="#tipografia" variant="simple" color-hover="#495057" color-text="white" submenu="true">Tipografía</plz-menu-item>
@@ -226,27 +226,26 @@
     <script>
       (function () {
         const contentCache = new Map();
-        const pagesCache = new Map();
         let currentPage = 'docs';
 
         const pageRoutes = {
-          'docs': { file: 'docs.html', sections: ['acerca', 'instalacion', 'uso'] },
-          'button': { file: 'docs-button.html', sections: [] },
-          'card': { file: 'docs-card.html', sections: [] },
-          'colors': { file: 'docs-colors.html', sections: [] },
-          'divider': { file: 'docs-divider.html', sections: [] },
-          'footer': { file: 'docs-footer.html', sections: [] },
-          'header': { file: 'docs-header.html', sections: [] },
-          'hero': { file: 'docs-hero.html', sections: [] },
-          'menu': { file: 'docs-menu.html', sections: [] },
-          'dropdown-menu': { file: 'docs-dropdown-menu.html', sections: [] },
-          'menu-item': { file: 'docs-menu-item.html', sections: [] },
-          'section': { file: 'docs-section.html', sections: [] },
-          'showcase': { file: 'docs-showcase.html', sections: [] },
-          'sidebar': { file: 'docs-sidebar.html', sections: [] },
-          'spinner': { file: 'docs-spinner.html', sections: [] },
-          'tooltip': { file: 'docs-tooltip.html', sections: [] },
-          'design-system': { file: 'docs-design-system.html', sections: ['colores', 'tipografia', 'formas'] },
+          'docs': { file: 'docs.html', sections: ['acerca', 'instalacion', 'uso'], dropdown: 'dropdown-docs' },
+          'button': { file: 'docs-button.html', sections: [], dropdown: 'dropdown-componentes' },
+          'card': { file: 'docs-card.html', sections: [], dropdown: 'dropdown-componentes' },
+          'colors': { file: 'docs-colors.html', sections: [], dropdown: 'dropdown-componentes' },
+          'divider': { file: 'docs-divider.html', sections: [], dropdown: 'dropdown-componentes' },
+          'footer': { file: 'docs-footer.html', sections: [], dropdown: 'dropdown-componentes' },
+          'header': { file: 'docs-header.html', sections: [], dropdown: 'dropdown-componentes' },
+          'hero': { file: 'docs-hero.html', sections: [], dropdown: 'dropdown-componentes' },
+          'menu': { file: 'docs-menu.html', sections: [], dropdown: 'dropdown-componentes' },
+          'dropdown-menu': { file: 'docs-dropdown-menu.html', sections: [], dropdown: 'dropdown-componentes' },
+          'menu-item': { file: 'docs-menu-item.html', sections: [], dropdown: 'dropdown-componentes' },
+          'section': { file: 'docs-section.html', sections: [], dropdown: 'dropdown-componentes' },
+          'showcase': { file: 'docs-showcase.html', sections: [], dropdown: 'dropdown-componentes' },
+          'sidebar': { file: 'docs-sidebar.html', sections: [], dropdown: 'dropdown-componentes' },
+          'spinner': { file: 'docs-spinner.html', sections: [], dropdown: 'dropdown-componentes' },
+          'tooltip': { file: 'docs-tooltip.html', sections: [], dropdown: 'dropdown-componentes' },
+          'design-system': { file: 'docs-design-system.html', sections: ['colores', 'tipografia', 'formas'], dropdown: 'dropdown-design-system' },
         };
 
         function init() {
@@ -256,7 +255,20 @@
           }
 
           window.addEventListener('hashchange', handleRoute);
+          window.addEventListener('plzNavigate', handleNavigate, false);
           handleRoute();
+
+          // Debug
+          setTimeout(() => {
+            console.log('=== Debug Info ===');
+            const items = document.querySelectorAll('plz-menu-item');
+            console.log(`Total items: ${items.length}`);
+            const firstItem = items[0];
+            if (firstItem) {
+              console.log('First item link:', firstItem.getAttribute('link'));
+              console.log('First item has activate?', typeof firstItem.activate);
+            }
+          }, 500);
         }
 
         function handleRoute() {
@@ -264,31 +276,46 @@
           let pageName = 'docs';
           let sectionId = null;
 
-          if (pageRoutes[hash]) {
-            pageName = hash;
-          } else {
-            for (const [page, config] of Object.entries(pageRoutes)) {
-              if (config.sections && config.sections.includes(hash)) {
-                pageName = page;
-                sectionId = hash;
-                break;
-              }
+          for (const [page, config] of Object.entries(pageRoutes)) {
+            if (page === hash) {
+              pageName = page;
+              sectionId = null;
+              break;
+            }
+            if (config.sections && config.sections.includes(hash)) {
+              pageName = page;
+              sectionId = hash;
+              break;
             }
           }
 
           loadContent(pageName, sectionId, hash);
         }
 
+        function handleNavigate(e) {
+          const link = e.detail;
+          if (link && link.startsWith('#')) {
+            const target = link.substring(1);
+            if (pageRoutes[target]) {
+              window.location.hash = '#' + target;
+            }
+          }
+        }
+
         async function loadContent(pageName, sectionId, hash) {
           const container = document.getElementById('main');
           if (!container) return;
 
-          if (currentPage !== pageName) {
+          const pageChanged = currentPage !== pageName;
+          const routeConfig = pageRoutes[pageName];
+          const hasSections = routeConfig && routeConfig.sections && routeConfig.sections.length > 0;
+
+          if (pageChanged || (hasSections && sectionId)) {
             currentPage = pageName;
             await loadPageContent(pageName, container);
           }
 
-          updateSidebarActive(hash);
+          updateSidebarState(pageName, hash);
 
           if (sectionId) {
             setTimeout(() => scrollToSection(sectionId), 50);
@@ -355,33 +382,62 @@
           }
         }
 
-        function updateSidebarActive(hash) {
+        function updateSidebarState(pageName, hash) {
+          const route = pageRoutes[pageName];
+          if (!route) return;
+
+          setTimeout(() => {
+            console.log(`updateSidebarState: pageName=${pageName}, hash=${hash}`);
+            if (route.dropdown) {
+              activateDropdown(route.dropdown);
+            }
+
+            activateMenuItem(hash);
+          }, 100);
+        }
+
+        function activateDropdown(dropdownId) {
+          const dropdown = document.getElementById(dropdownId);
+          console.log(`activateDropdown: ${dropdownId}, found:`, !!dropdown);
+          if (dropdown) {
+            dropdown.active = true;
+          }
+
+          document.querySelectorAll('plz-dropdown-menu').forEach(dd => {
+            if (dd.id !== dropdownId) {
+              dd.active = false;
+            }
+          });
+        }
+
+        function activateMenuItem(hash) {
+          console.log(`activateMenuItem: hash=${hash}`);
           document.querySelectorAll('plz-menu-item').forEach(item => {
             item.active = false;
           });
-          document.querySelectorAll('plz-dropdown-menu').forEach(dropdown => {
-            dropdown.active = false;
-          });
 
-          const targetItem = document.querySelector(`plz-menu-item[link="#${hash}"]`);
-          if (targetItem) {
-            targetItem.active = true;
-            const parentDropdown = targetItem.closest('plz-dropdown-menu');
-            if (parentDropdown) {
-              parentDropdown.active = true;
+          document.querySelectorAll('plz-menu-item').forEach(item => {
+            const itemLink = item.getAttribute('link');
+            console.log(`  Checking item with link="${itemLink}"`);
+            if (itemLink && itemLink === '#' + hash) {
+              console.log(`    MATCH! Activating item with link="${itemLink}"`);
+              item.active = true;
             }
-          } else {
-            const targetDropdown = document.querySelector(`plz-dropdown-menu[link="#${hash}"]`);
-            if (targetDropdown) {
-              targetDropdown.active = true;
-            }
-          }
+          });
         }
 
         if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', init);
+          document.addEventListener('DOMContentLoaded', () => {
+            Promise.all([customElements.whenDefined('plz-dropdown-menu'), customElements.whenDefined('plz-menu-item')]).then(() => {
+              console.log('Stencil components initialized');
+              init();
+            });
+          });
         } else {
-          init();
+          Promise.all([customElements.whenDefined('plz-dropdown-menu'), customElements.whenDefined('plz-menu-item')]).then(() => {
+            console.log('Stencil components initialized');
+            init();
+          });
         }
       })();
     </script>

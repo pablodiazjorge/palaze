@@ -17,6 +17,18 @@
   box-sizing: border-box;
 }
 
+:host([aria-current='page']) .simple-custom,
+:host([aria-current='page']) .simple,
+:host([aria-current='page']) .custom,
+:host([aria-current='page']) .item,
+:host([aria-current='page']) .item-image {
+  background-color: var(--bg-color-hover) !important;
+  color: var(--bg-color-text) !important;
+  font-weight: var(--plz-font-weight-bold) !important;
+  border-top-right-radius: var(--plz-border-radius-low-rounded) !important;
+  border-bottom-right-radius: var(--plz-border-radius-low-rounded) !important;
+}
+
 /* ## GENERAL ## */
 
 .item {
@@ -59,6 +71,14 @@
   border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
+.active-simple {
+  background-color: var(--bg-color-hover);
+  color: var(--bg-color-text);
+  font-weight: var(--plz-font-weight-bold);
+  border-top-right-radius: var(--plz-border-radius-low-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-low-rounded);
+}
+
 /* ## VARIANTE CUSTOM ## */
 
 .custom:hover {
@@ -68,8 +88,6 @@
   border-top-right-radius: var(--plz-border-radius-low-rounded);
   border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
-
-/* ## VARIANTE CUSTOM ## */
 
 .active {
   background-color: var(--bg-color-hover);
@@ -99,6 +117,14 @@ img {
 
 .item-image-hover:hover {
   background-color: var(--plz-color-black-4);
+}
+
+.item-image.active {
+  background-color: var(--bg-color-hover);
+  color: var(--bg-color-text);
+  font-weight: var(--plz-font-weight-bold);
+  border-top-right-radius: var(--plz-border-radius-low-rounded);
+  border-bottom-right-radius: var(--plz-border-radius-low-rounded);
 }
 
 /* Organización del contenedor dividido en items para una mejor disposición */

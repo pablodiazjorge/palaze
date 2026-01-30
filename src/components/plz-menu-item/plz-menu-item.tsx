@@ -14,24 +14,61 @@ export class PlzMenuItem {
   @Prop() colorText?: string = 'white';
   @Prop() imageUrl?: string = '';
   @Prop() submenu: boolean = false;
-  @Prop({ mutable: true }) active: boolean = false;
+  @Prop({ mutable: true, reflect: true }) active: boolean = false;
   @Prop() spa: boolean = false;
 
   @Event() plzNavigate: EventEmitter<string>;
 
-  private handleClick(e: Event) {
-    if (this.spa && this.link) {
-      e.preventDefault();
-      this.plzNavigate.emit(this.link);
-    }
-    this.activate();
+  activate() {
+    this.active = true;
+    this.el.setAttribute('aria-current', 'page');
+    console.log('Item activated:', this.link, 'aria-current set:', this.el.getAttribute('aria-current'));
+    this.el.dispatchEvent(
+      new CustomEvent('plzMenuItemActivated', {
+        bubbles: true,
+        composed: true,
+        detail: this.link,
+      }),
+    );
   }
 
-  activate() {
-    this.active = !this.active;
+  deactivate() {
+    this.active = false;
+    this.el.removeAttribute('aria-current');
+    console.log('Item deactivated:', this.link);
+    this.el.dispatchEvent(
+      new CustomEvent('plzMenuItemDeactivated', {
+        bubbles: true,
+        composed: true,
+      }),
+    );
+  }
+
+  componentDidLoad() {
+    this.el.addEventListener('click', (e: Event) => {
+      if (this.spa && this.link) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.plzNavigate.emit(this.link);
+      }
+      if (!this.submenu) {
+        this.activate();
+      }
+    });
   }
 
   render() {
+    const getActiveStyle = () => {
+      if (!this.active) return {};
+      return {
+        'background-color': 'var(--bg-color-hover)',
+        'color': 'var(--bg-color-text)',
+        'font-weight': '700',
+        'border-top-right-radius': '25px',
+        'border-bottom-right-radius': '25px',
+      };
+    };
+
     switch (this.variant) {
       case 'simple':
         return this.colorHover != '' ? (
@@ -40,8 +77,11 @@ export class PlzMenuItem {
               href={this.link}
               target={this.target}
               class="link simple-custom"
-              style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-              onClick={e => this.handleClick(e)}
+              style={{
+                '--bg-color-hover': `${this.colorHover}`,
+                '--bg-color-text': `${this.colorText}`,
+                ...getActiveStyle(),
+              }}
             >
               <li class={{ item: true, submenu: this.submenu }}>
                 <slot></slot>
@@ -50,7 +90,7 @@ export class PlzMenuItem {
           </Host>
         ) : (
           <Host>
-            <a href={this.link} target={this.target} class={`link simple ${this.active ? 'active-simple' : ''}`} onClick={e => this.handleClick(e)}>
+            <a href={this.link} target={this.target} class="link simple" style={getActiveStyle()}>
               <li class={{ item: true, submenu: this.submenu }}>
                 <slot></slot>
               </li>
@@ -63,9 +103,12 @@ export class PlzMenuItem {
             <a
               href={this.link}
               target={this.target}
-              class={`link custom ${this.active ? 'active' : ''}`}
-              onClick={e => this.handleClick(e)}
-              style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+              class="link custom"
+              style={{
+                '--bg-color-hover': `${this.colorHover}`,
+                '--bg-color-text': `${this.colorText}`,
+                ...getActiveStyle(),
+              }}
             >
               <li class={{ item: true, submenu: this.submenu }}>
                 <slot></slot>
@@ -75,16 +118,19 @@ export class PlzMenuItem {
         ) : this.colorHover != '' ? (
           <Host>
             <li
-              class={`item custom ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}
-              onClick={() => this.activate()}
-              style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+              class="item custom"
+              style={{
+                '--bg-color-hover': `${this.colorHover}`,
+                '--bg-color-text': `${this.colorText}`,
+                ...getActiveStyle(),
+              }}
             >
               <slot></slot>
             </li>
           </Host>
         ) : (
           <Host>
-            <li class={{ item: true, active: this.active, submenu: this.submenu }} onClick={() => this.activate()}>
+            <li class="item" style={getActiveStyle()}>
               <slot></slot>
             </li>
           </Host>
@@ -96,10 +142,13 @@ export class PlzMenuItem {
               href={this.link}
               target={this.target}
               class="link custom"
-              style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
-              onClick={e => this.handleClick(e)}
+              style={{
+                '--bg-color-hover': `${this.colorHover}`,
+                '--bg-color-text': `${this.colorText}`,
+                ...getActiveStyle(),
+              }}
             >
-              <li class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}>
+              <li class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu ? 'submenu' : ''}`}>
                 <div class="grid-item">
                   <img src={this.imageUrl} />
                 </div>
@@ -110,9 +159,12 @@ export class PlzMenuItem {
         ) : this.colorHover != '' ? (
           <Host>
             <li
-              class={`item-image grid-container ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}
-              onClick={() => this.activate()}
-              style={{ '--bg-color-hover': `${this.colorHover}`, '--bg-color-text': `${this.colorText}` }}
+              class={`item-image grid-container ${this.submenu ? 'submenu' : ''}`}
+              style={{
+                '--bg-color-hover': `${this.colorHover}`,
+                '--bg-color-text': `${this.colorText}`,
+                ...getActiveStyle(),
+              }}
             >
               <div class="grid-item">
                 <img src={this.imageUrl} />
@@ -122,7 +174,7 @@ export class PlzMenuItem {
           </Host>
         ) : (
           <Host>
-            <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''} ${this.submenu} ? 'submenu' : ''`}>
+            <li class={`item-image grid-container item-image-hover ${this.active ? 'active' : ''} ${this.submenu ? 'submenu' : ''}`} style={getActiveStyle()}>
               <div class="grid-item">
                 <img src={this.imageUrl} />
               </div>
